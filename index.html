@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas</title>
+<meta name="description" content="Laboratório especializado em análises microbiológicas e agrícolas: fungos de solo, nematoides, controle de qualidade de bioinsumos, contaminantes, PCR e mais. Patos de Minas - MG.">
+<link rel="canonical" href="https://laboratoriolamam.com.br/">
+<link rel="icon" href="favicon.ico">
+<!-- Compartilhamento (WhatsApp / redes sociais) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas">
+<meta property="og:description" content="Análises microbiológicas e agrícolas com precisão e agilidade. Fungos de solo, nematoides, controle de qualidade de bioinsumos, contaminantes, PCR e mais. Patos de Minas - MG.">
+<meta property="og:url" content="https://laboratoriolamam.com.br/">
+<meta property="og:image" content="https://laboratoriolamam.com.br/logo.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<!-- Dados estruturados (Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas",
+  "image": "https://laboratoriolamam.com.br/logo.png",
+  "url": "https://laboratoriolamam.com.br/",
+  "telephone": "+553438251631",
+  "email": "lamam@laboratoriolamam.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Ari Pessoa Franco, 216 - Cidade Nova",
+    "addressLocality": "Patos de Minas",
+    "addressRegion": "MG",
+    "postalCode": "38706-416",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://instagram.com/laboratoriolamam",
+    "https://wa.me/5534997741631"
+  ]
+}
+</script>
+<style>
+  :root{
+    --navy:#15507a; --navy-d:#0f3a59; --cyan:#3da9dc; --cyan-l:#5fc0ea;
+    --cinza:#5b6b78; --bg:#f5f9fc; --branco:#fff; --borda:#e2ebf2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#22323f;line-height:1.6;background:var(--branco)}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{line-height:1.2;color:var(--navy)}
+  section{padding:80px 0}
+  .sec-title{font-size:2rem;text-align:center;margin-bottom:10px}
+  .sec-sub{text-align:center;color:var(--cinza);max-width:640px;margin:0 auto 48px;font-size:1.02rem}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--borda)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy);font-size:1.15rem}
+  .brand img{height:42px}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav a{font-weight:600;color:#33485a;font-size:.95rem;transition:color .2s}
+  nav a:hover{color:var(--cyan)}
+  .btn{display:inline-block;background:var(--cyan);color:#fff;padding:11px 22px;border-radius:30px;font-weight:700;font-size:.95rem;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 14px rgba(61,169,220,.35)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(61,169,220,.45)}
+  .btn-navy{background:var(--navy);box-shadow:0 4px 14px rgba(21,80,122,.3)}
+  .menu-btn{display:none;font-size:1.6rem;background:none;border:none;color:var(--navy);cursor:pointer}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,#0f3a59 0%,#15507a 45%,#2d83b5 100%);color:#fff;position:relative;overflow:hidden;padding:96px 0 104px}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(95,192,234,.35),transparent 70%);border-radius:50%}
+  .hero h1{color:#fff;font-size:2.9rem;max-width:760px}
+  .hero p{font-size:1.2rem;max-width:620px;margin:20px 0 34px;color:#d7e8f4}
+  .hero .acoes{display:flex;gap:14px;flex-wrap:wrap}
+  .selo{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 16px;border-radius:30px;font-size:.85rem;font-weight:600;margin-bottom:22px}
+
+  /* Sobre */
+  .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .sobre-grid img{width:100%;border-radius:16px}
+  .stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-size:2rem;color:var(--cyan);line-height:1}
+  .stat span{font-size:.9rem;color:var(--cinza)}
+
+  /* Serviços */
+  .serv{background:var(--bg)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--borda);border-radius:14px;padding:26px;transition:transform .18s,box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(21,80,122,.1)}
+  .card .ic{font-size:1.9rem;display:inline-grid;place-items:center;width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,#eaf6fd,#d6edfa);margin-bottom:14px}
+  .card h3{font-size:1.12rem;margin-bottom:6px}
+  .card p{font-size:.92rem;color:var(--cinza)}
+
+  /* Diferenciais */
+  .dif-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .dif .ic{font-size:2rem}
+  .dif h3{font-size:1.05rem;margin:10px 0 6px}
+  .dif p{font-size:.9rem;color:var(--cinza)}
+
+  /* Contato */
+  .contato{background:var(--bg)}
+  .cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .info-item{display:flex;gap:14px;margin-bottom:20px;align-items:flex-start}
+  .info-item .ic{font-size:1.3rem;width:44px;height:44px;flex:none;display:grid;place-items:center;background:#fff;border:1px solid var(--borda);border-radius:10px;color:var(--navy)}
+  .info-item b{display:block;color:var(--navy)}
+  .info-item span,.info-item a{color:var(--cinza);font-size:.96rem}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:14px}
+
+  /* Footer */
+  footer{background:var(--navy-d);color:#cfe0ec;padding:40px 0;text-align:center;font-size:.9rem}
+  footer .brand{justify-content:center;color:#fff;margin-bottom:10px}
+  footer .brand img{filter:brightness(0) invert(1)}
+  footer a{color:#9fd0ec}
+
+  /* WhatsApp flutuante */
+  .wpp{position:fixed;right:22px;bottom:22px;z-index:60;background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 6px 20px rgba(37,211,102,.5);transition:transform .15s}
+  .wpp:hover{transform:scale(1.08)}
+
+  @media(max-width:820px){
+    .sobre-grid,.cont-grid{grid-template-columns:1fr;gap:30px}
+    .grid{grid-template-columns:1fr 1fr}
+    .dif-grid{grid-template-columns:1fr 1fr}
+    nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:16px 22px;gap:16px;border-bottom:1px solid var(--borda)}
+    nav ul.open{display:flex}
+    .menu-btn{display:block}
+    .hero h1{font-size:2.1rem}
+    section{padding:60px 0}
+  }
+  @media(max-width:520px){ .grid,.dif-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="brand"><img src="logo.png" alt="LAMAM"> LAMAM</a>
+    <button class="menu-btn" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a class="btn" href="https://wa.me/5534997741631" target="_blank">WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio" style="padding-top:96px">
+  <div class="wrap">
+    <span class="selo">🔬 Laboratório de análises agrícolas e microbiológicas</span>
+    <h1>Precisão e agilidade nas suas análises de solo e bioinsumos</h1>
+    <p>A LAMAM entrega laudos confiáveis para produtores, cooperativas e empresas — apoiando decisões no campo e o controle de qualidade da sua produção.</p>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/5534997741631" target="_blank">Fale conosco no WhatsApp</a>
+      <a class="btn btn-navy" href="#servicos">Ver serviços</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div>
+      <h2 class="sec-title" style="text-align:left">Sobre o laboratório</h2>
+      <p style="color:var(--cinza);margin-bottom:14px">A <b>LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas</b> é especializada em microbiologia do solo e controle de qualidade de bioinsumos. Localizada em Patos de Minas (MG), atende todo o país com metodologias reconhecidas e atendimento próximo.</p>
+      <p style="color:var(--cinza)">Nossa missão é transformar análises em informação útil para o campo — com resultados rápidos, rastreáveis e bem documentados.</p>
+      <div class="stats">
+        <div class="stat"><b>+13</b><span>tipos de análise</span></div>
+        <div class="stat"><b>Rápido</b><span>laudos ágeis</span></div>
+        <div class="stat"><b>MG</b><span>Patos de Minas</span></div>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg,#eaf6fd,#d6edfa);border-radius:16px;display:grid;place-items:center;min-height:300px">
+      <img src="logo.png" alt="LAMAM" style="width:62%;max-width:300px">
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="serv" id="servicos">
+  <div class="wrap">
+    <h2 class="sec-title">Nossos serviços</h2>
+    <p class="sec-sub">Análises microbiológicas e agrícolas para apoiar a sanidade do solo, a qualidade de bioinsumos e o manejo da sua lavoura.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🍄</div><h3>Fungos de solo</h3><p>Quantificação de fungos benéficos e indicadores da microbiota do solo (UFC/g).</p></div>
+      <div class="card"><div class="ic">🪱</div><h3>Nematoides</h3><p>Extração e contagem de nematoides em solo e raiz.</p></div>
+      <div class="card"><div class="ic">⚗️</div><h3>Compatibilidade</h3><p>Testes de compatibilidade entre produtos e bioinsumos.</p></div>
+      <div class="card"><div class="ic">🔬</div><h3>Contagem de UFC</h3><p>Quantificação de microrganismos por unidades formadoras de colônia.</p></div>
+      <div class="card"><div class="ic">🧪</div><h3>Controle de Qualidade (CQ)</h3><p>CQ alvo e completa de bioinsumos e inoculantes.</p></div>
+      <div class="card"><div class="ic">🌱</div><h3>On farm</h3><p>Análise de produção on farm — alvo e completa.</p></div>
+      <div class="card"><div class="ic">⚠️</div><h3>Contaminantes</h3><p>Detecção e quantificação de contaminantes microbiológicos.</p></div>
+      <div class="card"><div class="ic">🧬</div><h3>Conídios viáveis</h3><p>Avaliação de viabilidade de conídios.</p></div>
+      <div class="card"><div class="ic">🧫</div><h3>PCR</h3><p>Identificação de espécie por biologia molecular.</p></div>
+      <div class="card"><div class="ic">🍃</div><h3>Patologia de plantas</h3><p>Diagnóstico de doenças em tecidos vegetais.</p></div>
+      <div class="card"><div class="ic">🌾</div><h3>Patologia de sementes</h3><p>Sanidade de sementes e detecção de patógenos.</p></div>
+      <div class="card" style="background:linear-gradient(135deg,#15507a,#2d83b5);color:#fff;border:none"><div class="ic" style="background:rgba(255,255,255,.18)">💬</div><h3 style="color:#fff">Não achou o que precisa?</h3><p style="color:#d7e8f4">Fale com a gente — atendemos demandas específicas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section>
+  <div class="wrap">
+    <h2 class="sec-title">Por que a LAMAM</h2>
+    <p class="sec-sub">Compromisso com a qualidade do início ao laudo.</p>
+    <div class="dif-grid">
+      <div class="dif"><div class="ic">⚡</div><h3>Agilidade</h3><p>Resultados rápidos para você decidir no tempo certo.</p></div>
+      <div class="dif"><div class="ic">📋</div><h3>Laudos completos</h3><p>Relatórios claros, com fotos e rastreabilidade.</p></div>
+      <div class="dif"><div class="ic">🤝</div><h3>Atendimento próximo</h3><p>Suporte direto por WhatsApp e telefone.</p></div>
+      <div class="dif"><div class="ic">🔬</div><h3>Metodologia</h3><p>Técnicas reconhecidas e equipe especializada.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="wrap">
+    <h2 class="sec-title">Fale conosco</h2>
+    <p class="sec-sub">Estamos prontos para atender você e sua lavoura.</p>
+    <div class="cont-grid">
+      <div>
+        <div class="info-item"><div class="ic">📍</div><div><b>Endereço</b><span>Av. Ari Pessoa Franco, 216 — Bairro Cidade Nova<br>Patos de Minas - MG · CEP 38.706-416</span></div></div>
+        <div class="info-item"><div class="ic">📞</div><div><b>Telefone</b><a href="tel:+553438251631">(34) 3825-1631</a></div></div>
+        <div class="info-item"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/5534997741631" target="_blank">(34) 9.9774-1631</a></div></div>
+        <div class="info-item"><div class="ic">✉️</div><div><b>E-mail</b><a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></div></div>
+        <div class="info-item"><div class="ic">📸</div><div><b>Instagram</b><a href="https://instagram.com/laboratoriolamam" target="_blank">@laboratoriolamam</a></div></div>
+        <a class="btn" href="https://wa.me/5534997741631" target="_blank" style="margin-top:8px">Pedir um orçamento</a>
+      </div>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps?q=Av.%20Ari%20Pessoa%20Franco,%20216,%20Patos%20de%20Minas%20-%20MG&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#inicio" class="brand"><img src="logo.png" alt="LAMAM" style="height:36px"> LAMAM</a>
+    <p>Laboratório Mineiro de Análises Agrícolas e Microbiológicas · Patos de Minas - MG</p>
+    <p style="margin-top:8px">(34) 3825-1631 · <a href="https://wa.me/5534997741631">WhatsApp</a> · <a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></p>
+  </div>
+</footer>
+
+<a class="wpp" href="https://wa.me/5534997741631" target="_blank" title="WhatsApp" aria-label="WhatsApp">💬</a>
+
+</body>
+</html>
