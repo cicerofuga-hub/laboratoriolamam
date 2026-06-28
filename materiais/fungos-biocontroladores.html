@@ -74,7 +74,9 @@
   .ref-item{display:flex;gap:10px;margin-bottom:8px;font-size:.8rem;line-height:1.5;color:#33414c;}
   .ref-n{color:var(--cyan);font-weight:700;min-width:34px;flex-shrink:0;}
   /* Aviso legal topo + sumário */
-  .aviso-top{background:#fff7e6;border:1px solid #f0c66a;border-left:5px solid #e7a13a;border-radius:10px;padding:14px 18px;font-size:.86rem;color:#7a5300;margin-bottom:22px;}
+  .aviso-top{background:#fff7e6;border:1px solid #f0c66a;border-left:5px solid #e7a13a;border-radius:10px;padding:14px 18px;font-size:.86rem;color:#7a5300;margin-bottom:14px;}
+  .escopo{background:#eef5fb;border:1px solid #cfe0ee;border-left:5px solid var(--cyan);border-radius:10px;padding:14px 18px;font-size:.86rem;color:#1f4e6b;margin-bottom:14px;}
+  .rot-hint{display:none;background:#eef5fb;border:1px solid var(--borda);border-radius:8px;padding:9px 13px;font-size:.82rem;color:var(--navy);margin-bottom:18px;text-align:center;}
   .sumario{background:#fff;border:1px solid var(--borda);border-radius:12px;box-shadow:var(--sh);padding:18px 22px;margin-bottom:26px;}
   .sum-t{font-family:'Poppins';font-weight:700;color:var(--navy);font-size:1.05rem;margin-bottom:10px;}
   .sum-list{margin:0;padding-left:20px;font-size:.9rem;color:#33414c;}
@@ -82,7 +84,7 @@
   .sum-list a{color:var(--navy);font-weight:600;text-decoration:none;}
   .sum-list a:hover{color:var(--cyan);text-decoration:underline;}
   .gsec, .mt{scroll-margin-top:90px;}
-  @media(max-width:760px){ .leg{grid-template-columns:repeat(2,1fr);} .cols2,.cards3{grid-template-columns:1fr;} .guia-hero h1{font-size:1.5rem;} }
+  @media(max-width:760px){ .leg{grid-template-columns:repeat(2,1fr);} .cols2,.cards3{grid-template-columns:1fr;} .guia-hero h1{font-size:1.5rem;} .rot-hint{display:block;} }
   @media print{ header,.crumb,.guia-hero .acts,.wpp,footer .fline{display:none!important;} .body-area{background:#fff;padding:0;} .gsec{box-shadow:none;} }
 </style>
 </head>
@@ -124,6 +126,10 @@
 
   <div class="aviso-top"><strong>Aviso legal — </strong>este material é uma referência técnica compilada a partir de fontes científicas e <strong>não substitui o laudo oficial</strong> emitido pelo laboratório nem a recomendação individualizada de um Engenheiro Agrônomo habilitado. A interpretação de laudos microbiológicos é <strong>sempre contextual</strong>: valores de UFC/g só fazem sentido comparados ao histórico da mesma área, à mesma época de coleta e ao mesmo método laboratorial.</div>
 
+  <div class="escopo"><strong>Escopo deste guia — textura do solo:</strong> as faixas de UFC/g referem-se a <strong>solos de Cerrado e de textura média a argilosa</strong>. <strong>Solos arenosos apresentam populações fúngicas naturalmente muito menores</strong> — inclusive dos fungos benéficos —, de modo que os limiares de supressividade devem ser lidos com cautela nesses solos. Considere sempre a textura e o histórico da área.</div>
+
+  <div class="rot-hint">Dica: no celular, gire a tela na horizontal para visualizar melhor as tabelas.</div>
+
   <div class="sumario">
     <div class="sum-t">Sumário</div>
     <ol class="sum-list">
@@ -140,7 +146,7 @@
 
   <!-- 0 — COMO LER -->
   <div class="gsec" id="leg">
-    <div class="gsh"><span class="num">0</span> Como ler este guia — lógica e classificação</div>
+    <div class="gsh"><span class="num">1</span> Como ler este guia — lógica e classificação</div>
     <div class="gsb">
       <div class="gdesc">Estes fungos <strong>não são avaliados como patógenos</strong>. A pergunta não é “está causando doença?”, mas sim <em>“a comunidade biocontroladora do solo é suficiente para exercer supressividade?”</em>. Por isso a leitura de cor é <strong>invertida</strong> em relação às pragas: aqui, quanto <strong>mais alto</strong>, melhor.</div>
       <div class="nota"><strong>Lógica de interpretação:</strong> para o <em>Trichoderma</em> existe um limiar numérico de UFC/g bem documentado. Para <em>Clonostachys</em> e <em>Paecilomyces</em>, o contexto (cultura, histórico de patógenos, laudo nematológico) é mais determinante que o número isolado. Os <strong>fungos totais</strong> funcionam como o “hemograma” do solo — valem mais pela tendência ao longo do tempo do que por um valor único.</div>
@@ -157,7 +163,7 @@
 
   <!-- 1 — COMPARATIVO -->
   <div class="gsec" id="comparativo">
-    <div class="gsh"><span class="num">1</span> Comparativo dos três biocontroladores</div>
+    <div class="gsh"><span class="num">2</span> Comparativo dos três biocontroladores</div>
     <div class="gsb">
       <div class="gdesc">Os três fungos têm mecanismos <strong>complementares — não concorrentes</strong>. Saber onde cada um atua evita sobreposição de custos e potencializa o resultado.</div>
       <div class="tw"><table class="gt">
@@ -194,7 +200,7 @@
 
   <!-- 2 — TRICHODERMA -->
   <div class="gsec" id="trichoderma">
-    <div class="gsh"><span class="num">2</span> <em style="font-style:italic">Trichoderma</em> — interpretação no solo e rizosfera</div>
+    <div class="gsh"><span class="num">3</span> <em style="font-style:italic">Trichoderma</em> — interpretação no solo e rizosfera</div>
     <div class="gsb">
       <div class="gdesc">É o único gênero deste guia com um <strong>limiar de UFC/g de solo</strong> correlacionado à supressividade documentada em bioensaios. Além do biocontrole, é também promotor de crescimento vegetal.</div>
       <div class="tw"><table class="gt">
@@ -247,7 +253,7 @@
       </table></div>
       <div class="aviso"><strong>Referências numéricas:</strong> a atividade de biocontrole é relatada para populações de <em>Trichoderma</em> de <strong>10<sup>5</sup>–10<sup>7</sup> UFC/g</strong> (Revista Cultivar, 2016). Na rizosfera de meloeiro, 15 dias após o tratamento de sementes, isolados nativos atingiram <strong>4,5–5,8 log<sub>10</sub> UFC/g de raiz</strong> (Embrapa Agroindústria Tropical, 2024).</div>
 
-      <div class="mt">2.1 Fatores que modulam o <em>Trichoderma</em> no solo</div>
+      <div class="mt">3.1 Fatores que modulam o <em>Trichoderma</em> no solo</div>
       <div class="cols2">
         <div class="card ok"><strong>Aumentam</strong>
           Plantio direto consolidado (&gt; 5 anos) com cobertura morta permanente · matéria orgânica &gt; 3% · pH 5,5–7,0 · temperatura 20–35 °C com 60–80% da capacidade de campo · rotação com gramíneas (braquiária, milho) · compostagem / esterco curado · inoculação com produto registrado.
@@ -261,7 +267,7 @@
 
   <!-- 3 — CLONOSTACHYS -->
   <div class="gsec" id="clonostachys">
-    <div class="gsh"><span class="num">3</span> <em style="font-style:italic">Clonostachys</em> — interpretação no solo</div>
+    <div class="gsh"><span class="num">4</span> <em style="font-style:italic">Clonostachys</em> — interpretação no solo</div>
     <div class="gsb">
       <div class="gdesc">Diferencial-chave em relação ao <em>Trichoderma</em>: <strong>destrói fisicamente a córtex dos escleródios</strong> de <em>Sclerotinia</em> no solo e suprime a esporulação de <em>Botrytis</em> em restos culturais — reduzindo o inóculo da safra seguinte. Também tolera carbendazim.</div>
       <div class="aviso"><strong>Aviso metodológico:</strong> não existe, na literatura brasileira, um limiar de UFC/g de <em>Clonostachys</em> correlacionado com supressividade de campo (como existe para <em>Trichoderma</em>). A interpretação abaixo é <strong>contextual</strong>, baseada em densidades de produto formulado e no histórico de patógenos da área.</div>
@@ -300,7 +306,7 @@
 
   <!-- 4 — PAECILOMYCES -->
   <div class="gsec" id="paecilomyces">
-    <div class="gsh"><span class="num">4</span> <em style="font-style:italic">Paecilomyces</em> — interpretação + integração com o laudo nematológico</div>
+    <div class="gsh"><span class="num">5</span> <em style="font-style:italic">Paecilomyces</em> — interpretação + integração com o laudo nematológico</div>
     <div class="gsb">
       <div class="gdesc">É o principal agente de biocontrole fúngico de <strong>nematoides</strong> — parasita ovos e fêmeas sedentárias, com produto registrado no MAPA. A leitura do laudo deve ser <strong>sempre cruzada com o laudo nematológico</strong>.</div>
       <div class="tw"><table class="gt">
@@ -319,7 +325,7 @@
         </tbody>
       </table></div>
 
-      <div class="mt">4.1 Integração com o laudo nematológico</div>
+      <div class="mt">5.1 Integração com o laudo nematológico</div>
       <div class="tw"><table class="gt">
         <thead><tr>
           <th class="tl">Laudo nematológico</th>
@@ -341,7 +347,7 @@
 
   <!-- 5 — FUNGOS TOTAIS -->
   <div class="gsec" id="totais">
-    <div class="gsh"><span class="num">5</span> Fungos totais — o “hemograma” do solo</div>
+    <div class="gsh"><span class="num">6</span> Fungos totais — o “hemograma” do solo</div>
     <div class="gsb">
       <div class="gdesc">A contagem total de fungos não identifica espécies — mede a <strong>atividade fúngica global</strong>. Seu maior valor está na comparação ao longo do tempo (mesmo local, datas diferentes) ou com uma área de referência. Um laudo isolado tem valor diagnóstico limitado.</div>
       <div class="nota"><strong>Dados de campo (Brasil):</strong> em Palmas-TO (2024), Cerrado nativo = <strong>15,2 × 10<sup>4</sup> UFC/g</strong>; forrageiras = 2,1 × 10<sup>4</sup>; milho = 1,2 × 10<sup>4</sup>. Gêneros detectados: <em>Cladosporium</em>, <em>Trichoderma</em>, <em>Penicillium</em>, <em>Aspergillus</em>, <em>Fusarium</em>, <em>Pestalotia</em>.</div>
@@ -361,7 +367,7 @@
         </tbody>
       </table></div>
 
-      <div class="mt">5.1 Razão Fungos/Bactérias — indicador do sistema de manejo</div>
+      <div class="mt">6.1 Razão Fungos/Bactérias — indicador do sistema de manejo</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Razão F/B</th><th>Interpretação</th><th>Sistema típico</th></tr></thead>
         <tbody>
@@ -372,7 +378,7 @@
         </tbody>
       </table></div>
 
-      <div class="mt">5.2 O que procurar na composição dos gêneros</div>
+      <div class="mt">6.2 O que procurar na composição dos gêneros</div>
       <div class="cards3">
         <div class="card ok"><strong>Perfil saudável</strong>
           <em>Trichoderma</em> &gt; 10<sup>4</sup> UFC/g · <em>Penicillium</em> e <em>Aspergillus</em> (decompositores ativos) · <em>Cladosporium</em> (MO ativa) · <em>Fusarium</em> baixo (&lt; 10<sup>2</sup>) · mais de 5 gêneros diferentes · razão F/B entre 0,3 e 1,0.
@@ -390,9 +396,9 @@
 
   <!-- 6 — INTEGRAÇÃO -->
   <div class="gsec" id="integracao">
-    <div class="gsh"><span class="num">6</span> Interpretação integrada — cenários e checklist</div>
+    <div class="gsh"><span class="num">7</span> Interpretação integrada — cenários e checklist</div>
     <div class="gsb">
-      <div class="mt">6.1 Cenários práticos de interpretação conjunta</div>
+      <div class="mt">7.1 Cenários práticos de interpretação conjunta</div>
       <div class="tw"><table class="gt">
         <thead><tr>
           <th class="tl">Cenário</th><th><em>Trichoderma</em></th><th><em>Clonostachys</em></th><th><em>Paecilomyces</em></th><th>Fungos totais</th><th>Diagnóstico / ação</th>
@@ -426,7 +432,7 @@
         </tbody>
       </table></div>
 
-      <div class="mt">6.2 Checklist de interpretação do laudo</div>
+      <div class="mt">7.2 Checklist de interpretação do laudo</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl" style="width:34%">Pergunta</th><th>O que verificar</th><th>Decisão</th></tr></thead>
         <tbody>
@@ -445,7 +451,7 @@
 
   <!-- 7 — REFERÊNCIAS -->
   <div class="gsec" id="refs">
-    <div class="gsh"><span class="num">7</span> Referências bibliográficas</div>
+    <div class="gsh"><span class="num">8</span> Referências bibliográficas</div>
     <div class="gsb">
       <div class="mt"><em>Trichoderma</em></div>
       <div class="ref-item"><span class="ref-n">1.</span><span>REVISTA CULTIVAR. <strong>Agente versátil — produtos à base de Trichoderma no controle biológico.</strong> 2016.</span></div>

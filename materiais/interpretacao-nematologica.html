@@ -81,7 +81,8 @@
   .sum-crops a{color:var(--cyan);font-weight:500;text-decoration:none;}
   .sum-crops a:hover{text-decoration:underline;}
   .gsec, .mt{scroll-margin-top:90px;}
-  @media(max-width:700px){ .leg{grid-template-columns:repeat(2,1fr);} .guia-hero h1{font-size:1.5rem;} }
+  .rot-hint{display:none;background:#eef5fb;border:1px solid var(--borda);border-radius:8px;padding:9px 13px;font-size:.82rem;color:var(--navy);margin-bottom:18px;text-align:center;}
+  @media(max-width:700px){ .leg{grid-template-columns:repeat(2,1fr);} .guia-hero h1{font-size:1.5rem;} .rot-hint{display:block;} }
   @media print{ header,.crumb,.guia-hero .acts,.wpp,footer .fline{display:none!important;} .body-area{background:#fff;padding:0;} .gsec{box-shadow:none;} }
 </style>
 </head>
@@ -123,14 +124,16 @@
 
   <div class="aviso-top"><strong>Aviso legal — </strong>este material é uma referência técnica compilada a partir de fontes científicas e <strong>não substitui o laudo oficial</strong> emitido pelo laboratório nem a recomendação individualizada de um Engenheiro Agrônomo habilitado. Os valores de Nível de Dano Econômico (NDE) variam com a cultura, a textura do solo, a cultivar, o clima e a presença de múltiplas espécies — devem ser sempre contextualizados à realidade da área.</div>
 
+  <div class="rot-hint">Dica: no celular, gire a tela na horizontal para visualizar melhor as tabelas.</div>
+
   <div class="sumario">
     <div class="sum-t">Sumário</div>
     <ol class="sum-list">
       <li><a href="#leg">Sistema de classificação de infestação</a></li>
-      <li><a href="#especies">Tabelas de referência por espécie de nematoide</a></li>
       <li><a href="#culturas">Tabelas de interpretação por cultura</a>
         <span class="sum-crops"><a href="#c-soja">Soja</a> · <a href="#c-milho">Milho</a> · <a href="#c-algodao">Algodão</a> · <a href="#c-cana">Cana</a> · <a href="#c-cafe">Café</a> · <a href="#c-banana">Banana</a> · <a href="#c-hortalicas">Hortaliças</a> · <a href="#c-citros">Citros</a> · <a href="#c-feijao">Feijão</a></span>
       </li>
+      <li><a href="#especies">Tabelas de referência por espécie de nematoide</a></li>
       <li><a href="#hospedeiros">Hospedabilidade por espécie — rotação de culturas</a></li>
       <li><a href="#refs">Referências bibliográficas</a></li>
     </ol>
@@ -138,7 +141,7 @@
 
   <!-- LEGENDA -->
   <div class="gsec" id="leg">
-    <div class="gsh"><span class="num">0</span> Sistema de classificação de infestação</div>
+    <div class="gsh"><span class="num">1</span> Sistema de classificação de infestação</div>
     <div class="gsb">
       <div class="gdesc">Categorias utilizadas em todas as tabelas deste guia. Os limites numéricos variam por espécie e cultura; as faixas estão detalhadas em cada tabela específica.</div>
       <div class="leg">
@@ -153,111 +156,6 @@
   </div>
 
   <!-- SEÇÃO 1 — POR ESPÉCIE -->
-  <div class="gsec" id="especies">
-    <div class="gsh"><span class="num">1</span> Tabelas de referência por espécie de nematoide</div>
-    <div class="gsb">
-
-      <div class="mt">1.1 <em>Heterodera glycines</em> — Nematoide de Cisto da Soja (NCS)</div>
-      <div class="nota"><strong>Unidade:</strong> cistos viáveis por 200 cm³ de solo. Cada cisto contém até 500 ovos e permanece viável por 7–8 anos sem hospedeiro. A identificação de raça (1, 2, 3, 4, 4+, 5, 6, 9, 10, 14, 14+) é obrigatória para a seleção de cultivar resistente. Distribuição: MG, MT, MS, GO, SP, PR, RS, BA, TO e MA.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Cistos viáveis<br>/200 cm³ solo</th><th>Ovos estimados<br>/200 cm³ solo</th><th>Perda estimada</th><th>Ação recomendada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0%</td><td>Prevenção: não transportar solo de áreas infestadas. Monitoramento anual.</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 10</td><td class="c1">500 – 5.000</td><td class="c1">5 – 30%</td><td>Rotação com não-hospedeiras (milho, sorgo, cana). Cultivares resistentes recomendadas.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">11 – 20</td><td class="c2">5.500 – 10.000</td><td class="c2">30 – 50%</td><td>Obrigatório cultivar resistente às raças presentes. Rotação mínima de 2 anos.</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">21 – 50</td><td class="c3">10.500 – 25.000</td><td class="c3">50 – 70%</td><td>Resistente + nematicida + rotação obrigatória. Não cultivar soja suscetível.</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 50</td><td class="c4">&gt; 25.000</td><td class="c4">até 70%+</td><td>Área de risco crítico. Suspender soja suscetível por no mínimo 3 safras. Biossegurança máxima.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Não-hospedeiras: milho, sorgo, arroz, algodão, girassol, cana-de-açúcar, trigo. Refs.: Asmus &amp; Ceccon (Embrapa, 2002); Revista Cultivar (2020); Elevagro (2024).</div>
-
-      <div class="mt">1.2 <em>Meloidogyne</em> spp. — Nematoide das Galhas (NG)</div>
-      <div class="nota"><strong>Espécies principais no Brasil:</strong> <em>M. incognita</em> (raças 1–4), <em>M. javanica</em>, <em>M. arenaria</em>, <em>M. hapla</em> (Sul), <em>M. paranaensis</em> (cafeeiro, disseminada), <em>M. exigua</em> (café), <em>M. enterolobii</em> (= <em>mayaguensis</em>, muito agressiva). <strong>Unidade:</strong> J2 (juvenis de 2º estádio) por 200 cm³ de solo (pré-plantio) e espécimes/g de raiz (durante o ciclo). Temperatura ótima: 25–30 °C. Preferência por solos arenosos.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>J2/200 cm³ solo<br>(pré-plantio)</th><th>J2 ou ovos/g raiz<br>(durante ciclo)</th><th>Perda soja</th><th>Perda hortaliças</th><th>Perda café</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">&lt; 1</td><td class="c0">&lt; 1</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 50</td><td class="c1">1 – 10</td><td class="c1">5 – 15%</td><td class="c1">10 – 20%</td><td class="c1">5 – 15%</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">51 – 200</td><td class="c2">10 – 30</td><td class="c2">15 – 30%</td><td class="c2">20 – 40%</td><td class="c2">15 – 30%</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">201 – 500</td><td class="c3">30 – 100</td><td class="c3">30 – 60%</td><td class="c3">40 – 70%</td><td class="c3">30 – 50%</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 500</td><td class="c4">&gt; 100</td><td class="c4">60 – 90%</td><td class="c4">até 100%</td><td class="c4">até 50%</td></tr>
-        </tbody>
-      </table></div>
-      <div class="aviso"><strong>Atenção ao <em>M. enterolobii</em>:</strong> quebra o gene de resistência Mi-1 (tomate) e a resistência da maioria das cultivares. Identificação molecular obrigatória. Em goiabeira, pode causar morte de plantas adultas. Alta agressividade em algodão, pimentão e batata-doce.</div>
-      <div class="fonte">Refs.: Asmus (2001); Grigolli (2015); Inomoto &amp; Silva (2011); Embrapa Soja (CT-76/2010); Embrapa Hortaliças.</div>
-
-      <div class="mt">1.3 <em>Pratylenchus brachyurus</em> — Nematoide das Lesões Radiculares (NLR)</div>
-      <div class="nota"><strong>Unidade:</strong> espécimes por 200 cm³ de solo e por grama de raiz. Ocorre em 96,2% das áreas algodoeiras do MT e em mais de 99% das amostras de soja em algumas regiões. Solos arenosos (15–25% de argila) amplificam muito os danos. Populações acima de 1 espécime/cm³ de solo correlacionam-se com danos expressivos.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Esp./200 cm³ solo</th><th>Esp./g raiz</th><th>Perda soja</th><th>Perda milho</th><th>Perda algodão</th><th>Perda cana</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 100</td><td class="c1">&lt; 5</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 8%</td><td class="c1">&lt; 8%</td><td class="c1">&lt; 10%</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">101 – 500</td><td class="c2">5 – 19</td><td class="c2">10 – 25%</td><td class="c2">8 – 15%</td><td class="c2">8 – 20%</td><td class="c2">10 – 20%</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">501 – 2.000</td><td class="c3">19 – 30</td><td class="c3">25 – 50%</td><td class="c3">15 – 30%</td><td class="c3">20 – 35%</td><td class="c3">20 – 35%</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 2.000 (&gt; 1/cm³)</td><td class="c4">&gt; 30</td><td class="c4">até 50%</td><td class="c4">até 30%</td><td class="c4">30 – 50%</td><td class="c4">30 – 50%</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Franchini et al. (Embrapa, 2014); Instituto Phytus-RS (2024); Galbieri &amp; Asmus (Embrapa Algodão, 2016) — <em>P. brachyurus</em> em 96,2% das áreas do MT.</div>
-
-      <div class="mt">1.4 <em>Pratylenchus zeae</em> — Nematoide das Lesões em Cana-de-açúcar</div>
-      <div class="nota"><strong>Unidade:</strong> espécimes por 50 g de raiz fresca (padrão IAC). <em>P. zeae</em> está presente em 97% das amostras de canaviais brasileiros (Dinardo-Miranda, IAC). Endoparasita migrador, move-se pelo córtex radicular causando lesões necróticas avermelhadas que escurecem por fungos secundários.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Esp./50 g raiz fresca</th><th>Perda cana-planta</th><th>Perda cana-soca (t/ha/corte)</th><th>Observação</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente / Traço</td><td class="c0">&lt; 10</td><td class="c0">Não significativa</td><td class="c0">—</td><td>Presente em 97% dos canaviais — traço considerado natural.</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">10 – 500</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 5 t/ha</td><td>Convivência possível. Variedades tolerantes minimizam o impacto.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">501 – 2.500</td><td class="c2">10 – 20%</td><td class="c2">5 – 10 t/ha</td><td>Próximo ao NDE. Manejo preventivo e variedades tolerantes.</td></tr>
-          <tr><td class="tl c3">Alta (NDE)</td><td class="c3">&gt; 2.500</td><td class="c3">20 – 35%</td><td class="c3">10 – 20 t/ha</td><td>Redução de biomassa radicular e perfilhamento. Manejo urgente.</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 7.000 (&gt; 70/g)</td><td class="c4">até 50%</td><td class="c4">&gt; 20 t/ha</td><td>Raízes escurecidas/apodrecidas. Reforma antecipada do canavial.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Dinardo-Miranda (2005); Syngenta MaisAgro (2026); Staphyt Brasil/Conchal-SP (2024); SGS Brasil (2021).</div>
-
-      <div class="mt">1.5 <em>Rotylenchulus reniformis</em> — Nematoide Reniforme</div>
-      <div class="nota"><strong>Unidade:</strong> fêmeas + juvenis por 200 cm³ de solo. Limiar internacional: 1–10 nematoides/cm³ de solo já é suficiente para causar dano em mudas de algodão (Robinson et al., 1997). 4.500 esp./200 cm³ = sintomas "carijó" evidentes no algodão (Galbieri &amp; Asmus, MT). Semi-endoparasita — diagnóstico dificultado pela ausência de sintomas em populações moderadas.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Fêmeas+J/200 cm³ solo</th><th>Perda algodão</th><th>Perda soja</th><th>Perda abacaxi</th><th>Ação</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td>Prevenção. Não coexiste com <em>Meloidogyne</em> (competição entre espécies).</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 500</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 15%</td><td>Monitoramento. Cultivares tolerantes. <em>Crotalaria</em> na rotação.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">501 – 2.000</td><td class="c2">10 – 25%</td><td class="c2">10 – 20%</td><td class="c2">15 – 30%</td><td>Nematicida biológico. Atenção à interação com <em>Fusarium</em> spp.</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">2.001 – 4.500</td><td class="c3">25 – 40%</td><td class="c3">20 – 35%</td><td class="c3">30 – 50%</td><td>Nematicida químico. Rotação com milho/sorgo. Sintomas "carijó".</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 4.500</td><td class="c4">até 50%</td><td class="c4">até 40%</td><td class="c4">até 60%</td><td>Risco de perdas totais.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Galbieri &amp; Asmus (2016); Robinson et al. (1997); Bioscience Journal/UFU (2014) — perdas 23,1% e 35% em cultivares de algodão no MT.</div>
-
-      <div class="mt">1.6 <em>Aphelenchoides besseyi</em> — Nematoide da Haste Verde (NHV) / "Soja Louca II"</div>
-      <div class="nota"><strong>Particularidade:</strong> nematoide foliar/aéreo. Parasita flores, folhas, inflorescências e vagens — <strong>não é detectado em análise de solo convencional.</strong> A amostragem deve incluir folhas, nós, vagens e grãos. Sobrevive em palhada, sementes e solo por período limitado. Hospedeiras alternativas: arroz, algodão, feijão, jambu.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Esp./g folha ou grão<br>(extração laboratorial)</th><th>Sintomas</th><th>Perda soja</th><th>Ação</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">Nenhum</td><td class="c0">0</td><td>Monitorar histórico da área. Usar semente certificada.</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 10</td><td class="c1">Leve engrossamento nos nós</td><td class="c1">5 – 20%</td><td>Tratamento de sementes. Monitorar a lavoura em R1–R5.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">11 – 50</td><td class="c2">Retenção foliar, hastes verdes, caneluras</td><td class="c2">20 – 60%</td><td>Tratamento de sementes obrigatório. Rotação com não-hospedeiras.</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">51 – 200</td><td class="c3">Rosetamento de racemos, aborto de flores, vagens deformadas</td><td class="c3">60 – 90%</td><td>Epidemia confirmada. Suspender hospedeiras por 1–2 anos.</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 200</td><td class="c4">Plantas sem vagens maduras, grãos verdes, perda de reboleiras</td><td class="c4">até 100%</td><td>Epifitia. Área com histórico de "soja louca II".</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Meyer et al. (2017b); Repositório UEL (2024); Favoreto &amp; Loreto (2023).</div>
-
-      <div class="mt">1.7 Espécies emergentes — <em>Helicotylenchus dihystera</em>, <em>Scutellonema brachyurus</em> e <em>Tubixaba tuxaua</em></div>
-      <div class="nota"><strong>Status:</strong> NDE ainda não totalmente estabelecido na literatura brasileira. São considerados "patógenos potenciais" em expansão. O aumento gradual nas análises de solo é indicativo de ambiente favorável e exige monitoramento.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Tipo de parasitismo</th><th>Culturas afetadas</th><th>Nível de atenção sugerido</th><th>Status do NDE</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Helicotylenchus dihystera<br><span style="font-size:.72rem;color:#8a97a3">N. espiralado</span></td><td>Ectoparasita migrador</td><td>Soja, milho, cana, pastagens</td><td class="c2">Monitorar &gt; 200 esp./200 cm³</td><td>Em definição — crescimento populacional é sinal de alerta.</td></tr>
-          <tr><td class="tl it">Scutellonema brachyurus<br><span style="font-size:.72rem;color:#8a97a3">N. falso-espiral</span></td><td>Ecto/semiendoparasita</td><td>Soja, milho, inhame, pastagens</td><td class="c2">Monitorar &gt; 300 esp./200 cm³</td><td>Em definição — associado a quedas de produtividade em alta densidade.</td></tr>
-          <tr><td class="tl it">Tubixaba tuxaua<br><span style="font-size:.72rem;color:#8a97a3">N. específico de soja</span></td><td>Endoparasita migrador</td><td>Soja, milho, trigo</td><td class="c3">Atenção &gt; 100 esp./200 cm³</td><td>Causa danos em Latossolo Vermelho — patogenicidade confirmada (PR/MA).</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Elevagro (2024); AgroInsight (2021); Agroadvance (2025); Furlanetto et al. (2010).</div>
-
-    </div>
-  </div>
-
-  <!-- SEÇÃO 2 — POR CULTURA -->
   <div class="gsec" id="culturas">
     <div class="gsh"><span class="num">2</span> Tabelas de interpretação por cultura</div>
     <div class="gsb">
@@ -379,8 +277,113 @@
   </div>
 
   <!-- SEÇÃO 3 — HOSPEDEIROS -->
+  <div class="gsec" id="especies">
+    <div class="gsh"><span class="num">3</span> Tabelas de referência por espécie de nematoide</div>
+    <div class="gsb">
+
+      <div class="mt">3.1 <em>Heterodera glycines</em> — Nematoide de Cisto da Soja (NCS)</div>
+      <div class="nota"><strong>Unidade:</strong> cistos viáveis por 200 cm³ de solo. Cada cisto contém até 500 ovos e permanece viável por 7–8 anos sem hospedeiro. A identificação de raça (1, 2, 3, 4, 4+, 5, 6, 9, 10, 14, 14+) é obrigatória para a seleção de cultivar resistente. Distribuição: MG, MT, MS, GO, SP, PR, RS, BA, TO e MA.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Nível</th><th>Cistos viáveis<br>/200 cm³ solo</th><th>Ovos estimados<br>/200 cm³ solo</th><th>Perda estimada</th><th>Ação recomendada</th></tr></thead>
+        <tbody>
+          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0%</td><td>Prevenção: não transportar solo de áreas infestadas. Monitoramento anual.</td></tr>
+          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 10</td><td class="c1">500 – 5.000</td><td class="c1">5 – 30%</td><td>Rotação com não-hospedeiras (milho, sorgo, cana). Cultivares resistentes recomendadas.</td></tr>
+          <tr><td class="tl c2">Média</td><td class="c2">11 – 20</td><td class="c2">5.500 – 10.000</td><td class="c2">30 – 50%</td><td>Obrigatório cultivar resistente às raças presentes. Rotação mínima de 2 anos.</td></tr>
+          <tr><td class="tl c3">Alta</td><td class="c3">21 – 50</td><td class="c3">10.500 – 25.000</td><td class="c3">50 – 70%</td><td>Resistente + nematicida + rotação obrigatória. Não cultivar soja suscetível.</td></tr>
+          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 50</td><td class="c4">&gt; 25.000</td><td class="c4">até 70%+</td><td>Área de risco crítico. Suspender soja suscetível por no mínimo 3 safras. Biossegurança máxima.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fonte">Não-hospedeiras: milho, sorgo, arroz, algodão, girassol, cana-de-açúcar, trigo. Refs.: Asmus &amp; Ceccon (Embrapa, 2002); Revista Cultivar (2020); Elevagro (2024).</div>
+
+      <div class="mt">3.2 <em>Meloidogyne</em> spp. — Nematoide das Galhas (NG)</div>
+      <div class="nota"><strong>Espécies principais no Brasil:</strong> <em>M. incognita</em> (raças 1–4), <em>M. javanica</em>, <em>M. arenaria</em>, <em>M. hapla</em> (Sul), <em>M. paranaensis</em> (cafeeiro, disseminada), <em>M. exigua</em> (café), <em>M. enterolobii</em> (= <em>mayaguensis</em>, muito agressiva). <strong>Unidade:</strong> J2 (juvenis de 2º estádio) por 200 cm³ de solo (pré-plantio) e espécimes/g de raiz (durante o ciclo). Temperatura ótima: 25–30 °C. Preferência por solos arenosos.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Nível</th><th>J2/200 cm³ solo<br>(pré-plantio)</th><th>J2 ou ovos/g raiz<br>(durante ciclo)</th><th>Perda soja</th><th>Perda hortaliças</th><th>Perda café</th></tr></thead>
+        <tbody>
+          <tr><td class="tl c0">Ausente</td><td class="c0">&lt; 1</td><td class="c0">&lt; 1</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td></tr>
+          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 50</td><td class="c1">1 – 10</td><td class="c1">5 – 15%</td><td class="c1">10 – 20%</td><td class="c1">5 – 15%</td></tr>
+          <tr><td class="tl c2">Média</td><td class="c2">51 – 200</td><td class="c2">10 – 30</td><td class="c2">15 – 30%</td><td class="c2">20 – 40%</td><td class="c2">15 – 30%</td></tr>
+          <tr><td class="tl c3">Alta</td><td class="c3">201 – 500</td><td class="c3">30 – 100</td><td class="c3">30 – 60%</td><td class="c3">40 – 70%</td><td class="c3">30 – 50%</td></tr>
+          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 500</td><td class="c4">&gt; 100</td><td class="c4">60 – 90%</td><td class="c4">até 100%</td><td class="c4">até 50%</td></tr>
+        </tbody>
+      </table></div>
+      <div class="aviso"><strong>Atenção ao <em>M. enterolobii</em>:</strong> quebra o gene de resistência Mi-1 (tomate) e a resistência da maioria das cultivares. Identificação molecular obrigatória. Em goiabeira, pode causar morte de plantas adultas. Alta agressividade em algodão, pimentão e batata-doce.</div>
+      <div class="fonte">Refs.: Asmus (2001); Grigolli (2015); Inomoto &amp; Silva (2011); Embrapa Soja (CT-76/2010); Embrapa Hortaliças.</div>
+
+      <div class="mt">3.3 <em>Pratylenchus brachyurus</em> — Nematoide das Lesões Radiculares (NLR)</div>
+      <div class="nota"><strong>Unidade:</strong> espécimes por 200 cm³ de solo e por grama de raiz. Ocorre em 96,2% das áreas algodoeiras do MT e em mais de 99% das amostras de soja em algumas regiões. Solos arenosos (15–25% de argila) amplificam muito os danos. Populações acima de 1 espécime/cm³ de solo correlacionam-se com danos expressivos.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Nível</th><th>Esp./200 cm³ solo</th><th>Esp./g raiz</th><th>Perda soja</th><th>Perda milho</th><th>Perda algodão</th><th>Perda cana</th></tr></thead>
+        <tbody>
+          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td></tr>
+          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 100</td><td class="c1">&lt; 5</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 8%</td><td class="c1">&lt; 8%</td><td class="c1">&lt; 10%</td></tr>
+          <tr><td class="tl c2">Média</td><td class="c2">101 – 500</td><td class="c2">5 – 19</td><td class="c2">10 – 25%</td><td class="c2">8 – 15%</td><td class="c2">8 – 20%</td><td class="c2">10 – 20%</td></tr>
+          <tr><td class="tl c3">Alta</td><td class="c3">501 – 2.000</td><td class="c3">19 – 30</td><td class="c3">25 – 50%</td><td class="c3">15 – 30%</td><td class="c3">20 – 35%</td><td class="c3">20 – 35%</td></tr>
+          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 2.000 (&gt; 1/cm³)</td><td class="c4">&gt; 30</td><td class="c4">até 50%</td><td class="c4">até 30%</td><td class="c4">30 – 50%</td><td class="c4">30 – 50%</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fonte">Refs.: Franchini et al. (Embrapa, 2014); Instituto Phytus-RS (2024); Galbieri &amp; Asmus (Embrapa Algodão, 2016) — <em>P. brachyurus</em> em 96,2% das áreas do MT.</div>
+
+      <div class="mt">3.4 <em>Pratylenchus zeae</em> — Nematoide das Lesões em Cana-de-açúcar</div>
+      <div class="nota"><strong>Unidade:</strong> espécimes por 50 g de raiz fresca (padrão IAC). <em>P. zeae</em> está presente em 97% das amostras de canaviais brasileiros (Dinardo-Miranda, IAC). Endoparasita migrador, move-se pelo córtex radicular causando lesões necróticas avermelhadas que escurecem por fungos secundários.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Nível</th><th>Esp./50 g raiz fresca</th><th>Perda cana-planta</th><th>Perda cana-soca (t/ha/corte)</th><th>Observação</th></tr></thead>
+        <tbody>
+          <tr><td class="tl c0">Ausente / Traço</td><td class="c0">&lt; 10</td><td class="c0">Não significativa</td><td class="c0">—</td><td>Presente em 97% dos canaviais — traço considerado natural.</td></tr>
+          <tr><td class="tl c1">Baixa</td><td class="c1">10 – 500</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 5 t/ha</td><td>Convivência possível. Variedades tolerantes minimizam o impacto.</td></tr>
+          <tr><td class="tl c2">Média</td><td class="c2">501 – 2.500</td><td class="c2">10 – 20%</td><td class="c2">5 – 10 t/ha</td><td>Próximo ao NDE. Manejo preventivo e variedades tolerantes.</td></tr>
+          <tr><td class="tl c3">Alta (NDE)</td><td class="c3">&gt; 2.500</td><td class="c3">20 – 35%</td><td class="c3">10 – 20 t/ha</td><td>Redução de biomassa radicular e perfilhamento. Manejo urgente.</td></tr>
+          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 7.000 (&gt; 70/g)</td><td class="c4">até 50%</td><td class="c4">&gt; 20 t/ha</td><td>Raízes escurecidas/apodrecidas. Reforma antecipada do canavial.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fonte">Refs.: Dinardo-Miranda (2005); Syngenta MaisAgro (2026); Staphyt Brasil/Conchal-SP (2024); SGS Brasil (2021).</div>
+
+      <div class="mt">3.5 <em>Rotylenchulus reniformis</em> — Nematoide Reniforme</div>
+      <div class="nota"><strong>Unidade:</strong> fêmeas + juvenis por 200 cm³ de solo. Limiar internacional: 1–10 nematoides/cm³ de solo já é suficiente para causar dano em mudas de algodão (Robinson et al., 1997). 4.500 esp./200 cm³ = sintomas "carijó" evidentes no algodão (Galbieri &amp; Asmus, MT). Semi-endoparasita — diagnóstico dificultado pela ausência de sintomas em populações moderadas.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Nível</th><th>Fêmeas+J/200 cm³ solo</th><th>Perda algodão</th><th>Perda soja</th><th>Perda abacaxi</th><th>Ação</th></tr></thead>
+        <tbody>
+          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td>Prevenção. Não coexiste com <em>Meloidogyne</em> (competição entre espécies).</td></tr>
+          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 500</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 15%</td><td>Monitoramento. Cultivares tolerantes. <em>Crotalaria</em> na rotação.</td></tr>
+          <tr><td class="tl c2">Média</td><td class="c2">501 – 2.000</td><td class="c2">10 – 25%</td><td class="c2">10 – 20%</td><td class="c2">15 – 30%</td><td>Nematicida biológico. Atenção à interação com <em>Fusarium</em> spp.</td></tr>
+          <tr><td class="tl c3">Alta</td><td class="c3">2.001 – 4.500</td><td class="c3">25 – 40%</td><td class="c3">20 – 35%</td><td class="c3">30 – 50%</td><td>Nematicida químico. Rotação com milho/sorgo. Sintomas "carijó".</td></tr>
+          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 4.500</td><td class="c4">até 50%</td><td class="c4">até 40%</td><td class="c4">até 60%</td><td>Risco de perdas totais.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fonte">Refs.: Galbieri &amp; Asmus (2016); Robinson et al. (1997); Bioscience Journal/UFU (2014) — perdas 23,1% e 35% em cultivares de algodão no MT.</div>
+
+      <div class="mt">3.6 <em>Aphelenchoides besseyi</em> — Nematoide da Haste Verde (NHV) / "Soja Louca II"</div>
+      <div class="nota"><strong>Particularidade:</strong> nematoide foliar/aéreo. Parasita flores, folhas, inflorescências e vagens — <strong>não é detectado em análise de solo convencional.</strong> A amostragem deve incluir folhas, nós, vagens e grãos. Sobrevive em palhada, sementes e solo por período limitado. Hospedeiras alternativas: arroz, algodão, feijão, jambu.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Nível</th><th>Esp./g folha ou grão<br>(extração laboratorial)</th><th>Sintomas</th><th>Perda soja</th><th>Ação</th></tr></thead>
+        <tbody>
+          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">Nenhum</td><td class="c0">0</td><td>Monitorar histórico da área. Usar semente certificada.</td></tr>
+          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 10</td><td class="c1">Leve engrossamento nos nós</td><td class="c1">5 – 20%</td><td>Tratamento de sementes. Monitorar a lavoura em R1–R5.</td></tr>
+          <tr><td class="tl c2">Média</td><td class="c2">11 – 50</td><td class="c2">Retenção foliar, hastes verdes, caneluras</td><td class="c2">20 – 60%</td><td>Tratamento de sementes obrigatório. Rotação com não-hospedeiras.</td></tr>
+          <tr><td class="tl c3">Alta</td><td class="c3">51 – 200</td><td class="c3">Rosetamento de racemos, aborto de flores, vagens deformadas</td><td class="c3">60 – 90%</td><td>Epidemia confirmada. Suspender hospedeiras por 1–2 anos.</td></tr>
+          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 200</td><td class="c4">Plantas sem vagens maduras, grãos verdes, perda de reboleiras</td><td class="c4">até 100%</td><td>Epifitia. Área com histórico de "soja louca II".</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fonte">Refs.: Meyer et al. (2017b); Repositório UEL (2024); Favoreto &amp; Loreto (2023).</div>
+
+      <div class="mt">3.7 Espécies emergentes — <em>Helicotylenchus dihystera</em>, <em>Scutellonema brachyurus</em> e <em>Tubixaba tuxaua</em></div>
+      <div class="nota"><strong>Status:</strong> NDE ainda não totalmente estabelecido na literatura brasileira. São considerados "patógenos potenciais" em expansão. O aumento gradual nas análises de solo é indicativo de ambiente favorável e exige monitoramento.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Espécie</th><th>Tipo de parasitismo</th><th>Culturas afetadas</th><th>Nível de atenção sugerido</th><th>Status do NDE</th></tr></thead>
+        <tbody>
+          <tr><td class="tl it">Helicotylenchus dihystera<br><span style="font-size:.72rem;color:#8a97a3">N. espiralado</span></td><td>Ectoparasita migrador</td><td>Soja, milho, cana, pastagens</td><td class="c2">Monitorar &gt; 200 esp./200 cm³</td><td>Em definição — crescimento populacional é sinal de alerta.</td></tr>
+          <tr><td class="tl it">Scutellonema brachyurus<br><span style="font-size:.72rem;color:#8a97a3">N. falso-espiral</span></td><td>Ecto/semiendoparasita</td><td>Soja, milho, inhame, pastagens</td><td class="c2">Monitorar &gt; 300 esp./200 cm³</td><td>Em definição — associado a quedas de produtividade em alta densidade.</td></tr>
+          <tr><td class="tl it">Tubixaba tuxaua<br><span style="font-size:.72rem;color:#8a97a3">N. específico de soja</span></td><td>Endoparasita migrador</td><td>Soja, milho, trigo</td><td class="c3">Atenção &gt; 100 esp./200 cm³</td><td>Causa danos em Latossolo Vermelho — patogenicidade confirmada (PR/MA).</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fonte">Refs.: Elevagro (2024); AgroInsight (2021); Agroadvance (2025); Furlanetto et al. (2010).</div>
+
+    </div>
+  </div>
+
+  <!-- SEÇÃO 2 — POR CULTURA -->
   <div class="gsec" id="hospedeiros">
-    <div class="gsh"><span class="num">3</span> Hospedabilidade por espécie — base para rotação de culturas</div>
+    <div class="gsh"><span class="num">4</span> Hospedabilidade por espécie — base para rotação de culturas</div>
     <div class="gsb">
       <div class="legchip">Classificação simplificada: <span class="chip hp">Principal (multiplica muito)</span> <span class="chip hs">Secundário (multiplica moderado)</span> <span class="chip hr">Resistente / não-hospedeiro (reduz população)</span> <span class="chip hv">Variável (depende de cultivar/raça)</span></div>
       <div class="tw"><table class="gt">
@@ -403,7 +406,7 @@
 
   <!-- SEÇÃO 4 — REFERÊNCIAS -->
   <div class="gsec" id="refs">
-    <div class="gsh"><span class="num">Ref</span> Referências bibliográficas</div>
+    <div class="gsh"><span class="num">5</span> Referências bibliográficas</div>
     <div class="gsb">
       <div class="gdesc">Fontes primárias e secundárias consultadas para a elaboração deste guia.</div>
       <div class="ref-item"><span class="ref-n">1.</span><span>ASMUS, G. L.; CECCON, G. <strong>Níveis de danos do nematoide de cisto da soja.</strong> Embrapa Agropecuária Oeste, Comunicado Técnico 69, Dourados-MS, 2002.</span></div>

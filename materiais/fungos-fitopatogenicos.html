@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Interpretação de Fungos Fitopatogênicos de Solo — LAMAM</title>
+<meta name="description" content="Como interpretar a densidade de inóculo de Fusarium e Macrophomina no solo. Material técnico do LAMAM — foco em solos de Cerrado e de textura média a argilosa.">
+<link rel="icon" href="../favicon.ico">
+<meta property="og:title" content="Guia de Interpretação de Fungos Fitopatogênicos de Solo — LAMAM">
+<meta property="og:description" content="Risco por densidade de inóculo de Fusarium e Macrophomina no solo, com foco em solos de Cerrado.">
+<meta property="og:image" content="https://laboratoriolamam.com.br/img/svc-patologia-plantas.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .gwrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+  .guia-hero{background:linear-gradient(140deg,#081f33,#10416a 70%);color:#fff;padding:54px 0 46px;}
+  .guia-hero .eyebrow{color:var(--cyan-l);}
+  .guia-hero h1{color:#fff;font-size:2.1rem;font-weight:800;margin:10px 0 12px;max-width:780px;}
+  .guia-hero p{color:#cfe2f0;font-size:1.05rem;max-width:720px;}
+  .guia-hero .base{font-size:.82rem;color:#9fc1d8;margin-top:14px;}
+  .guia-hero .rev{font-size:.8rem;color:var(--cyan-l);margin-top:6px;font-style:italic;}
+  .guia-hero .acts{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;}
+  .crumb{background:var(--bg);border-bottom:1px solid var(--borda);font-size:.86rem;}
+  .crumb .gwrap{padding-top:13px;padding-bottom:13px;color:var(--cinza);}
+  .crumb a{color:var(--navy);font-weight:500;} .crumb a:hover{color:var(--cyan);} .crumb span{margin:0 8px;color:var(--cinza-l);}
+  .body-area{background:var(--bg);padding:34px 0 56px;}
+  .gsec{background:#fff;border:1px solid var(--borda);border-radius:12px;box-shadow:var(--sh);margin-bottom:26px;overflow:hidden;}
+  .gsh{background:var(--navy);color:#fff;padding:13px 22px;font-family:'Poppins';font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:11px;}
+  .gsh .num{background:rgba(255,255,255,.18);border-radius:8px;min-width:28px;height:28px;display:grid;place-items:center;font-size:.85rem;}
+  .gsb{padding:20px 22px;}
+  .gdesc{font-size:.86rem;color:var(--cinza);margin-bottom:14px;border-bottom:1px solid var(--borda);padding-bottom:10px;}
+  .mt{font-family:'Poppins';font-size:.96rem;font-weight:700;color:var(--navy);margin:20px 0 8px;padding-left:10px;border-left:3px solid var(--cyan);}
+  .mt em{font-style:italic;}
+  /* Legenda (patógeno: mais baixo = melhor) */
+  .leg{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:8px 0;}
+  .li{border-radius:8px;padding:11px 9px;text-align:center;font-size:.8rem;font-weight:700;border:1.5px solid;}
+  .li small{display:block;font-weight:400;font-size:.71rem;margin-top:3px;opacity:.88;}
+  .l0{background:#eef1f4;border-color:#c2ccd6;color:#5b6b78;}
+  .l1{background:#e6f4ea;border-color:#6cc08a;color:#1f7a44;}
+  .l2{background:#fff3d6;border-color:#e7b84d;color:#8a6100;}
+  .l3{background:#ffe6d2;border-color:#f0935a;color:#b3500f;}
+  .l4{background:#fbe3e3;border-color:#e08a8a;color:#c1121f;}
+  /* Tabelas */
+  .tw{overflow-x:auto;margin:10px 0;}
+  table.gt{width:100%;border-collapse:collapse;font-size:.8rem;}
+  table.gt th{background:var(--navy);color:#fff;padding:8px 9px;text-align:center;font-weight:600;border:1px solid #0f3a59;font-size:.78rem;}
+  table.gt th.tl{text-align:left;}
+  table.gt td{padding:7px 9px;border:1px solid var(--borda);text-align:center;vertical-align:middle;color:#2b3a45;}
+  table.gt td.tl{text-align:left;font-weight:600;}
+  table.gt td.txt{text-align:left;font-weight:400;font-size:.78rem;}
+  table.gt td.it{font-style:italic;text-align:left;font-size:.78rem;}
+  table.gt tr:nth-child(even) td{background:#fafcfe;}
+  .c0{background:#eef1f4!important;color:#5b6b78;font-size:.76rem;}
+  .c1{background:#e6f4ea!important;color:#1f7a44;font-weight:600;}
+  .c2{background:#fff3d6!important;color:#8a6100;font-weight:600;}
+  .c3{background:#ffe6d2!important;color:#b3500f;font-weight:700;}
+  .c4{background:#fbe3e3!important;color:#c1121f;font-weight:700;}
+  /* Notas */
+  .nota{background:var(--bg);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:11px 14px;font-size:.82rem;color:#33414c;margin:10px 0;}
+  .aviso{background:#fff7e6;border-left:4px solid #e7a13a;border-radius:0 8px 8px 0;padding:11px 14px;font-size:.82rem;color:#7a5300;margin:10px 0;}
+  .fonte{font-size:.73rem;color:var(--cinza-l);margin-top:8px;font-style:italic;}
+  /* Referências */
+  .ref-item{display:flex;gap:10px;margin-bottom:8px;font-size:.8rem;line-height:1.5;color:#33414c;}
+  .ref-n{color:var(--cyan);font-weight:700;min-width:30px;flex-shrink:0;}
+  /* Aviso legal topo + escopo + sumário + dica mobile */
+  .aviso-top{background:#fff7e6;border:1px solid #f0c66a;border-left:5px solid #e7a13a;border-radius:10px;padding:14px 18px;font-size:.86rem;color:#7a5300;margin-bottom:14px;}
+  .escopo{background:#eef5fb;border:1px solid #cfe0ee;border-left:5px solid var(--cyan);border-radius:10px;padding:14px 18px;font-size:.86rem;color:#1f4e6b;margin-bottom:22px;}
+  .rot-hint{display:none;background:#eef5fb;border:1px solid var(--borda);border-radius:8px;padding:9px 13px;font-size:.82rem;color:var(--navy);margin-bottom:18px;text-align:center;}
+  .sumario{background:#fff;border:1px solid var(--borda);border-radius:12px;box-shadow:var(--sh);padding:18px 22px;margin-bottom:26px;}
+  .sum-t{font-family:'Poppins';font-weight:700;color:var(--navy);font-size:1.05rem;margin-bottom:10px;}
+  .sum-list{margin:0;padding-left:20px;font-size:.9rem;color:#33414c;}
+  .sum-list li{margin-bottom:6px;}
+  .sum-list a{color:var(--navy);font-weight:600;text-decoration:none;}
+  .sum-list a:hover{color:var(--cyan);text-decoration:underline;}
+  .gsec, .mt{scroll-margin-top:90px;}
+  @media(max-width:760px){ .leg{grid-template-columns:repeat(2,1fr);} .guia-hero h1{font-size:1.5rem;} .rot-hint{display:block;} }
+  @media print{ header,.crumb,.guia-hero .acts,.wpp,footer .fline{display:none!important;} .body-area{background:#fff;padding:0;} .gsec{box-shadow:none;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../icon.png" alt="LAMAM"> LAMAM</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="../index.html#inicio">Início</a></li>
+        <li><a href="../index.html#servicos">Serviços</a></li>
+        <li><a href="../index.html#galeria">Galeria</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
+        <li><a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumb"><div class="gwrap"><a href="../index.html">Início</a> <span>›</span> <a href="../index.html#servicos">Serviços</a> <span>›</span> <a href="../servicos/fungos-solo.html">Fungos de solo</a> <span>›</span> <b>Guia de fungos fitopatogênicos</b></div></nav>
+
+<section class="guia-hero">
+  <div class="gwrap">
+    <span class="eyebrow">Material técnico</span>
+    <h1>Guia de Interpretação — Fungos Fitopatogênicos de Solo</h1>
+    <p>Como ler a densidade de inóculo de <em>Fusarium</em> e <em>Macrophomina</em> no laudo de solo — entendendo que, para patógenos, <strong>quanto menor a população, melhor</strong>.</p>
+    <div class="base">Base técnica: Embrapa · IAC · SciELO · literatura científica nacional e internacional.</div>
+    <div class="rev">Última revisão: junho de 2026</div>
+    <div class="acts">
+      <a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener">Falar com o laboratório</a>
+    </div>
+  </div>
+</section>
+
+<div class="body-area">
+<div class="gwrap">
+
+  <div class="aviso-top"><strong>Aviso legal — </strong>este material é uma referência técnica compilada a partir de fontes científicas e <strong>não substitui o laudo oficial</strong> emitido pelo laboratório nem a recomendação individualizada de um Engenheiro Agrônomo habilitado. Para fungos de solo, a densidade de inóculo é um <strong>indicador de pressão/risco</strong>, não um preditor direto de perda.</div>
+
+  <div class="escopo"><strong>Escopo deste guia — textura do solo:</strong> as faixas de UFC/g e de microesclerócios apresentadas referem-se a <strong>solos de Cerrado e de textura média a argilosa</strong>. A textura influencia fortemente o resultado: <strong>solos arenosos apresentam populações fúngicas naturalmente muito menores</strong>, de modo que um mesmo número de UFC/g tem peso diferente. Sempre interprete o laudo considerando a textura e o histórico da área.</div>
+
+  <div class="rot-hint">Dica: no celular, gire a tela na horizontal para visualizar melhor as tabelas.</div>
+
+  <div class="sumario">
+    <div class="sum-t">Sumário</div>
+    <ol class="sum-list">
+      <li><a href="#leg">Como ler este guia — lógica e classificação</a></li>
+      <li><a href="#fusarium"><em>Fusarium</em> — interpretação no solo</a></li>
+      <li><a href="#macrophomina"><em>Macrophomina</em> — interpretação no solo</a></li>
+      <li><a href="#integracao">Como ler o laudo — perguntas na ordem certa</a></li>
+      <li><a href="#refs">Referências bibliográficas</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 — COMO LER -->
+  <div class="gsec" id="leg">
+    <div class="gsh"><span class="num">1</span> Como ler este guia — lógica e classificação</div>
+    <div class="gsb">
+      <div class="gdesc">Fungos de solo se comportam de modo diferente dos nematoides. Não há um Nível de Dano Econômico (NDE) linear: o risco depende da <strong>tríade da doença</strong> — hospedeiro suscetível + patógeno virulento + ambiente favorável. A presença do fungo no laudo <strong>não garante doença</strong>; a densidade indica a pressão de inóculo.</div>
+      <div class="nota"><strong>Lógica ecológica:</strong> para patógenos, <strong>populações menores são melhores</strong>. Densidades baixas significam menor potencial de epidemia e solos mais equilibrados; densidades altas indicam acúmulo de inóculo e histórico de doença. Para <em>Fusarium</em>, além da quantidade importa <em>qual</em> Fusarium — o gênero reúne desde saprófitas comuns até formas patogênicas específicas de cada cultura; o laudo de gênero é o primeiro sinal, e a cultura, o histórico e o ambiente refinam o risco.</div>
+      <div class="leg">
+        <div class="li l0">AUSENTE<small>Não detectado</small></div>
+        <div class="li l1">BAIXO<small>Baixa pressão de inóculo — favorável</small></div>
+        <div class="li l2">MODERADO<small>Atenção — monitorar</small></div>
+        <div class="li l3">ALTO<small>Risco elevado de doença</small></div>
+        <div class="li l4">CRÍTICO<small>Pressão severa — perdas prováveis</small></div>
+      </div>
+      <div class="aviso"><strong>Importante:</strong> a correlação entre densidade de inóculo e doença é <strong>fraca para fungos de solo</strong> — a virulência do isolado, a resistência da cultivar e o ambiente (umidade, temperatura, textura) pesam mais que o número puro. Use as faixas como referência de risco, não como critério absoluto. A interpretação deve ser feita por Engenheiro Agrônomo habilitado.</div>
+    </div>
+  </div>
+
+  <!-- 2 — FUSARIUM -->
+  <div class="gsec" id="fusarium">
+    <div class="gsh"><span class="num">2</span> <em style="font-style:italic">Fusarium</em> — interpretação no solo</div>
+    <div class="gsb">
+      <div class="gdesc">É o gênero fitopatogênico mais frequente em laudos de solo. O risco depende da espécie/forma especial envolvida e, fortemente, do ambiente — <em>Fusarium</em> sobrevive por anos no solo como clamidósporos (estruturas de resistência de parede espessa), o que torna a redução de inóculo um processo lento.</div>
+
+      <div class="mt">2.1 Ecologia no solo — o que favorece cada forma</div>
+      <div class="tw"><table class="gt">
+        <thead><tr>
+          <th class="tl">Espécie / forma especial</th>
+          <th>Hospedeiro principal</th>
+          <th>Condição de solo que favorece</th>
+          <th>Estrutura de resistência</th>
+          <th>Persistência no solo</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="it">F. solani f.sp. glycines<br><small>(podridão vermelha da raiz)</small></td><td class="txt">Soja</td><td class="txt">Solo encharcado, mal drenado, temperaturas amenas (15–20 °C)</td><td class="txt">Clamidósporos (abundantes)</td><td class="c4">5–15 anos</td></tr>
+          <tr><td class="it">F. oxysporum f.sp. phaseoli<br><small>(murcha-de-fusário)</small></td><td class="txt">Feijão</td><td class="txt">Solo compactado, monocultura irrigada, pH ácido</td><td class="txt">Clamidósporos</td><td class="c3">3–5 anos</td></tr>
+          <tr><td class="it">F. solani f.sp. phaseoli<br><small>(podridão radicular seca)</small></td><td class="txt">Feijão</td><td class="txt">Compactação, ferimentos radiculares, alta umidade</td><td class="txt">Clamidósporos</td><td class="c4">Vários anos</td></tr>
+          <tr><td class="it">F. verticillioides</td><td class="txt">Milho</td><td class="txt">Solo quente, resíduos de milho não decompostos</td><td class="txt">Macro/microconídios (sem clamidósporos)</td><td class="c2">1–2 anos</td></tr>
+          <tr><td class="it">F. oxysporum (demais f.sp.)</td><td class="txt">Específico de cada cultura</td><td class="txt">Exsudatos radiculares do hospedeiro ativam o inóculo dormente</td><td class="txt">Clamidósporos</td><td class="c4">3–10 anos</td></tr>
+        </tbody>
+      </table></div>
+      <div class="nota"><strong>Especificidade de hospedeiro:</strong> cada forma especial de <em>F. oxysporum</em> ataca essencialmente uma cultura — a presença de uma f.sp. de tomate, por exemplo, é inofensiva para a soja. Por isso a leitura do laudo só faz sentido cruzada com a <strong>cultura que será plantada</strong>.</div>
+
+      <div class="mt">2.2 Interpretação de risco — Soja (podridão vermelha da raiz)</div>
+      <div class="tw"><table class="gt">
+        <thead><tr>
+          <th class="tl">Indicador</th>
+          <th class="c0">Ausente</th>
+          <th class="c1">Baixo</th>
+          <th class="c2">Moderado</th>
+          <th class="c3">Alto</th>
+          <th class="c4">Crítico</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="tl"><em>F. solani</em> f.sp. <em>glycines</em><br>UFC/g solo <small>(meio seletivo)</small></td>
+            <td class="c0">Não detectado</td><td class="c1">Traço</td><td class="c2">10<sup>2</sup>–10<sup>3</sup></td><td class="c3">10<sup>3</sup>–10<sup>4</sup></td><td class="c4">&gt; 10<sup>4</sup></td>
+          </tr>
+          <tr>
+            <td class="tl">Perda estimada de produtividade</td>
+            <td class="c0">0%</td><td class="c1">&lt; 5%</td><td class="c2">5–20%</td><td class="c3">20–40%</td><td class="c4">até 100% em várzea</td>
+          </tr>
+          <tr>
+            <td class="tl">Condição de solo agravante</td>
+            <td class="c0">Boa drenagem</td><td class="c1">Umidade alta temporária</td><td class="c2">Solo úmido + 15–20 °C</td><td class="c3">Encharcamento + solo mal drenado</td><td class="c4">Várzea + encharcamento prolongado + cultivar suscetível</td>
+          </tr>
+          <tr>
+            <td class="tl">Sintoma diagnóstico</td>
+            <td class="c0">Nenhum</td><td class="c1">Atrofia radicular leve</td><td class="c2">Raiz avermelhada</td><td class="c3">Podridão radicular + folha "carijó" (amarelecimento internervural)</td><td class="c4">Murcha irreversível + raízes podres</td>
+          </tr>
+        </tbody>
+      </table></div>
+      <div class="aviso"><strong>Atenção à correlação:</strong> para <em>Fusarium</em>, a densidade pura é menos determinante que a <strong>virulência do isolado</strong> e a <strong>resistência da cultivar</strong>. Além disso, <strong>nematoides</strong> (<em>Meloidogyne</em>, <em>Pratylenchus</em>) amplificam o dano — os ferimentos nas raízes abrem porta de entrada para o fungo. Consulte sempre o laudo nematológico em conjunto.</div>
+
+      <div class="mt">2.3 Persistência e rotação</div>
+      <div class="nota">O clamidósporo persiste por <strong>3–10 anos</strong> (até 15 para <em>F. solani</em>) mesmo sem o hospedeiro — por isso áreas com histórico exigem <strong>rotações longas</strong> (3–5 anos) para reduzir o inóculo de forma significativa. Cuidado: <em>F. solani</em> f.sp. <em>glycines</em> sobrevive em raízes de <strong>milho e algodão</strong>, então rotação com essas culturas é <strong>ineficaz</strong> para a podridão vermelha da soja — prefira gramíneas forrageiras (braquiária).</div>
+    </div>
+  </div>
+
+  <!-- 3 — MACROPHOMINA -->
+  <div class="gsec" id="macrophomina">
+    <div class="gsh"><span class="num">3</span> <em style="font-style:italic">Macrophomina</em> — interpretação no solo</div>
+    <div class="gsb">
+      <div class="gdesc">É o patógeno do <strong>estresse hídrico</strong> por excelência (podridão de carvão / podridão cinzenta da raiz) — muito relevante no Cerrado, onde veranicos e altas temperaturas são comuns. Sobrevive como <strong>microesclerócios</strong> por até 15 anos e raramente causa dano severo em plantas com boa disponibilidade de água.</div>
+      <div class="nota"><strong>O clima é o gatilho principal:</strong> a germinação dos microesclerócios é estimulada por <strong>déficit hídrico + temperatura alta</strong> (ótimo de 30–35 °C). A correlação da densidade com a perda é fraca — o veranico determina o dano mais do que o número de microesclerócios. Ainda assim, <strong>quanto menor a densidade, menor o risco</strong> em um ano de seca. É polífago (&gt; 500 hospedeiros): milho, algodão e feijão também multiplicam o inóculo, o que limita a eficácia da rotação com essas culturas.</div>
+
+      <div class="mt">3.1 Interpretação de risco — <em>Macrophomina phaseolina</em></div>
+      <div class="tw"><table class="gt">
+        <thead><tr>
+          <th class="tl">Indicador</th>
+          <th class="c0">Ausente</th>
+          <th class="c1">Baixo</th>
+          <th class="c2">Moderado</th>
+          <th class="c3">Alto</th>
+          <th class="c4">Crítico</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="tl">Microesclerócios/g solo<br><small>(camada 0–7,5 cm)</small></td>
+            <td class="c0">0</td><td class="c1">&lt; 5</td><td class="c2">5–15<br><small>(média PR: 7,9–14,3)</small></td><td class="c3">15–50</td><td class="c4">&gt; 50<br><small>(até 215 em rotação longa)</small></td>
+          </tr>
+          <tr>
+            <td class="tl">Incidência de colmos infectados</td>
+            <td class="c0">0%</td><td class="c1">&lt; 10%</td><td class="c2">10–30%</td><td class="c3">30–70%</td><td class="c4">&gt; 70%</td>
+          </tr>
+          <tr>
+            <td class="tl">Perda estimada (soja)</td>
+            <td class="c0">0</td><td class="c1">&lt; 5%</td><td class="c2">5–20%</td><td class="c3">20–40%</td><td class="c4">até 50%</td>
+          </tr>
+          <tr>
+            <td class="tl">Condição climática de risco</td>
+            <td class="c0">Sem veranico</td><td class="c1">Déficit leve (&lt; 7 dias)</td><td class="c2">Veranico 7–15 dias + T &gt; 30 °C</td><td class="c3">Veranico &gt; 15 dias + T &gt; 35 °C no enchimento</td><td class="c4">Estresse severo prolongado + compactação</td>
+          </tr>
+        </tbody>
+      </table></div>
+      <div class="aviso"><strong>Diagnóstico de campo:</strong> microesclerócios aparecem como pontos pretos na epiderme e no córtex das raízes seccionadas (visíveis em lupa). Solo compactado, com temperatura superficial acima de 50 °C nas horas mais quentes, é o ambiente ideal de infecção. A interação com o nematoide <em>Pratylenchus brachyurus</em> potencializa a entrada do fungo — o laudo nematológico deve ser consultado em conjunto.</div>
+    </div>
+  </div>
+
+  <!-- 4 — INTEGRAÇÃO -->
+  <div class="gsec" id="integracao">
+    <div class="gsh"><span class="num">4</span> Como ler o laudo — perguntas na ordem certa</div>
+    <div class="gsb">
+      <div class="gdesc">A densidade é apenas um dos fatores. Antes de decidir o manejo, percorra estas perguntas na ordem.</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl" style="width:6%">#</th><th class="tl">Pergunta</th><th>Por que importa</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="tl">Qual fungo — gênero ou espécie/forma?</td><td class="txt">"<em>Fusarium</em> spp." é o primeiro sinal; a espécie/f.sp. e a cultura refinam muito o prognóstico.</td></tr>
+          <tr><td>2</td><td class="tl">Qual a estrutura de resistência?</td><td class="txt">Clamidósporos (<em>Fusarium</em>, 3–10 anos) e microesclerócios (<em>Macrophomina</em>, até 15 anos) definem a persistência no solo.</td></tr>
+          <tr><td>3</td><td class="tl">Qual a densidade — UFC/g ou microesclerócios/g?</td><td class="txt">Indica a magnitude do inóculo; lembre que <strong>menor é melhor</strong>, mas não é o único determinante.</td></tr>
+          <tr><td>4</td><td class="tl">Qual a cultura a ser plantada?</td><td class="txt">A especificidade de hospedeiro define se aquele <em>Fusarium</em> é ou não uma ameaça para a lavoura.</td></tr>
+          <tr><td>5</td><td class="tl">Qual o histórico e a previsão climática?</td><td class="txt"><em>Macrophomina</em>: risco depende de veranico. <em>F. solani</em> (PVR): risco depende de encharcamento em temperatura amena.</td></tr>
+          <tr><td>6</td><td class="tl">Há nematoides no laudo nematológico?</td><td class="txt"><em>Meloidogyne</em>/<em>Pratylenchus</em> + <em>Fusarium</em>/<em>Macrophomina</em> = sinergismo de dano. Análise integrada obrigatória.</td></tr>
+          <tr><td>7</td><td class="tl">Qual a textura e a condição física do solo?</td><td class="txt">Solos arenosos têm populações fúngicas naturalmente menores. Compactação favorece <em>Fusarium</em> e <em>Macrophomina</em>.</td></tr>
+          <tr><td>8</td><td class="tl">É ponto único ou série temporal?</td><td class="txt">A tendência (subindo ou descendo) é mais informativa que um valor isolado.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="aviso"><strong>Aviso técnico:</strong> os valores de UFC/g e de microesclerócios são indicadores de pressão de inóculo, não preditores diretos de perda. A decisão de manejo deve resultar da análise integrada (laudo fitopatológico + nematológico + histórico climático + textura/condição física do solo + cultivar), feita por Engenheiro Agrônomo habilitado com conhecimento da área.</div>
+      <div class="nota">Este guia será ampliado em próximas revisões com outros fungos de solo (<em>Cladosporium</em>, <em>Aspergillus</em>, <em>Penicillium</em>, <em>Rhizoctonia</em>).</div>
+    </div>
+  </div>
+
+  <!-- 5 — REFERÊNCIAS -->
+  <div class="gsec" id="refs">
+    <div class="gsh"><span class="num">5</span> Referências bibliográficas</div>
+    <div class="gsb">
+      <div class="mt"><em>Fusarium</em></div>
+      <div class="ref-item"><span class="ref-n">1.</span><span>LOPES, C. A.; REIS, A. <strong>Murcha-de-fusário: importante doença do tomateiro.</strong> Anais da Academia Pernambucana de Ciência Agronômica, 2008–2009. UFRPE.</span></div>
+      <div class="ref-item"><span class="ref-n">2.</span><span>EMBRAPA / CNPT. <strong>Recuperação de colônias de Fusarium solani f.sp. glycines a partir de solo e raízes de soja.</strong> (Meio Nash-Snyder modificado).</span></div>
+      <div class="ref-item"><span class="ref-n">3.</span><span>UFLA / MENEZES, A. S. <strong>Espécies do complexo Fusarium oxysporum (FOSC) associadas ao feijoeiro.</strong> Dissertação, 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">4.</span><span>PET AGRONOMIA / UFSM. <strong>Fusarium solani na cultura da soja</strong> (podridão vermelha da raiz; sintoma "carijó"). 2022.</span></div>
+      <div class="ref-item"><span class="ref-n">5.</span><span>EMBRAPA FEIJÃO / AGEITEC. <strong>Doenças fúngicas do solo — feijão</strong> (nematoides como agravante de Fusarium).</span></div>
+      <div class="ref-item"><span class="ref-n">6.</span><span>NPDN — National Plant Diagnostic Network. <strong>Tips for identifying Fusarium — morphological identification.</strong> 2021.</span></div>
+      <div class="ref-item"><span class="ref-n">7.</span><span>FRONZA, V. <strong>Genética da reação da soja a Fusarium solani f.sp. glycines.</strong> Tese, USP, 2003 (herdabilidade 0,37–0,66).</span></div>
+      <div class="ref-item"><span class="ref-n">8.</span><span>RUPE, J. C.; HARTMAN, G. L. <strong>Sudden death syndrome of soybean</strong> (sobrevivência de F. solani em milho e algodão; rotação ineficaz). 1999.</span></div>
+
+      <div class="mt"><em>Macrophomina</em></div>
+      <div class="ref-item"><span class="ref-n">9.</span><span>EMBRAPA SOJA. <strong>Macrophomina phaseolina em soja.</strong> Documentos 346, Londrina, 2014 (densidades 7,9–14,3 e até 215 µesc./g).</span></div>
+      <div class="ref-item"><span class="ref-n">10.</span><span>EMBRAPA AGROPECUÁRIA OESTE / Tocantins. <strong>M. phaseolina em milho safrinha: levantamento.</strong> 2019 (incidência 88,1%; perdas 22–47,6%).</span></div>
+      <div class="ref-item"><span class="ref-n">11.</span><span>AGRON.COM.BR. <strong>Macrophomina phaseolina na cultura da soja</strong> (camada 0–7,5 cm; T solo &gt; 50 °C; sobrevivência 15 anos; &gt; 500 hospedeiros). 2021.</span></div>
+
+      <div class="aviso" style="margin-top:14px"><strong>Aviso técnico:</strong> as faixas deste guia referem-se a solos de Cerrado e de textura média a argilosa, e integram dados da literatura científica brasileira e internacional. Para interpretar um laudo específico é necessário considerar o método laboratorial, a textura do solo, as condições de amostragem e o histórico da área. A consulta a um Engenheiro Agrônomo habilitado é indispensável para a decisão de manejo.</div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../icon.png" alt="LAMAM" style="height:34px"> LAMAM</a>
+    <p>Laboratório Mineiro de Análises Agrícolas e Microbiológicas · Patos de Minas - MG</p>
+    <p class="fline">(34) 3825-1631 · <a href="https://wa.me/5534997741631" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></p>
+    <p class="fline" style="margin-top:12px;font-size:.8rem;color:#6f93ab">Guia de fungos fitopatogênicos do solo · compilação técnica LAMAM · Última revisão: junho de 2026</p>
+  </div>
+</footer>
+
+<a class="wpp" href="https://wa.me/5534997741631" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg></a>
+
+</body>
+</html>

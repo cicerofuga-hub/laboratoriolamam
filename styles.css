@@ -120,6 +120,25 @@ nav a:hover{color:var(--cyan)}
 .destaque-img:hover img{transform:scale(1.05)}
 @media(max-width:780px){ .destaque{grid-template-columns:1fr} .destaque-img{order:-1} .destaque-img img{max-height:200px} .destaque-txt{padding:30px 26px} }
 
+/* Materiais técnicos — grade de guias */
+.materiais-sec{padding:0 0 92px}
+.materiais-sec .sec-head{margin-bottom:30px}
+.mat-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:24px}
+.mat-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--borda);border-radius:16px;overflow:hidden;box-shadow:var(--sh);text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s}
+.mat-card:hover{transform:translateY(-4px);box-shadow:var(--sh-h)}
+.mat-thumb{display:block;height:150px;background-size:cover;background-position:center}
+.mat-body{padding:18px 20px;display:flex;flex-direction:column;gap:7px}
+.mat-tag{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--cyan)}
+.mat-body strong{font-family:'Poppins';font-size:1.12rem;color:var(--ink)}
+.mat-desc{font-size:.9rem;color:var(--cinza);line-height:1.5}
+.mat-link{margin-top:4px;font-weight:600;color:var(--navy)}
+.mat-card:hover .mat-link{color:var(--cyan)}
+.mat-pdfs{background:#fff;border:1px solid var(--borda);border-radius:14px;padding:15px 20px;font-size:.92rem;color:var(--cinza);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+.mat-pdfs-t{font-weight:700;color:var(--ink)}
+.mat-pdfs a{color:var(--navy);font-weight:500;text-decoration:none}
+.mat-pdfs a:hover{color:var(--cyan);text-decoration:underline}
+@media(max-width:780px){ .mat-grid{grid-template-columns:1fr} }
+
 .dif-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .dif{text-align:center;padding:14px}
 .dif .ic{display:inline-grid;place-items:center;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#eaf6fd,#d3ecfb);color:var(--navy);margin-bottom:14px}
