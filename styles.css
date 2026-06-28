@@ -67,6 +67,17 @@ nav a:hover{color:var(--cyan)}
 
 .serv{background:var(--bg)}
 
+/* ---- Credibilidade ---- */
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cred-card{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--borda);border-radius:18px;padding:28px;box-shadow:var(--sh)}
+.cred-ic{flex:none;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#eaf6fd,#d3ecfb);color:var(--navy)}
+.cred-ic svg{width:30px;height:30px}
+.cred-card h3{font-size:1.16rem;margin-bottom:7px;color:var(--navy)}
+.cred-card p{color:var(--cinza);font-size:.97rem}
+.cred-doc{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:600;color:var(--cyan);font-size:.92rem}
+.cred-doc:hover{color:var(--navy)}
+@media(max-width:900px){ .cred-grid{grid-template-columns:1fr} }
+
 /* ---- Cards de serviço (com foto) ---- */
 .scards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .scard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--borda);border-radius:16px;overflow:hidden;transition:transform .2s,box-shadow .25s;color:inherit}
