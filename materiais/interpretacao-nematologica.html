@@ -68,6 +68,18 @@
   /* Referências */
   .ref-item{display:flex;gap:10px;margin-bottom:8px;font-size:.8rem;line-height:1.5;color:#33414c;}
   .ref-n{color:var(--cyan);font-weight:700;min-width:30px;flex-shrink:0;}
+  /* Aviso legal topo + sumário */
+  .aviso-top{background:#fff7e6;border:1px solid #f0c66a;border-left:5px solid #e7a13a;border-radius:10px;padding:14px 18px;font-size:.86rem;color:#7a5300;margin-bottom:22px;}
+  .sumario{background:#fff;border:1px solid var(--borda);border-radius:12px;box-shadow:var(--sh);padding:18px 22px;margin-bottom:26px;}
+  .sum-t{font-family:'Poppins';font-weight:700;color:var(--navy);font-size:1.05rem;margin-bottom:10px;}
+  .sum-list{margin:0;padding-left:20px;font-size:.9rem;color:#33414c;}
+  .sum-list li{margin-bottom:6px;}
+  .sum-list a{color:var(--navy);font-weight:600;text-decoration:none;}
+  .sum-list a:hover{color:var(--cyan);text-decoration:underline;}
+  .sum-crops{display:block;margin-top:4px;font-size:.82rem;color:var(--cinza);font-weight:400;}
+  .sum-crops a{color:var(--cyan);font-weight:500;text-decoration:none;}
+  .sum-crops a:hover{text-decoration:underline;}
+  .gsec, .mt{scroll-margin-top:90px;}
   @media(max-width:700px){ .leg{grid-template-columns:repeat(2,1fr);} .guia-hero h1{font-size:1.5rem;} }
   @media print{ header,.crumb,.guia-hero .acts,.wpp,footer .fline{display:none!important;} .body-area{background:#fff;padding:0;} .gsec{box-shadow:none;} }
 </style>
@@ -108,8 +120,23 @@
 <div class="body-area">
 <div class="gwrap">
 
+  <div class="aviso-top"><strong>Aviso legal — </strong>este material é uma referência técnica compilada a partir de fontes científicas e <strong>não substitui o laudo oficial</strong> emitido pelo laboratório nem a recomendação individualizada de um Engenheiro Agrônomo habilitado. Os valores de Nível de Dano Econômico (NDE) variam com a cultura, a textura do solo, a cultivar, o clima e a presença de múltiplas espécies — devem ser sempre contextualizados à realidade da área.</div>
+
+  <div class="sumario">
+    <div class="sum-t">Sumário</div>
+    <ol class="sum-list">
+      <li><a href="#leg">Sistema de classificação de infestação</a></li>
+      <li><a href="#especies">Tabelas de referência por espécie de nematoide</a></li>
+      <li><a href="#culturas">Tabelas de interpretação por cultura</a>
+        <span class="sum-crops"><a href="#c-soja">Soja</a> · <a href="#c-milho">Milho</a> · <a href="#c-algodao">Algodão</a> · <a href="#c-cana">Cana</a> · <a href="#c-cafe">Café</a> · <a href="#c-banana">Banana</a> · <a href="#c-hortalicas">Hortaliças</a> · <a href="#c-citros">Citros</a> · <a href="#c-feijao">Feijão</a></span>
+      </li>
+      <li><a href="#hospedeiros">Hospedabilidade por espécie — rotação de culturas</a></li>
+      <li><a href="#refs">Referências bibliográficas</a></li>
+    </ol>
+  </div>
+
   <!-- LEGENDA -->
-  <div class="gsec">
+  <div class="gsec" id="leg">
     <div class="gsh"><span class="num">0</span> Sistema de classificação de infestação</div>
     <div class="gsb">
       <div class="gdesc">Categorias utilizadas em todas as tabelas deste guia. Os limites numéricos variam por espécie e cultura; as faixas estão detalhadas em cada tabela específica.</div>
@@ -125,7 +152,7 @@
   </div>
 
   <!-- SEÇÃO 1 — POR ESPÉCIE -->
-  <div class="gsec">
+  <div class="gsec" id="especies">
     <div class="gsh"><span class="num">1</span> Tabelas de referência por espécie de nematoide</div>
     <div class="gsb">
 
@@ -230,12 +257,12 @@
   </div>
 
   <!-- SEÇÃO 2 — POR CULTURA -->
-  <div class="gsec">
+  <div class="gsec" id="culturas">
     <div class="gsh"><span class="num">2</span> Tabelas de interpretação por cultura</div>
     <div class="gsb">
       <div class="gdesc">Cada tabela apresenta os principais nematoides da cultura, suas faixas populacionais de risco e perdas esperadas, na unidade-padrão mais utilizada na literatura para cada patossistema.</div>
 
-      <div class="mt">2.1 Soja (<em>Glycine max</em>)</div>
+      <div class="mt" id="c-soja">2.1 Soja (<em>Glycine max</em>)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Ausente</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda máx.</th></tr></thead>
         <tbody>
@@ -249,7 +276,7 @@
       <div class="nota"><strong>Alerta soja:</strong> <em>Pratylenchus</em> e <em>Meloidogyne</em> ocorrem simultaneamente em até 40% das áreas — o dano conjunto é sinérgico. A sucessão soja–milho safrinha em áreas infestadas por <em>P. brachyurus</em> eleva as populações perigosamente.</div>
       <div class="fonte">Perdas econômicas na soja: R$ 27,7 bilhões/safra (SBN/Syngenta/Agroconsult, 2022).</div>
 
-      <div class="mt">2.2 Milho (<em>Zea mays</em>)</div>
+      <div class="mt" id="c-milho">2.2 Milho (<em>Zea mays</em>)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
         <tbody>
@@ -260,7 +287,7 @@
       <div class="nota">No milho, as galhas são pequenas e passam despercebidas a olho nu. Milho é não-hospedeiro de <em>H. glycines</em> — ótima opção de rotação para o NCS. Atenção: o milho é hospedeiro de <em>P. brachyurus</em> — não interrompe o ciclo desse nematoide.</div>
       <div class="fonte">Refs.: Syngenta MaisAgro (2025) — 1.378 amostras de raízes de milho. Perda potencial: R$ 110,3 bi em 10 anos.</div>
 
-      <div class="mt">2.3 Algodão (<em>Gossypium hirsutum</em>)</div>
+      <div class="mt" id="c-algodao">2.3 Algodão (<em>Gossypium hirsutum</em>)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
         <tbody>
@@ -272,7 +299,7 @@
       <div class="nota">No algodão do Cerrado: <em>P. brachyurus</em> (96,2%), <em>M. incognita</em> (24,4%) e <em>R. reniformis</em> (12,8%) das áreas do MT. Populações mistas são mais destrutivas. Perda potencial: R$ 44,1 bi em 10 anos (SBN, 2022).</div>
       <div class="fonte">Refs.: Bioscience Journal/UFU (2014); Embrapa Algodão (Galbieri &amp; Asmus, 2016).</div>
 
-      <div class="mt">2.4 Cana-de-açúcar (<em>Saccharum officinarum</em>)</div>
+      <div class="mt" id="c-cana">2.4 Cana-de-açúcar (<em>Saccharum officinarum</em>)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta (NDE)</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
         <tbody>
@@ -285,7 +312,7 @@
       <div class="nota">Limiares de dano significativo para cana (Syngenta, 2026): 400 J2/50 g de raiz de <em>Meloidogyne</em> spp. e 2.500 <em>P. zeae</em>/50 g de raiz. Perda potencial: R$ 143,8 bi em 10 anos.</div>
       <div class="fonte">Refs.: Dinardo-Miranda (2005); SGS Brasil (2021); Staphyt (2024); AgroAdvance (2024).</div>
 
-      <div class="mt">2.5 Café (<em>Coffea arabica</em> e <em>C. canephora</em>)</div>
+      <div class="mt" id="c-cafe">2.5 Café (<em>Coffea arabica</em> e <em>C. canephora</em>)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
         <tbody>
@@ -298,7 +325,7 @@
       <div class="nota"><em>M. exigua</em> é a espécie mais disseminada no café brasileiro; menos agressiva em lavouras bem nutridas. Cultivares resistentes: IAPAR 59, Obatã IAC 1669-20, IAC 125 RN. Perda potencial: R$ 114 bi em 10 anos.</div>
       <div class="fonte">Refs.: Barbosa et al. (2004); Instituto Biológico de São Paulo (Boletim 32, 2018); IAC.</div>
 
-      <div class="mt">2.6 Banana / Bananeira (<em>Musa</em> spp.)</div>
+      <div class="mt" id="c-banana">2.6 Banana / Bananeira (<em>Musa</em> spp.)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
         <tbody>
@@ -311,7 +338,7 @@
       <div class="nota">Para banana não existe um número populacional universal de NDE — uma área com 100 nematoides/g de raiz pode ter plantas totalmente afetadas e outra, assintomáticas. Avalie sempre em conjunto com o estado visual das plantas. Controle essencial: mudas sadias e áreas indenes.</div>
       <div class="fonte">Refs.: Embrapa Banana; Terra Fértil (2022); UFPR (Pereira, 2003).</div>
 
-      <div class="mt">2.7 Hortaliças (tomate, alface, cenoura, batata, pimentão, pepino)</div>
+      <div class="mt" id="c-hortalicas">2.7 Hortaliças (tomate, alface, cenoura, batata, pimentão, pepino)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Cultura</th><th>Espécie principal</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
         <tbody>
@@ -325,7 +352,7 @@
       <div class="nota">Hortaliças são altamente suscetíveis. Múltiplas gerações de <em>Meloidogyne</em> em um único ciclo curto elevam exponencialmente a população para a safra seguinte. A cenoura cultivar Brasília (Embrapa Hortaliças) é referência histórica de tolerância.</div>
       <div class="fonte">Refs.: Embrapa Hortaliças; Becker (1990); Charchar &amp; Moita (Embrapa).</div>
 
-      <div class="mt">2.8 Citros (<em>Citrus</em> spp.)</div>
+      <div class="mt" id="c-citros">2.8 Citros (<em>Citrus</em> spp.)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda / Impacto</th></tr></thead>
         <tbody>
@@ -336,7 +363,7 @@
       <div class="nota"><em>T. semipenetrans</em> causa o "declínio lento" — perda gradual e cumulativa de vigor e produtividade; a relação causa-efeito é difícil de estabelecer. Dano econômico médio estimado: 10% da produção (Lordello, 1976).</div>
       <div class="fonte">Refs.: Lordello (1976); Syngenta Digital (2024); MaisAgro (2026).</div>
 
-      <div class="mt">2.9 Feijão (<em>Phaseolus vulgaris</em>)</div>
+      <div class="mt" id="c-feijao">2.9 Feijão (<em>Phaseolus vulgaris</em>)</div>
       <div class="tw"><table class="gt">
         <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
         <tbody>
@@ -351,7 +378,7 @@
   </div>
 
   <!-- SEÇÃO 3 — HOSPEDEIROS -->
-  <div class="gsec">
+  <div class="gsec" id="hospedeiros">
     <div class="gsh"><span class="num">3</span> Hospedabilidade por espécie — base para rotação de culturas</div>
     <div class="gsb">
       <div class="legchip">Classificação simplificada: <span class="chip hp">Principal (multiplica muito)</span> <span class="chip hs">Secundário (multiplica moderado)</span> <span class="chip hr">Resistente / não-hospedeiro (reduz população)</span> <span class="chip hv">Variável (depende de cultivar/raça)</span></div>
@@ -374,29 +401,53 @@
   </div>
 
   <!-- SEÇÃO 4 — REFERÊNCIAS -->
-  <div class="gsec">
+  <div class="gsec" id="refs">
     <div class="gsh"><span class="num">Ref</span> Referências bibliográficas</div>
     <div class="gsb">
       <div class="gdesc">Fontes primárias e secundárias consultadas para a elaboração deste guia.</div>
-      <div class="ref-item"><span class="ref-n">1.</span><span>ASMUS, G. L.; CECCON, G. <strong>Níveis de dano do nematoide de cisto da soja.</strong> Embrapa Agropecuária Oeste, Comunicado Técnico 69, Dourados-MS, 2002.</span></div>
-      <div class="ref-item"><span class="ref-n">2.</span><span>ASMUS, G. L. <strong>Danos e perdas de produção causados por nematoides no Brasil.</strong> Embrapa Agropecuária Oeste, 2001.</span></div>
-      <div class="ref-item"><span class="ref-n">3.</span><span>GRIGOLLI, J. F. J. <strong>Nematoides de importância econômica na soja.</strong> In: Proteção de Plantas, 2015.</span></div>
-      <div class="ref-item"><span class="ref-n">4.</span><span>INOMOTO, M. M.; SILVA, R. A. <strong>Nematoides do gênero <em>Meloidogyne</em>: identificação e manejo.</strong> Embrapa/ESALQ, 2011.</span></div>
-      <div class="ref-item"><span class="ref-n">5.</span><span>EMBRAPA SOJA. <strong>Nematoides em soja: identificação e controle.</strong> Circular Técnica 76, Londrina-PR, 2010.</span></div>
-      <div class="ref-item"><span class="ref-n">6.</span><span>FRANCHINI, J. C. et al. <strong>Manejo de <em>Pratylenchus brachyurus</em> na cultura da soja.</strong> Embrapa Soja, Londrina, 2014.</span></div>
-      <div class="ref-item"><span class="ref-n">7.</span><span>GALBIERI, R.; ASMUS, G. L. <strong>Principais espécies de nematoides do algodoeiro no Brasil.</strong> Embrapa Agropecuária Oeste, 2016.</span></div>
-      <div class="ref-item"><span class="ref-n">8.</span><span>ROBINSON, A. F. et al. (1997) apud NCBI (2012). <strong>Quantitative field testing <em>Rotylenchulus reniformis</em>.</strong> PLoS ONE.</span></div>
-      <div class="ref-item"><span class="ref-n">9.</span><span>BIOSCIENCE JOURNAL / UFU. <strong>Correlação entre densidade populacional de nematoides e produtividade do algodoeiro.</strong> Uberlândia, v.30, Supl.1, 2014.</span></div>
-      <div class="ref-item"><span class="ref-n">10.</span><span>DINARDO-MIRANDA, L. L. <strong>Pragas da cana-de-açúcar.</strong> In: Cana-de-açúcar. IAC, Campinas, 2005/2008. p.349–404.</span></div>
-      <div class="ref-item"><span class="ref-n">11.</span><span>MEYER, M. C. et al. (2017b). <strong>O nematoide da haste verde.</strong> Mais Soja.</span></div>
-      <div class="ref-item"><span class="ref-n">12.</span><span>FAVORETO, L.; LORETO, E. <strong>O nematoide <em>Aphelenchoides besseyi</em>: situação nas culturas de soja e algodão.</strong> Informações Agronômicas, abr. 2023.</span></div>
-      <div class="ref-item"><span class="ref-n">13.</span><span>BARBOSA, D. H. S. G. et al. <strong>Respostas de genótipos de <em>Coffea</em> spp. a populações de <em>Meloidogyne exigua</em>.</strong> Fitopatologia Brasileira (SciELO), 2004.</span></div>
-      <div class="ref-item"><span class="ref-n">14.</span><span>INSTITUTO BIOLÓGICO DE SÃO PAULO. <strong>Nematoides parasitas do cafeeiro.</strong> Boletim Técnico 32, 2018.</span></div>
-      <div class="ref-item"><span class="ref-n">15.</span><span>PEREIRA, A. M. <strong>Identificação e manejo de nematoides da bananeira no Leste do Paraná.</strong> Dissertação, UFPR, Curitiba, 2003.</span></div>
-      <div class="ref-item"><span class="ref-n">16.</span><span>LORDELLO, L. G. E. <strong>Nematoides das plantas cultivadas.</strong> São Paulo: Nobel, 1976.</span></div>
-      <div class="ref-item"><span class="ref-n">17.</span><span>BECKER, W. F. <strong>Impacto dos fitonematoides no Brasil.</strong> 1990, apud Maciel, S. L. (Tese, USP, 1998).</span></div>
-      <div class="ref-item"><span class="ref-n">18.</span><span>INOMOTO, M. M.; ASMUS, G. L. <strong>Tabela de hospedabilidade de culturas e plantas de cobertura a fitonematoides.</strong> ESALQ — Visão Agrícola, n.9, 2009.</span></div>
-      <div class="ref-item"><span class="ref-n">19.</span><span>SYNGENTA / AGROCONSULT / SBN. <strong>Mapa de crescimento e danos econômicos causados por nematoides.</strong> São Paulo, ago. 2022.</span></div>
+      <div class="ref-item"><span class="ref-n">1.</span><span>ASMUS, G. L.; CECCON, G. <strong>Níveis de danos do nematoide de cisto da soja.</strong> Embrapa Agropecuária Oeste, Comunicado Técnico 69, Dourados-MS, 2002.</span></div>
+      <div class="ref-item"><span class="ref-n">2.</span><span>REVISTA CULTIVAR. <strong>Produtores alcançam altas produtividades de soja em ambientes com nematoide de cisto.</strong> 13 jul. 2020.</span></div>
+      <div class="ref-item"><span class="ref-n">3.</span><span>ELEVAGRO. <strong>Nematoide de cisto da soja (<em>Heterodera glycines</em>).</strong> 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">4.</span><span>ASMUS, G. L. <strong>Danos e perdas de produção causados por nematoides no Brasil.</strong> Embrapa Agropecuária Oeste, 2001.</span></div>
+      <div class="ref-item"><span class="ref-n">5.</span><span>GRIGOLLI, J. F. J. <strong>Nematoides de importância econômica na soja.</strong> In: Proteção de Plantas, 2015.</span></div>
+      <div class="ref-item"><span class="ref-n">6.</span><span>INOMOTO, M. M.; SILVA, R. A. <strong>Nematoides do gênero <em>Meloidogyne</em>: identificação e manejo.</strong> Embrapa/ESALQ, 2011.</span></div>
+      <div class="ref-item"><span class="ref-n">7.</span><span>MIRANDA, V. I. G. et al. <strong>Levantamento de <em>Meloidogyne</em> spp. em áreas de cultivo no Brasil.</strong> Revista Brasileira de Fitopatologia, 2011.</span></div>
+      <div class="ref-item"><span class="ref-n">8.</span><span>EMBRAPA SOJA. <strong>Nematoides em soja: identificação e controle.</strong> Circular Técnica 76, Londrina-PR, 2010.</span></div>
+      <div class="ref-item"><span class="ref-n">9.</span><span>EMBRAPA HORTALIÇAS. <strong>Nematoides — Cenoura.</strong> Portal Embrapa de Informação Tecnológica.</span></div>
+      <div class="ref-item"><span class="ref-n">10.</span><span>FRANCHINI, J. C. et al. <strong>Manejo de <em>Pratylenchus brachyurus</em> na cultura da soja.</strong> Embrapa Soja, Londrina, 2014.</span></div>
+      <div class="ref-item"><span class="ref-n">11.</span><span>INSTITUTO PHYTUS-RS. <strong>Pesquisa investiga nematicida biológico e plantas de cobertura.</strong> GlobalCropProtection, out. 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">12.</span><span>ELEVAGRO. <strong><em>Pratylenchus brachyurus</em> — nematoide das lesões radiculares.</strong> 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">13.</span><span>GALBIERI, R.; ASMUS, G. L. <strong>Principais espécies de nematoides do algodoeiro no Brasil.</strong> Embrapa Agropecuária Oeste, 2016.</span></div>
+      <div class="ref-item"><span class="ref-n">14.</span><span>DINARDO-MIRANDA, L. L. <strong>Pragas da cana-de-açúcar.</strong> In: Cana-de-açúcar. IAC, Campinas, 2005/2008. p.349–404.</span></div>
+      <div class="ref-item"><span class="ref-n">15.</span><span>SYNGENTA MAISAGRO. <strong>Nematoides na cana-de-açúcar: quanto lucro você está perdendo?</strong> Fev. 2026.</span></div>
+      <div class="ref-item"><span class="ref-n">16.</span><span>STAPHYT BRASIL. <strong>Nematoides em cana-de-açúcar.</strong> Laboratório de Nematologia, Conchal-SP, nov. 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">17.</span><span>SGS BRASIL. <strong>Nematoides em cana-de-açúcar: como reconhecer e manejar.</strong> Abr. 2021.</span></div>
+      <div class="ref-item"><span class="ref-n">18.</span><span>GALBIERI, R.; ASMUS, G. L. <strong>Sintomas reflexos de <em>R. reniformis</em> (4.500 esp./200 cm³).</strong> In: Nematoides do algodoeiro, Embrapa Algodão, 2016.</span></div>
+      <div class="ref-item"><span class="ref-n">19.</span><span>ROBINSON, A. F. et al. (1997) apud NCBI (2012). <strong>Quantitative field testing <em>Rotylenchulus reniformis</em> DNA.</strong> PLoS ONE.</span></div>
+      <div class="ref-item"><span class="ref-n">20.</span><span>BIOSCIENCE JOURNAL / UFU. <strong>Correlação entre densidade populacional de nematoides e produtividade do algodoeiro.</strong> Uberlândia, v.30, Supl.1, 2014.</span></div>
+      <div class="ref-item"><span class="ref-n">21.</span><span>NCBI / JOFNEM. <strong><em>Rotylenchulus reniformis</em> management and vertical distribution.</strong> DOI: 10.2478/jofnem-2025-0052. Nov. 2025.</span></div>
+      <div class="ref-item"><span class="ref-n">22.</span><span>MEYER, M. C. et al. (2017b) apud Mais Soja. <strong>O nematoide da haste verde.</strong></span></div>
+      <div class="ref-item"><span class="ref-n">23.</span><span>REPOSITÓRIO UEL. <strong>Cultivo de aveia ou milheto com <em>A. besseyi</em> e a síndrome da haste verde.</strong> Fev. 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">24.</span><span>FAVORETO, L.; LORETO, E. <strong>O nematoide <em>Aphelenchoides besseyi</em>: situação nas culturas de soja e algodão.</strong> Informações Agronômicas, n.1, abr. 2023.</span></div>
+      <div class="ref-item"><span class="ref-n">25.</span><span>MAISSOJA.COM.BR. <strong>Manejo integrado de nematoides na soja.</strong> Fev. 2025.</span></div>
+      <div class="ref-item"><span class="ref-n">26.</span><span>ELEVAGRO. <strong>Aspectos técnicos do nematoide <em>Helicotylenchus dihystera</em>.</strong> Dez. 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">27.</span><span>AGROINSIGHT. <strong>Diversidade dos nematoides: de parasita de baleias a parasita de plantas.</strong> Ago. 2021.</span></div>
+      <div class="ref-item"><span class="ref-n">28.</span><span>AGROADVANCE. <strong>Nematicidas: químicos ou biológicos?</strong> Ago. 2025.</span></div>
+      <div class="ref-item"><span class="ref-n">29.</span><span>FURLANETTO, C. et al. (2010) apud Editora Científica. <strong>Dinâmica populacional de <em>P. brachyurus</em> e <em>T. tuxaua</em> em áreas de soja no Nordeste.</strong> Jan. 2021.</span></div>
+      <div class="ref-item"><span class="ref-n">30.</span><span>BARBOSA, D. H. S. G. et al. <strong>Respostas de genótipos de <em>Coffea</em> spp. a populações de <em>Meloidogyne exigua</em>.</strong> Fitopatologia Brasileira (SciELO), 2004.</span></div>
+      <div class="ref-item"><span class="ref-n">31.</span><span>SYNGENTA / MAISAGRO. <strong>Nematoides no milho: os problemas desse inimigo oculto.</strong> Nov. 2025.</span></div>
+      <div class="ref-item"><span class="ref-n">32.</span><span>LORDELLO, L. G. E. <strong>Nematoides das plantas cultivadas.</strong> São Paulo: Nobel, 1976.</span></div>
+      <div class="ref-item"><span class="ref-n">33.</span><span>BECKER, W. F. <strong>Impacto dos fitonematoides no Brasil.</strong> 1990, apud Maciel, S. L. (Tese, USP, 1998).</span></div>
+      <div class="ref-item"><span class="ref-n">34.</span><span>SYNGENTA / AGROCONSULT / SBN. <strong>Mapa de crescimento e danos econômicos causados por nematoides.</strong> São Paulo, ago. 2022.</span></div>
+      <div class="ref-item"><span class="ref-n">35.</span><span>INOMOTO, M. M.; ASMUS, G. L. <strong>Tabela de hospedabilidade de culturas e plantas de cobertura a fitonematoides.</strong> ESALQ — Visão Agrícola, n.9, 2009. p.114.</span></div>
+      <div class="ref-item"><span class="ref-n">36.</span><span>EMBRAPA BANANA. <strong>Nematoides — Portal de Informação Tecnológica — Cultura da Bananeira.</strong></span></div>
+      <div class="ref-item"><span class="ref-n">37.</span><span>TERRA FÉRTIL BLOG. <strong>A banana e um inimigo invisível.</strong> Jul. 2022.</span></div>
+      <div class="ref-item"><span class="ref-n">38.</span><span>PEREIRA, A. M. <strong>Identificação e manejo de nematoides da bananeira no Leste do Paraná.</strong> Dissertação, UFPR, Curitiba, 2003.</span></div>
+      <div class="ref-item"><span class="ref-n">39.</span><span>INSTITUTO BIOLÓGICO DE SÃO PAULO. <strong>Nematoides parasitas do cafeeiro.</strong> Boletim Técnico 32, fev. 2018.</span></div>
+      <div class="ref-item"><span class="ref-n">40.</span><span>DIAS, W. P. et al. <strong>Nematoides da soja: identificação e controle.</strong> Embrapa Soja, Londrina, 2010.</span></div>
+      <div class="ref-item"><span class="ref-n">41.</span><span>REHAGRO. <strong>Nematoides no café: como identificar e realizar o controle?</strong> Abr. 2026.</span></div>
+      <div class="ref-item"><span class="ref-n">42.</span><span>AGROADVANCE. <strong>Nematoides parasitas da cana-de-açúcar.</strong> Mai. 2024.</span></div>
+      <div class="ref-item"><span class="ref-n">43.</span><span>FAVORETO, L. et al. <strong>Diagnose e manejo de fitonematoides na cultura da soja.</strong> ResearchGate, fev. 2019.</span></div>
       <div class="aviso" style="margin-top:16px"><strong>Aviso legal:</strong> este material é uma referência técnica compilada a partir de fontes científicas e <strong>não substitui</strong> o laudo oficial emitido pelo laboratório nem a recomendação técnica individualizada de um Engenheiro Agrônomo habilitado. Os valores de NDE devem ser contextualizados à realidade da área, cultivar, textura do solo e sistema de produção.</div>
     </div>
   </div>
