@@ -123,7 +123,7 @@ nav a:hover{color:var(--cyan)}
 /* Materiais técnicos — grade de guias */
 .materiais-sec{padding:0 0 92px}
 .materiais-sec .sec-head{margin-bottom:30px}
-.mat-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:24px}
+.mat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:24px}
 .mat-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--borda);border-radius:16px;overflow:hidden;box-shadow:var(--sh);text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s}
 .mat-card:hover{transform:translateY(-4px);box-shadow:var(--sh-h)}
 .mat-thumb{display:block;height:150px;background-size:cover;background-position:center}
