@@ -110,6 +110,7 @@ nav a:hover{color:var(--cyan)}
 
 /* Destaque — material técnico */
 .destaque-sec{padding:0 0 92px}
+.destaque-list{display:flex;flex-direction:column;gap:22px;margin:6px 0 8px}
 .destaque{display:grid;grid-template-columns:1.3fr .7fr;gap:0;background:linear-gradient(140deg,#0b2740,#13507a 78%);border-radius:20px;overflow:hidden;box-shadow:var(--sh-h);align-items:stretch}
 .destaque-txt{padding:26px 44px;color:#fff}
 .destaque-txt .eyebrow{color:var(--cyan-l)}
