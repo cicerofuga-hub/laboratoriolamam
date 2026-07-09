@@ -1,367 +1,748 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas</title>
 <meta name="description" content="Laboratório especializado em análises microbiológicas e agrícolas: controle de qualidade de bioinsumos, fungos de solo, nematoides, contaminantes, PCR, patologia e mais. Patos de Minas - MG.">
+<link rel="canonical" href="https://laboratoriolamam.com.br/">
 <link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="icon.png">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas">
 <meta property="og:description" content="Laboratório especializado em análises microbiológicas e agrícolas: controle de qualidade de bioinsumos, fungos de solo, nematoides, contaminantes, PCR, patologia e mais. Patos de Minas - MG.">
 <meta property="og:image" content="https://laboratoriolamam.com.br/img/hero-plate.jpg">
+<meta property="og:url" content="https://laboratoriolamam.com.br/">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="LAMAM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas">
+<meta name="twitter:description" content="Laboratório especializado em análises microbiológicas e agrícolas: controle de qualidade de bioinsumos, fungos de solo, nematoides, contaminantes, PCR, patologia e mais. Patos de Minas - MG.">
+<meta name="twitter:image" content="https://laboratoriolamam.com.br/img/hero-plate.jpg">
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas",
+  "description": "Laboratório especializado em análises microbiológicas e agrícolas: controle de qualidade de bioinsumos, fungos de solo, nematoides, contaminantes, PCR, patologia e mais.",
+  "url": "https://laboratoriolamam.com.br/",
+  "image": "https://laboratoriolamam.com.br/img/hero-plate.jpg",
+  "logo": "https://laboratoriolamam.com.br/icon.png",
+  "telephone": "+55-34-3825-1631",
+  "email": "lamam@laboratoriolamam.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Ari Pessoa Franco, 216 — Bairro Cidade Nova",
+    "addressLocality": "Patos de Minas",
+    "addressRegion": "MG",
+    "postalCode": "38706-416",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://instagram.com/laboratoriolamam",
+    "https://wa.me/5534997741631"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3">
+<style>
+  :root{
+    --navy:#15507a;
+    --navy-deep:#0b1a2b;
+    --ink:#070c12;
+    --cyan:#3da9dc;
+    --cyan-bright:#5cc6f5;
+    --text:#eaf2f8;
+    --muted:#93a7b8;
+    --border:rgba(255,255,255,.08);
+    --border-strong:rgba(92,198,245,.35);
+    --glass:rgba(15,28,44,.55);
+    --glass-2:rgba(11,26,43,.65);
+    --radius:18px;
+    --shadow:0 24px 60px -24px rgba(0,0,0,.75);
+    --glow-cyan:0 0 0 1px rgba(92,198,245,.25), 0 20px 60px -18px rgba(61,169,220,.45);
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+
+    /* ---- LIGHT palette ---- */
+    --light-bg:#ffffff;
+    --light-bg-2:#f6f8fa;
+    --light-ink:#0f2a40;
+    --light-muted:#5b7085;
+    --light-border:#e5ecf2;
+    --light-border-strong:rgba(21,80,122,.16);
+    --light-shadow:0 18px 44px -22px rgba(15,42,64,.28);
+    --light-shadow-hover:0 30px 66px -24px rgba(15,42,64,.36);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--text);
+    background:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* ambient mesh glows behind DARK zones */
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(60% 45% at 78% 8%, rgba(61,169,220,.16), transparent 60%),
+      radial-gradient(55% 50% at 8% 30%, rgba(21,80,122,.24), transparent 60%);
+    pointer-events:none;
+  }
+  body::after{
+    content:"";
+    position:fixed;inset:0;z-index:-2;
+    background:linear-gradient(180deg,#070c12 0%,#0a121d 45%,#070c12 100%);
+    opacity:1;pointer-events:none;
+  }
+
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  h1,h2,h3,.brand-word{font-family:'Poppins',sans-serif;line-height:1.12;letter-spacing:-.02em}
+  .accent{color:var(--cyan-bright);text-shadow:0 0 24px rgba(92,198,245,.45)}
+
+  /* ---------- HEADER (dark translucent) ---------- */
+  header.site{
+    position:sticky;top:0;z-index:60;
+    background:rgba(7,12,18,.62);
+    backdrop-filter:blur(16px) saturate(140%);
+    -webkit-backdrop-filter:blur(16px) saturate(140%);
+    border-bottom:1px solid var(--border);
+    transition:background .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  header.site.scrolled{
+    background:rgba(6,10,16,.86);
+    box-shadow:0 12px 34px -18px rgba(0,0,0,.7);
+  }
+  .navbar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700}
+  .brand img{
+    height:34px;width:auto;object-fit:contain;vertical-align:middle;
+    filter:drop-shadow(0 0 10px rgba(92,198,245,.55));
+  }
+  .brand-word{font-size:20px;letter-spacing:.06em;color:#fff}
+  nav.links{display:flex;align-items:center;gap:30px}
+  nav.links a:not(.nav-cta){color:#dde5ee;font-size:14.5px;font-weight:500;transition:color .25s var(--ease);position:relative}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--cyan-bright);box-shadow:0 0 10px var(--cyan-bright);transition:width .3s var(--ease)}
+  nav.links a:not(.nav-cta):hover{color:#fff}
+  nav.links a:hover::after{width:100%}
+  .nav-cta{
+    padding:9px 22px;border-radius:999px;font-weight:700;font-size:14px;color:#04121c;
+    white-space:nowrap;
+    background:linear-gradient(135deg,var(--cyan-bright),var(--cyan));
+    box-shadow:0 8px 24px -8px rgba(61,169,220,.7);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease)
+  }
+  .nav-cta::after{display:none}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px -6px rgba(92,198,245,.85);color:#04121c}
+  .menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text);width:42px;height:38px;border-radius:10px;font-size:18px;cursor:pointer}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease)}
+  .btn-primary{color:#04121c;background:linear-gradient(135deg,var(--cyan-bright),var(--cyan));box-shadow:0 12px 30px -10px rgba(61,169,220,.75)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 46px -12px rgba(92,198,245,.9),0 0 0 1px rgba(92,198,245,.5)}
+  .btn-ghost{color:var(--cyan-bright);background:transparent;border:1px solid var(--border-strong)}
+  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--cyan-bright);box-shadow:0 0 0 1px var(--cyan-bright),0 14px 30px -14px rgba(92,198,245,.6);background:rgba(92,198,245,.06)}
+  .btn-ghost-light{color:var(--navy);background:transparent;border:1px solid var(--light-border-strong)}
+  .btn-ghost-light:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 0 0 1px rgba(61,169,220,.4),0 14px 30px -16px rgba(21,80,122,.4);background:rgba(61,169,220,.06)}
+  .btn svg{width:18px;height:18px}
+
+  /* ---------- HERO (DARK) ---------- */
+  .hero{position:relative;padding:78px 0 92px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-bright);padding:8px 15px;border-radius:999px;border:1px solid var(--border-strong);background:rgba(92,198,245,.07)}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan-bright);box-shadow:0 0 12px var(--cyan-bright);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero h1{font-size:clamp(2.3rem,4.6vw,3.55rem);margin:22px 0 20px;font-weight:700}
+  .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:40ch;margin-bottom:32px}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+
+  .hero-media{position:relative;display:flex;justify-content:center}
+  .hero-media::before{
+    content:"";position:absolute;inset:-6% -6% -6% -6%;
+    background:radial-gradient(circle at 50% 45%, rgba(92,198,245,.42), rgba(61,169,220,.12) 42%, transparent 68%);
+    filter:blur(18px);z-index:0;animation:breathe 7s ease-in-out infinite;
+  }
+  @keyframes breathe{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.06);opacity:1}}
+  .hero-plate{
+    position:relative;z-index:1;width:min(460px,100%);aspect-ratio:1/1;object-fit:cover;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(92,198,245,.35),0 0 60px -6px rgba(61,169,220,.6),0 40px 90px -30px rgba(0,0,0,.9);
+  }
+  .hero-badge{
+    position:absolute;z-index:2;bottom:16px;right:2%;
+    display:flex;align-items:center;gap:11px;
+    background:var(--glass-2);border:1px solid var(--border);backdrop-filter:blur(12px);
+    padding:12px 16px;border-radius:14px;box-shadow:var(--shadow)
+  }
+  .hero-badge .num{font-family:'Poppins';font-weight:700;color:var(--cyan-bright);font-size:1.35rem;line-height:1}
+  .hero-badge small{color:var(--muted);font-size:12px;display:block}
+
+  /* ---------- CREDIBILITY STRIP (dark band) ---------- */
+  .credstrip{
+    position:relative;
+    border-top:1px solid var(--border);
+    background:linear-gradient(180deg,rgba(11,26,43,.55),rgba(7,12,18,.85));
+  }
+  .cred-inner{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;padding:26px 24px}
+  .cred{display:flex;align-items:flex-start;gap:14px;padding:16px 22px;border-radius:14px;border:1px solid var(--border);background:var(--glass);min-width:300px;max-width:430px;flex:1 1 330px;transition:border-color .25s var(--ease),box-shadow .25s var(--ease),transform .25s var(--ease)}
+  .cred:hover{border-color:var(--border-strong);box-shadow:0 0 0 1px rgba(92,198,245,.22);transform:translateY(-2px)}
+  .cred .ic{width:44px;height:44px;flex:0 0 44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(92,198,245,.18),rgba(21,80,122,.35));border:1px solid var(--border-strong);color:var(--cyan-bright)}
+  .cred .ic svg{width:22px;height:22px}
+  .cred b{font-family:'Poppins';font-size:15px;color:#fff;display:block;margin-bottom:3px}
+  .cred span{font-size:13px;color:var(--muted);display:block}
+  .cred .cred-links{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 18px}
+  .cred .cred-links a{font-size:12.5px;font-weight:600;color:var(--cyan-bright);transition:color .2s var(--ease)}
+  .cred .cred-links a:hover{color:#fff;text-decoration:underline}
+  .fade-to-light{height:0;margin-top:-1px;background:linear-gradient(180deg,#070c12 0%,#0a121d 26%,#ffffff 100%);pointer-events:none}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:92px 0}
+
+  /* LIGHT sections */
+  .sec-light{background:var(--light-bg);color:var(--light-ink)}
+  .sec-light-alt{background:var(--light-bg-2);color:var(--light-ink)}
+  .sec-light h1,.sec-light h2,.sec-light h3,
+  .sec-light-alt h1,.sec-light-alt h2,.sec-light-alt h3{color:var(--light-ink)}
+  .sec-light .accent,.sec-light-alt .accent{color:var(--cyan);text-shadow:none}
+
+  .sec-head{max-width:680px;margin:0 auto 54px;text-align:center}
+  .sec-tag{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-bright)}
+  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:12px 0 14px}
+  .sec-head p{color:var(--muted);font-size:1.05rem}
+  .divider-glow{height:1px;width:120px;margin:20px auto 0;background:linear-gradient(90deg,transparent,var(--cyan-bright),transparent);box-shadow:0 0 14px var(--cyan-bright)}
+  .sec-light .sec-tag,.sec-light-alt .sec-tag{color:var(--cyan)}
+  .sec-light .sec-head p,.sec-light-alt .sec-head p{color:var(--light-muted)}
+  .sec-light .divider-glow,.sec-light-alt .divider-glow{background:linear-gradient(90deg,transparent,var(--cyan),transparent);box-shadow:0 0 12px rgba(61,169,220,.5)}
+
+  /* ---------- SERVICES (LIGHT cards) ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .card-light{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    background:#fff;border:1px solid var(--light-border);
+    box-shadow:var(--light-shadow);
+    display:flex;flex-direction:column;
+    transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease)
+  }
+  .card-light:hover{transform:translateY(-8px);border-color:var(--light-border-strong);box-shadow:var(--light-shadow-hover)}
+  .card-light .thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0a121d}
+  .card-light .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);filter:saturate(1.05)}
+  .card-light:hover .thumb img{transform:scale(1.08)}
+  .card-light .body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+  .card-light h3{font-size:1.05rem;color:var(--navy);margin-bottom:6px;line-height:1.22}
+  .card-light p{font-size:13.5px;color:var(--light-muted);margin-bottom:14px;flex:1}
+  .card-light .go{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--cyan);transition:gap .25s var(--ease)}
+  .card-light:hover .go{gap:12px}
+  /* Serviços: índice em lista (sem foto, sem ícone) */
+  .svc-list{display:grid;grid-template-columns:1fr 1fr;gap:0 46px;margin-top:6px}
+  .svc-row{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:5px 16px;
+    padding:20px 10px 18px;border-bottom:1px solid var(--light-border);border-radius:10px;
+    transition:background .25s var(--ease),padding-left .25s var(--ease)}
+  .svc-row:hover{background:#f5fafd;padding-left:18px}
+  .svc-row .rt{grid-column:1;grid-row:1;font-family:'Poppins',sans-serif;font-weight:600;
+    font-size:1.05rem;color:var(--navy);line-height:1.25}
+  .svc-row .rd{grid-column:1;grid-row:2;font-size:13.2px;color:var(--light-muted);line-height:1.5}
+  .svc-row .ra{grid-column:2;grid-row:1/3;align-self:center;color:var(--cyan);font-size:19px;
+    transition:transform .25s var(--ease)}
+  .svc-row:hover .ra{transform:translateX(5px)}
+  .svc-foot{text-align:center;margin-top:40px}
+  .svc-foot span.small{display:block;color:var(--light-muted);font-size:13.5px}
+
+  /* ---------- MATERIAIS (LIGHT-ALT) ---------- */
+  .mat-highlight{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:0;
+    border-radius:var(--radius);overflow:hidden;margin-bottom:34px;
+    background:linear-gradient(135deg,#0b1a2b,#15507a);
+    border:1px solid var(--border-strong);
+    box-shadow:var(--glow-cyan);
+  }
+  .mat-highlight .mh-txt{padding:38px 36px;display:flex;flex-direction:column;justify-content:center;color:#fff}
+  .mat-highlight .mh-txt .sec-tag{color:var(--cyan-bright)}
+  .mat-highlight .mh-txt h3{font-size:clamp(1.4rem,2.4vw,1.9rem);color:#fff;margin:10px 0 12px}
+  .mat-highlight .mh-txt p{color:var(--muted);margin-bottom:22px;font-size:1rem}
+  .mat-highlight .mh-img{position:relative;overflow:hidden;min-height:220px;background:#0a121d}
+  .mat-highlight .mh-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);filter:saturate(1.05)}
+  .mat-highlight:hover .mh-img img{transform:scale(1.06)}
+  .mat-highlight .mh-img::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(11,26,43,.55),transparent 55%);pointer-events:none}
+
+  .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .mat-card{
+    display:flex;flex-direction:column;overflow:hidden;border-radius:16px;
+    background:#fff;border:1px solid var(--light-border);box-shadow:var(--light-shadow);
+    transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease)
+  }
+  .mat-card:hover{transform:translateY(-6px);border-color:var(--light-border-strong);box-shadow:var(--light-shadow-hover)}
+  .mat-card .mc-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0a121d}
+  .mat-card .mc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+  .mat-card:hover .mc-img img{transform:scale(1.07)}
+  .mat-card .mc-body{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
+  .mat-card .mc-tag{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+  .mat-card h4{font-family:'Poppins';font-size:1rem;color:var(--navy);margin:7px 0 8px;line-height:1.2}
+  .mat-card p{font-size:13px;color:var(--light-muted);margin-bottom:12px;flex:1}
+  .mat-card .go{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--cyan);transition:gap .25s var(--ease)}
+  .mat-card:hover .go{gap:11px}
+
+  .guias-lista{display:flex;flex-direction:column;gap:16px}
+  .guia-row{display:grid;grid-template-columns:1fr 300px;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--light-border);box-shadow:var(--light-shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);text-decoration:none}
+  .guia-row:hover{transform:translateY(-4px);box-shadow:var(--light-shadow-hover);border-color:var(--light-border-strong)}
+  .guia-row .g-txt{padding:20px 30px;display:flex;flex-direction:column;justify-content:center}
+  .guia-row .g-tag{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+  .guia-row .g-txt h3{font-family:'Poppins';font-size:1.16rem;color:var(--navy);margin:6px 0 8px;line-height:1.22}
+  .guia-row .g-txt p{font-size:13.5px;color:var(--light-muted);margin-bottom:12px;line-height:1.5;max-width:62ch}
+  .guia-row .go{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--cyan);transition:gap .25s var(--ease)}
+  .guia-row:hover .go{gap:11px}
+  .guia-row .g-img{position:relative;overflow:hidden;background:#0a121d;min-height:148px}
+  .guia-row .g-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+  .guia-row:hover .g-img img{transform:scale(1.06)}
+  .mat-pdfs{margin-top:34px;padding:26px 28px;border-radius:16px;border:1px solid var(--light-border);background:#fff;box-shadow:var(--light-shadow)}
+  .mat-pdfs .mp-t{display:block;font-family:'Poppins';font-weight:600;color:var(--navy);font-size:1.02rem;margin-bottom:16px}
+  .mat-pdfs .mp-list{display:flex;flex-wrap:wrap;gap:12px}
+  .mat-pdfs .mp-list a{
+    display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border-radius:999px;
+    border:1px solid var(--light-border-strong);color:var(--navy);font-size:13.5px;font-weight:500;
+    background:var(--light-bg-2);transition:all .25s var(--ease)
+  }
+  .mat-pdfs .mp-list a:hover{background:rgba(61,169,220,.08);border-color:var(--cyan);box-shadow:0 0 0 1px rgba(61,169,220,.35);transform:translateY(-2px)}
+  .mat-pdfs .mp-list svg{width:15px;height:15px;color:var(--cyan)}
+
+  /* ---------- ABOUT (LIGHT) ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .about-media{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--light-border);box-shadow:var(--light-shadow)}
+  .about-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(21,80,122,.14),transparent 55%);pointer-events:none}
+  .about-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  .about-text h2{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-bottom:18px;color:var(--navy)}
+  .about-text p{color:var(--light-muted);margin-bottom:16px;font-size:1.04rem}
+  .about-feats{list-style:none;display:grid;gap:12px;margin-top:22px}
+  .about-feats li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--light-ink)}
+  .about-feats .chk{flex:0 0 22px;width:22px;height:22px;border-radius:6px;display:grid;place-items:center;background:rgba(61,169,220,.14);border:1px solid var(--light-border-strong);color:var(--cyan)}
+  .about-feats svg{width:13px;height:13px}
+
+  /* boundary fades */
+  .fade-to-dark{height:0;background:linear-gradient(180deg,#f6f8fa 0%,#0a121d 74%,#070c12 100%);pointer-events:none}
+  .fade-light-to-lightalt{height:1px}
+
+  /* ---------- GALLERY (DARK) ---------- */
+  .sec-dark{background:linear-gradient(180deg,#070c12,#0a121d 50%,#070c12)}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .gal-item{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#000;aspect-ratio:1/1;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease),filter .35s var(--ease);filter:brightness(.92)}
+  .gal-item:hover{transform:translateY(-6px);box-shadow:var(--glow-cyan);z-index:2}
+  .gal-item:hover img{transform:scale(1.12);filter:brightness(1.05) saturate(1.1)}
+  .gal-item::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 60px 8px rgba(0,0,0,.6);pointer-events:none}
+  .gal-cap{position:absolute;left:10px;bottom:9px;z-index:3;font-size:11px;font-weight:500;color:rgba(234,242,248,.82);letter-spacing:.02em;text-shadow:0 1px 6px rgba(0,0,0,.9);pointer-events:none;opacity:.9}
+
+  /* ---------- CONTACT / FOOTER (DARK) ---------- */
+  footer.site{position:relative;padding:88px 0 34px;border-top:1px solid var(--border);background:linear-gradient(180deg,#0a121d 0%,#050a0f 100%)}
+  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:52px;align-items:start;margin-bottom:56px}
+  .contact-lead .sec-tag{color:var(--cyan-bright)}
+  .contact-lead h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:10px 0 16px;color:#fff}
+  .contact-lead p{color:var(--muted);max-width:42ch;margin-bottom:26px}
+  .contact-lead .btn{margin-right:12px;margin-bottom:12px}
+  .contact-info{display:grid;gap:18px}
+  .ci-row{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:14px;border:1px solid var(--border);background:var(--glass);transition:border-color .25s var(--ease),box-shadow .25s var(--ease)}
+  .ci-row:hover{border-color:var(--border-strong);box-shadow:0 0 0 1px rgba(92,198,245,.2)}
+  .ci-row .ic{flex:0 0 40px;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(92,198,245,.18),rgba(21,80,122,.35));border:1px solid var(--border-strong);color:var(--cyan-bright)}
+  .ci-row .ic svg{width:19px;height:19px}
+  .ci-row b{display:block;color:#fff;font-family:'Poppins';font-size:14.5px;margin-bottom:2px}
+  .ci-row span,.ci-row a{color:var(--muted);font-size:14px}
+  .ci-row a:hover{color:var(--cyan-bright)}
+  .foot-bottom{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:26px;border-top:1px solid var(--border)}
+  .foot-bottom .brand-word{font-size:17px}
+  .foot-bottom .brand img{height:30px;width:auto;object-fit:contain;vertical-align:middle}
+  .foot-legal{color:var(--muted);font-size:12.5px;max-width:56ch}
+  .foot-social a{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:11px;border:1px solid var(--border);color:var(--muted);transition:all .25s var(--ease)}
+  .foot-social a:hover{color:var(--cyan-bright);border-color:var(--border-strong);box-shadow:0 0 0 1px rgba(92,198,245,.25)}
+  .foot-social svg{width:19px;height:19px}
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float{
+    position:fixed;right:22px;bottom:22px;z-index:80;
+    width:60px;height:60px;border-radius:50%;
+    display:grid;place-items:center;
+    background:#25D366;color:#04121c;
+    box-shadow:0 12px 30px -6px rgba(37,211,102,.6),0 0 0 6px rgba(37,211,102,.14);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+    animation:waPulse 2.6s infinite
+  }
+  .wa-float:hover{transform:translateY(-4px) scale(1.06)}
+  .wa-float svg{width:32px;height:32px}
+  @keyframes waPulse{0%,100%{box-shadow:0 12px 30px -6px rgba(37,211,102,.6),0 0 0 0 rgba(37,211,102,.35)}50%{box-shadow:0 12px 30px -6px rgba(37,211,102,.6),0 0 0 14px rgba(37,211,102,0)}}
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:1000px){
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}
+    .mat-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:860px){
+    nav.links{display:none}
+    nav.links.open{display:flex;position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:6px;padding:16px 24px 22px;background:rgba(7,12,18,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    nav.links.open a{padding:8px 0;font-size:16px}
+    .menu-btn{display:block}
+    .hero-grid{grid-template-columns:1fr;gap:44px}
+    .hero-media{order:-1}
+    .hero p.lead{max-width:none}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
+    .about-media{order:-1}
+    .mat-highlight{grid-template-columns:1fr}
+    .guia-row{grid-template-columns:1fr}
+    .guia-row .g-img{min-height:168px;order:-1}
+    .mat-highlight .mh-img{min-height:200px;order:-1}
+  }
+  @media(max-width:560px){
+    section{padding:66px 0}
+    .svc-grid,.gal-grid,.mat-grid{grid-template-columns:1fr}
+    .svc-list{grid-template-columns:1fr;gap:0}
+    .hero-actions .btn{flex:1;justify-content:center}
+    .foot-bottom{flex-direction:column;align-items:flex-start}
+    .fade-to-light,.fade-to-dark{height:0}
+  }
+</style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a href="index.html" class="brand"><img src="icon.png" alt="LAMAM"> LAMAM</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-    <nav>
-      <ul id="menu">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg> WhatsApp</a></li>
-      </ul>
+
+<!-- ============ HEADER ============ -->
+<header class="site" id="siteHeader">
+  <div class="wrap navbar">
+    <a class="brand" href="#top" aria-label="LAMAM — início">
+      <img src="icon.png" alt="LAMAM">
+      <span class="brand-word">LAMAM</span>
+    </a>
+    <nav class="links" id="nav">
+      <a href="#top">Início</a>
+      <a href="#servicos">Análises</a>
+      <a href="#materiais">Guias Técnicos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+      <a class="nav-cta" href="https://wa.me/5534997741631" target="_blank" rel="noopener">Fale conosco</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
   </div>
 </header>
-<section class="hero" id="inicio" style="padding:0">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="selo">&#128300; Laboratório de análises <b>agrícolas e microbiológicas</b></span>
-      <h1>Do solo ao bioinsumo, <span class="hl">análises em que o agro confia</span></h1>
-      <p class="lead">O LAMAM entrega laudos confiáveis para produtores, cooperativas e empresas — apoiando decisões no campo e o controle de qualidade da sua produção.</p>
-      <div class="acoes">
-        <a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg> Fale no WhatsApp</a>
-        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
-      </div>
-      <div class="trust">
-        <div class="t"><b>14</b><span>tipos de análise</span></div>
-        <div class="t"><b>MAPA</b><span>cadastrado p/ inoculantes</span></div>
-        <div class="t"><b>Brasil</b><span>atendemos todo o país</span></div>
-      </div>
-    </div>
-    <div class="hero-art">
-      <img src="img/hero-plate.jpg" alt="Placa de Petri — teste de antagonismo de fungos">
-      <div class="hero-badge"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v6.5L5 17a2 2 0 002 3h10a2 2 0 002-3l-5-8.5V2"/><path d="M7.5 14h9"/></svg></span> Microbiologia aplicada ao agro</div>
-    </div>
-  </div>
-</section>
 
-<section id="sobre" class="sobre">
-  <div class="wrap sobre-grid">
-    <div class="sobre-foto reveal"><img src="img/fachada.jpg" alt="Sede do LAMAM em Patos de Minas - MG"></div>
-    <div class="reveal">
-      <span class="eyebrow">Sobre nós</span>
-      <h2>Microbiologia do solo e qualidade de bioinsumos</h2>
-      <p>O <b>LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas</b> é especializado em microbiologia do solo e controle de qualidade de bioinsumos. Sediado em Patos de Minas (MG), atende todo o país com metodologias reconhecidas e atendimento próximo.</p>
-      <p>Nossa missão é transformar análises em informação útil para o campo — com resultados confiáveis, rastreáveis e bem documentados.</p>
-      <div class="stats">
-        <div class="stat"><b>14</b><span>tipos de análise</span></div>
-        <div class="stat"><b>MAPA</b><span>cadastrado</span></div>
-        <div class="stat"><b>MG</b><span>Patos de Minas</span></div>
+<main id="top">
+
+  <!-- ============ HERO (DARK) ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><span class="dot"></span>Microbiologia aplicada ao agro</span>
+        <h1>Do solo ao bioinsumo, <span class="accent">análises em que o agro confia</span></h1>
+        <p class="lead">O LAMAM entrega laudos confiáveis para produtores, cooperativas e empresas — apoiando decisões no campo e o controle de qualidade da sua produção.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5534997741631" target="_blank" rel="noopener">
+            Fale conosco
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#servicos">Nossas análises</a>
+        </div>
+      </div>
+      <div class="hero-media reveal d2">
+        <img class="hero-plate" src="img/hero-plate.jpg?v=2" alt="Analista do LAMAM segurando uma placa de contagem (UFC) de Trichoderma spp. no laboratório">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="credibilidade">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Credibilidade</span>
-      <h2>Qualidade reconhecida</h2>
-      <p>Trabalhamos com rigor técnico e participamos de programas oficiais de controle de qualidade.</p>
-    </div>
-    <div class="cred-grid">
-      <div class="cred-card reveal">
-        <span class="cred-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+  <!-- ============ CREDIBILITY STRIP (DARK) ============ -->
+  <div class="credstrip">
+    <div class="wrap cred-inner">
+      <a class="cred reveal" href="docs/cadastro-mapa.pdf" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 4-3 7.5-7 10-4-2.5-7-6-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
         <div>
-          <h3>Cadastrado no MAPA</h3>
-          <p>O LAMAM é cadastrado no Ministério da Agricultura e Pecuária (MAPA) para a análise de inoculantes (atividade de fertilizantes, inoculantes e corretivos). Cadastro nº MG-01239.</p>
-          <a class="cred-doc" href="docs/cadastro-mapa.pdf" target="_blank" rel="noopener">Ver documento oficial &rarr;</a>
+          <b>Cadastro MAPA nº MG-01239</b>
+          <span>Laboratório registrado e habilitado para análise de inoculantes</span>
+          <span class="cred-links"><span>Ver documento oficial →</span></span>
         </div>
-      </div>
-      <div class="cred-card reveal">
-        <span class="cred-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/><path d="M12 6v3l1.5 1"/></svg></span>
+      </a>
+      <div class="cred reveal d1">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v6l-4 8a3 3 0 0 0 3 4h6a3 3 0 0 0 3-4l-4-8V2"/><path d="M8 2h8"/><path d="M7 15h10"/></svg></span>
         <div>
-          <h3>Ensaios interlaboratoriais — Embrapa Soja</h3>
-          <p>Participamos dos ensaios interlaboratoriais de análise de inoculantes da Embrapa Soja (Laboratório de Biotecnologia do Solo), comparando nossos resultados com laboratórios de referência.</p>
-          <a class="cred-doc" href="docs/ensaio-embrapa-1.pdf" target="_blank" rel="noopener">Ver certificado &rarr;</a> <a class="cred-doc" href="docs/ensaio-embrapa-2.pdf" target="_blank" rel="noopener" style="margin-left:16px">2º certificado &rarr;</a>
+          <b>Ensaios interlaboratoriais — Embrapa Soja</b>
+          <span>Comparação de resultados com laboratórios de referência</span>
+          <span class="cred-links">
+            <a href="docs/ensaio-embrapa-1.pdf" target="_blank" rel="noopener">Ver certificado →</a>
+            <a href="docs/ensaio-embrapa-2.pdf" target="_blank" rel="noopener">2º certificado →</a>
+          </span>
         </div>
       </div>
     </div>
   </div>
-</section>
+  <!-- smooth dark→light gradient fade -->
+  <div class="fade-to-light" aria-hidden="true"></div>
 
-<section class="serv" id="servicos">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">O que fazemos</span>
-      <h2>Nossos serviços</h2>
-      <p>Clique em um serviço para ver os detalhes e o material de coleta e envio das amostras.</p>
-    </div>
-    <div class="scards">
-      <a class="scard reveal" href="servicos/cq-produto-comercial.html">
-        <div class="scard-img"><img src="img/gal-2.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
-          <h3>Controle de qualidade de produto biológico comercial</h3>
-          <p>Concentração e pureza de inoculantes e produtos biológicos comerciais.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/cq-onfarm.html">
-        <div class="scard-img"><img src="img/gal-4.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-5 0-8 5-11M12 21c0-6-1-9-6-11"/><path d="M12 21v-7"/><path d="M17 10c1.5-1 2-3 2-5-2 0-4 .5-5 2M7 10C5.5 9 5 7 5 5c2 0 4 .5 5 2"/></svg></span>
-          <h3>Controle de qualidade de bioinsumo On Farm</h3>
-          <p>Qualidade dos bioinsumos multiplicados na própria fazenda.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/contaminantes.html">
-        <div class="scard-img"><img src="img/svc-contaminantes.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></span>
-          <h3>Análise de contaminantes</h3>
-          <p>Coliformes, enterobactérias, bolores e leveduras em bioinsumos, água e matérias-primas.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/compatibilidade.html">
-        <div class="scard-img ph"><span class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5l-4 8.5A2 2 0 008 19h8a2 2 0 001.8-2.9L14 8V3"/><path d="M7.5 14h9"/></svg></span><span class="ph-tag">foto em breve</span></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5l-4 8.5A2 2 0 008 19h8a2 2 0 001.8-2.9L14 8V3"/><path d="M7.5 14h9"/></svg></span>
-          <h3>Compatibilidade entre produtos biológicos e químicos/fertilizantes</h3>
-          <p>Teste de compatibilidade em calda e em tratamento de sementes (TS).</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/recuperacao-sementes.html">
-        <div class="scard-img"><img src="img/gal-3.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="15" rx="4" ry="6"/><path d="M12 15c0-4 3-7 7-7-1 4-3 6-7 7zM12 21v-2"/></svg></span>
-          <h3>Recuperação de microrganismos em sementes</h3>
-          <p>Contagem dos microrganismos recuperados de sementes tratadas.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/sobrevivencia.html">
-        <div class="scard-img"><img src="img/svc-conidios.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <h3>Análise de sobrevivência de microrganismos</h3>
-          <p>Monitoramento da viabilidade dos microrganismos ao longo do tempo.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/fungos-solo.html">
-        <div class="scard-img"><img src="img/gal-1.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13c4.5 0 8-2.2 8-5s-3.5-5-8-5-8 2.2-8 5 3.5 5 8 5z"/><path d="M12 13v8M9 21h6"/></svg></span>
-          <h3>Análise de fungos de solo</h3>
-          <p>Quantificação de Trichoderma e demais fungos do solo (UFC/g).</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/fitonematoides.html">
-        <div class="scard-img"><img src="img/svc-fitonematoides.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2 0 2-3 4-3s2 3 4 3 2-3 4-3 2 3 4 3"/><path d="M3 10c2 0 2-3 4-3s2 3 4 3 2-3 4-3 2 3 4 3"/></svg></span>
-          <h3>Quantificação de fitonematoides em solo e raiz</h3>
-          <p>Extração e contagem de fitonematoides em solo e raízes.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/pcr-fitonematoides.html">
-        <div class="scard-img"><img src="img/svc-pcr.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3c0 5 10 7 10 12a4 4 0 01-8 0M17 21c0-5-10-7-10-12a4 4 0 018 0"/><path d="M8.5 7h7M8.5 17h7M10 5h4M10 19h4"/></svg></span>
-          <h3>Identificação de espécie de fitonematoides por PCR</h3>
-          <p>Identificação molecular de espécies de Meloidogyne por PCR.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/patologia-sementes.html">
-        <div class="scard-img"><img src="img/gal-6.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="15" rx="4" ry="6"/><path d="M12 15c0-4 3-7 7-7-1 4-3 6-7 7zM12 21v-2"/></svg></span>
-          <h3>Patologia de sementes</h3>
-          <p>Sanidade de sementes — detecção de fungos e patógenos.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/patologia-plantas.html">
-        <div class="scard-img"><img src="img/svc-patologia-plantas.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 014 13C4 8 11 3 11 3s7 5 7 10a7 7 0 01-7 7z"/><path d="M11 20V9"/></svg></span>
-          <h3>Patologia de plantas</h3>
-          <p>Diagnóstico de doenças em tecidos vegetais.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/placas-resinadas.html">
-        <div class="scard-img"><img src="img/hero-plate.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3l3 18M15 3l-3 18"/></svg></span>
-          <h3>Confecção de placas com microrganismos resinadas</h3>
-          <p>Placas de microrganismos preservadas em resina, para didática e exposição.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/antagonismo.html">
-        <div class="scard-img"><img src="img/gal-5.jpg" alt="" loading="lazy"></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1.3" fill="currentColor" stroke="none"/><circle cx="14.5" cy="9" r="1.3" fill="currentColor" stroke="none"/><circle cx="13" cy="14.5" r="1.3" fill="currentColor" stroke="none"/></svg></span>
-          <h3>Isolamento de microrganismos e ensaios de antagonismo in vitro</h3>
-          <p>Isolamento de microrganismos e testes de antagonismo (biocontrole) in vitro.</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-      <a class="scard reveal" href="servicos/broca-do-cafe.html">
-        <div class="scard-img ph"><span class="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="7" width="8" height="13" rx="4"/><path d="M12 7V4M9 5L7 3M15 5l2-2M8 11H4M8 15H3.5M8 19l-3 2M16 11h4M16 15h4.5M16 19l3 2"/></svg></span><span class="ph-tag">foto em breve</span></div>
-        <div class="scard-body">
-          <span class="scard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="7" width="8" height="13" rx="4"/><path d="M12 7V4M9 5L7 3M15 5l2-2M8 11H4M8 15H3.5M8 19l-3 2M16 11h4M16 15h4.5M16 19l3 2"/></svg></span>
-          <h3>Bioensaio e venda de broca-do-café</h3>
-          <p>Bioensaios de eficácia e fornecimento de broca-do-café (Hypothenemus hampei).</p>
-          <span class="scard-link">Saiba mais &rarr;</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="galeria">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Nosso trabalho</span>
-      <h2>Análises em imagens</h2>
-      <p>Um pouco do que observamos no dia a dia — placas, colônias e sementes registradas no laboratório.</p>
-    </div>
-    <div class="gal-grid">
-      <figure class="gal-item reveal"><img src="img/gal-1.jpg" alt="Fungos de solo" loading="lazy"><figcaption>Fungos de solo</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/gal-2.jpg" alt="Contagem de bactérias (UFC)" loading="lazy"><figcaption>Contagem de bactérias (UFC)</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/gal-5.jpg" alt="Teste de antagonismo" loading="lazy"><figcaption>Teste de antagonismo</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/gal-4.jpg" alt="Controle de qualidade de fungos" loading="lazy"><figcaption>Controle de qualidade de fungos</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/gal-6.jpg" alt="Sanidade de sementes" loading="lazy"><figcaption>Sanidade de sementes</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/gal-3.jpg" alt="Patologia de sementes" loading="lazy"><figcaption>Patologia de sementes</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/gal-7.jpg" alt="Identificação de fungos" loading="lazy"><figcaption>Identificação de fungos</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/gal-8.jpg" alt="Microbiologia aplicada" loading="lazy"><figcaption>Microbiologia aplicada</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="materiais-sec" id="materiais">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">Materiais técnicos</span><h2>Guias gratuitos para consultar e baixar</h2><p>Referências de interpretação de laudos e de coleta/envio de amostras — de uso livre.</p></div>
-    <div class="destaque-list">
-      <div class="destaque reveal">
-        <div class="destaque-txt">
-          <span class="eyebrow">Interpretação · online</span>
-          <h2>Guia de interpretação de laudos nematológicos</h2>
-          <p>Níveis de dano econômico de fitonematoides por espécie e por cultura — entenda o que o resultado da sua análise significa e decida o manejo com segurança.</p>
-          <a class="btn" href="materiais/interpretacao-nematologica.html">Acessar o guia &rarr;</a>
-        </div>
-        <a class="destaque-img" href="materiais/interpretacao-nematologica.html"><img src="img/svc-fitonematoides.jpg" alt="Microscopia de fitonematoide" loading="lazy"></a>
+  <!-- ============ SERVIÇOS (LIGHT) — 14 análises ============ -->
+  <section id="servicos" class="sec-light">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-tag">O que analisamos</span>
+        <h2>Análises que orientam decisões no campo</h2>
+        <p>Clique em uma análise para ver os detalhes e o material de coleta e envio das amostras.</p>
+        <div class="divider-glow"></div>
       </div>
-      <div class="destaque reveal">
-        <div class="destaque-txt">
-          <span class="eyebrow">Interpretação · online</span>
-          <h2>Fungos benéficos do solo</h2>
+
+      <div class="svc-list">
+        <a class="svc-row reveal" href="servicos/fitonematoides.html"><span class="rt">Fitonematoides</span><span class="rd">Extração e contagem de fitonematoides em solo e raízes.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/pcr-fitonematoides.html"><span class="rt">PCR de fitonematoides</span><span class="rd">Identificação molecular de espécies de Meloidogyne por PCR.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/fungos-solo.html"><span class="rt">Fungos de solo</span><span class="rd">Quantificação de Trichoderma e demais fungos do solo (UFC/g).</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/patologia-plantas.html"><span class="rt">Patologia de plantas</span><span class="rd">Diagnóstico de doenças em tecidos vegetais.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/patologia-sementes.html"><span class="rt">Patologia de sementes</span><span class="rd">Sanidade de sementes — detecção de fungos e patógenos.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/compatibilidade.html"><span class="rt">Compatibilidade de bioinsumos</span><span class="rd">Teste de compatibilidade em calda e em tratamento de sementes (TS).</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/cq-produto-comercial.html"><span class="rt">CQ de produto comercial</span><span class="rd">Concentração e pureza de inoculantes e produtos biológicos comerciais.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/cq-onfarm.html"><span class="rt">CQ On Farm</span><span class="rd">Qualidade dos bioinsumos multiplicados na própria fazenda.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/contaminantes.html"><span class="rt">Contaminantes</span><span class="rd">Coliformes, enterobactérias, bolores e leveduras em bioinsumos, água e matérias-primas.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/recuperacao-sementes.html"><span class="rt">Recuperação de microrganismos em sementes</span><span class="rd">Contagem dos microrganismos recuperados de sementes tratadas.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/sobrevivencia.html"><span class="rt">Conídios viáveis</span><span class="rd">Contagem de conídios e percentual de viabilidade (germinação).</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/antagonismo.html"><span class="rt">Antagonismo</span><span class="rd">Isolamento de microrganismos e testes de antagonismo (biocontrole) in vitro.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/placas-resinadas.html"><span class="rt">Placas resinadas</span><span class="rd">Placas de microrganismos preservadas em resina, para didática e exposição.</span><span class="ra" aria-hidden="true">→</span></a>
+        <a class="svc-row reveal" href="servicos/broca-do-cafe.html"><span class="rt">Broca-do-café</span><span class="rd">Bioensaios de eficácia e fornecimento de broca-do-café (Hypothenemus hampei).</span><span class="ra" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="svc-foot reveal">
+        <span class="small">São 14 análises especializadas no nosso portfólio.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MATERIAIS TÉCNICOS (LIGHT-ALT) ============ -->
+  <section id="materiais" class="sec-light-alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-tag">Materiais técnicos</span>
+        <h2>Guias gratuitos para consultar</h2>
+        <p>Referências de interpretação de laudos e de coleta/envio de amostras — de uso livre.</p>
+        <div class="divider-glow"></div>
+      </div>
+
+      <div class="guias-lista">
+      <a class="guia-row reveal" href="materiais/interpretacao-nematologica.html">
+        <div class="g-txt">
+          <span class="g-tag">Interpretação · online · destaque</span>
+          <h3>Guia de interpretação de laudos nematológicos</h3>
+          <p>Níveis de dano econômico de fitonematoides por espécie e por cultura — o que o resultado da sua análise significa e como decidir o manejo.</p>
+          <span class="go">Acessar o guia &rarr;</span>
+        </div>
+        <div class="g-img"><img src="img/svc-fitonematoides.jpg" alt="Guia de interpretação de laudos nematológicos" loading="lazy"></div>
+      </a>
+      <a class="guia-row reveal" href="materiais/fungos-biocontroladores.html">
+        <div class="g-txt">
+          <span class="g-tag">Interpretação · online</span>
+          <h3>Fungos benéficos do solo</h3>
           <p>Trichoderma, Clonostachys, Purpureocillium e fungos totais — o que a contagem (UFC/g) significa para o manejo biológico.</p>
-          <a class="btn" href="materiais/fungos-biocontroladores.html">Acessar o guia &rarr;</a>
+          <span class="go">Acessar o guia &rarr;</span>
         </div>
-        <a class="destaque-img" href="materiais/fungos-biocontroladores.html"><img src="img/gal-1.jpg" alt="Fungos benéficos do solo" loading="lazy"></a>
-      </div>
-      <div class="destaque reveal">
-        <div class="destaque-txt">
-          <span class="eyebrow">Interpretação · online</span>
-          <h2>Fungos fitopatogênicos do solo</h2>
+        <div class="g-img"><img src="img/gal-1.jpg" alt="Fungos benéficos do solo" loading="lazy"></div>
+      </a>
+      <a class="guia-row reveal" href="materiais/fungos-fitopatogenicos.html">
+        <div class="g-txt">
+          <span class="g-tag">Interpretação · online</span>
+          <h3>Fungos fitopatogênicos do solo</h3>
           <p>Fusarium e Macrophomina — como interpretar o risco por densidade de inóculo no solo.</p>
-          <a class="btn" href="materiais/fungos-fitopatogenicos.html">Acessar o guia &rarr;</a>
+          <span class="go">Acessar o guia &rarr;</span>
         </div>
-        <a class="destaque-img" href="materiais/fungos-fitopatogenicos.html"><img src="img/svc-patologia-plantas.jpg" alt="Fungos fitopatogênicos do solo" loading="lazy"></a>
-      </div>
-      <div class="destaque reveal">
-        <div class="destaque-txt">
-          <span class="eyebrow">Como funciona · online</span>
-          <h2>Compatibilidade biológicos × químicos</h2>
+        <div class="g-img"><img src="img/svc-patologia-plantas.jpg" alt="Fungos fitopatogênicos do solo" loading="lazy"></div>
+      </a>
+      <a class="guia-row reveal" href="materiais/compatibilidade-biologicos.html">
+        <div class="g-txt">
+          <span class="g-tag">Como funciona · online</span>
+          <h3>Compatibilidade biológicos × químicos</h3>
           <p>Como avaliamos, por UFC, se o biológico sobrevive na mistura — e os parâmetros que você pode configurar.</p>
-          <a class="btn" href="materiais/compatibilidade-biologicos.html">Acessar o guia &rarr;</a>
+          <span class="go">Acessar o guia &rarr;</span>
         </div>
-        <a class="destaque-img" href="materiais/compatibilidade-biologicos.html"><img src="img/svc-conidios.jpg" alt="Compatibilidade biológicos x químicos" loading="lazy"></a>
-      </div>
-      <div class="destaque reveal">
-        <div class="destaque-txt">
-          <span class="eyebrow">Interpretação · online</span>
-          <h2>Patologia de sementes</h2>
+        <div class="g-img"><img src="img/svc-conidios.jpg" alt="Compatibilidade biológicos × químicos" loading="lazy"></div>
+      </a>
+      <a class="guia-row reveal" href="materiais/patologia-sementes.html">
+        <div class="g-txt">
+          <span class="g-tag">Interpretação · online</span>
+          <h3>Patologia de sementes</h3>
           <p>Padrões sanitários oficiais (PNQR), principais fungos de campo e de armazenamento e como ler o laudo de sanidade.</p>
-          <a class="btn" href="materiais/patologia-sementes.html">Acessar o guia &rarr;</a>
+          <span class="go">Acessar o guia &rarr;</span>
         </div>
-        <a class="destaque-img" href="materiais/patologia-sementes.html"><img src="img/gal-3.jpg" alt="Patologia de sementes" loading="lazy"></a>
+        <div class="g-img"><img src="img/gal-3.jpg" alt="Patologia de sementes" loading="lazy"></div>
+      </a>
+      </div>
+
+      <!-- PDF guides -->
+      <div class="mat-pdfs reveal">
+        <span class="mp-t">Guias de coleta e envio (PDF):</span>
+        <div class="mp-list">
+          <a href="docs/guia-amostragem-nematoides.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Amostragem de nematoides</a>
+          <a href="docs/guia-sanidade-sementes.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Sanidade de sementes</a>
+          <a href="docs/guia-diagnose-plantas.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Diagnóstico de doenças de plantas</a>
+          <a href="docs/guia-placas-resinadas.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Confecção de placas resinadas</a>
+          <a href="docs/guia-bioinsumos-comerciais.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Bioinsumos comerciais</a>
+          <a href="docs/guia-bioinsumos-onfarm.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Bioinsumos on farm</a>
+        </div>
       </div>
     </div>
-    <div class="mat-pdfs reveal">
-      <span class="mat-pdfs-t">Guias de coleta e envio (PDF):</span>
-      <a href="docs/guia-amostragem-nematoides.pdf" target="_blank" rel="noopener">Amostragem de nematoides</a>
-      <a href="docs/guia-sanidade-sementes.pdf" target="_blank" rel="noopener">Sanidade de sementes</a>
-      <a href="docs/guia-diagnose-plantas.pdf" target="_blank" rel="noopener">Diagnóstico de doenças de plantas</a>
-      <a href="docs/guia-placas-resinadas.pdf" target="_blank" rel="noopener">Confecção de placas resinadas</a>
-      <a href="docs/guia-bioinsumos-comerciais.pdf" target="_blank" rel="noopener">Bioinsumos comerciais</a>
-      <a href="docs/guia-bioinsumos-onfarm.pdf" target="_blank" rel="noopener">Bioinsumos on farm</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="serv">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">Por que o LAMAM</span><h2>Compromisso do início ao laudo</h2></div>
-    <div class="dif-grid">
-      <div class="dif reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Credibilidade</h3><p>Cadastrado no MAPA e participante dos ensaios interlaboratoriais da Embrapa Soja.</p></div>
-      <div class="dif reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><h3>Laudos com fotos</h3><p>Resultados documentados com imagens das análises e rastreáveis.</p></div>
-      <div class="dif reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-5 0-8 5-11M12 21c0-6-1-9-6-11"/><path d="M12 21v-7"/><path d="M17 10c1.5-1 2-3 2-5-2 0-4 .5-5 2M7 10C5.5 9 5 7 5 5c2 0 4 .5 5 2"/></svg></div><h3>Foco no agro</h3><p>Microbiologia aplicada à realidade da lavoura.</p></div>
-      <div class="dif reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v6.5L5 17a2 2 0 002 3h10a2 2 0 002-3l-5-8.5V2"/><path d="M7.5 14h9"/></svg></div><h3>Metodologia</h3><p>Técnicas reconhecidas e equipe especializada.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="contato" id="contato">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">Fale conosco</span><h2>Vamos conversar</h2><p>Estamos prontos para atender você e a sua lavoura.</p></div>
-    <div class="cont-grid">
-      <div class="reveal">
-        <div class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Endereço</b><span>Av. Ari Pessoa Franco, 216 — Bairro Cidade Nova<br>Patos de Minas - MG · CEP 38.706-416</span></div></div>
-        <div class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.4a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div><div><b>Telefone</b><a href="tel:+553438251631">(34) 3825-1631</a></div></div>
-        <div class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg></div><div><b>WhatsApp</b><a href="https://wa.me/5534997741631" target="_blank" rel="noopener">(34) 9.9774-1631</a></div></div>
-        <div class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><b>E-mail</b><a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></div></div>
-        <div class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div><div><b>Instagram</b><a href="https://instagram.com/laboratoriolamam" target="_blank" rel="noopener">@laboratoriolamam</a></div></div>
-        <a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener" style="margin-top:6px"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg> Pedir um orçamento</a>
+  <!-- ============ SOBRE (LIGHT) ============ -->
+  <section id="sobre" class="sec-light">
+    <div class="wrap about-grid">
+      <div class="about-media reveal">
+        <img src="img/fachada.jpg" alt="Fachada do laboratório LAMAM em Patos de Minas - MG">
       </div>
-      <div class="mapa reveal"><iframe src="https://www.google.com/maps?q=Av.%20Ari%20Pessoa%20Franco,%20216,%20Patos%20de%20Minas%20-%20MG&output=embed" loading="lazy" title="Localização do LAMAM"></iframe></div>
+      <div class="about-text reveal d1">
+        <span class="sec-tag">Sobre o LAMAM</span>
+        <h2>Microbiologia encontra tecnologia</h2>
+        <p>O <b>LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas</b> é especializado em microbiologia do solo e controle de qualidade de bioinsumos. Sediado em Patos de Minas (MG), atende todo o país com metodologias reconhecidas e atendimento próximo.</p>
+        <p>Nossa missão é transformar análises em informação útil para o campo — com resultados confiáveis, rastreáveis e bem documentados. Da caracterização do solo ao controle de qualidade de bioinsumos, nossa estrutura foi pensada para dar segurança às decisões de quem produz no campo.</p>
+        <ul class="about-feats">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Cadastro no MAPA nº MG-01239</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Participação em ensaios interlaboratoriais com a Embrapa Soja</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Portfólio de 14 análises especializadas para o agro</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
-<footer>
+  </section>
+
+  <!-- smooth light→dark gradient fade -->
+  <div class="fade-to-dark" aria-hidden="true"></div>
+
+  <!-- ============ GALERIA (DARK) ============ -->
+  <section id="galeria" class="sec-dark">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-tag">Nosso trabalho</span>
+        <h2>A vida microbiana em detalhe</h2>
+        <p>Imagens de microscopia do nosso laboratório — fungos, bactérias e fitonematoides revelados em alta definição.</p>
+        <div class="divider-glow"></div>
+      </div>
+      <div class="gal-grid">
+        <div class="gal-item reveal"><img src="img/micro-01.jpg" alt="Conidióforo e conídios em azul de algodão" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d1"><img src="img/micro-02.jpg" alt="Cabeça conidial em azul de algodão" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d2"><img src="img/micro-03.jpg" alt="Macroconídios de Fusarium" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d3"><img src="img/micro-04.jpg" alt="Hifas hialinas septadas" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal"><img src="img/micro-05.jpg" alt="Estrutura fúngica pigmentada" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d1"><img src="img/micro-06.jpg" alt="Conídios de Alternaria (dictiósporos)" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d2"><img src="img/micro-07.jpg" alt="Acérvulo com setas — Colletotrichum" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d3"><img src="img/micro-08.jpg" alt="Detalhe celular pigmentado" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal"><img src="img/micro-09.jpg" alt="Bactérias com endósporos (contraste de fase)" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d1"><img src="img/micro-10.jpg" alt="Cadeias de esporos de actinobactéria" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d2"><img src="img/micro-11.jpg" alt="Cauda de fitonematoide" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+        <div class="gal-item reveal d3"><img src="img/micro-12.jpg" alt="Região anterior de fitonematoide" loading="lazy"><span class="gal-cap">© Lab. LAMAM</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ CONTATO / FOOTER (DARK) ============ -->
+<footer class="site" id="contato">
   <div class="wrap">
-    <a href="index.html" class="brand"><img src="icon.png" alt="LAMAM" style="height:34px"> LAMAM</a>
-    <p>Laboratório Mineiro de Análises Agrícolas e Microbiológicas · Patos de Minas - MG</p>
-    <p class="fline">(34) 3825-1631 · <a href="https://wa.me/5534997741631" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></p>
-    <p class="fline" style="margin-top:14px;font-size:.82rem;color:#6f93ab">© 2026 LAMAM. Todos os direitos reservados.</p>
+    <div class="contact-grid">
+      <div class="contact-lead reveal">
+        <span class="sec-tag">Vamos conversar</span>
+        <h2>Precisa de uma análise confiável?</h2>
+        <p>Fale com nossa equipe e descubra como o LAMAM pode apoiar as decisões da sua produção. Estamos prontos para atender você e a sua lavoura.</p>
+        <a class="btn btn-primary" href="https://wa.me/5534997741631" target="_blank" rel="noopener">
+          Fale conosco no WhatsApp
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="mailto:lamam@laboratoriolamam.com.br">Enviar e-mail</a>
+      </div>
+
+      <div class="contact-info reveal d1">
+        <div class="ci-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><b>Endereço</b><span>Av. Ari Pessoa Franco, 216 — Bairro Cidade Nova, Patos de Minas - MG · CEP 38.706-416</span></div>
+        </div>
+        <div class="ci-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><b>Telefone</b><span><a href="tel:+553438251631">(34) 3825-1631</a> · WhatsApp <a href="https://wa.me/5534997741631" target="_blank" rel="noopener">(34) 9.9774-1631</a></span></div>
+        </div>
+        <div class="ci-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <div><b>E-mail</b><span><a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></span></div>
+        </div>
+        <div class="ci-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+          <div><b>Instagram</b><span><a href="https://instagram.com/laboratoriolamam" target="_blank" rel="noopener">@laboratoriolamam</a></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <a class="brand" href="#top">
+        <img src="icon.png" alt="LAMAM">
+        <span class="brand-word">LAMAM</span>
+      </a>
+      <p class="foot-legal">© 2026 Laboratório Mineiro de Análises Agrícolas e Microbiológicas · Patos de Minas - MG</p>
+      <div class="foot-social">
+        <a href="https://instagram.com/laboratoriolamam" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/5534997741631" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.3 0-.5s-.5-1.3-.7-1.7-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 6.5 10a5 5 0 0 0 1 2.6 11 11 0 0 0 4.3 3.8c1.8.7 1.9.5 2.3.5a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.2-.2-.2-.4-.3z"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
-<a class="wpp" href="https://wa.me/5534997741631" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg></a>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="wa-float" href="https://wa.me/5534997741631" target="_blank" rel="noopener" aria-label="Fale no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.3 0-.5s-.5-1.3-.7-1.7-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 6.5 10a5 5 0 0 0 1 2.6 11 11 0 0 0 4.3 3.8c1.8.7 1.9.5 2.3.5a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.2-.2-.2-.4-.3z"/></svg>
+</a>
+
 <script>
-  document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4*60)+'ms';io.observe(el);});
+  // Mobile menu toggle
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', function(){
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); });
+  });
+
+  // Header: more solid dark on scroll
+  var header = document.getElementById('siteHeader');
+  function onScroll(){
+    if(window.scrollY > 24){ header.classList.add('scrolled'); }
+    else { header.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Scroll-reveal via IntersectionObserver
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
 </script>
 </body>
 </html>

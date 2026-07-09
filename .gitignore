@@ -1,0 +1,6 @@
+# Arquivos de trabalho local — nunca publicar
+*.bak
+*.bak_*
+_home_final.html
+preview-*.html
+servicos/_*.html
