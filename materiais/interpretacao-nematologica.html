@@ -135,6 +135,12 @@
   .gfoto-2.tri img{height:380px;}
   .gfoto-2 figcaption{font-size:.8rem;color:#5b6b78;font-style:italic;margin-top:6px;}
   .gfoto-2.tri figcaption,.gfoto-2.med figcaption{max-width:200px;margin-left:auto;margin-right:auto;}
+  /* par de fotos de mesma largura e altura, lado a lado */
+  .gfoto-par{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+  .gfoto-par figure{margin:0;}
+  .gfoto-par img{width:100%;height:240px;object-fit:cover;display:block;border-radius:10px;border:1px solid var(--borda);}
+  .gfoto-par figcaption{font-size:.8rem;color:#5b6b78;font-style:italic;margin-top:7px;text-align:center;}
+  @media(max-width:600px){.gfoto-par{grid-template-columns:1fr;} .gfoto-par img{height:200px;}}
   .pdf-card{display:flex;align-items:center;gap:14px;text-decoration:none;margin:18px 0 4px;
     background:#f3f9fd;border:1px solid #cfe4f3;border-left:4px solid var(--cyan);border-radius:12px;
     padding:14px 18px;transition:background .15s,border-color .15s,box-shadow .15s;}
@@ -719,9 +725,9 @@
         intensa</b>, em reboleiras de plantas de menor porte e em declínio. Vale percorrer a lavoura e
         registrar essas manchas antes de coletar.</p>
 
-      <div class="gfoto-2 med">
-        <figure><img src="../img/cafe-lavoura-paranaensis.jpg" alt="Lavoura de café jovem com plantas atrofiadas e falhas em reboleiras"><figcaption>Lavoura em formação: plantas atrofiadas e falhas em reboleiras, foco de <i>M. paranaensis</i>.</figcaption></figure>
-        <figure><img src="../img/cafe-lavoura-velha.jpg" alt="Lavoura de café adulta em declínio, desfolhada, ao lado de plantas sadias"><figcaption>Lavoura adulta em declínio: <b>desfolha intensa</b> (à esquerda), ao lado de plantas ainda sadias.</figcaption></figure>
+      <div class="gfoto-par">
+        <figure><img src="../img/cafe-lavoura-paranaensis.jpg" alt="Lavoura de café jovem com plantas atrofiadas e falhas em reboleiras"><figcaption>Lavoura jovem: falhas e plantas atrofiadas (<i>M. paranaensis</i>).</figcaption></figure>
+        <figure><img src="../img/cafe-lavoura-velha.jpg" alt="Lavoura de café adulta em declínio, desfolhada, ao lado de plantas sadias"><figcaption>Lavoura adulta: desfolha intensa e declínio.</figcaption></figure>
       </div>
 
       <div class="aviso"><b>Colete o material certo: é ele que permite o diagnóstico.</b> Como o sintoma
