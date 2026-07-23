@@ -3,87 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia de Interpretação de Laudos Nematológicos — LAMAM</title>
-<meta name="description" content="Níveis de dano econômico de fitonematoides por espécie e por cultura agrícola. Material técnico do LAMAM — Laboratório Mineiro de Análises Agrícolas e Microbiológicas.">
+<title>Interpretação de laudos nematológicos — Como ler o seu laudo | LAMAM</title>
+<meta name="description" content="Como ler o laudo de nematoides: faixas de risco por cultura, unidades (200 cm³ de solo, 1 g de raiz), cistos viáveis, análise por PCR e coleta correta. Material técnico do LAMAM.">
+<link rel="canonical" href="https://laboratoriolamam.com.br/materiais/interpretacao-nematologica.html">
+<meta property="og:url" content="https://laboratoriolamam.com.br/materiais/interpretacao-nematologica.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Interpretação de laudos nematológicos — Como ler o seu laudo | LAMAM">
+<meta property="og:description" content="Faixas de risco por cultura, unidades do laudo, cistos viáveis, PCR e coleta correta. Material técnico do LAMAM.">
 <link rel="icon" href="../favicon.ico">
-<meta property="og:title" content="Guia de Interpretação de Laudos Nematológicos — LAMAM">
-<meta property="og:description" content="Níveis de dano econômico de fitonematoides por espécie e por cultura agrícola.">
-<meta property="og:image" content="https://laboratoriolamam.com.br/img/svc-fitonematoides.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 <style>
-  .gwrap{max-width:1120px;margin:0 auto;padding:0 22px;}
-  /* Hero */
-  .guia-hero{background:linear-gradient(140deg,#081f33,#10416a 70%);color:#fff;padding:54px 0 46px;}
-  .guia-hero .eyebrow{color:var(--cyan-l);}
-  .guia-hero h1{color:#fff;font-size:2.1rem;font-weight:800;margin:10px 0 12px;max-width:760px;}
-  .guia-hero p{color:#cfe2f0;font-size:1.05rem;max-width:680px;}
-  .guia-hero .base{font-size:.82rem;color:#9fc1d8;margin-top:14px;}
-  .guia-hero .rev{font-size:.8rem;color:var(--cyan-l);margin-top:6px;font-style:italic;}
-  .guia-hero .acts{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;}
-  .crumb{background:var(--bg);border-bottom:1px solid var(--borda);font-size:.86rem;}
-  .crumb .gwrap{padding-top:13px;padding-bottom:13px;color:var(--cinza);}
-  .crumb a{color:var(--navy);font-weight:500;} .crumb a:hover{color:var(--cyan);} .crumb span{margin:0 8px;color:var(--cinza-l);}
-  /* Seções */
-  .body-area{background:var(--bg);padding:34px 0 56px;}
-  .gsec{background:#fff;border:1px solid var(--borda);border-radius:12px;box-shadow:var(--sh);margin-bottom:26px;overflow:hidden;}
-  .gsh{background:var(--navy);color:#fff;padding:13px 22px;font-family:'Poppins';font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:11px;}
-  .gsh .num{background:rgba(255,255,255,.18);border-radius:8px;min-width:28px;height:28px;display:grid;place-items:center;font-size:.85rem;}
-  .gsb{padding:20px 22px;}
-  .gdesc{font-size:.86rem;color:var(--cinza);margin-bottom:14px;border-bottom:1px solid var(--borda);padding-bottom:10px;}
-  .mt{font-family:'Poppins';font-size:.96rem;font-weight:700;color:var(--navy);margin:20px 0 8px;padding-left:10px;border-left:3px solid var(--cyan);}
-  .mt em{font-style:italic;}
-  /* Legenda */
-  .leg{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:8px 0;}
-  .li{border-radius:8px;padding:11px 9px;text-align:center;font-size:.8rem;font-weight:700;border:1.5px solid;}
-  .li small{display:block;font-weight:400;font-size:.71rem;margin-top:3px;opacity:.85;}
-  .l0{background:#eef1f4;border-color:#c2ccd6;color:#5b6b78;}
-  .l1{background:#e6f4ea;border-color:#6cc08a;color:#1f7a44;}
-  .l2{background:#fff3d6;border-color:#e7b84d;color:#8a6100;}
-  .l3{background:#ffe6d2;border-color:#f0935a;color:#b3500f;}
-  .l4{background:#fbe3e3;border-color:#e08a8a;color:#c1121f;}
-  /* Tabelas */
-  .tw{overflow-x:auto;margin:10px 0;}
-  table.gt{width:100%;border-collapse:collapse;font-size:.8rem;}
-  table.gt th{background:var(--navy);color:#fff;padding:8px 9px;text-align:center;font-weight:600;border:1px solid #0f3a59;font-size:.78rem;}
-  table.gt th.tl{text-align:left;}
-  table.gt td{padding:7px 9px;border:1px solid var(--borda);text-align:center;vertical-align:middle;color:#2b3a45;}
-  table.gt td.tl{text-align:left;font-weight:600;}
-  table.gt td.it{font-style:italic;font-size:.78rem;color:var(--cinza);}
-  table.gt tr:nth-child(even) td{background:#fafcfe;}
-  .c0{background:#eef1f4!important;color:#5b6b78;font-size:.76rem;}
-  .c1{background:#e6f4ea!important;color:#1f7a44;font-weight:600;}
-  .c2{background:#fff3d6!important;color:#8a6100;font-weight:600;}
-  .c3{background:#ffe6d2!important;color:#b3500f;font-weight:700;}
-  .c4{background:#fbe3e3!important;color:#c1121f;font-weight:700;}
-  /* Notas */
-  .nota{background:var(--bg);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:11px 14px;font-size:.82rem;color:#33414c;margin:10px 0;}
-  .aviso{background:#fff7e6;border-left:4px solid #e7a13a;border-radius:0 8px 8px 0;padding:11px 14px;font-size:.82rem;color:#7a5300;margin:10px 0;}
-  .fonte{font-size:.73rem;color:var(--cinza-l);margin-top:8px;font-style:italic;}
-  /* Chips hospedeiros */
-  .chip{display:inline-block;border-radius:5px;padding:2px 8px;font-size:.71rem;margin:1px;font-weight:600;color:#fff;}
-  .hp{background:#c1121f;} .hs{background:#e0820f;} .hr{background:#1f9d57;} .hv{background:#7a8896;}
-  .legchip{font-size:.8rem;color:var(--cinza);margin-bottom:12px;}
-  /* Referências */
-  .ref-item{display:flex;gap:10px;margin-bottom:8px;font-size:.8rem;line-height:1.5;color:#33414c;}
-  .ref-n{color:var(--cyan);font-weight:700;min-width:30px;flex-shrink:0;}
-  /* Aviso legal topo + sumário */
-  .aviso-top{background:#fff7e6;border:1px solid #f0c66a;border-left:5px solid #e7a13a;border-radius:10px;padding:14px 18px;font-size:.86rem;color:#7a5300;margin-bottom:22px;}
-  .sumario{background:#fff;border:1px solid var(--borda);border-radius:12px;box-shadow:var(--sh);padding:18px 22px;margin-bottom:26px;}
-  .sum-t{font-family:'Poppins';font-weight:700;color:var(--navy);font-size:1.05rem;margin-bottom:10px;}
-  .sum-list{margin:0;padding-left:20px;font-size:.9rem;color:#33414c;}
-  .sum-list li{margin-bottom:6px;}
-  .sum-list a{color:var(--navy);font-weight:600;text-decoration:none;}
-  .sum-list a:hover{color:var(--cyan);text-decoration:underline;}
-  .sum-crops{display:block;margin-top:4px;font-size:.82rem;color:var(--cinza);font-weight:400;}
-  .sum-crops a{color:var(--cyan);font-weight:500;text-decoration:none;}
-  .sum-crops a:hover{text-decoration:underline;}
-  .gsec, .mt{scroll-margin-top:90px;}
-  .rot-hint{display:none;background:#eef5fb;border:1px solid var(--borda);border-radius:8px;padding:9px 13px;font-size:.82rem;color:var(--navy);margin-bottom:18px;text-align:center;}
-  @media(max-width:700px){ .leg{grid-template-columns:repeat(2,1fr);} .guia-hero h1{font-size:1.5rem;} .rot-hint{display:block;} }
-  @media print{ header,.crumb,.guia-hero .acts,.wpp,footer .fline{display:none!important;} .body-area{background:#fff;padding:0;} .gsec{box-shadow:none;} }
+  :root{ --navy:#15507a; --navy-d:#0f3a59; --cyan:#3da9dc; --bg:#f4f8fc; --borda:#e4edf4; --cinza:#5b6b78; }
+  .guia-hero{background:linear-gradient(140deg,#081f33,#10416a 70%);color:#fff;padding:52px 0 44px;}
+  .guia-hero .eyebrow{color:#5fc0ea;}
+  .guia-hero h1{color:#fff;font-size:2.15rem;margin:10px 0 12px;font-weight:800;line-height:1.2;}
+  .guia-hero p{color:#cfe0ec;max-width:60ch;font-size:1.05rem;}
+  .guia-hero .rev{color:#8fb0c6;font-style:italic;font-size:.85rem;margin-top:12px;}
+  .gwrap{max-width:1000px;margin:0 auto;padding:0 22px;}
+  .body-area{background:var(--bg);padding:38px 0 60px;}
+  html{scroll-behavior:smooth;}
+  .cult,.refs{scroll-margin-top:84px;}
+  .sumario{background:#fff;border:1px solid var(--borda);border-radius:14px;margin-bottom:26px;
+    overflow:hidden;box-shadow:0 2px 12px rgba(21,80,122,.07);}
+  .sumario h2{font-family:'Poppins';font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;
+    color:#fff;margin:0;padding:13px 22px;background:linear-gradient(135deg,var(--navy),#1e6fa6);}
+  .sumario ol{list-style:none;margin:0;padding:0;}
+  .sumario > ol{counter-reset:s1;padding:10px 16px 14px;}
+  .sumario > ol > li{counter-increment:s1;}
+  .sumario > ol > li + li{border-top:1px solid #eff5fa;}
+  .sumario > ol > li > a{color:var(--navy);font-size:1rem;font-weight:700;text-decoration:none;
+    display:flex;gap:12px;align-items:center;padding:11px 10px;border-radius:9px;transition:background .15s,color .15s;}
+  .sumario > ol > li > a::before{content:counter(s1);flex:0 0 auto;width:26px;height:26px;border-radius:8px;
+    background:var(--navy);color:#fff;font-size:.82rem;font-weight:700;
+    display:flex;align-items:center;justify-content:center;transition:background .15s;}
+  .sumario > ol > li > a:hover{background:#f1f8fd;}
+  .sumario > ol > li > a:hover::before{background:var(--cyan);}
+  .sumario ol ol{counter-reset:s2;margin:0 0 12px 23px;padding-left:15px;border-left:2px solid #e3eff8;}
+  .sumario ol ol li{counter-increment:s2;}
+  .sumario ol ol li a{color:#3b4c59;font-size:.9rem;font-weight:500;text-decoration:none;
+    display:flex;gap:10px;align-items:center;padding:5px 9px;border-radius:7px;transition:background .15s,color .15s;}
+  .sumario ol ol li a::before{content:counter(s1) "." counter(s2);color:var(--cyan);font-weight:700;
+    font-size:.78rem;min-width:25px;flex:0 0 auto;font-variant-numeric:tabular-nums;}
+  .sumario ol ol li a:hover{background:#f1f8fd;color:var(--navy);}
+  .body-area{counter-reset:sec;}
+  .culturas{counter-reset:cult;}
+  h2.ch, .refs h2{counter-increment:sec;}
+  h2.ch::before, .refs h2::before{content:counter(sec) ". ";}
+  .culturas .cult h2.ch{counter-increment:cult;}
+  .culturas .cult h2.ch::before{content:counter(sec) "." counter(cult) " ";}
+
+  .aviso-top{background:#fff8e6;border-left:4px solid #e0a80d;border-radius:10px;padding:20px 24px;margin-bottom:24px;}
+  .aviso-top b{color:#8a6400;}
+  .aviso-top p{margin:0 0 10px;color:#4a3c14;line-height:1.65;}
+  .aviso-top p:last-child{margin-bottom:0;}
+
+  .comofunc{background:#eef6fc;border:1px solid #d5e8f5;border-radius:12px;padding:20px 24px;margin-bottom:24px;}
+  .comofunc h2{font-family:'Poppins';font-size:1.05rem;color:var(--navy);margin:0 0 8px;}
+  .comofunc p{margin:0 0 10px;color:#2c4a5e;line-height:1.6;font-size:.95rem;}
+  .comofunc .regra{background:#fff;border-radius:8px;padding:12px 16px;font-weight:600;color:var(--navy);
+    border:1px solid #cfe3f0;text-align:center;font-size:1.02rem;}
+
+  .cult{background:#fff;border:1px solid var(--borda);border-radius:14px;margin-bottom:18px;overflow:hidden;}
+  h2.ch{background:var(--navy);color:#fff;padding:13px 22px;font-family:'Poppins';font-weight:700;
+    font-size:1.08rem;margin:0;}
+  .cb{padding:18px 22px;}
+
+  table.gt{width:100%;border-collapse:collapse;font-size:.92rem;}
+  table.gt th{background:#eaf2f8;color:var(--navy);padding:10px;text-align:center !important;font-weight:700;
+    border-bottom:2px solid var(--cyan);font-size:.86rem;}
+  table.gt td{padding:11px 10px;border-bottom:1px solid var(--borda);vertical-align:middle;line-height:1.5;}
+  table.gt th{vertical-align:middle;}
+  .esp{font-weight:600;color:var(--navy);white-space:nowrap;}
+  .esp small{font-style:italic;font-weight:400;color:var(--cinza);display:block;}
+  .esp small[style]{font-style:normal;}
+  .faixa b{color:#0f3a59;}
+  td.band.semnum{background:#f3f5f7;color:#6a7783;font-weight:600;}
+  .semnum{color:#8a6400;font-weight:600;}
+  /* semáforo baixo/médio/alto */
+  table.sem th{text-align:center;}
+  table.sem td.band{text-align:center;font-weight:700;white-space:nowrap;}
+  td.band small,td.uni small{display:block;font-size:.7rem;font-weight:600;opacity:.72;margin-top:2px;letter-spacing:.01em;}
+  .b-baixo{background:#e7f5ec;color:#1b7a3e;}
+  .b-medio{background:#fdf6e3;color:#9a6a00;}
+  .b-alto{background:#fdeeee;color:#b3352a;}
+  .sem-leg{font-size:.8rem;color:#5b6b78;margin:8px 0 2px;}
+  .sem-leg b{color:var(--navy);}
+  .orient{display:inline-block;background:#eef2f6;color:#5b6b78;font-size:.72rem;font-weight:600;
+    padding:2px 9px;border-radius:20px;margin-left:8px;vertical-align:middle;}
+
+  details.tec{margin-top:14px;border:1px solid #d5e8f5;border-radius:9px;background:#f7fbfe;}
+  details.tec summary{cursor:pointer;padding:11px 16px;font-weight:600;color:var(--navy);font-size:.9rem;
+    list-style:none;display:flex;align-items:center;gap:8px;}
+  details.tec summary::-webkit-details-marker{display:none;}
+  details.tec summary::before{content:"▸";color:var(--cyan);transition:transform .2s;}
+  details.tec[open] summary::before{transform:rotate(90deg);}
+  details.tec .tec-b{padding:4px 16px 14px;font-size:.85rem;color:#3d4f5c;line-height:1.6;}
+  details.tec .tl{margin:10px 0;padding-left:12px;border-left:2px solid var(--cyan);}
+  details.tec .tl b{color:var(--navy);}
+  details.tec .nao{color:#7a5b00;}
+
+  .nota{background:#eef6fc;border-left:3px solid var(--cyan);padding:11px 15px;border-radius:8px;
+    margin:12px 0;font-size:.9rem;color:#2c4a5e;line-height:1.55;}
+  .perigo{background:#fdeeee;border-left:3px solid #c0392b;padding:11px 15px;border-radius:8px;
+    margin:12px 0;font-size:.9rem;color:#6e2620;line-height:1.55;}
+  .aviso{background:#fff8e6;border-left:4px solid #e0a80d;border-radius:0 8px 8px 0;padding:12px 16px;
+    margin:12px 0;font-size:.9rem;color:#4a3c14;line-height:1.6;}
+  .aviso b{color:#8a6400;}
+
+  .refs{background:#fff;border:1px solid var(--borda);border-radius:14px;padding:20px 24px;margin-top:22px;}
+  .refs h2{font-family:'Poppins';font-size:1.05rem;color:var(--navy);margin:0 0 12px;}
+  .ref-item{font-size:.82rem;color:#3d4f5c;margin-bottom:7px;line-height:1.5;}
+  .refs{counter-reset:refn;}
+  .refs .ref-item{counter-increment:refn;padding-left:24px;text-indent:-24px;}
+  .refs .ref-item::before{content:counter(refn) ". ";font-weight:700;color:var(--navy);}
+  h3.sub{font-family:'Poppins';font-size:1.02rem;color:var(--navy);margin:18px 0 8px;}
+  .foto-slot{border:1.5px dashed #bcd6ea;border-radius:10px;background:#f2f8fc;padding:24px;
+    text-align:center;color:#6a8296;font-size:.88rem;margin:12px 0;line-height:1.5;}
+  .foto-slot b{display:block;color:var(--navy);font-size:.94rem;margin-bottom:3px;}
+  .cb p.txt{margin:0 0 10px;color:#2c4a5e;line-height:1.6;font-size:.95rem;}
+  .gfoto{margin:14px auto;text-align:center;max-width:400px;}
+  .gfoto img{max-width:100%;border-radius:10px;border:1px solid var(--borda);}
+  .gfoto figcaption{font-size:.8rem;color:#5b6b78;font-style:italic;margin-top:6px;}
+  .gfoto-2{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:flex-start;margin:16px 0;}
+  .gfoto-2 figure{margin:0;text-align:center;flex:0 0 auto;max-width:100%;}
+  .gfoto-2 img{height:210px;width:auto;max-width:100%;display:block;border-radius:10px;border:1px solid var(--borda);}
+  .gfoto-2.esm img{height:400px;}
+  .gfoto-2.med img{height:320px;}
+  .gfoto-2.tri img{height:380px;}
+  .gfoto-2 figcaption{font-size:.8rem;color:#5b6b78;font-style:italic;margin-top:6px;}
+  .gfoto-2.tri figcaption,.gfoto-2.med figcaption{max-width:200px;margin-left:auto;margin-right:auto;}
+  .pdf-card{display:flex;align-items:center;gap:14px;text-decoration:none;margin:18px 0 4px;
+    background:#f3f9fd;border:1px solid #cfe4f3;border-left:4px solid var(--cyan);border-radius:12px;
+    padding:14px 18px;transition:background .15s,border-color .15s,box-shadow .15s;}
+  .pdf-card:hover{background:#e9f4fc;border-color:var(--cyan);box-shadow:0 3px 14px rgba(21,80,122,.11);}
+  .pdf-ico{flex:0 0 auto;width:46px;height:46px;border-radius:10px;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;
+    font-size:.74rem;letter-spacing:.05em;}
+  .pdf-txt{display:flex;flex-direction:column;gap:3px;min-width:0;}
+  .pdf-txt b{color:var(--navy);font-size:.98rem;line-height:1.3;}
+  .pdf-txt small{color:#5b6b78;font-size:.82rem;line-height:1.35;}
+  .pdf-seta{margin-left:auto;padding-left:10px;color:var(--cyan);font-size:1.35rem;font-weight:700;
+    transition:transform .15s;}
+  .pdf-card:hover .pdf-seta{transform:translateX(4px);}
+  .gfoto-2.quad{gap:12px;}
+  .gfoto-2.quad img{height:265px;}
+  .gfoto-2.quad figcaption{max-width:200px;margin-left:auto;margin-right:auto;}
+  @media(max-width:820px){.gfoto-2.quad img{height:200px;}}
+  .gfoto-2.cafe img{height:430px;}
+  .gfoto-2.cafe .fg-estreita{max-width:272px;}
+  .gfoto-2.cafe .fg-larga{max-width:540px;}
+  @media(max-width:820px){.gfoto-2.cafe img{height:300px;}
+    .gfoto-2.cafe .fg-estreita{max-width:190px;} .gfoto-2.cafe .fg-larga{max-width:380px;}}
+  @media(max-width:600px){.gfoto-2 img{height:160px;} .gfoto-2.esm img{height:250px;}
+    .gfoto-2.med img{height:220px;} .gfoto-2.tri img{height:240px;}}
+  .cb p.txt, .nota, .aviso, .aviso-top p, .tec-b{text-align:justify;}
+  @media print{ header,.crumb,.wpp,footer .fline{display:none!important;}
+    details.tec{border:none;} details.tec[open] .tec-b{display:block;}
+    .ch,table.gt th{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;} }
 </style>
 </head>
 <body>
@@ -91,387 +170,685 @@
 <header>
   <div class="wrap nav">
     <a href="../index.html" class="brand"><img src="../icon.png" alt="LAMAM"> LAMAM</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
-    <nav>
-      <ul id="menu">
-        <li><a href="../index.html#inicio">Início</a></li>
-        <li><a href="../index.html#servicos">Serviços</a></li>
-        <li><a href="../index.html#galeria">Galeria</a></li>
-        <li><a href="../index.html#contato">Contato</a></li>
-        <li><a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener">WhatsApp</a></li>
-      </ul>
-    </nav>
+    <nav><ul id="menu"><li><a href="../index.html#servicos">Serviços</a></li><li><a href="../index.html#contato">Contato</a></li></ul></nav>
   </div>
 </header>
 
-<nav class="crumb"><div class="gwrap"><a href="../index.html">Início</a> <span>›</span> <a href="../index.html#servicos">Serviços</a> <span>›</span> <a href="../servicos/fitonematoides.html">Fitonematoides</a> <span>›</span> <b>Guia de interpretação</b></div></nav>
+<nav class="crumb"><div class="wrap"><a href="../index.html">Início</a> <span>›</span> <b>Interpretação de laudos nematológicos</b></div></nav>
 
 <section class="guia-hero">
   <div class="gwrap">
     <span class="eyebrow">Material técnico</span>
-    <h1>Guia de Interpretação de Laudos Nematológicos</h1>
-    <p>Níveis de dano econômico de fitonematoides por espécie e por cultura agrícola — referência para a leitura dos resultados da análise nematológica.</p>
-    <div class="base">Base técnica: Embrapa · IAC · Sociedade Brasileira de Nematologia (SBN) · literatura científica nacional e internacional.</div>
-    <div class="rev">Última revisão: junho de 2026</div>
-    <div class="acts">
-      <a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener">Falar com o laboratório</a>
-    </div>
+    <h1>Como ler o seu laudo de nematoides</h1>
+    <p>Este guia converte a <b>densidade populacional</b> do laudo num semáforo (<b>baixo, médio, alto</b>),
+       como leitura orientativa do risco, não como diagnóstico.</p>
+    <p class="rev">Última revisão: julho de 2026</p>
   </div>
 </section>
 
 <div class="body-area">
 <div class="gwrap">
 
-  <div class="aviso-top"><strong>Aviso legal — </strong>este material é uma referência técnica compilada a partir de fontes científicas e <strong>não substitui o laudo oficial</strong> emitido pelo laboratório nem a recomendação individualizada de um Engenheiro Agrônomo habilitado. Os valores de Nível de Dano Econômico (NDE) variam com a cultura, a textura do solo, a cultivar, o clima e a presença de múltiplas espécies — devem ser sempre contextualizados à realidade da área.</div>
+  <div class="aviso-top">
+    <p><b>Antes de tudo: este guia é orientativo.</b></p>
+    <p>Os números abaixo dão uma <b>noção</b> do risco; não são ordem de tratar. A leitura muda com
+       a cultivar, o tipo de solo, a época da coleta, o histórico da área, as outras espécies
+       presentes e a chuva. <b>Um mesmo número pode ser grave numa lavoura e inofensivo em outra.</b></p>
+    <p>O laboratório entrega a contagem. <b>Quem decide o manejo é o agrônomo, olhando a área.</b>
+       A própria Sociedade Brasileira de Nematologia (2019) trata a classificação
+       “alto/médio/baixo” como <b>item opcional do laudo</b>, a ser definida por cada laboratório
+       conforme a cultura e a região.</p>
+  </div>
 
-  <div class="rot-hint">Dica: no celular, gire a tela na horizontal para visualizar melhor as tabelas.</div>
-
-  <div class="sumario">
-    <div class="sum-t">Sumário</div>
-    <ol class="sum-list">
-      <li><a href="#leg">Sistema de classificação de infestação</a></li>
-      <li><a href="#culturas">Tabelas de interpretação por cultura</a>
-        <span class="sum-crops"><a href="#c-soja">Soja</a> · <a href="#c-milho">Milho</a> · <a href="#c-algodao">Algodão</a> · <a href="#c-cana">Cana</a> · <a href="#c-cafe">Café</a> · <a href="#c-banana">Banana</a> · <a href="#c-hortalicas">Hortaliças</a> · <a href="#c-citros">Citros</a> · <a href="#c-feijao">Feijão</a></span>
+  <nav class="sumario">
+    <h2>Neste guia</h2>
+    <ol>
+      <li><a href="#c-laudo">Entendendo o seu laudo</a></li>
+      <li><a href="#c-culturas">Culturas — faixas por semáforo</a>
+        <ol>
+          <li><a href="#c-soja">Soja</a></li>
+          <li><a href="#c-milho">Milho</a></li>
+          <li><a href="#c-feijao">Feijão</a></li>
+          <li><a href="#c-cafe">Café</a></li>
+          <li><a href="#c-algodao">Algodão</a></li>
+          <li><a href="#c-cana">Cana-de-açúcar</a></li>
+          <li><a href="#c-hortalicas">Hortaliças</a></li>
+          <li><a href="#c-frutas">Frutas</a></li>
+          <li><a href="#c-trigo">Trigo</a></li>
+          <li><a href="#c-pastagem">Pastagem</a></li>
+        </ol>
       </li>
-      <li><a href="#especies">Tabelas de referência por espécie de nematoide</a></li>
-      <li><a href="#hospedeiros">Hospedabilidade por espécie — rotação de culturas</a></li>
-      <li><a href="#refs">Referências bibliográficas</a></li>
+      <li><a href="#c-pcr">A análise por PCR: o que é e para que serve</a></li>
+      <li><a href="#c-cafe-pcr">Galhas de <i>Meloidogyne</i> no café e o PCR</a></li>
+      <li><a href="#c-material">Material a coletar e enviar</a></li>
+      <li><a href="#refs">Referências</a></li>
     </ol>
-  </div>
+  </nav>
 
-  <!-- LEGENDA -->
-  <div class="gsec" id="leg">
-    <div class="gsh"><span class="num">1</span> Sistema de classificação de infestação</div>
-    <div class="gsb">
-      <div class="gdesc">Categorias utilizadas em todas as tabelas deste guia. Os limites numéricos variam por espécie e cultura; as faixas estão detalhadas em cada tabela específica.</div>
-      <div class="leg">
-        <div class="li l0">AUSENTE / TRAÇO<small>Abaixo do limite de detecção ou não detectado</small></div>
-        <div class="li l1">BAIXA<small>Presença detectada, abaixo do limiar de dano</small></div>
-        <div class="li l2">MÉDIA<small>Atenção: próximo ao nível de ação</small></div>
-        <div class="li l3">ALTA<small>Acima do NDE — intervenção necessária</small></div>
-        <div class="li l4">MUITO ALTA<small>Infestação severa — perdas expressivas</small></div>
+  <!-- ============ ENTENDENDO O LAUDO ============ -->
+  <div class="cult" id="c-laudo">
+    <h2 class="ch">Entendendo o seu laudo</h2>
+    <div class="cb">
+      <p class="txt"><b>O laudo lista apenas os gêneros encontrados na sua amostra</b>. Não é uma lista fixa: se um
+        gênero não aparece, é porque não foi detectado. A quantificação é feita por <b>gênero</b>; a <b>espécie</b>
+        (sobretudo em <i>Meloidogyne</i>) é definida por <b>PCR</b>, à parte.</p>
+      <div class="aviso"><b>A amostragem determina o resultado.</b> A análise só é representativa quando a coleta é feita
+        corretamente e as <b>amostras simples são bem homogeneizadas</b> antes de formar a amostra composta. Por isso, a
+        <b>não detecção de um nematoide não garante a sua ausência</b> na área: amostragem inadequada, população baixa e
+        a época de coleta interferem na <b>recuperação</b> e na <b>detecção</b> do nematoide.</div>
+      <p class="txt">As contagens saem nas unidades do laudo do LAMAM: <b>por 200 cm³ de solo</b> e <b>por 1 grama de
+        raiz</b>. É nessas unidades que as faixas desta página estão; dá para comparar direto, sem fazer cálculos.</p>
+      <p class="txt">Abaixo, <b>todos os gêneros que o laboratório quantifica</b>, agrupados pelo modo de parasitismo:</p>
+      <table class="gt">
+        <thead><tr>
+          <th style="width:18%">Grupo</th><th style="width:22%">Como parasita</th>
+          <th style="width:60%">Gêneros quantificados no laudo do LAMAM</th>
+        </tr></thead>
+        <tbody>
+          <tr><td><b>Endoparasitas</b></td><td>Penetram e vivem <b>dentro</b> da raiz</td>
+            <td><i>Meloidogyne</i> spp. (galhas), <i>Pratylenchus</i> spp. (lesões), <i>Rotylenchulus</i> spp. (reniforme), <i>Tylenchulus</i> spp. (citros), <i>Radopholus</i> spp.</td></tr>
+          <tr><td><b>Ectoparasitas</b></td><td>Alimentam-se de <b>fora</b>, com o estilete</td>
+            <td><i>Helicotylenchus</i> spp. (espiralado), <i>Criconemoides</i> spp. (anelado), <i>Hemicycliophora</i> spp., <i>Paratrichodorus</i> spp. (vetor de vírus), <i>Paratylenchus</i> spp. (alfinete), <i>Scutellonema</i> spp., <i>Tylenchorhynchus</i> spp. (esguio), <i>Xiphinema</i> spp. (adaga, vetor de vírus)</td></tr>
+          <tr><td><b>Cistos e ovos</b></td><td>Não parasitam; são <b>fonte de inóculo</b> no solo</td>
+            <td><i>Heterodera glycines</i> (cisto da soja): no laudo, <b>cisto viável</b> e <b>cisto inviável</b>.<br><br>A contagem de <b>ovos</b> (sobretudo no solo) pode ser de <b>qualquer nematoide</b>, inclusive de vida livre.</td></tr>
+          <tr><td><b>De vida livre</b></td><td><b>Não</b> parasitam a planta</td>
+            <td>Agrupados no laudo como <b>“vida livre”</b> (bacteriófagos, fungívoros, onívoros, predadores): indicadores de solo biologicamente ativo, não dano.</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub">Cisto viável × inviável</h3>
+      <p class="txt">No cisto da soja (<i>Heterodera glycines</i>), a fêmea fecundada retém os ovos no corpo e, ao
+        morrer, sua <b>cutícula endurece e escurece</b>, formando o <b>cisto</b> (em média cerca de 200 ovos, podendo
+        chegar a 500). Nem todo cisto no solo é infestação atual: o <b>viável</b> está <b>túrgido e globular</b>,
+        cheio de ovos; o <b>inviável</b> fica <b>vazio e colapsado</b>, por <b>eclosão dos ovos</b> ou por
+        <b>parasitismo</b> de fungos que atacam os ovos dentro do cisto.</p>
+      <div class="gfoto-2">
+        <figure><img src="../img/cisto-lado-a-lado.jpg" alt="Cisto viável (esquerda) e inviável (direita) — laboratório LAMAM"><figcaption>À <b>esquerda</b>, o cisto <b>viável</b> (túrgido); à <b>direita</b>, o <b>inviável</b> (colapsado).</figcaption></figure>
+        <figure><img src="../img/cisto-tamanhos.jpg" alt="Cistos de diferentes tamanhos e cores — laboratório LAMAM"><figcaption>Cistos variam em tamanho e cor conforme a idade.</figcaption></figure>
       </div>
-      <div class="aviso"><strong>Importante:</strong> os valores de Nível de Dano Econômico (NDE) variam com a cultura, a textura do solo, a cultivar, as condições climáticas e a presença de múltiplas espécies. Use as tabelas como referência técnica, não como critério absoluto. A interpretação deve sempre ser feita por Engenheiro Agrônomo habilitado.</div>
+
+      <h3 class="sub">Como diferenciar na prática</h3>
+      <p class="txt">Ao estereomicroscópio: <b>(1) forma/turgidez</b>: o viável é globular e cheio, o inviável colapsa e
+        achata; <b>(2) cor</b> é só indício: o escurecimento é o envelhecimento da cutícula, e um cisto marrom pode
+        ainda estar cheio de ovos; <b>(3) esmagamento</b> é o critério definitivo: rompe-se o cisto e checa-se o
+        conteúdo: ovos íntegros = viável; cavidade vazia = inviável.</p>
+      <div class="gfoto-2 esm">
+        <figure><img src="../img/cisto-viavel-rompido.jpg" alt="Cisto viável rompido, ovos no interior"><figcaption>Cisto <b>viável</b> rompido — ovos no interior.</figcaption></figure>
+        <figure><img src="../img/cisto-inviavel-agulha.jpg" alt="Cisto inviável, cavidade vazia ao toque da agulha"><figcaption>Cisto <b>inviável</b> — cavidade vazia ao toque da agulha.</figcaption></figure>
+      </div>
+
+      <h3 class="sub">Nematoides de vida livre</h3>
+      <div class="nota">Nem todo nematoide do solo é fitoparasita. Os <b>de vida livre</b> se alimentam de bactérias,
+        fungos, matéria orgânica ou de outros nematoides e <b>não parasitam a cultura</b>: sua abundância e diversidade
+        são indicadores de um <b>solo biologicamente ativo</b>. No laudo têm caráter <b>informativo</b>: não representam
+        problema fitossanitário e <b>não</b> se somam aos fitonematoides na avaliação de risco.</div>
+
+      <h3 class="sub">Quando pedir a identificação de espécie (PCR)</h3>
+      <p class="txt">A rotina identifica por gênero. A <b>PCR</b> (espécie) entra quando o manejo depende dela:
+        sobretudo para separar as espécies de <i>Meloidogyne</i>, já que a escolha de cultivar/porta-enxerto resistente
+        é <b>espécie-específica</b> (soja, algodão, café, cana). Para o <b>café</b>, veja o tópico específico sobre
+        galhas e PCR.</p>
     </div>
   </div>
 
-  <!-- SEÇÃO 1 — POR ESPÉCIE -->
-  <div class="gsec" id="culturas">
-    <div class="gsh"><span class="num">2</span> Tabelas de interpretação por cultura</div>
-    <div class="gsb">
-      <div class="gdesc">Cada tabela apresenta os principais nematoides da cultura, suas faixas populacionais de risco e perdas esperadas, na unidade-padrão mais utilizada na literatura para cada patossistema.</div>
+  <!-- ============ CULTURAS (tópico 2 · subtópicos 2.x) ============ -->
+  <div class="cult" id="c-culturas">
+    <h2 class="ch">Culturas — faixas por semáforo</h2>
+    <div class="cb">
+      <p class="txt">Cada cultura tem sua própria tabela de semáforo, na unidade do laudo. Compare o número da sua
+        amostra com a faixa da cultura correspondente. <b>Baixo</b> e <b>médio</b> são orientativos; a faixa
+        <b>alta (“dano”)</b> vem de estudo publicado (fonte no detalhe técnico de cada cultura).</p>
+    </div>
+  </div>
+  <div class="culturas">
 
-      <div class="mt" id="c-soja">2.1 Soja (<em>Glycine max</em>)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Ausente</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda máx.</th></tr></thead>
+  <!-- ============ SOJA ============ -->
+  <div class="cult" id="c-soja">
+    <h2 class="ch">Soja</h2>
+    <div class="cb">
+      <p class="sem-leg">Contagem no seu laudo (por <b>200 cm³ de solo</b>). A faixa
+        <span class="b-alto" style="padding:1px 7px;border-radius:4px">Alto</span> é ancorada em dano
+        publicado; <span class="b-baixo" style="padding:1px 7px;border-radius:4px">Baixo</span> e
+        <span class="b-medio" style="padding:1px 7px;border-radius:4px">Médio</span> são leitura
+        orientativa do LAMAM. <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr>
+          <th style="width:24%;text-align:left">Nematoide</th>
+          <th>Baixo</th><th>Médio<br><small style="font-weight:400">atenção</small></th>
+          <th>Alto<br><small style="font-weight:400">dano provável</small></th>
+          <th style="width:30%;text-align:left">O que observar</th>
+        </tr></thead>
         <tbody>
-          <tr><td class="tl it">Heterodera glycines</td><td>N. de Cisto</td><td class="c0">0/200 cm³</td><td class="c1">1–10</td><td class="c2">11–20</td><td class="c3">21–50</td><td class="c4">&gt;50</td><td class="c4">até 70%</td></tr>
-          <tr><td class="tl it">Meloidogyne javanica / incognita</td><td>N. das Galhas</td><td class="c0">&lt;1 J2/200 cm³</td><td class="c1">1–50</td><td class="c2">51–200</td><td class="c3">201–500</td><td class="c4">&gt;500</td><td class="c4">até 90%</td></tr>
-          <tr><td class="tl it">Pratylenchus brachyurus</td><td>N. das Lesões</td><td class="c0">0/200 cm³</td><td class="c1">1–100 ou &lt;5/g</td><td class="c2">101–500 ou 5–19/g</td><td class="c3">501–2.000 ou 19–30/g</td><td class="c4">&gt;2.000 ou &gt;30/g</td><td class="c4">até 50%</td></tr>
-          <tr><td class="tl it">Rotylenchulus reniformis</td><td>N. Reniforme</td><td class="c0">0/200 cm³</td><td class="c1">1–500</td><td class="c2">501–2.000</td><td class="c3">2.001–4.500</td><td class="c4">&gt;4.500</td><td class="c4">até 40%</td></tr>
-          <tr><td class="tl it">Aphelenchoides besseyi</td><td>N. Haste Verde</td><td class="c0">0/g folha</td><td class="c1">1–10/g</td><td class="c2">11–50/g</td><td class="c3">51–200/g</td><td class="c4">&gt;200/g</td><td class="c4">até 100%</td></tr>
+          <tr>
+            <td class="esp">Cisto <small>Heterodera glycines</small></td>
+            <td class="band b-baixo">até 5<small>cistos/200 cm³</small></td><td class="band b-medio">5 a 10<small>cistos/200 cm³</small></td><td class="band b-alto">acima de 10<small>cistos/200 cm³</small></td>
+            <td>Contar <b>cistos viáveis</b> (com ovos). 10 cistos viáveis/200 cm³ já custaram cerca de 16% de perda, e em veranico até 1 cisto pesa.</td>
+          </tr>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne incognita</small></td>
+            <td class="band b-baixo">até 100<small>J2/200 cm³</small></td><td class="band b-medio">100 a 200<small>J2/200 cm³</small></td><td class="band b-alto">acima de 200<small>J2/200 cm³</small></td>
+            <td>Plantas menores em reboleiras, com <b>galhas</b> nas raízes. Piora em solo arenoso; em solo mais argiloso o limiar é maior.</td>
+          </tr>
+          <tr>
+            <td class="esp">Lesões <small>Pratylenchus brachyurus</small></td>
+            <td class="band b-baixo">até 100<small>nematoides/200 cm³</small></td><td class="band b-medio">100 a 200<small>nematoides/200 cm³</small></td><td class="band b-alto">acima de 200<small>nematoides/200 cm³</small></td>
+            <td>O mais comum no Cerrado. Raiz com <b>lesões escuras</b>; reboleiras de plantas fracas. Avalie também a lesão na raiz, não só o solo.</td>
+          </tr>
+          <tr>
+            <td class="esp">Reniforme <small>Rotylenchulus reniformis</small></td>
+            <td class="band semnum" colspan="2">sem faixa nacional</td><td class="band b-alto">acima de 2.000<small>nematoides/200 cm³</small></td>
+            <td>Menos comum em soja de MG. <b>Não use o limite do algodão</b>: em soja o risco vem com população bem maior.</td>
+          </tr>
         </tbody>
-      </table></div>
-      <div class="nota"><strong>Alerta soja:</strong> <em>Pratylenchus</em> e <em>Meloidogyne</em> ocorrem simultaneamente em até 40% das áreas — o dano conjunto é sinérgico. A sucessão soja–milho safrinha em áreas infestadas por <em>P. brachyurus</em> eleva as populações perigosamente.</div>
-      <div class="fonte">Perdas econômicas na soja: R$ 27,7 bilhões/safra (SBN/Syngenta/Agroconsult, 2022).</div>
+      </table>
 
-      <div class="mt" id="c-milho">2.2 Milho (<em>Zea mays</em>)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Pratylenchus brachyurus</td><td>N. das Lesões</td><td class="c1">&lt;100/200 cm³</td><td class="c2">100–500</td><td class="c3">500–2.000</td><td class="c4">&gt;2.000</td><td>5–30% (73,66% das amostras +)</td></tr>
-          <tr><td class="tl it">Meloidogyne incognita / javanica</td><td>N. das Galhas</td><td class="c1">&lt;50 J2/200 cm³</td><td class="c2">50–200</td><td class="c3">200–500</td><td class="c4">&gt;500</td><td>5–20% (40,71% das amostras +)</td></tr>
-        </tbody>
-      </table></div>
-      <div class="nota">No milho, as galhas são pequenas e passam despercebidas a olho nu. Milho é não-hospedeiro de <em>H. glycines</em> — ótima opção de rotação para o NCS. Atenção: o milho é hospedeiro de <em>P. brachyurus</em> — não interrompe o ciclo desse nematoide.</div>
-      <div class="fonte">Refs.: Syngenta MaisAgro (2025) — 1.378 amostras de raízes de milho. Perda potencial: R$ 110,3 bi em 10 anos.</div>
-
-      <div class="mt" id="c-algodao">2.3 Algodão (<em>Gossypium hirsutum</em>)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Pratylenchus brachyurus</td><td>N. das Lesões</td><td class="c1">&lt;100/200 cm³</td><td class="c2">100–500</td><td class="c3">500–2.000</td><td class="c4">&gt;2.000</td><td>Maior dano em associação com estresses</td></tr>
-          <tr><td class="tl it">Meloidogyne incognita (raça 3)</td><td>N. das Galhas</td><td class="c1">&lt;50 J2/200 cm³</td><td class="c2">50–200</td><td class="c3">200–500</td><td class="c4">&gt;500</td><td>23–35% em populações mistas (MT)</td></tr>
-          <tr><td class="tl it">Rotylenchulus reniformis</td><td>N. Reniforme</td><td class="c1">&lt;500/200 cm³</td><td class="c2">500–2.000</td><td class="c3">2.000–4.500</td><td class="c4">&gt;4.500 ("carijó")</td><td>até 50% em campos individuais</td></tr>
-        </tbody>
-      </table></div>
-      <div class="nota">No algodão do Cerrado: <em>P. brachyurus</em> (96,2%), <em>M. incognita</em> (24,4%) e <em>R. reniformis</em> (12,8%) das áreas do MT. Populações mistas são mais destrutivas. Perda potencial: R$ 44,1 bi em 10 anos (SBN, 2022).</div>
-      <div class="fonte">Refs.: Bioscience Journal/UFU (2014); Embrapa Algodão (Galbieri &amp; Asmus, 2016).</div>
-
-      <div class="mt" id="c-cana">2.4 Cana-de-açúcar (<em>Saccharum officinarum</em>)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta (NDE)</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Pratylenchus zeae</td><td>N. das Lesões (cana)</td><td class="c1">10–500/50 g raiz</td><td class="c2">500–2.500</td><td class="c3">&gt;2.500</td><td class="c4">&gt;7.000 (&gt;70/g)</td><td>até 30% soca; até 50% cana-planta</td></tr>
-          <tr><td class="tl it">Meloidogyne javanica</td><td>N. das Galhas</td><td class="c1">&lt;50 J2/200 cm³</td><td class="c2">50–200</td><td class="c3">&gt;200 (&gt;400/50 g raiz)</td><td class="c4">&gt;500</td><td>até 30% cana-planta</td></tr>
-          <tr><td class="tl it">Meloidogyne incognita</td><td>N. das Galhas (agressivo)</td><td class="c1">&lt;25 J2/200 cm³</td><td class="c2">25–100</td><td class="c3">&gt;100</td><td class="c4">&gt;400</td><td>até 50% cana-planta (10–20 t/ha/corte)</td></tr>
-          <tr><td class="tl it">Pratylenchus brachyurus</td><td>N. das Lesões</td><td class="c1">&lt;100/200 cm³</td><td class="c2">100–500</td><td class="c3">500–2.000</td><td class="c4">&gt;2.000</td><td>20–30%+ em associação</td></tr>
-        </tbody>
-      </table></div>
-      <div class="nota">Limiares de dano significativo para cana (Syngenta, 2026): 400 J2/50 g de raiz de <em>Meloidogyne</em> spp. e 2.500 <em>P. zeae</em>/50 g de raiz. Perda potencial: R$ 143,8 bi em 10 anos.</div>
-      <div class="fonte">Refs.: Dinardo-Miranda (2005); SGS Brasil (2021); Staphyt (2024); AgroAdvance (2024).</div>
-
-      <div class="mt" id="c-cafe">2.5 Café (<em>Coffea arabica</em> e <em>C. canephora</em>)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Meloidogyne exigua</td><td>NG do Café</td><td class="c1">&lt;50 J2 / &lt;5 ovos/g</td><td class="c2">50–200 / 5–20</td><td class="c3">200–500 / 20–50</td><td class="c4">&gt;500 / &gt;50</td><td>até 45% (Barbosa et al., 2004)</td></tr>
-          <tr><td class="tl it">Meloidogyne incognita</td><td>NG agressivo</td><td class="c1">&lt;25 J2/200 cm³</td><td class="c2">25–100</td><td class="c3">100–400</td><td class="c4">&gt;400</td><td>até 50%. Raízes com aspecto de cortiça.</td></tr>
-          <tr><td class="tl it">Meloidogyne paranaensis</td><td>NG do cafeeiro</td><td class="c1">&lt;25 J2/200 cm³</td><td class="c2">25–100</td><td class="c3">100–300</td><td class="c4">&gt;300</td><td>Muito agressiva. Supressão de até 50%.</td></tr>
-          <tr><td class="tl it">Pratylenchus coffeae / jaehni</td><td>N. das Lesões</td><td class="c1">&lt;50/200 cm³</td><td class="c2">50–300</td><td class="c3">300–1.000</td><td class="c4">&gt;1.000</td><td>Tão agressivos quanto <em>M. incognita</em>.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="nota"><em>M. exigua</em> é a espécie mais disseminada no café brasileiro; menos agressiva em lavouras bem nutridas. Cultivares resistentes: IAPAR 59, Obatã IAC 1669-20, IAC 125 RN. Perda potencial: R$ 114 bi em 10 anos.</div>
-      <div class="fonte">Refs.: Barbosa et al. (2004); Instituto Biológico de São Paulo (Boletim 32, 2018); IAC.</div>
-
-      <div class="mt" id="c-banana">2.6 Banana / Bananeira (<em>Musa</em> spp.)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Radopholus similis</td><td>N. Cavernícola</td><td class="c1">&lt;10/g raiz</td><td class="c2">10–50</td><td class="c3">50–200</td><td class="c4">&gt;200</td><td>até 100% — tombamento por necrose do rizoma</td></tr>
-          <tr><td class="tl it">Pratylenchus coffeae</td><td>N. das Lesões</td><td class="c1">&lt;20/g raiz</td><td class="c2">20–80</td><td class="c3">80–300</td><td class="c4">&gt;300</td><td>Redução da raiz, queda do peso do cacho</td></tr>
-          <tr><td class="tl it">Meloidogyne spp.</td><td>N. das Galhas</td><td class="c1">&lt;50 J2/200 cm³</td><td class="c2">50–200</td><td class="c3">200–500</td><td class="c4">&gt;500</td><td>Menos destrutivas que <em>R. similis</em></td></tr>
-          <tr><td class="tl it">Helicotylenchus multicinctus</td><td>N. Espiralado</td><td class="c1">&lt;50/g raiz</td><td class="c2">50–200</td><td class="c3">200–500</td><td class="c4">&gt;500</td><td>Danos às raízes; sinérgico com <em>R. similis</em></td></tr>
-        </tbody>
-      </table></div>
-      <div class="nota">Para banana não existe um número populacional universal de NDE — uma área com 100 nematoides/g de raiz pode ter plantas totalmente afetadas e outra, assintomáticas. Avalie sempre em conjunto com o estado visual das plantas. Controle essencial: mudas sadias e áreas indenes.</div>
-      <div class="fonte">Refs.: Embrapa Banana; Terra Fértil (2022); UFPR (Pereira, 2003).</div>
-
-      <div class="mt" id="c-hortalicas">2.7 Hortaliças (tomate, alface, cenoura, batata, pimentão, pepino)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Cultura</th><th>Espécie principal</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl">Tomate</td><td class="it">M. incognita / javanica</td><td class="c1">&lt;25 J2/200 cm³</td><td class="c2">25–100</td><td class="c3">100–300</td><td class="c4">&gt;300</td><td>15–100% (suscetível sem gene Mi-1)</td></tr>
-          <tr><td class="tl">Alface</td><td class="it">M. incognita / javanica</td><td class="c1">&lt;25 J2/200 cm³</td><td class="c2">25–100</td><td class="c3">100–400</td><td class="c4">&gt;400</td><td>20–80%; várias gerações por ciclo</td></tr>
-          <tr><td class="tl">Cenoura</td><td class="it">M. incognita / javanica</td><td class="c1">&lt;25 J2/200 cm³</td><td class="c2">25–100</td><td class="c3">100–300</td><td class="c4">&gt;300</td><td>20–100% (raízes deformadas)</td></tr>
-          <tr><td class="tl">Batata</td><td class="it">M. hapla / incognita</td><td class="c1">&lt;50 J2/200 cm³</td><td class="c2">50–200</td><td class="c3">200–500</td><td class="c4">&gt;500</td><td>12–40%; <em>M. hapla</em> prevalece no Sul/Sudeste</td></tr>
-          <tr><td class="tl">Pimentão / Pepino</td><td class="it">M. incognita / enterolobii</td><td class="c1">&lt;10 J2/200 cm³</td><td class="c2">10–50</td><td class="c3">50–200</td><td class="c4">&gt;200</td><td>30–100%; <em>M. enterolobii</em> quebra Mi-1</td></tr>
-        </tbody>
-      </table></div>
-      <div class="nota">Hortaliças são altamente suscetíveis. Múltiplas gerações de <em>Meloidogyne</em> em um único ciclo curto elevam exponencialmente a população para a safra seguinte. A cenoura cultivar Brasília (Embrapa Hortaliças) é referência histórica de tolerância.</div>
-      <div class="fonte">Refs.: Embrapa Hortaliças; Becker (1990); Charchar &amp; Moita (Embrapa).</div>
-
-      <div class="mt" id="c-citros">2.8 Citros (<em>Citrus</em> spp.)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda / Impacto</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Tylenchulus semipenetrans</td><td>N. dos Citros</td><td class="c1">&lt;100/200 cm³</td><td class="c2">100–500</td><td class="c3">500–2.000</td><td class="c4">&gt;2.000</td><td>"Declínio lento": 10–15%/ano; sintomas após 8–10 anos</td></tr>
-          <tr><td class="tl it">Radopholus similis</td><td>N. Cavernícola</td><td class="c1">&lt;10/g raiz</td><td class="c2">10–50</td><td class="c3">50–200</td><td class="c4">&gt;200</td><td>Necroses extensas; redução severa da produção</td></tr>
-        </tbody>
-      </table></div>
-      <div class="nota"><em>T. semipenetrans</em> causa o "declínio lento" — perda gradual e cumulativa de vigor e produtividade; a relação causa-efeito é difícil de estabelecer. Dano econômico médio estimado: 10% da produção (Lordello, 1976).</div>
-      <div class="fonte">Refs.: Lordello (1976); Syngenta Digital (2024); MaisAgro (2026).</div>
-
-      <div class="mt" id="c-feijao">2.9 Feijão (<em>Phaseolus vulgaris</em>)</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Nome popular</th><th>Baixa</th><th>Média</th><th>Alta</th><th>Muito Alta</th><th>Perda estimada</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Meloidogyne incognita / javanica</td><td>N. das Galhas</td><td class="c1">&lt;50 J2/200 cm³</td><td class="c2">50–200</td><td class="c3">200–500</td><td class="c4">&gt;500</td><td>10–35%</td></tr>
-          <tr><td class="tl it">Heterodera glycines</td><td>N. de Cisto</td><td class="c1">1–10 cistos/200 cm³</td><td class="c2">11–20</td><td class="c3">21–50</td><td class="c4">&gt;50</td><td>Feijão é hospedeiro secundário do NCS</td></tr>
-          <tr><td class="tl it">Rotylenchulus reniformis</td><td>N. Reniforme</td><td class="c1">&lt;500/200 cm³</td><td class="c2">500–2.000</td><td class="c3">2.000–4.500</td><td class="c4">&gt;4.500</td><td>10–20%</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Becker (1990); Embrapa; Agrolink. Perda média estimada no feijão: 10%.</div>
-
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>H. glycines:</b> NDE de <b>2 a 5 cistos viáveis/100 cm³</b> (= 4 a 10/200 cm³) em ano favorável: 5 cistos custam cerca de 16% de perda; 10 cistos, 45%; 50 cistos, 70%. Em veranico, 1 cisto/100 cm³ já custou 15 a 16%. Meta de manejo: até 3/100 cm³. <b>Atenção de unidade:</b> a fonte contabiliza <b>cistos VIÁVEIS</b>, e não ovos+J2; a conversão entre as duas unidades é indireta, porque o número de ovos por cisto é variável (cerca de 200 em média). Confirmar em que unidade o laudo de cisto sai. Asmus &amp; Andrade (2002).</div>
+        <div class="tl"><b>M. incognita:</b> em solo arenoso, 100 J2/100 cm³ (= 200/200 cm³) associam-se a perda de 10% ou mais em soja suscetível; em solo silte-franco o limiar sobe para 150/100 cm³ ou mais (Faske, Mueller &amp; Gorny, 2021). <span class="nao">O estudo clássico de microparcelas na Geórgia (Niblack, Hussey &amp; Boerma, 1986) trabalhou com <b>ovos</b> de inóculo, e não com J2 extraídos: 31 ovos/100 cm³ já ficaram acima do limite de tolerância, com supressão de 53 a 82% da cultivar suscetível GaSoy 17 nessa densidade. A relação ajustada é log-linear (Y = 1,0 + 0,331·log₁₀Pi), não linear na densidade.</span></div>
+        <div class="tl"><b>P. brachyurus:</b> no solo, risco acima de 100/100 cm³ (Inomoto, 2015, ESALQ), critério institucional apresentado sem a equação nem o método de extração. Na raiz, cada 82/g corresponde a 1 saca/ha a menos (Franchini et al., 2014, Embrapa). <span class="nao">O ensaio da Embrapa mediu a população na RAIZ em R3 e relatou correlação com a produtividade (r = −0,744): descreve tendência ao longo do ciclo, e não um gatilho de decisão em pré-plantio.</span></div>
+        <div class="tl"><b>R. reniformis:</b> 1.000 a 5.000/100 cm³ (= 2.000 a 10.000/200 cm³) para perda de 10% ou mais, solo de textura grossa a média, valores obtidos nos EUA (Faske et al., 2024).</div>
+        <div class="tl"><b>M. javanica:</b> os níveis de dano publicados para soja foram estabelecidos com <i>M. incognita</i>; a agressividade e a reação das cultivares diferem entre as duas espécies, de modo que o valor de uma não se transfere para a outra.</div>
+      </div>
+      </details>
     </div>
   </div>
 
-  <!-- SEÇÃO 3 — HOSPEDEIROS -->
-  <div class="gsec" id="especies">
-    <div class="gsh"><span class="num">3</span> Tabelas de referência por espécie de nematoide</div>
-    <div class="gsb">
-
-      <div class="mt">3.1 <em>Heterodera glycines</em> — Nematoide de Cisto da Soja (NCS)</div>
-      <div class="nota"><strong>Unidade:</strong> cistos viáveis por 200 cm³ de solo. Cada cisto contém até 500 ovos e permanece viável por 7–8 anos sem hospedeiro. A identificação de raça (1, 2, 3, 4, 4+, 5, 6, 9, 10, 14, 14+) é obrigatória para a seleção de cultivar resistente. Distribuição: MG, MT, MS, GO, SP, PR, RS, BA, TO e MA.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Cistos viáveis<br>/200 cm³ solo</th><th>Ovos estimados<br>/200 cm³ solo</th><th>Perda estimada</th><th>Ação recomendada</th></tr></thead>
+  <!-- ============ MILHO ============ -->
+  <div class="cult" id="c-milho">
+    <h2 class="ch">Milho</h2>
+    <div class="cb">
+      <p class="sem-leg">Contagem por <b>200 cm³ de solo</b>, no plantio.
+        <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr>
+          <th style="width:24%;text-align:left">Nematoide</th>
+          <th>Baixo</th><th>Médio<br><small style="font-weight:400">atenção</small></th>
+          <th>Alto<br><small style="font-weight:400">dano provável</small></th>
+          <th style="width:30%;text-align:left">O que observar</th>
+        </tr></thead>
         <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0%</td><td>Prevenção: não transportar solo de áreas infestadas. Monitoramento anual.</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 10</td><td class="c1">500 – 5.000</td><td class="c1">5 – 30%</td><td>Rotação com não-hospedeiras (milho, sorgo, cana). Cultivares resistentes recomendadas.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">11 – 20</td><td class="c2">5.500 – 10.000</td><td class="c2">30 – 50%</td><td>Obrigatório cultivar resistente às raças presentes. Rotação mínima de 2 anos.</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">21 – 50</td><td class="c3">10.500 – 25.000</td><td class="c3">50 – 70%</td><td>Resistente + nematicida + rotação obrigatória. Não cultivar soja suscetível.</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 50</td><td class="c4">&gt; 25.000</td><td class="c4">até 70%+</td><td>Área de risco crítico. Suspender soja suscetível por no mínimo 3 safras. Biossegurança máxima.</td></tr>
+          <tr>
+            <td class="esp">Lesões <small>Pratylenchus zeae</small></td>
+            <td class="band b-baixo">até 100<small>nematoides/200 cm³</small></td><td class="band b-medio">100 a 200<small>nematoides/200 cm³</small></td><td class="band b-alto">acima de 200<small>nematoides/200 cm³</small></td>
+            <td>Um dos que mais causam perda no milho. No Alto, vale planejar rotação com plantas não hospedeiras.</td>
+          </tr>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne incognita</small></td>
+            <td class="band b-baixo">até 100<small>J2/200 cm³</small></td><td class="band b-medio">100 a 200<small>J2/200 cm³</small></td><td class="band b-alto">acima de 200<small>J2/200 cm³</small></td>
+            <td>Cada 200 J2/200 cm³ correspondem a 2 a 7% de grãos a menos, conforme o ensaio da colheita (Bowen et al., 2008).</td>
+          </tr>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne javanica</small></td>
+            <td class="band semnum" colspan="3">sem faixa</td>
+            <td>A literatura registra danos pouco expressivos e boa parte dos híbridos brasileiros como resistentes; a resposta varia com a cultivar e o solo, e por isso a população merece acompanhamento.</td>
+          </tr>
         </tbody>
-      </table></div>
-      <div class="fonte">Não-hospedeiras: milho, sorgo, arroz, algodão, girassol, cana-de-açúcar, trigo. Refs.: Asmus &amp; Ceccon (Embrapa, 2002); Revista Cultivar (2020); Elevagro (2024).</div>
-
-      <div class="mt">3.2 <em>Meloidogyne</em> spp. — Nematoide das Galhas (NG)</div>
-      <div class="nota"><strong>Espécies principais no Brasil:</strong> <em>M. incognita</em> (raças 1–4), <em>M. javanica</em>, <em>M. arenaria</em>, <em>M. hapla</em> (Sul), <em>M. paranaensis</em> (cafeeiro, disseminada), <em>M. exigua</em> (café), <em>M. enterolobii</em> (= <em>mayaguensis</em>, muito agressiva). <strong>Unidade:</strong> J2 (juvenis de 2º estádio) por 200 cm³ de solo (pré-plantio) e espécimes/g de raiz (durante o ciclo). Temperatura ótima: 25–30 °C. Preferência por solos arenosos.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>J2/200 cm³ solo<br>(pré-plantio)</th><th>J2 ou ovos/g raiz<br>(durante ciclo)</th><th>Perda soja</th><th>Perda hortaliças</th><th>Perda café</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">&lt; 1</td><td class="c0">&lt; 1</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 50</td><td class="c1">1 – 10</td><td class="c1">5 – 15%</td><td class="c1">10 – 20%</td><td class="c1">5 – 15%</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">51 – 200</td><td class="c2">10 – 30</td><td class="c2">15 – 30%</td><td class="c2">20 – 40%</td><td class="c2">15 – 30%</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">201 – 500</td><td class="c3">30 – 100</td><td class="c3">30 – 60%</td><td class="c3">40 – 70%</td><td class="c3">30 – 50%</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 500</td><td class="c4">&gt; 100</td><td class="c4">60 – 90%</td><td class="c4">até 100%</td><td class="c4">até 50%</td></tr>
-        </tbody>
-      </table></div>
-      <div class="aviso"><strong>Atenção ao <em>M. enterolobii</em>:</strong> quebra o gene de resistência Mi-1 (tomate) e a resistência da maioria das cultivares. Identificação molecular obrigatória. Em goiabeira, pode causar morte de plantas adultas. Alta agressividade em algodão, pimentão e batata-doce.</div>
-      <div class="fonte">Refs.: Asmus (2001); Grigolli (2015); Inomoto &amp; Silva (2011); Embrapa Soja (CT-76/2010); Embrapa Hortaliças.</div>
-
-      <div class="mt">3.3 <em>Pratylenchus brachyurus</em> — Nematoide das Lesões Radiculares (NLR)</div>
-      <div class="nota"><strong>Unidade:</strong> espécimes por 200 cm³ de solo e por grama de raiz. Ocorre em 96,2% das áreas algodoeiras do MT e em mais de 99% das amostras de soja em algumas regiões. Solos arenosos (15–25% de argila) amplificam muito os danos. Populações acima de 1 espécime/cm³ de solo correlacionam-se com danos expressivos.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Esp./200 cm³ solo</th><th>Esp./g raiz</th><th>Perda soja</th><th>Perda milho</th><th>Perda algodão</th><th>Perda cana</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 100</td><td class="c1">&lt; 5</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 8%</td><td class="c1">&lt; 8%</td><td class="c1">&lt; 10%</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">101 – 500</td><td class="c2">5 – 19</td><td class="c2">10 – 25%</td><td class="c2">8 – 15%</td><td class="c2">8 – 20%</td><td class="c2">10 – 20%</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">501 – 2.000</td><td class="c3">19 – 30</td><td class="c3">25 – 50%</td><td class="c3">15 – 30%</td><td class="c3">20 – 35%</td><td class="c3">20 – 35%</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 2.000 (&gt; 1/cm³)</td><td class="c4">&gt; 30</td><td class="c4">até 50%</td><td class="c4">até 30%</td><td class="c4">30 – 50%</td><td class="c4">30 – 50%</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Franchini et al. (Embrapa, 2014); Instituto Phytus-RS (2024); Galbieri &amp; Asmus (Embrapa Algodão, 2016) — <em>P. brachyurus</em> em 96,2% das áreas do MT.</div>
-
-      <div class="mt">3.4 <em>Pratylenchus zeae</em> — Nematoide das Lesões em Cana-de-açúcar</div>
-      <div class="nota"><strong>Unidade:</strong> espécimes por 50 g de raiz fresca (padrão IAC). <em>P. zeae</em> está presente em 97% das amostras de canaviais brasileiros (Dinardo-Miranda, IAC). Endoparasita migrador, move-se pelo córtex radicular causando lesões necróticas avermelhadas que escurecem por fungos secundários.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Esp./50 g raiz fresca</th><th>Perda cana-planta</th><th>Perda cana-soca (t/ha/corte)</th><th>Observação</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente / Traço</td><td class="c0">&lt; 10</td><td class="c0">Não significativa</td><td class="c0">—</td><td>Presente em 97% dos canaviais — traço considerado natural.</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">10 – 500</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 5 t/ha</td><td>Convivência possível. Variedades tolerantes minimizam o impacto.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">501 – 2.500</td><td class="c2">10 – 20%</td><td class="c2">5 – 10 t/ha</td><td>Próximo ao NDE. Manejo preventivo e variedades tolerantes.</td></tr>
-          <tr><td class="tl c3">Alta (NDE)</td><td class="c3">&gt; 2.500</td><td class="c3">20 – 35%</td><td class="c3">10 – 20 t/ha</td><td>Redução de biomassa radicular e perfilhamento. Manejo urgente.</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 7.000 (&gt; 70/g)</td><td class="c4">até 50%</td><td class="c4">&gt; 20 t/ha</td><td>Raízes escurecidas/apodrecidas. Reforma antecipada do canavial.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Dinardo-Miranda (2005); Syngenta MaisAgro (2026); Staphyt Brasil/Conchal-SP (2024); SGS Brasil (2021).</div>
-
-      <div class="mt">3.5 <em>Rotylenchulus reniformis</em> — Nematoide Reniforme</div>
-      <div class="nota"><strong>Unidade:</strong> fêmeas + juvenis por 200 cm³ de solo. Limiar internacional: 1–10 nematoides/cm³ de solo já é suficiente para causar dano em mudas de algodão (Robinson et al., 1997). 4.500 esp./200 cm³ = sintomas "carijó" evidentes no algodão (Galbieri &amp; Asmus, MT). Semi-endoparasita — diagnóstico dificultado pela ausência de sintomas em populações moderadas.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Fêmeas+J/200 cm³ solo</th><th>Perda algodão</th><th>Perda soja</th><th>Perda abacaxi</th><th>Ação</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td>Prevenção. Não coexiste com <em>Meloidogyne</em> (competição entre espécies).</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 500</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 10%</td><td class="c1">&lt; 15%</td><td>Monitoramento. Cultivares tolerantes. <em>Crotalaria</em> na rotação.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">501 – 2.000</td><td class="c2">10 – 25%</td><td class="c2">10 – 20%</td><td class="c2">15 – 30%</td><td>Nematicida biológico. Atenção à interação com <em>Fusarium</em> spp.</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">2.001 – 4.500</td><td class="c3">25 – 40%</td><td class="c3">20 – 35%</td><td class="c3">30 – 50%</td><td>Nematicida químico. Rotação com milho/sorgo. Sintomas "carijó".</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 4.500</td><td class="c4">até 50%</td><td class="c4">até 40%</td><td class="c4">até 60%</td><td>Risco de perdas totais.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Galbieri &amp; Asmus (2016); Robinson et al. (1997); Bioscience Journal/UFU (2014) — perdas 23,1% e 35% em cultivares de algodão no MT.</div>
-
-      <div class="mt">3.6 <em>Aphelenchoides besseyi</em> — Nematoide da Haste Verde (NHV) / "Soja Louca II"</div>
-      <div class="nota"><strong>Particularidade:</strong> nematoide foliar/aéreo. Parasita flores, folhas, inflorescências e vagens — <strong>não é detectado em análise de solo convencional.</strong> A amostragem deve incluir folhas, nós, vagens e grãos. Sobrevive em palhada, sementes e solo por período limitado. Hospedeiras alternativas: arroz, algodão, feijão, jambu.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Nível</th><th>Esp./g folha ou grão<br>(extração laboratorial)</th><th>Sintomas</th><th>Perda soja</th><th>Ação</th></tr></thead>
-        <tbody>
-          <tr><td class="tl c0">Ausente</td><td class="c0">0</td><td class="c0">Nenhum</td><td class="c0">0</td><td>Monitorar histórico da área. Usar semente certificada.</td></tr>
-          <tr><td class="tl c1">Baixa</td><td class="c1">1 – 10</td><td class="c1">Leve engrossamento nos nós</td><td class="c1">5 – 20%</td><td>Tratamento de sementes. Monitorar a lavoura em R1–R5.</td></tr>
-          <tr><td class="tl c2">Média</td><td class="c2">11 – 50</td><td class="c2">Retenção foliar, hastes verdes, caneluras</td><td class="c2">20 – 60%</td><td>Tratamento de sementes obrigatório. Rotação com não-hospedeiras.</td></tr>
-          <tr><td class="tl c3">Alta</td><td class="c3">51 – 200</td><td class="c3">Rosetamento de racemos, aborto de flores, vagens deformadas</td><td class="c3">60 – 90%</td><td>Epidemia confirmada. Suspender hospedeiras por 1–2 anos.</td></tr>
-          <tr><td class="tl c4">Muito Alta</td><td class="c4">&gt; 200</td><td class="c4">Plantas sem vagens maduras, grãos verdes, perda de reboleiras</td><td class="c4">até 100%</td><td>Epifitia. Área com histórico de "soja louca II".</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Meyer et al. (2017b); Repositório UEL (2024); Favoreto &amp; Loreto (2023).</div>
-
-      <div class="mt">3.7 Espécies emergentes — <em>Helicotylenchus dihystera</em>, <em>Scutellonema brachyurus</em> e <em>Tubixaba tuxaua</em></div>
-      <div class="nota"><strong>Status:</strong> NDE ainda não totalmente estabelecido na literatura brasileira. São considerados "patógenos potenciais" em expansão. O aumento gradual nas análises de solo é indicativo de ambiente favorável e exige monitoramento.</div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl">Espécie</th><th>Tipo de parasitismo</th><th>Culturas afetadas</th><th>Nível de atenção sugerido</th><th>Status do NDE</th></tr></thead>
-        <tbody>
-          <tr><td class="tl it">Helicotylenchus dihystera<br><span style="font-size:.72rem;color:#8a97a3">N. espiralado</span></td><td>Ectoparasita migrador</td><td>Soja, milho, cana, pastagens</td><td class="c2">Monitorar &gt; 200 esp./200 cm³</td><td>Em definição — crescimento populacional é sinal de alerta.</td></tr>
-          <tr><td class="tl it">Scutellonema brachyurus<br><span style="font-size:.72rem;color:#8a97a3">N. falso-espiral</span></td><td>Ecto/semiendoparasita</td><td>Soja, milho, inhame, pastagens</td><td class="c2">Monitorar &gt; 300 esp./200 cm³</td><td>Em definição — associado a quedas de produtividade em alta densidade.</td></tr>
-          <tr><td class="tl it">Tubixaba tuxaua<br><span style="font-size:.72rem;color:#8a97a3">N. específico de soja</span></td><td>Endoparasita migrador</td><td>Soja, milho, trigo</td><td class="c3">Atenção &gt; 100 esp./200 cm³</td><td>Causa danos em Latossolo Vermelho — patogenicidade confirmada (PR/MA).</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Elevagro (2024); AgroInsight (2021); Agroadvance (2025); Furlanetto et al. (2010).</div>
-
+      </table>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>P. zeae:</b> nível de ação acima de 100/100 cm³ no plantio (Inomoto, 2015, ESALQ). <span class="nao">A extensão da Geórgia (UGA C834) traz um valor parecido, mas em <b>outra base</b>: "200 ou mais" por 100 cm³ (= 400/200 cm³), e em amostra de fim de ciclo, não de plantio. As duas apresentam o número como nível de ação; o método de extração e a equação de perda não constam das publicações.</span></div>
+        <div class="tl"><b>M. incognita:</b> 2,2 a 7,0% de perda de grãos por 100 J2/100 cm³, em contagem feita na colheita (Bowen et al., 2008, EUA). <span class="nao">Para contagem do ano anterior (pré-plantio), a mesma fonte estima 3,8 a 11,4%. O modelo é linear, mas a proporcionalidade foi imposta no ajuste (intercepto fixado em 1,0).</span></div>
+        <div class="tl"><b>M. javanica:</b> a revisão classifica o milho como pouco afetado pela espécie (Oliveira &amp; Inomoto, 2023); entre 20 e 30% dos híbridos brasileiros são resistentes a <i>M. javanica</i> (Inomoto, 2015). <b>O "200/200 cm³" que circula para <i>P. brachyurus</i> no milho refere-se, na origem, ao risco na SOJA da sucessão, e não ao milho.</b></div>
+      </div>
+      </details>
     </div>
   </div>
 
-  <!-- SEÇÃO 2 — POR CULTURA -->
-  <div class="gsec" id="hospedeiros">
-    <div class="gsh"><span class="num">4</span> Hospedabilidade por espécie — base para rotação de culturas</div>
-    <div class="gsb">
-      <div class="legchip">Classificação simplificada: <span class="chip hp">Principal (multiplica muito)</span> <span class="chip hs">Secundário (multiplica moderado)</span> <span class="chip hr">Resistente / não-hospedeiro (reduz população)</span> <span class="chip hv">Variável (depende de cultivar/raça)</span></div>
-      <div class="tw"><table class="gt">
-        <thead><tr><th class="tl" style="min-width:120px">Nematoide</th><th class="tl">Hospedeiros principais</th><th class="tl">Hospedeiros secundários</th><th class="tl">Não-hospedeiros / resistentes</th></tr></thead>
+  <!-- ============ FEIJÃO ============ -->
+  <div class="cult" id="c-feijao">
+    <h2 class="ch">Feijão</h2>
+    <div class="cb">
+      <p class="sem-leg">Contagem por <b>200 cm³ de solo</b>. <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr>
+          <th style="width:24%;text-align:left">Nematoide</th>
+          <th>Baixo</th><th>Médio<br><small style="font-weight:400">atenção</small></th>
+          <th>Alto<br><small style="font-weight:400">dano provável</small></th>
+          <th style="width:30%;text-align:left">O que observar</th>
+        </tr></thead>
         <tbody>
-          <tr><td class="tl it">Heterodera glycines</td><td><span class="chip hp">Soja</span><span class="chip hp">Feijão</span><span class="chip hp">Ervilha</span><span class="chip hp">Tremoço</span></td><td><span class="chip hs">Algumas daninhas</span></td><td><span class="chip hr">Milho</span><span class="chip hr">Sorgo</span><span class="chip hr">Arroz</span><span class="chip hr">Algodão</span><span class="chip hr">Cana</span><span class="chip hr">Trigo</span><span class="chip hr">Girassol</span></td></tr>
-          <tr><td class="tl it">Meloidogyne javanica</td><td><span class="chip hp">Soja</span><span class="chip hp">Tomate</span><span class="chip hp">Café</span><span class="chip hp">Algodão</span><span class="chip hp">Batata</span><span class="chip hp">Banana</span><span class="chip hp">Amendoim</span><span class="chip hp">Cana</span></td><td><span class="chip hs">Milho</span><span class="chip hs">Feijão</span><span class="chip hv">Brachiaria</span></td><td><span class="chip hr">Crotalaria spectabilis</span><span class="chip hr">C. breviflora</span><span class="chip hr">Mucuna preta</span><span class="chip hr">Nabo forrageiro</span></td></tr>
-          <tr><td class="tl it">Meloidogyne incognita</td><td><span class="chip hp">Soja</span><span class="chip hp">Algodão</span><span class="chip hp">Tomate</span><span class="chip hp">Tabaco</span><span class="chip hp">Café</span><span class="chip hp">Cana</span><span class="chip hp">Feijão</span></td><td><span class="chip hs">Milho</span><span class="chip hs">Amendoim</span></td><td><span class="chip hr">Crotalaria spectabilis</span><span class="chip hr">C. breviflora</span><span class="chip hr">Mucuna cinza</span><span class="chip hr">Tomate Mi-1 (raças 1 e 2)</span></td></tr>
-          <tr><td class="tl it">P. brachyurus</td><td><span class="chip hp">Soja</span><span class="chip hp">Milho</span><span class="chip hp">Algodão</span><span class="chip hp">Cana</span><span class="chip hp">Arroz</span><span class="chip hp">Café</span><span class="chip hp">Eucalipto</span></td><td><span class="chip hs">Sorgo</span><span class="chip hv">B. decumbens</span><span class="chip hv">Aveia preta</span></td><td><span class="chip hr">Crotalaria spectabilis</span><span class="chip hr">C. breviflora</span><span class="chip hr">Nabo forrageiro</span><span class="chip hr">Milheto ADR 300</span></td></tr>
-          <tr><td class="tl it">P. zeae</td><td><span class="chip hp">Cana</span><span class="chip hp">Milho</span><span class="chip hp">Sorgo</span></td><td><span class="chip hs">Arroz</span><span class="chip hs">Trigo</span></td><td><span class="chip hr">Crotalaria spectabilis</span><span class="chip hr">C. breviflora</span><span class="chip hr">Mucuna preta</span></td></tr>
-          <tr><td class="tl it">R. reniformis</td><td><span class="chip hp">Algodão</span><span class="chip hp">Soja</span><span class="chip hp">Café</span><span class="chip hp">Feijão</span><span class="chip hp">Abacaxi</span><span class="chip hp">Banana</span></td><td><span class="chip hs">Gravioleira</span><span class="chip hs">Coentro</span></td><td><span class="chip hr">Milho</span><span class="chip hr">Sorgo</span><span class="chip hr">Crotalaria</span></td></tr>
-          <tr><td class="tl it">M. exigua</td><td><span class="chip hp">Café arábica</span><span class="chip hp">Café conilon</span></td><td><span class="chip hs">Chá</span><span class="chip hs">Pimentão</span><span class="chip hs">Cebola</span></td><td><span class="chip hr">IAPAR 59</span><span class="chip hr">Obatã IAC 1669</span><span class="chip hr">IAC 125 RN</span></td></tr>
-          <tr><td class="tl it">Radopholus similis</td><td><span class="chip hp">Banana</span><span class="chip hp">Antúrio</span><span class="chip hp">Citros</span><span class="chip hp">Pimenta-do-reino</span></td><td><span class="chip hs">Coco</span><span class="chip hs">Ornamentais</span></td><td><span class="chip hr">Mudas certificadas livres de nematoide</span></td></tr>
-          <tr><td class="tl it">A. besseyi</td><td><span class="chip hp">Soja</span><span class="chip hp">Arroz</span><span class="chip hp">Algodão</span><span class="chip hp">Feijão</span><span class="chip hp">Jambu</span></td><td><span class="chip hv">Milho (variável)</span></td><td><span class="chip hr">Milheto</span><span class="chip hr">Sorgo</span></td></tr>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne incognita</small></td>
+            <td class="band semnum" colspan="2">sem faixa</td>
+            <td class="band b-alto">a partir de 5<small>ovos+J2/200 cm³</small></td>
+            <td>O dano começa com pouquíssimo nematoide. Em cultivar suscetível, trate população baixa já como risco.</td>
+          </tr>
         </tbody>
-      </table></div>
-      <div class="fonte">Refs.: Inomoto &amp; Asmus (2009) — tabela de hospedabilidade; ESALQ/USP (Visão Agrícola 9); Embrapa Soja (CT-76/2010).</div>
+      </table>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>M. incognita:</b> limite de tolerância de <b>2 a 3 ovos+J2/100 cm³</b> (= 4 a 6/200 cm³), Crozzoli et al. (1997), Venezuela. Na tabela, 5/200 cm³: o valor medido é 4 a 6, e arredondar para baixo mantém o alerta antes de a produção começar a cair. <span class="nao">O limiar fica próximo do limite de detecção do laudo: no feijoeiro suscetível, a perda já se manifesta em densidades muito baixas.</span></div>
+      </div>
+      </details>
     </div>
   </div>
 
-  <!-- SEÇÃO 4 — REFERÊNCIAS -->
-  <div class="gsec" id="refs">
-    <div class="gsh"><span class="num">5</span> Referências bibliográficas</div>
-    <div class="gsb">
-      <div class="gdesc">Fontes primárias e secundárias consultadas para a elaboração deste guia.</div>
-      <div class="ref-item"><span class="ref-n">1.</span><span>ASMUS, G. L.; CECCON, G. <strong>Níveis de danos do nematoide de cisto da soja.</strong> Embrapa Agropecuária Oeste, Comunicado Técnico 69, Dourados-MS, 2002.</span></div>
-      <div class="ref-item"><span class="ref-n">2.</span><span>REVISTA CULTIVAR. <strong>Produtores alcançam altas produtividades de soja em ambientes com nematoide de cisto.</strong> 13 jul. 2020.</span></div>
-      <div class="ref-item"><span class="ref-n">3.</span><span>ELEVAGRO. <strong>Nematoide de cisto da soja (<em>Heterodera glycines</em>).</strong> 2024.</span></div>
-      <div class="ref-item"><span class="ref-n">4.</span><span>ASMUS, G. L. <strong>Danos e perdas de produção causados por nematoides no Brasil.</strong> Embrapa Agropecuária Oeste, 2001.</span></div>
-      <div class="ref-item"><span class="ref-n">5.</span><span>GRIGOLLI, J. F. J. <strong>Nematoides de importância econômica na soja.</strong> In: Proteção de Plantas, 2015.</span></div>
-      <div class="ref-item"><span class="ref-n">6.</span><span>INOMOTO, M. M.; SILVA, R. A. <strong>Nematoides do gênero <em>Meloidogyne</em>: identificação e manejo.</strong> Embrapa/ESALQ, 2011.</span></div>
-      <div class="ref-item"><span class="ref-n">7.</span><span>MIRANDA, V. I. G. et al. <strong>Levantamento de <em>Meloidogyne</em> spp. em áreas de cultivo no Brasil.</strong> Revista Brasileira de Fitopatologia, 2011.</span></div>
-      <div class="ref-item"><span class="ref-n">8.</span><span>EMBRAPA SOJA. <strong>Nematoides em soja: identificação e controle.</strong> Circular Técnica 76, Londrina-PR, 2010.</span></div>
-      <div class="ref-item"><span class="ref-n">9.</span><span>EMBRAPA HORTALIÇAS. <strong>Nematoides — Cenoura.</strong> Portal Embrapa de Informação Tecnológica.</span></div>
-      <div class="ref-item"><span class="ref-n">10.</span><span>FRANCHINI, J. C. et al. <strong>Manejo de <em>Pratylenchus brachyurus</em> na cultura da soja.</strong> Embrapa Soja, Londrina, 2014.</span></div>
-      <div class="ref-item"><span class="ref-n">11.</span><span>INSTITUTO PHYTUS-RS. <strong>Pesquisa investiga nematicida biológico e plantas de cobertura.</strong> GlobalCropProtection, out. 2024.</span></div>
-      <div class="ref-item"><span class="ref-n">12.</span><span>ELEVAGRO. <strong><em>Pratylenchus brachyurus</em> — nematoide das lesões radiculares.</strong> 2024.</span></div>
-      <div class="ref-item"><span class="ref-n">13.</span><span>GALBIERI, R.; ASMUS, G. L. <strong>Principais espécies de nematoides do algodoeiro no Brasil.</strong> Embrapa Agropecuária Oeste, 2016.</span></div>
-      <div class="ref-item"><span class="ref-n">14.</span><span>DINARDO-MIRANDA, L. L. <strong>Pragas da cana-de-açúcar.</strong> In: Cana-de-açúcar. IAC, Campinas, 2005/2008. p.349–404.</span></div>
-      <div class="ref-item"><span class="ref-n">15.</span><span>SYNGENTA MAISAGRO. <strong>Nematoides na cana-de-açúcar: quanto lucro você está perdendo?</strong> Fev. 2026.</span></div>
-      <div class="ref-item"><span class="ref-n">16.</span><span>STAPHYT BRASIL. <strong>Nematoides em cana-de-açúcar.</strong> Laboratório de Nematologia, Conchal-SP, nov. 2024.</span></div>
-      <div class="ref-item"><span class="ref-n">17.</span><span>SGS BRASIL. <strong>Nematoides em cana-de-açúcar: como reconhecer e manejar.</strong> Abr. 2021.</span></div>
-      <div class="ref-item"><span class="ref-n">18.</span><span>GALBIERI, R.; ASMUS, G. L. <strong>Sintomas reflexos de <em>R. reniformis</em> (4.500 esp./200 cm³).</strong> In: Nematoides do algodoeiro, Embrapa Algodão, 2016.</span></div>
-      <div class="ref-item"><span class="ref-n">19.</span><span>ROBINSON, A. F. et al. (1997) apud NCBI (2012). <strong>Quantitative field testing <em>Rotylenchulus reniformis</em> DNA.</strong> PLoS ONE.</span></div>
-      <div class="ref-item"><span class="ref-n">20.</span><span>BIOSCIENCE JOURNAL / UFU. <strong>Correlação entre densidade populacional de nematoides e produtividade do algodoeiro.</strong> Uberlândia, v.30, Supl.1, 2014.</span></div>
-      <div class="ref-item"><span class="ref-n">21.</span><span>NCBI / JOFNEM. <strong><em>Rotylenchulus reniformis</em> management and vertical distribution.</strong> DOI: 10.2478/jofnem-2025-0052. Nov. 2025.</span></div>
-      <div class="ref-item"><span class="ref-n">22.</span><span>MEYER, M. C. et al. (2017b) apud Mais Soja. <strong>O nematoide da haste verde.</strong></span></div>
-      <div class="ref-item"><span class="ref-n">23.</span><span>REPOSITÓRIO UEL. <strong>Cultivo de aveia ou milheto com <em>A. besseyi</em> e a síndrome da haste verde.</strong> Fev. 2024.</span></div>
-      <div class="ref-item"><span class="ref-n">24.</span><span>FAVORETO, L.; LORETO, E. <strong>O nematoide <em>Aphelenchoides besseyi</em>: situação nas culturas de soja e algodão.</strong> Informações Agronômicas, n.1, abr. 2023.</span></div>
-      <div class="ref-item"><span class="ref-n">25.</span><span>MAISSOJA.COM.BR. <strong>Manejo integrado de nematoides na soja.</strong> Fev. 2025.</span></div>
-      <div class="ref-item"><span class="ref-n">26.</span><span>ELEVAGRO. <strong>Aspectos técnicos do nematoide <em>Helicotylenchus dihystera</em>.</strong> Dez. 2024.</span></div>
-      <div class="ref-item"><span class="ref-n">27.</span><span>AGROINSIGHT. <strong>Diversidade dos nematoides: de parasita de baleias a parasita de plantas.</strong> Ago. 2021.</span></div>
-      <div class="ref-item"><span class="ref-n">28.</span><span>AGROADVANCE. <strong>Nematicidas: químicos ou biológicos?</strong> Ago. 2025.</span></div>
-      <div class="ref-item"><span class="ref-n">29.</span><span>FURLANETTO, C. et al. (2010) apud Editora Científica. <strong>Dinâmica populacional de <em>P. brachyurus</em> e <em>T. tuxaua</em> em áreas de soja no Nordeste.</strong> Jan. 2021.</span></div>
-      <div class="ref-item"><span class="ref-n">30.</span><span>BARBOSA, D. H. S. G. et al. <strong>Respostas de genótipos de <em>Coffea</em> spp. a populações de <em>Meloidogyne exigua</em>.</strong> Fitopatologia Brasileira (SciELO), 2004.</span></div>
-      <div class="ref-item"><span class="ref-n">31.</span><span>SYNGENTA / MAISAGRO. <strong>Nematoides no milho: os problemas desse inimigo oculto.</strong> Nov. 2025.</span></div>
-      <div class="ref-item"><span class="ref-n">32.</span><span>LORDELLO, L. G. E. <strong>Nematoides das plantas cultivadas.</strong> São Paulo: Nobel, 1976.</span></div>
-      <div class="ref-item"><span class="ref-n">33.</span><span>BECKER, W. F. <strong>Impacto dos fitonematoides no Brasil.</strong> 1990, apud Maciel, S. L. (Tese, USP, 1998).</span></div>
-      <div class="ref-item"><span class="ref-n">34.</span><span>SYNGENTA / AGROCONSULT / SBN. <strong>Mapa de crescimento e danos econômicos causados por nematoides.</strong> São Paulo, ago. 2022.</span></div>
-      <div class="ref-item"><span class="ref-n">35.</span><span>INOMOTO, M. M.; ASMUS, G. L. <strong>Tabela de hospedabilidade de culturas e plantas de cobertura a fitonematoides.</strong> ESALQ — Visão Agrícola, n.9, 2009. p.114.</span></div>
-      <div class="ref-item"><span class="ref-n">36.</span><span>EMBRAPA BANANA. <strong>Nematoides — Portal de Informação Tecnológica — Cultura da Bananeira.</strong></span></div>
-      <div class="ref-item"><span class="ref-n">37.</span><span>TERRA FÉRTIL BLOG. <strong>A banana e um inimigo invisível.</strong> Jul. 2022.</span></div>
-      <div class="ref-item"><span class="ref-n">38.</span><span>PEREIRA, A. M. <strong>Identificação e manejo de nematoides da bananeira no Leste do Paraná.</strong> Dissertação, UFPR, Curitiba, 2003.</span></div>
-      <div class="ref-item"><span class="ref-n">39.</span><span>INSTITUTO BIOLÓGICO DE SÃO PAULO. <strong>Nematoides parasitas do cafeeiro.</strong> Boletim Técnico 32, fev. 2018.</span></div>
-      <div class="ref-item"><span class="ref-n">40.</span><span>DIAS, W. P. et al. <strong>Nematoides da soja: identificação e controle.</strong> Embrapa Soja, Londrina, 2010.</span></div>
-      <div class="ref-item"><span class="ref-n">41.</span><span>REHAGRO. <strong>Nematoides no café: como identificar e realizar o controle?</strong> Abr. 2026.</span></div>
-      <div class="ref-item"><span class="ref-n">42.</span><span>AGROADVANCE. <strong>Nematoides parasitas da cana-de-açúcar.</strong> Mai. 2024.</span></div>
-      <div class="ref-item"><span class="ref-n">43.</span><span>FAVORETO, L. et al. <strong>Diagnose e manejo de fitonematoides na cultura da soja.</strong> ResearchGate, fev. 2019.</span></div>
-      <div class="aviso" style="margin-top:16px"><strong>Aviso legal:</strong> este material é uma referência técnica compilada a partir de fontes científicas e <strong>não substitui</strong> o laudo oficial emitido pelo laboratório nem a recomendação técnica individualizada de um Engenheiro Agrônomo habilitado. Os valores de NDE devem ser contextualizados à realidade da área, cultivar, textura do solo e sistema de produção.</div>
+  <!-- ============ CAFÉ ============ -->
+  <div class="cult" id="c-cafe">
+    <h2 class="ch">Café</h2>
+    <div class="cb">
+      <p class="sem-leg">Contagem por <b>200 cm³ de solo</b>. <b>Cuidado:</b> em café os números são os
+        menos certos da literatura, e <b>lavoura velha sofre com bem menos nematoide</b>.
+        <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr>
+          <th style="width:24%;text-align:left">Nematoide</th>
+          <th>Baixo</th><th>Médio<br><small style="font-weight:400">atenção</small></th>
+          <th>Alto<br><small style="font-weight:400">dano provável</small></th>
+          <th style="width:30%;text-align:left">O que observar</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne exigua</small></td>
+            <td class="band b-baixo">até 20<small>J2/200 cm³</small></td><td class="band b-medio">20 a 80<small>J2/200 cm³</small></td><td class="band b-alto">acima de 80<small>J2/200 cm³</small></td>
+            <td><b>Em lavoura com mais de 5 anos, trate qualquer detecção como atenção:</b> ela sofre com população muito baixa.</td>
+          </tr>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne paranaensis</small></td>
+            <td class="band b-alto" colspan="3">presença</td>
+            <td>É a mais agressiva por planta: onde entra, derruba a lavoura. A presença já é o alerta, não espere o número subir.</td>
+          </tr>
+          <tr>
+            <td class="esp">Lesões <small>Pratylenchus coffeae</small></td>
+            <td class="band b-alto" colspan="3">presença</td>
+            <td>Em ensaio controlado, o cafeeiro reduziu o crescimento já na <b>menor densidade testada</b>, por isso a detecção, por si só, conta como alerta.</td>
+          </tr>
+        </tbody>
+      </table>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>M. exigua:</b> até <b>45% de perda em campo</b> (noroeste do RJ), em lavoura com mais de 5 anos e bem conduzida; nessa condição o limiar medido é de <b>3 J2/100 cm³ (= 6/200 cm³)</b> (Barbosa et al., 2004, único estudo de campo com limiar de solo; Silva et al., 2007, e o Boletim IB 32/2018 apenas o citam). <span class="nao">As faixas da tabela (20 e 80 J2/200 cm³) vêm da curva de <b>lavoura jovem</b> do mesmo trabalho (10 e 40 J2/100 cm³): em lavoura velha o dano começa bem antes, a partir de 6/200 cm³. As densidades publicadas já trazem o fator de correção do método de extração, então não são diretamente comparáveis a uma contagem bruta de rotina. Perda média por nematoides no café: cerca de 15% no mundo e 20% no Brasil (Boletim IB, médias estimadas, sem estudo de origem).</span></div>
+        <div class="tl"><b>M. paranaensis:</b> a mais agressiva por planta. Em conilon (ES), no clone <b>altamente suscetível 1V</b>, reduziu 45% o stand e até 85% a produção; já o clone <b>12V, embora suscetível, manteve produção adequada</b> (72 sacas/ha), ou seja, a suscetibilidade varia muito entre clones (Lima et al., 2019). Ocorrência no sul de MG associada a focos de mortalidade (Salgado et al., 2015). <span class="nao">Os trabalhos relatam a perda associada à <b>presença</b> da espécie, sem uma densidade de solo correspondente: daí o critério de tratar a detecção confirmada como alto risco.</span></div>
+        <div class="tl"><b>P. coffeae / P. jaehni:</b> o Instituto Biológico (2018) afirma que <b>são tão agressivas ao café quanto <i>M. incognita</i></b>. Café muito intolerante a <i>P. coffeae</i>: em casa de vegetação (Seinhorst), há redução de crescimento já na menor densidade testada, <b>333 nematoides/planta</b>, e morte em densidades altas (Kubo et al., 2003). <span class="nao">A unidade é inóculo POR PLANTA, em vaso: mede a resposta da planta, e não corresponde a uma densidade de solo de campo. É o que sustenta o critério de tratar a presença como alerta.</span></div>
+      </div>
+      </details>
     </div>
+  </div>
+
+  <!-- ============ ALGODÃO ============ -->
+  <div class="cult" id="c-algodao">
+    <h2 class="ch">Algodão</h2>
+    <div class="cb">
+      <p class="sem-leg">Contagem por <b>200 cm³ de solo</b>. <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr>
+          <th style="width:24%;text-align:left">Nematoide</th>
+          <th>Baixo</th><th>Médio<br><small style="font-weight:400">atenção</small></th>
+          <th>Alto<br><small style="font-weight:400">dano provável</small></th>
+          <th style="width:30%;text-align:left">O que observar</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne incognita</small></td>
+            <td class="band b-baixo">até 50<small>J2/200 cm³</small></td><td class="band b-medio">50 a 100<small>J2/200 cm³</small></td><td class="band b-alto">acima de 100<small>J2/200 cm³</small></td>
+            <td>Reboleiras de plantas fracas, raiz com galhas. Costuma vir junto com outros.</td>
+          </tr>
+          <tr>
+            <td class="esp">Reniforme <small>Rotylenchulus reniformis</small></td>
+            <td class="band b-baixo">até 300<small>nematoides/200 cm³</small></td><td class="band b-medio">300 a 600<small>nematoides/200 cm³</small></td><td class="band b-alto">acima de 600<small>nematoides/200 cm³</small></td>
+            <td>Concentra-se mais fundo (20 a 40 cm): <b>coletar só a camada de cima subestima</b>. Comum em MT.</td>
+          </tr>
+          <tr>
+            <td class="esp">Lesões <small>Pratylenchus brachyurus</small></td>
+            <td class="band semnum" colspan="3">sem faixa</td>
+            <td>Em campo, a densidade não prediz a perda. O algodão tolera, mas <b>multiplica o nematoide</b> para a cultura seguinte. Acompanhe pela raiz e pelo histórico.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="nota"><b>Uma observação importante:</b> no algodão, estudos de campo em
+        Mato Grosso mostraram que a <b>contagem sozinha não prediz a perda</b>. Uma planta com raiz
+        vigorosa aguenta mais nematoide, e contagem alta com raiz boa não significa o mesmo que
+        contagem alta com raiz destruída.</div>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>M. incognita:</b> cerca de 100 espécimes/200 cm³ (= 50/100 cm³), "população de dano baixa, ao redor de cem indivíduos" (Galbieri &amp; Asmus, 2016); a extensão do Arkansas usa 50/100 cm³ (amostra de junho a novembro). <span class="nao">É compilação de especialistas; a equação, a época e o método de extração não constam da publicação.</span></div>
+        <div class="tl"><b>R. reniformis:</b> a referência mais citada é de cerca de 600/200 cm³ (IMAmt, 2016). Em campo brasileiro, entre 250 e 2.000/200 cm³ a resposta medida é errática; concentra-se a 20 a 40 cm de profundidade. Reboleiras com mais de uma espécie renderam 23 a 35% menos que áreas sadias (Silva et al., 2014).</div>
+        <div class="tl"><b>P. brachyurus:</b> estudos de campo no MT avaliaram a relação entre densidade e produtividade e <b>não encontraram correlação</b> (Machado et al., 2006). Em casa de vegetação (Machado, Ferraz &amp; Inomoto, 2012), o dano só apareceu a partir de 30.000/400 cm³, densidade acima da observada em lavoura.</div>
+      </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ============ CANA ============ -->
+  <div class="cult" id="c-cana">
+    <h2 class="ch">Cana-de-açúcar</h2>
+    <div class="cb">
+      <p class="sem-leg">Em cana o mais informativo é a contagem na <b>raiz</b> (por grama), aos cerca de 6 meses,
+        não o solo do plantio. <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr>
+          <th style="width:24%;text-align:left">Nematoide</th>
+          <th>Baixo</th><th>Médio<br><small style="font-weight:400">atenção</small></th>
+          <th>Alto<br><small style="font-weight:400">dano provável</small></th>
+          <th style="width:30%;text-align:left">O que observar</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="esp">Lesões <small>Pratylenchus zeae</small></td>
+            <td class="band b-baixo">até 50<small>nematoides/g de raiz</small></td><td class="band b-medio">50 a 100<small>nematoides/g de raiz</small></td><td class="band b-alto">acima de 100<small>nematoides/g de raiz</small></td>
+            <td>Em variedade suscetível, a partir do Médio já pode reduzir a produção.</td>
+          </tr>
+          <tr>
+            <td class="esp">Galhas <small>Meloidogyne</small></td>
+            <td class="band semnum" colspan="3">sem faixa</td>
+            <td>Em campo, sob infestação natural, a perda chegou a 22% em cultivar suscetível. Os ensaios mediram a perda, sem estabelecer um valor de corte de contagem: em variedade suscetível, população expressiva indica risco.</td>
+          </tr>
+        </tbody>
+      </table>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>P. zeae:</b> em pré-amostragem de soqueira aos 6 meses (por 50 g de raízes): abaixo de 2.500 (= 50/g) o acréscimo com nematicida é de cerca de 5 t/ha (inviável); entre 2.500 e 5.000 (50 a 100/g), cerca de 10 t/ha; acima de 5.000 (mais de 100/g), mais de 15 t/ha (Novaretti, 1997). Magnitude aos 6 meses (Novaretti &amp; Reis, 2009): cada 1.000/50 g corresponde a −1,1 t/ha (aos 2 meses após o corte esse coeficiente sobe para −4,0 t/ha). <span class="nao">Os valores "1.870" e "4.790/50 g" de Dinardo-Miranda et al. (1996) NÃO são limiares: são médias populacionais de genótipos em subparcelas não tratadas, e o próprio trabalho classificou o genótipo de 4.790 como <b>tolerante</b> e o de 1.870 como <b>intolerante</b>, de modo que não servem como faixa de risco.</span></div>
+        <div class="tl"><b>Meloidogyne:</b> em CAMPO (SP, solo arenoso, cana planta), sob infestação natural de <i>M. javanica</i> + <i>P. zeae</i>, a perda chegou a <b>22% (cv. IACSP96-7569) e 17% (cv. CTC20)</b>, estimada pela resposta ao nematicida; média de 10% ou mais, com várias cultivares tolerantes (Dinardo-Miranda, Fracasso &amp; Miranda, 2019). <span class="nao">O percentual medido é o efeito conjunto das DUAS espécies e corresponde aos máximos de duas cultivares específicas: aplica-se a essa condição, e não como faixa geral. A perda foi estimada pela resposta ao nematicida, sem uma densidade correspondente. Endoparasitos também parasitam a cana no NE, em campo (Chaves, Pedrosa &amp; Moura, 2002).</span></div>
+      </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ============ HORTALIÇAS ============ -->
+  <div class="cult" id="c-hortalicas">
+    <h2 class="ch">Hortaliças</h2>
+    <div class="cb">
+      <div class="nota">Nas hortaliças, a sensibilidade a galhas (<i>Meloidogyne</i>) muda MUITO de
+        uma cultura para outra. O mesmo número que é seguro no tomate pode ser grave no pepino.</div>
+      <p class="sem-leg">Galhas (<i>Meloidogyne incognita</i>), por <b>200 cm³ de solo</b>. A tabela traz
+        um único valor por cultura: o ponto em que o <b>dano começa</b>. <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr><th style="width:20%">Cultura</th><th style="width:22%;text-align:left">Nematoide</th><th style="width:26%">Dano começa a partir de</th><th style="width:30%;text-align:left">O que observar</th></tr></thead>
+        <tbody>
+          <tr><td><b>Tomate</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-medio">180<small>J2/200 cm³</small></td><td>a mais tolerante do grupo</td></tr>
+          <tr><td><b>Pimentão</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-medio">80<small>J2/200 cm³</small></td><td></td></tr>
+          <tr><td><b>Berinjela</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">11<small>ovos+J2/200 cm³</small></td><td>muito sensível</td></tr>
+          <tr><td><b>Melão / melancia / abobrinha</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">3 a 11<small>J2/200 cm³</small></td><td>sensíveis</td></tr>
+          <tr><td><b>Pepino</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">presença</td><td>o limite é tão baixo (abaixo do que o laudo detecta) que qualquer detecção já preocupa</td></tr>
+          <tr><td><b>Cenoura</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">presença</td><td>o dano é de QUALIDADE (raiz bifurcada, com galhas, sem valor comercial) e começa em densidade no piso de detecção do laudo</td></tr>
+        </tbody>
+      </table>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>Hortaliças (<i>M. incognita</i>):</b> limites de tolerância pelo modelo de Seinhorst, compilados por Talavera-Rubia et al. (2022) da literatura (microparcelas na Itália, cultivo protegido na Espanha, ensaios nos EUA e no Irã), em /100 cm³ e dobrados aqui para /200 cm³: tomate 92 (→184; mas a literatura-fonte varia de 2 a 400/100 cm³, e 92 é a média); pimentão 41 (→82; faixa 8 a 74); berinjela 5,4 (→11), <b>em ovos+juvenis/cm³</b> no original italiano (Di Vito, Greco &amp; Carella, 1986), e não J2; pepino 0,1 (abaixo da detecção). <span class="nao">Como a fração de ovos domina no solo, um laudo que conta só J2 subestima o risco na berinjela. Cenoura: o limiar de <b>qualidade</b> por Seinhorst (Wesemael &amp; Moens, 2008) fica abaixo do que a contagem de rotina resolve, por isso a leitura é "presença"; para <i>M. hapla</i> (Vrain, 1982) o modelo de Seinhorst não ajustou, e não há limiar publicado para as espécies tropicais.</span></div>
+      </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ============ FRUTAS ============ -->
+  <div class="cult" id="c-frutas">
+    <h2 class="ch">Frutas</h2>
+    <div class="cb">
+      <div class="nota">Nas fruteiras, o laudo útil costuma ser o de <b>raiz</b> (por grama), não o de solo.
+        E, na maioria delas, a leitura não é uma faixa numérica: <b>a presença já é a decisão</b>.</div>
+      <p class="sem-leg">Atenção em citros: as duas referências abaixo contam <b>estágios diferentes</b> do
+        nematoide, não some uma com a outra. <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr><th style="width:14%">Cultura</th><th style="width:22%;text-align:left">Nematoide</th><th style="width:26%">Leitura</th><th style="width:30%;text-align:left">O que observar</th></tr></thead>
+        <tbody>
+          <tr><td><b>Citros</b></td><td class="esp"><small>Tylenchulus semipenetrans</small></td>
+            <td class="band b-alto">acima de 1.400<small>fêmeas/g de raiz</small></td>
+            <td>População elevada (referência da Califórnia). É o principal nematoide dos citros, causa o “declínio lento”.</td></tr>
+          <tr><td><b>Citros</b></td><td class="esp"><small>Tylenchulus semipenetrans</small></td>
+            <td class="band b-alto">acima de 4.000<small>juvenis/g de raiz</small></td>
+            <td>Associado a declínio (referência de Israel). Conta juvenis, estágio diferente das fêmeas acima.</td></tr>
+          <tr><td><b>Citros</b></td><td class="esp"><small>Pratylenchus jaehni</small></td>
+            <td class="band b-alto">presença</td>
+            <td>É o nematoide-das-lesões dos citros no Brasil. Trate a detecção como alerta.</td></tr>
+          <tr><td><b>Goiaba</b></td><td class="esp"><small>Meloidogyne enterolobii</small></td>
+            <td class="band b-alto">presença</td>
+            <td>É a espécie mais agressiva. Derrubou a goiabicultura de regiões inteiras. Não espere população alta: a presença já é o risco.</td></tr>
+          <tr><td><b>Banana</b></td><td class="esp"><small>Radopholus similis</small></td>
+            <td class="band b-alto">acima de 25<small>R. similis/g de raiz</small></td>
+            <td>Em banana o laudo útil é o de RAIZ, não o de solo. Causa o tombamento da bananeira.</td></tr>
+          <tr><td><b>Banana</b></td><td class="esp"><small>Meloidogyne</small></td>
+            <td class="band semnum">sem faixa</td>
+            <td>Provoca deformação e engrossamento das raízes, com galhas ocasionais nas radicelas. População expressiva indica risco.</td></tr>
+          <tr><td><b>Banana</b></td><td class="esp"><small>Helicotylenchus</small></td>
+            <td class="band semnum">sem faixa</td>
+            <td>Costuma aparecer em número alto no laudo, mas seu dano por indivíduo é menos estabelecido. Não decidir só por ele, nem ignorá-lo.</td></tr>
+          <tr><td><b>Maracujá</b></td><td class="esp"><small>Meloidogyne / Rotylenchulus</small></td>
+            <td class="band semnum">sem faixa</td>
+            <td>Em levantamento de pomares de maracujá em declínio (DF/MG/GO), galhas apareceram em quase metade das amostras. O trabalho mediu prevalência, não dano: leia junto com sintoma e histórico.</td></tr>
+        </tbody>
+      </table>
+      <div class="perigo"><b>Por que a goiaba é o caso mais grave:</b> o declínio da goiabeira é uma <b>doença
+        complexa</b>. O <i>M. enterolobii</i> abre a porta para uma podridão de raiz por fungo
+        (<i>Fusarium solani</i>). O nematoide sozinho já é grave; com o fungo, mata a planta.</div>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>Citros — T. semipenetrans:</b> perdas relatadas de <b>10 a 30%</b> conforme o nível de infestação (Verdejo-Lucas &amp; McKenry, 2004). Limiares diagnósticos, ambos <b>por grama de raiz</b>: <b>acima de 1.400 fêmeas/g</b> = nível alto na Califórnia em maio e junho (acima de 1.100 em fevereiro a abril), Becker &amp; Westerdahl, UC IPM; e <b>acima de 4.000 juvenis/g</b> = nível crítico para declínio em Israel (Cohn, 1969, citado em Verdejo-Lucas &amp; McKenry, 2004). <span class="nao">São ESTÁGIOS diferentes (fêmea × juvenil), mesmo denominador (g de raiz): não comparar nem somar os dois números. Gabia, Santos &amp; Wilcken (2016) mostraram que a contagem isolada não previu a perda; cruze com sintoma e histórico.</span></div>
+        <div class="tl"><b>Citros — P. jaehni:</b> nematoide-das-lesões dos citros descrito no Brasil, separado de <i>P. coffeae</i> em 2001 (Inserra et al.). O guia de citros da UF/IFAS (Flórida) recomenda tratar a detecção de <b>qualquer</b> nematoide-das-lesões (<i>P. coffeae</i>) ou de <i>Radopholus similis</i> como dano sério; a regra de "detectou, é grave" aplica-se por analogia, já que a UF/IFAS não menciona <i>P. jaehni</i>, que é a espécie brasileira.</div>
+        <div class="tl"><b>Goiaba — M. enterolobii:</b> declínio da goiabeira = ação sinérgica do nematoide com <i>Fusarium solani</i> (hoje <i>Neocosmospora falciformis</i>): Gomes et al. (2011); Veloso, Câmara &amp; Souza (2021). Impacto econômico direto estimado em <b>R$ 112,7 milhões</b> e cerca de 3.700 empregos rurais em cinco estados (RJ, RN, CE, PE e BA); só nos perímetros irrigados da CODEVASF (Petrolina-PE e Juazeiro-BA), R$ 108,3 milhões e cerca de 3.650 empregos (Pereira et al., 2009). <span class="nao">Os trabalhos documentam a perda associada à <b>presença</b> da espécie, sem uma densidade correspondente: para <i>M. enterolobii</i>, a detecção confirmada já é decisão de manejo. É polífaga (goiaba, hortaliças e outras).</span></div>
+        <div class="tl"><b>Banana:</b> na bananicultura equatoriana, recomenda-se nematicida quando <i>Radopholus similis</i> passa de 2.500/100 g de raízes em amostra de rebento seguidor (ou 10.000/100 g entre planta-mãe e rebento), limiar por espécie, não "total" (Aguirre et al., 2016, citando recomendação do INIAP). Bananais comerciais convivem com 11.000 a 12.000/100 g. <i>Meloidogyne</i>: praga importante, com deformação e engrossamento das raízes; os trabalhos associam população expressiva a risco, sem um valor de corte consolidado (Araya, 2004).</div>
+        <div class="tl"><b>Maracujá:</b> em levantamento em pomares em declínio no DF, MG e GO, <i>Meloidogyne</i> spp. ocorreu em 47% e <i>R. reniformis</i> em 35% das amostras (Sharma, Junqueira &amp; Gomes, 1999). <span class="nao">O trabalho mede <b>prevalência em pomares já em declínio</b>, e não incidência geral nem relação com perda: descreve associação.</span></div>
+      </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ============ TRIGO ============ -->
+  <div class="cult" id="c-trigo">
+    <h2 class="ch">Trigo</h2>
+    <div class="cb">
+      <p class="sem-leg">Contagem por <b>grama de solo</b> (pré-semeadura). <b>Atenção à unidade:</b> a referência
+        de trigo é australiana e conta <b>por grama de solo</b>, não por 200 cm³ como as demais tabelas.
+        <span class="orient">classificação orientativa</span></p>
+      <table class="gt sem">
+        <thead><tr><th style="width:26%;text-align:left">Nematoide</th><th style="width:30%">Leitura</th><th style="width:30%;text-align:left">O que observar</th></tr></thead>
+        <tbody>
+          <tr><td class="esp">Trigo <small>Pratylenchus thornei</small></td>
+            <td class="band b-alto">150 a 250<small>nematoides/g de solo</small><small>25 a 28% de perda</small></td>
+            <td>A relação medida é contínua: a produção cai junto com a população desde as densidades mais baixas avaliadas. Cultivar tolerante pesa muito. (dado da Austrália)</td></tr>
+        </tbody>
+      </table>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>P. thornei:</b> a produção cai <b>linearmente</b> com o log da densidade pré-semeadura; a maior perda observada em campo (25 a 28%) ocorreu nas densidades máximas do experimento, de <b>150 a 250 por grama de solo</b> (Fanning et al., 2020, Austrália). Em ensaio de nematicida (Thompson &amp; Clewett, 2021), o controle do nematoide elevou a produção em 20 a 70%; ali a densidade é medida <b>por kg de solo</b>, escala mil vezes diferente da anterior. <span class="nao">A fonte expressa a densidade <b>por grama de solo</b> (extração por peso, método australiano), mantida assim porque a conversão para 200 cm³ dependeria de uma densidade aparente que a fonte não informa. Sendo log-linear, o modelo ajustado prevê perda proporcional em toda a faixa avaliada. Dado australiano: a magnitude depende de cultivar e safra, e a extrapolação para outras culturas exige nova validação.</span></div>
+      </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ============ PASTAGEM ============ -->
+  <div class="cult" id="c-pastagem">
+    <h2 class="ch">Pastagem (Brachiaria, Panicum)</h2>
+    <div class="cb">
+      <div class="nota"><b>Em pastagem, a contagem não diz se o pasto vai bem ou mal.</b> Um estudo de
+        campo mediu a população e <b>não achou relação</b> entre a quantidade de nematoide e a condição
+        do pasto (bom, médio ou ruim). Por isso o laudo de pastagem serve para <b>escolher a próxima
+        forrageira</b>, não para “aprovar” ou “reprovar” a área.</div>
+      <table class="gt sem">
+        <thead><tr><th style="width:30%;text-align:left">Capim (para <i>Pratylenchus brachyurus</i>)</th><th style="width:34%">Multiplica o nematoide?</th><th style="width:30%;text-align:left">Uso em área infestada</th></tr></thead>
+        <tbody>
+          <tr><td>Panicum 'Tanzânia', 'Mombaça'; capim 'Mulato'</td><td class="band b-alto">multiplica muito</td><td>evitar em área infestada, aumenta a população</td></tr>
+          <tr><td><i>Brachiaria</i> 'Marandu', decumbens</td><td class="band b-medio">multiplica</td><td>hospedeira, não limpa a área</td></tr>
+          <tr><td><i>B. dictyoneura</i></td><td class="band b-medio">multiplica pouco</td><td>o menor risco, mas <b>não elimina</b> o nematoide</td></tr>
+        </tbody>
+      </table>
+      <p class="sem-leg" style="margin-top:10px"><b>Importante:</b> nos ensaios de hospedabilidade,
+        <b>todas</b> essas forrageiras multiplicaram o nematoide em algum grau; a diferença está em quanto.
+        <span class="orient">classificação orientativa</span></p>
+      <details class="tec"><summary>Detalhe técnico e fontes</summary>
+      <div class="tec-b">
+        <div class="tl"><b>O que o estudo de referência mediu:</b> as faixas desta seção são <b>densidades de campo</b>, e não níveis de dano econômico: a literatura brasileira de pastagem tropical relaciona densidade a <i>hospedabilidade</i>, não a perda de forragem ou a ganho animal. Densidades de campo de referência (Terenos-MS): <i>P. brachyurus</i> 87 a 311 e <i>P. zeae</i> 1 a 61 <b>por 10 g de raiz</b>; no solo, 0 a 8 e 1 a 39 <b>por 200 cm³</b>. A condição visual da pastagem NÃO se relacionou com a densidade (Carvalho et al., 2013).</div>
+        <div class="tl"><b>Hospedabilidade (casa de vegetação):</b> Panicum 'Tanzânia'/'Mombaça' e capim 'Mulato' = fator de reprodução ALTO; <i>B. dictyoneura</i> = o menor (FR de 1,0 a 1,3, ainda &gt;1). <b>Todas as forrageiras avaliadas apresentaram FR &gt; 1</b>, ou seja, multiplicaram o nematoide (Inomoto, Machado &amp; Antedomênico, 2007). <span class="nao">As tabelas de gramado/turfe dos EUA referem-se a outras espécies e a outro uso, em unidade por 100 cm³: estão fora do escopo desta seção.</span></div>
+      </div>
+      </details>
+    </div>
+  </div>
+  </div><!-- /.culturas -->
+
+  <!-- ============ A ANÁLISE POR PCR ============ -->
+  <div class="cult" id="c-pcr">
+    <h2 class="ch">A análise por PCR: o que é e para que serve</h2>
+    <div class="cb">
+      <p class="txt"><b>O que a PCR responde.</b> A contagem do laudo identifica o nematoide até o
+        <b>gênero</b>: <i>Meloidogyne</i>, <i>Pratylenchus</i>, <i>Rotylenchulus</i> e assim por diante.
+        A PCR vai um passo adiante e identifica a <b>espécie</b>. É uma análise <b>qualitativa</b>:
+        responde <b>qual espécie está presente</b> na amostra, e não quantos indivíduos existem. No LAMAM,
+        é realizada principalmente para <b>espécies de <i>Meloidogyne</i></b>.</p>
+      <p class="txt"><b>Por que isso muda a decisão.</b> Dentro de um mesmo gênero, as espécies diferem em
+        agressividade, em faixa de hospedeiros e na reação das cultivares. Resistência de cultivar e de
+        porta-enxerto é <b>espécie-específica</b>, e a mesma planta de rotação pode ser hospedeira de uma
+        espécie e não hospedeira de outra. Por isso a PCR <b>não substitui a contagem</b>: as duas se
+        completam: a contagem diz <b>quanto</b>, a PCR diz <b>qual</b>.</p>
+
+      <p class="txt"><b>Que material serve para a análise.</b></p>
+      <table class="gt">
+        <thead><tr><th style="width:26%">Material</th><th style="width:26%">Origem</th><th>Observação</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="esp">Fêmeas <small style="color:#5b6b78">material desejável</small></td>
+            <td>Extraídas de <b>raízes com galhas</b></td>
+            <td>É a via preferencial: a fêmea, retirada do interior da galha, fornece material íntegro e abundante para a extração de DNA.</td>
+          </tr>
+          <tr>
+            <td class="esp">Juvenis (J2) <small style="color:#5b6b78">alternativa</small></td>
+            <td>Recuperados da <b>amostra de solo</b></td>
+            <td>Quando não há raiz com galha, a identificação também pode ser feita a partir dos juvenis extraídos do solo.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="gfoto-2 quad">
+        <figure><img src="../img/pcr-femea-na-raiz.jpg" alt="Dissecação de raiz de cafeeiro expondo a fêmea de Meloidogyne"><figcaption>Dissecação da raiz sob estereomicroscópio até expor as fêmeas, em <b>cafeeiro</b>.</figcaption></figure>
+        <figure><img src="../img/pcr-extracao.jpg" alt="Dissecação de raiz de jiló expondo fêmeas de Meloidogyne"><figcaption>Dissecação da raiz sob estereomicroscópio até expor as fêmeas, em <b>jiló</b>.</figcaption></figure>
+        <figure><img src="../img/pcr-femea-extraida.jpg" alt="Fêmea de Meloidogyne extraída, na ponta da agulha"><figcaption>Fêmea extraída, na ponta da agulha, de onde sai o DNA.</figcaption></figure>
+        <figure><img src="../img/pcr-eletroforese.jpg" alt="Gel de eletroforese com as bandas amplificadas e o marcador de peso molecular"><figcaption>A leitura do resultado: eletroforese em gel, com o marcador de peso molecular nas laterais.</figcaption></figure>
+      </div>
+
+      <div class="nota">Sempre que possível, envie <b>raízes com galhas</b> junto com o solo: fêmeas são o
+        material desejável para a PCR, e a mesma amostra ainda serve para a contagem.</div>
+    </div>
+  </div>
+
+  <!-- ============ GALHAS DE MELOIDOGYNE NO CAFÉ E O PCR ============ -->
+  <div class="cult" id="c-cafe-pcr">
+    <h2 class="ch">Galhas de <i>Meloidogyne</i> no café e o PCR</h2>
+    <div class="cb">
+      <p class="txt">O cafeeiro é parasitado principalmente por <b><i>Meloidogyne</i></b> (nematoides das galhas):
+        <i>M. exigua</i> é a mais disseminada no Brasil, enquanto <i>M. paranaensis</i> e <i>M. incognita</i> são as
+        mais agressivas.</p>
+      <p class="txt"><b>Na raiz, o sintoma muda conforme a espécie, e é isso que define o que coletar.</b>
+        <i>M. exigua</i> parasita as <b>radicelas</b> e forma as <b>galhas clássicas, pequenas e arredondadas</b>,
+        em série ao longo da raiz fina. Já <i>M. paranaensis</i> e <i>M. incognita</i> penetram em
+        <b>raízes mais grossas</b>, e o sintoma característico é a <b>cortiça</b>: o córtex engrossa,
+        <b>fendilha</b> e sofre <b>descorticamento</b>, desprendendo-se em placas e expondo o tecido
+        interno, com poucas ou nenhuma galha nítida.</p>
+
+      <div class="gfoto-2 cafe">
+        <figure class="fg-estreita"><img src="../img/cafe-galhas-exigua.jpg" alt="Galhas de Meloidogyne exigua em radicelas de cafeeiro"><figcaption>Galhas clássicas de <i>M. exigua</i>: pequenas e arredondadas, em série ao longo da radicela.</figcaption></figure>
+        <figure class="fg-larga"><img src="../img/cafe-cortica-1.jpg" alt="Raiz grossa de cafeeiro com cortiça, fendilhamento e descorticamento — detalhe ampliado"><figcaption>Raiz grossa com <b>cortiça</b>, e o <b>detalhe ampliado</b> do sintoma: <b>fendilhamento</b> longitudinal do córtex e <b>descorticamento</b>.</figcaption></figure>
+      </div>
+
+      <p class="txt"><b>Na parte aérea</b>, o parasitismo se traduz em <b>amarelecimento</b> e <b>desfolha
+        intensa</b>, em reboleiras de plantas de menor porte e em declínio. Vale percorrer a lavoura e
+        registrar essas manchas antes de coletar.</p>
+
+      <div class="foto-slot"><b>Fotos a inserir — parte aérea</b>plantas de cafeeiro amareladas e desfolhadas na reboleira (sintoma de campo)</div>
+
+      <div class="aviso"><b>Colete o material certo: é ele que permite o diagnóstico.</b> Como o sintoma
+        difere entre as espécies, a amostra precisa conter a raiz que está doente: <b>raízes grossas com
+        cortiça</b> (fendilhadas e descorticadas) quando houver suspeita de <i>M. paranaensis</i> ou
+        <i>M. incognita</i>, e <b>radicelas com galhas</b> quando houver suspeita de <i>M. exigua</i>. Na
+        dúvida, envie os dois tipos.</div>
+
+      <p class="txt"><b>Por que a espécie importa no café.</b> O porta-enxerto ‘Apoatã IAC 2258’ resiste a
+        <i>M. exigua</i>, <i>M. incognita</i> e <i>M. paranaensis</i>, mas é propagado por <b>semente</b> (a
+        <i>Coffea canephora</i> é de fecundação cruzada) e, por isso, <b>segrega de 10 a 15% de plantas
+        suscetíveis</b>: parte do talhão enxertado falha. Além disso, já há populações de <i>M. paranaensis</i>
+        com virulência sobre genótipos resistentes. Saber qual é a espécie por <b>PCR</b> orienta a escolha do
+        porta-enxerto e do manejo; a contagem por gênero, isoladamente, não resolve essa decisão no café.</p>
+    </div>
+  </div>
+
+  <!-- ============ MATERIAL A COLETAR E ENVIAR (tópico 4) ============ -->
+  <div class="cult" id="c-material">
+    <h2 class="ch">Material a coletar e enviar</h2>
+    <div class="cb">
+      <p class="txt">Cada amostra reúne, aproximadamente, <b>500 ml de solo</b> + <b>50 g de raízes</b> (radicelas), de
+        <b>pelo menos 20 subamostras</b> por talhão de até 100 ha. Use as fotos abaixo como <b>referência visual</b>:
+        elas dispensam a balança no campo.</p>
+      <div class="gfoto-2 med">
+        <figure><img src="../img/coleta-solo-quantidade.jpg" alt="Saco de coleta do LAMAM preenchido com cerca de 500 ml de solo"><figcaption>O saco do LAMAM mede <b>23 × 16 cm</b>. Os 500 ml de solo precisam preencher, no mínimo, <b>10 cm de altura</b> do saco, como na foto.</figcaption></figure>
+        <figure><img src="../img/coleta-raizes-quantidade.jpg" alt="Mão fechada cheia de radicelas de café"><figcaption>A quantidade ideal de raízes: uma <b>mão fechada cheia</b> de radicelas.</figcaption></figure>
+        <figure><img src="../img/coleta-saco-identificacao.jpg" alt="Saco de coleta do LAMAM com os campos de identificação"><figcaption>Envie a amostra <b>identificada</b>: proprietário, propriedade, município, talhão, data de coleta e a análise desejada.</figcaption></figure>
+      </div>
+      <a class="pdf-card" href="../docs/guia-amostragem-nematoides.pdf" target="_blank" rel="noopener">
+        <span class="pdf-ico">PDF</span>
+        <span class="pdf-txt">
+          <b>Guia de coleta e envio de amostras</b>
+          <small>O passo a passo completo: coleta, acondicionamento e envio (6 páginas)</small>
+        </span>
+        <span class="pdf-seta" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="refs" id="refs">
+    <h2>Referências</h2>
+    <p style="font-size:.82rem;color:#5b6b78;margin:0 0 12px">Os números desta página vêm de artigos
+      científicos, teses, boletins técnicos e publicações de instituições de pesquisa.</p>
+    <div class="ref-item">AGUIRRE, Oscar; CHÁVEZ, Carlos; GIRAUD, Alba; ARAYA, Mario. Frequencies and population densities of plant-parasitic nematodes on banana (<i>Musa</i> AAA) plantations in Ecuador from 2008 to 2014. <b>Agronomía Colombiana</b>, v. 34, n. 1, p. 61-73, 2016.</div>
+    <div class="ref-item">ALVES, Cintia da Silva; STARLING, Renan Zappavigna Costa; RODRIGUES, Lilian Lagen; NASCIMENTO, Maria Laura Urbano; VARGAS, Amanda Dutra de; REIS, Ualace Oliveira dos; CAMARA, Guilherme de Resende; MORAES, Wilian Bucker; XAVIER, André da Silva; ALVES, Fábio Ramos. Greenhouse and field assessment of biological and chemical agents against guava decline. <b>Summa Phytopathologica</b>, Botucatu, v. 47, n. 2, p. 96-102, 2021.</div>
+    <div class="ref-item">ARAYA, Mario. Los fitonematodos del banano: su parasitismo y combate. In: REUNIÓN INTERNACIONAL ACORBAT, 16., 2004, Oaxaca. <b>Memorias</b>. Oaxaca: ACORBAT, 2004. p. 84-105.</div>
+    <div class="ref-item">ASMUS, Guilherme Lafourcade; ANDRADE, Paulo José Melo de. <b>Níveis de danos do nematóide de cisto da soja</b>. Dourados: Embrapa Agropecuária Oeste, 2002. 4 p. (Comunicado Técnico, 69).</div>
+    <div class="ref-item">BARBOSA, Dalva Helena Souza Gonçalves; VIEIRA, Henrique Duarte; SOUZA, Ricardo Moreira de; VIANA, Alexandre Pio; SILVA, Cláudio Pereira da. Field estimates of coffee yield losses and damage threshold by <i>Meloidogyne exigua</i>. <b>Nematologia Brasileira</b>, Piracicaba, v. 28, n. 1, p. 49-54, 2004.</div>
+    <div class="ref-item">BECKER, John Ole; WESTERDAHL, Becky B. <b>UC IPM pest management guidelines: citrus — nematodes</b>. Davis: University of California ANR, Publication 3441.</div>
+    <div class="ref-item">BOWEN, Kira L.; HAGAN, Austin K.; CAMPBELL, Henry L.; NIGHTENGALE, Sydney. Effect of southern root-knot nematode (<i>Meloidogyne incognita</i> race 3) on corn yields in Alabama. <b>Plant Health Progress</b>, v. 9, n. 1, 2008.</div>
+    <div class="ref-item">CARVALHO, Cristiane de; FERNANDES, Celso Dornelas; SANTOS, Jaime Maia dos; MACEDO, Manuel Cláudio Motta. Densidade populacional de <i>Pratylenchus</i> spp. em pastagens de <i>Brachiaria</i> spp. e sua influência na disponibilidade e na qualidade da forragem. <b>Revista Ceres</b>, Viçosa, v. 60, n. 1, p. 30-37, 2013.</div>
+    <div class="ref-item">CHAVES, Andréa; PEDROSA, Elvira Maria Régis; MOURA, Romero Marinho de. Efeitos da aplicação de terbufos sobre a densidade populacional de nematóides endoparasitos em cinco variedades de cana-de-açúcar no Nordeste. <b>Nematologia Brasileira</b>, Piracicaba, v. 26, n. 2, p. 167-176, 2002.</div>
+    <div class="ref-item">CROZZOLI, Renato; GRECO, Nicola; SUÁREZ C., Aura; RIVAS, Delia. Patogenicidad del nematodo agallador, <i>Meloidogyne incognita</i>, en cultivares de <i>Phaseolus vulgaris</i> y <i>Vigna unguiculata</i>. <b>Nematropica</b>, v. 27, n. 1, p. 61-67, 1997.</div>
+    <div class="ref-item">DIAS, Waldir Pereira; GARCIA, Alvaro; SILVA, José Francisco Villela; CARNEIRO, Geraldo Estevam de Souza. <b>Nematoides em soja: identificação e controle</b>. Londrina: Embrapa Soja, 2010. (Circular Técnica, 76).</div>
+    <div class="ref-item">DI VITO, Michele; GRECO, Nicola; CARELLA, Antonio. Effect of <i>Meloidogyne incognita</i> and importance of the inoculum on the yield of eggplant. <b>Journal of Nematology</b>, v. 18, n. 4, p. 487-490, 1986.</div>
+    <div class="ref-item">DINARDO-MIRANDA, Leila Luci; MORELLI, Jorge Luiz; LANDELL, Marcos Guimarães de Andrade; SILVA, Marcos de Almeida. Comportamento de genótipos de cana-de-açúcar em relação a <i>Pratylenchus zeae</i>. <b>Nematologia Brasileira</b>, Piracicaba, v. 20, n. 2, p. 52-58, 1996.</div>
+    <div class="ref-item">DINARDO-MIRANDA, Leila Luci; FRACASSO, Juliano Vilela; MIRANDA, Ivan Dinardo. Damage caused by <i>Meloidogyne javanica</i> and <i>Pratylenchus zeae</i> to sugarcane cultivars. <b>Summa Phytopathologica</b>, Botucatu, v. 45, n. 2, p. 146-156, 2019.</div>
+    <div class="ref-item">DONALD, Patricia A.; HOLGUIN, Cesar M.; AGUDELO, Paula A. First report of lance nematode (<i>Hoplolaimus magnistylus</i>) on corn, soybean, and cotton in Tennessee. <b>Plant Disease</b>, v. 97, n. 10, p. 1389, 2013.</div>
+    <div class="ref-item">DUNCAN, Larry W.; NOLING, Joseph W.; INSERRA, Renato N. <b>Nematode management in Florida citrus</b> (Florida citrus production guide). Gainesville: UF/IFAS Extension. (ENY-606/CG010).</div>
+    <div class="ref-item">FANNING, Joshua P.; REEVES, Katherine L.; FORKNALL, Clayton R.; McKAY, Alan C.; HOLLAWAY, Grant J. <i>Pratylenchus thornei</i>: the relationship between presowing nematode density and yield loss in wheat and barley. <b>Phytopathology</b>, v. 110, n. 3, p. 674-683, 2020.</div>
+    <div class="ref-item">FASKE, Travis R.; MUELLER, John D.; GORNY, Adrienne. <b>An overview of root-knot nematodes</b>. [S. l.]: Crop Protection Network, 2021. (CPN-1027).</div>
+    <div class="ref-item">FASKE, Travis R.; WATSON, Terry; WHEELER, Terry; GRABAU, Zane. <b>An overview of reniform nematode</b>. [S. l.]: Crop Protection Network, 2024. (CPN-7002).</div>
+    <div class="ref-item">FRANCHINI, Julio Cezar; DEBIASI, Henrique; DIAS, Waldir Pereira; RAMOS JUNIOR, Edison Ulisses; SILVA, José Francisco Villela. Perda de produtividade da soja em área infestada por nematoide das lesões radiculares na região médio norte do Mato Grosso. In: BERNARDI, Alberto Carlos de Campos <i>et al.</i> (Ed. téc.). <b>Agricultura de precisão: resultados de um novo olhar</b>. Brasília: Embrapa, 2014. p. 274-278.</div>
+    <div class="ref-item">GABIA, Adriano Augusto; SANTOS, Tiago Roque Gonzaga dos; WILCKEN, Silvia Renata Siciliano. Comportamento de <i>Tylenchulus semipenetrans</i> em laranjeira ‘Pera Rio’ enxertada em limoeiro ‘Cravo’. <b>Summa Phytopathologica</b>, Botucatu, v. 42, n. 3, p. 243-248, 2016.</div>
+    <div class="ref-item">GALBIERI, Rafael; ASMUS, Guilherme Lafourcade. Principais espécies de nematoides do algodoeiro no Brasil. In: GALBIERI, Rafael; BELOT, Jean Louis (ed.). <b>Nematoides fitoparasitas do algodoeiro nos cerrados brasileiros</b>. Cuiabá: IMAmt, 2016. p. 11-36.</div>
+    <div class="ref-item">GOMES, Vicente Martins; SOUZA, Ricardo Moreira de; MUSSI-DIAS, Vicente; SILVEIRA, Silvaldo Felipe da; DOLINSKI, Cláudia. Guava decline: a complex disease involving <i>Meloidogyne mayaguensis</i> and <i>Fusarium solani</i>. <b>Journal of Phytopathology</b>, v. 159, n. 1, p. 45-50, 2011.</div>
+    <div class="ref-item">HANDOO, Zafar A.; SKANTAR, Andrea M.; MULROONEY, Robert P. First report of the sting nematode <i>Belonolaimus longicaudatus</i> on soybean in Delaware. <b>Plant Disease</b>, v. 94, n. 1, p. 133, 2010.</div>
+    <div class="ref-item">INOMOTO, Mário Massayuki. Perdas acarretadas por nematoides podem, com precaução, ser evitadas. <b>Visão Agrícola</b>, Piracicaba, n. 13, p. 116-119, 2015.</div>
+    <div class="ref-item">INOMOTO, Mário Massayuki; MACHADO, Andressa Cristina Zamboni; ANTEDOMÊNICO, Sérgio Roberto. Reação de <i>Brachiaria</i> spp. e <i>Panicum maximum</i> a <i>Pratylenchus brachyurus</i>. <b>Fitopatologia Brasileira</b>, Brasília, v. 32, n. 4, p. 341-344, 2007.</div>
+    <div class="ref-item">INSERRA, Renato N.; KAPLAN, David; SANTOS, Jaime Maia dos; DUNCAN, Larry W.; VOVLAS, Nicola; DUNN, Danny; TROCCOLI, Alberto. <i>Pratylenchus jaehni</i> sp. n. from citrus in Brazil and its relationship with <i>P. coffeae</i> and <i>P. loosi</i>. <b>Nematology</b>, v. 3, n. 7, p. 653-665, 2001.</div>
+    <div class="ref-item">KUBO, Rúbia Karla; SILVA, Rosangela Aparecida; TOMAZINI, Marli Dias; OLIVEIRA, Claudio Marcelo Gonçalves de; MAZZAFERA, Paulo; INOMOTO, Mário Massayuki. Patogenicidade de <i>Pratylenchus coffeae</i> em plântulas de cafeeiro cv. Mundo Novo. <b>Fitopatologia Brasileira</b>, Brasília, v. 28, n. 1, p. 41-48, 2003.</div>
+    <div class="ref-item">LIMA, Inobert de Melo; BUONICONTRO, Daniele Salgado; ARPINI, Bruna da Silva; TEODORO, Marcos César; COSTA, Nathalia Sousa. Gerenciamento de nematoides no sistema de produção do cafeeiro Conilon. In: PARTELLI, Fábio Luiz; ESPINDULA, Marcelo Curitiba (Ed.). <b>Café Conilon: conhecimento para superar desafios</b>. Alegre: CAUFES, 2019. cap. 4, p. 61-74.</div>
+    <div class="ref-item">MACHADO, Andressa Cristina Zamboni; BELUTI, Danilo Brito; SILVA, Rosangela Aparecida; SERRANO, Marco Antônio dos Santos; INOMOTO, Mário Massayuki. Avaliação de danos causados por <i>Pratylenchus brachyurus</i> em algodoeiro. <b>Fitopatologia Brasileira</b>, Brasília, v. 31, n. 1, p. 11-16, 2006.</div>
+    <div class="ref-item">MACHADO, Andressa Cristina Zamboni; FERRAZ, Luiz Carlos Camargo Barbosa; INOMOTO, Mário Massayuki. Pathogenicity of <i>Pratylenchus brachyurus</i> on cotton plants. <b>The Journal of Cotton Science</b>, v. 16, n. 4, p. 268-271, 2012.</div>
+    <div class="ref-item">MOENS, Thomas; ARAYA, Mario; SWENNEN, Rony; DE WAELE, Dirk; SANDOVAL, Jorge. Effect of growing medium, inoculum density, exposure time and pot volume on the early reproduction and damage potential of <i>Radopholus similis</i> in banana. <b>Nematropica</b>, v. 33, n. 1, p. 9-26, 2003.</div>
+    <div class="ref-item">NIBLACK, Terry L.; HUSSEY, Richard S.; BOERMA, H. Roger. Effects of environments, <i>Meloidogyne incognita</i> inoculum levels, and <i>Glycine max</i> genotype on root-knot nematode-soybean interactions in field microplots. <b>Journal of Nematology</b>, v. 18, n. 3, p. 338-346, 1986.</div>
+    <div class="ref-item">NOVARETTI, Wilson Roberto Trevisan. <b>Controle de <i>Meloidogyne incognita</i> e <i>Pratylenchus zeae</i> em cana-de-açúcar com nematicidas, associados ou não à matéria orgânica</b>. 1997. 51 f. Tese (Doutorado em Ciências, Entomologia) — Escola Superior de Agricultura “Luiz de Queiroz”, Universidade de São Paulo, Piracicaba, 1997.</div>
+    <div class="ref-item">NOVARETTI, Wilson Roberto Trevisan; REIS, Ademir Moraes. Influência do método de aplicação de nematicidas no controle de <i>Pratylenchus zeae</i> em soqueiras de cana-de-açúcar e definição dos níveis de dano e de controle. <b>Nematologia Brasileira</b>, Piracicaba, v. 33, n. 1, p. 83-89, 2009.</div>
+    <div class="ref-item">OLIVEIRA, Claudio Marcelo Gonçalves de; INOMOTO, Mário Massayuki. Nematoides que atacam a cultura do milho no Brasil. <b>Biológico</b>, São Paulo, v. 85, p. 1-13, 2023.</div>
+    <div class="ref-item">OLIVEIRA, Claudio Marcelo Gonçalves de; ROSA, Jaqueline Magalhães Oliveira. <b>Nematoides parasitos do cafeeiro</b>. São Paulo: Instituto Biológico, 2018. (Boletim Técnico, 32).</div>
+    <div class="ref-item">PEREIRA, Flávia Oliveira Marchi; SOUZA, Ricardo Moreira de; SOUZA, Paulo Marcelo de; DOLINSKI, Cláudia; SANTOS, Girlene Kelly. Estimativa do impacto econômico e social direto de <i>Meloidogyne mayaguensis</i> na cultura da goiaba no Brasil. <b>Nematologia Brasileira</b>, Piracicaba, v. 33, n. 2, p. 176-181, 2009.</div>
+    <div class="ref-item">SALGADO, Sônia Maria Lima; GUIMARÃES, Natálya Monique R. B.; BOTELHO, César Elias; TASSONE, Guilherme A. T.; MARCELO, Ana Luiza; SOUZA, Simone Ribeiro de; OLIVEIRA, Rosângela D. Lima; FERREIRA, Daniel Furtado. <i>Meloidogyne paranaensis</i> and <i>M. exigua</i> in coffee plantation from the South of Minas Gerais State. <b>Coffee Science</b>, Lavras, v. 10, n. 4, p. 475-481, 2015.</div>
+    <div class="ref-item">SHARMA, Raj Dwar; JUNQUEIRA, Nilton Tadeu Vilela; GOMES, Antônio Carlos. <b>Nematóides nocivos ao maracujazeiro</b>. Planaltina: Embrapa Cerrados, 1999. (Comunicado Técnico, 4).</div>
+    <div class="ref-item">SHIGUEOKA, Luciana Harumi; FONSECA, Inês Cristina de Batista; SERA, Gustavo Hiroshi; SERA, Tumoru; SANTINO, Aleandro da Silva; DORIGO, Orazília França; MACHADO, Andressa Cristina Zamboni. Virulence and reproductive fitness of <i>Meloidogyne paranaensis</i> field populations in coffee genotypes. <b>Plant Disease</b>, v. 106, n. 10, p. 2618-2624, 2022.</div>
+    <div class="ref-item">SILVA, Rosangela Aparecida; RACK, Vanessa Menezes; VIGOLO, Fábio; SANTOS, Poliana Silvestro; CASTRO, Renato Dias de; KOBAYASTI, Leimi. Correlação entre densidade populacional de nematoides e produtividade de algodoeiro. <b>Bioscience Journal</b>, Uberlândia, v. 30, supl. 1, p. 210-218, 2014.</div>
+    <div class="ref-item">SILVA, Rosana Vieira; OLIVEIRA, Ricardo Daniel de Lima; PEREIRA, Antônio Alves; SÊNI, Denise José. Respostas de genótipos de <i>Coffea</i> spp. a diferentes populações de <i>Meloidogyne exigua</i>. <b>Fitopatologia Brasileira</b>, Brasília, v. 32, n. 3, p. 205-212, 2007.</div>
+    <div class="ref-item">SOCIEDADE BRASILEIRA DE NEMATOLOGIA. <b>Recomendações técnicas para amostragem, processamento de amostras e emissão de laudos</b>. [S. l.]: Sociedade Brasileira de Nematologia, 2019. 13 p.</div>
+    <div class="ref-item">TALAVERA-RUBIA, Miguel; VELA-DELGADO, María Dolores; VERDEJO-LUCAS, Soledad. A cost-benefit analysis of soil disinfestation methods against root-knot nematodes in Mediterranean intensive horticulture. <b>Plants</b>, v. 11, n. 20, art. 2774, 2022.</div>
+    <div class="ref-item">THOMPSON, John P.; CLEWETT, Timothy G. Impacts of root-lesion nematode (<i>Pratylenchus thornei</i>) on plant nutrition, biomass, grain yield and yield components of susceptible/intolerant wheat cultivars determined by nematicide applications. <b>Agronomy</b>, v. 11, n. 2, art. 296, 2021.</div>
+    <div class="ref-item">VELOSO, Jaqueline Silva; CÂMARA, Marcos Paz Saraiva; SOUZA, Ricardo Moreira de. Guava decline: updating its etiology from ‘<i>Fusarium solani</i>’ to <i>Neocosmospora falciformis</i>. <b>European Journal of Plant Pathology</b>, v. 159, n. 2, p. 455-460, 2021.</div>
+    <div class="ref-item">VERDEJO-LUCAS, Soledad; McKENRY, Michael V. Management of the citrus nematode, <i>Tylenchulus semipenetrans</i>. <b>Journal of Nematology</b>, v. 36, n. 4, p. 424-432, 2004.</div>
+    <div class="ref-item">VRAIN, Thierry C. Relationship between <i>Meloidogyne hapla</i> density and damage to carrots in organic soils. <b>Journal of Nematology</b>, v. 14, n. 1, p. 50-57, 1982.</div>
+    <div class="ref-item">WESEMAEL, Wim M. L.; MOENS, Maurice. Quality damage on carrots (<i>Daucus carota</i> L.) caused by the root-knot nematode <i>Meloidogyne chitwoodi</i>. <b>Nematology</b>, v. 10, n. 2, p. 261-270, 2008.</div>
+    <div class="ref-item">XING, Lijuan; WESTPHAL, Andreas. Predicting damage of <i>Meloidogyne incognita</i> on watermelon. <b>Journal of Nematology</b>, v. 44, n. 2, p. 127-133, 2012.</div>
   </div>
 
 </div>
 </div>
 
 <footer>
-  <div class="wrap">
-    <a href="../index.html" class="brand"><img src="../icon.png" alt="LAMAM" style="height:34px"> LAMAM</a>
-    <p>Laboratório Mineiro de Análises Agrícolas e Microbiológicas · Patos de Minas - MG</p>
-    <p class="fline">(34) 3825-1631 · <a href="https://wa.me/5534997741631" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></p>
-    <p class="fline" style="margin-top:12px;font-size:.8rem;color:#6f93ab">Guia de interpretação · compilação técnica LAMAM · Última revisão: junho de 2026</p>
+  <div class="wrap" style="text-align:center;padding:24px 0">
+    <div class="brand" style="justify-content:center"><img src="../icon.png" alt="LAMAM"> LAMAM</div>
+    <p style="color:#8fb0c6;font-size:.85rem">Laboratório Mineiro de Análises Agrícolas e Microbiológicas</p>
   </div>
 </footer>
 
-<a class="wpp" href="https://wa.me/5534997741631" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg></a>
-
-<script>
-  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});
-</script>
 </body>
 </html>
