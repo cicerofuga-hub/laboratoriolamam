@@ -135,12 +135,12 @@
   .gfoto-2.tri img{height:380px;}
   .gfoto-2 figcaption{font-size:.8rem;color:#5b6b78;font-style:italic;margin-top:6px;}
   .gfoto-2.tri figcaption,.gfoto-2.med figcaption{max-width:200px;margin-left:auto;margin-right:auto;}
-  /* par de fotos de mesma largura e altura, lado a lado */
-  .gfoto-par{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+  /* par de fotos de mesma largura, lado a lado (altura natural, sem corte) */
+  .gfoto-par{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;align-items:start;}
   .gfoto-par figure{margin:0;}
-  .gfoto-par img{width:100%;height:240px;object-fit:cover;display:block;border-radius:10px;border:1px solid var(--borda);}
+  .gfoto-par img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--borda);}
   .gfoto-par figcaption{font-size:.8rem;color:#5b6b78;font-style:italic;margin-top:7px;text-align:center;}
-  @media(max-width:600px){.gfoto-par{grid-template-columns:1fr;} .gfoto-par img{height:200px;}}
+  @media(max-width:600px){.gfoto-par{grid-template-columns:1fr;}}
   .pdf-card{display:flex;align-items:center;gap:14px;text-decoration:none;margin:18px 0 4px;
     background:#f3f9fd;border:1px solid #cfe4f3;border-left:4px solid var(--cyan);border-radius:12px;
     padding:14px 18px;transition:background .15s,border-color .15s,box-shadow .15s;}
@@ -224,7 +224,7 @@
         </ol>
       </li>
       <li><a href="#c-pcr">A análise por PCR: o que é e para que serve</a></li>
-      <li><a href="#c-cafe-pcr">Galhas de <i>Meloidogyne</i> no café e o PCR</a></li>
+      <li><a href="#c-cafe-pcr">Nematoides das galhas no cafeeiro e o PCR</a></li>
       <li><a href="#c-material">Material a coletar e enviar</a></li>
       <li><a href="#refs">Referências</a></li>
     </ol>
@@ -234,13 +234,13 @@
   <div class="cult" id="c-laudo">
     <h2 class="ch">Entendendo o seu laudo</h2>
     <div class="cb">
-      <p class="txt"><b>O laudo lista apenas os gêneros encontrados na sua amostra</b>. Não é uma lista fixa: se um
-        gênero não aparece, é porque não foi detectado. A quantificação é feita por <b>gênero</b>; a <b>espécie</b>
+      <p class="txt"><b>O laudo lista apenas os gêneros encontrados na sua amostra.</b> Não é uma lista fixa: se um
+        gênero não aparece, é porque não foi detectado. A quantificação é feita por gênero; a espécie
         (sobretudo em <i>Meloidogyne</i>) é definida por <b>PCR</b>, à parte.</p>
       <div class="aviso"><b>A amostragem determina o resultado.</b> A análise só é representativa quando a coleta é feita
-        corretamente e as <b>amostras simples são bem homogeneizadas</b> antes de formar a amostra composta. Por isso, a
+        corretamente e as amostras simples são bem homogeneizadas antes de formar a amostra composta. Por isso, a
         <b>não detecção de um nematoide não garante a sua ausência</b> na área: amostragem inadequada, população baixa e
-        a época de coleta interferem na <b>recuperação</b> e na <b>detecção</b> do nematoide.</div>
+        a época de coleta interferem na recuperação e na detecção do nematoide.</div>
       <p class="txt">As contagens saem nas unidades do laudo do LAMAM: <b>por 200 cm³ de solo</b> e <b>por 1 grama de
         raiz</b>. É nessas unidades que as faixas desta página estão; dá para comparar direto, sem fazer cálculos.</p>
       <p class="txt">Abaixo, <b>todos os gêneros que o laboratório quantifica</b>, agrupados pelo modo de parasitismo:</p>
@@ -265,10 +265,10 @@
 
       <h3 class="sub">Cisto viável × inviável</h3>
       <p class="txt">No cisto da soja (<i>Heterodera glycines</i>), a fêmea fecundada retém os ovos no corpo e, ao
-        morrer, sua <b>cutícula endurece e escurece</b>, formando o <b>cisto</b> (em média cerca de 200 ovos, podendo
-        chegar a 500). Nem todo cisto no solo é infestação atual: o <b>viável</b> está <b>túrgido e globular</b>,
-        cheio de ovos; o <b>inviável</b> fica <b>vazio e colapsado</b>, por <b>eclosão dos ovos</b> ou por
-        <b>parasitismo</b> de fungos que atacam os ovos dentro do cisto.</p>
+        morrer, sua cutícula endurece e escurece, formando o cisto (em média cerca de 200 ovos, podendo
+        chegar a 500). Nem todo cisto no solo é infestação atual: o <b>viável</b> está túrgido e globular,
+        cheio de ovos; o <b>inviável</b> fica vazio e colapsado, por eclosão dos ovos ou por
+        parasitismo de fungos que atacam os ovos dentro do cisto.</p>
       <div class="gfoto-2">
         <figure><img src="../img/cisto-lado-a-lado.jpg" alt="Cisto viável (esquerda) e inviável (direita) — laboratório LAMAM"><figcaption>À <b>esquerda</b>, o cisto <b>viável</b> (túrgido); à <b>direita</b>, o <b>inviável</b> (colapsado).</figcaption></figure>
         <figure><img src="../img/cisto-tamanhos.jpg" alt="Cistos de diferentes tamanhos e cores — laboratório LAMAM"><figcaption>Cistos variam em tamanho e cor conforme a idade.</figcaption></figure>
@@ -286,9 +286,9 @@
 
       <h3 class="sub">Nematoides de vida livre</h3>
       <div class="nota">Nem todo nematoide do solo é fitoparasita. Os <b>de vida livre</b> se alimentam de bactérias,
-        fungos, matéria orgânica ou de outros nematoides e <b>não parasitam a cultura</b>: sua abundância e diversidade
-        são indicadores de um <b>solo biologicamente ativo</b>. No laudo têm caráter <b>informativo</b>: não representam
-        problema fitossanitário e <b>não</b> se somam aos fitonematoides na avaliação de risco.</div>
+        fungos, matéria orgânica ou de outros nematoides e não parasitam a cultura: sua abundância e diversidade
+        são indicadores de um solo biologicamente ativo. No laudo têm caráter informativo, não representam
+        problema fitossanitário e não se somam aos fitonematoides na avaliação de risco.</div>
 
       <h3 class="sub">Quando pedir a identificação de espécie (PCR)</h3>
       <p class="txt">A rotina identifica por gênero. A <b>PCR</b> (espécie) entra quando o manejo depende dela:
@@ -329,7 +329,7 @@
           <tr>
             <td class="esp">Cisto <small>Heterodera glycines</small></td>
             <td class="band b-baixo">até 5<small>cistos/200 cm³</small></td><td class="band b-medio">5 a 10<small>cistos/200 cm³</small></td><td class="band b-alto">acima de 10<small>cistos/200 cm³</small></td>
-            <td>Contar <b>cistos viáveis</b> (com ovos). 10 cistos viáveis/200 cm³ já custaram cerca de 16% de perda, e em veranico até 1 cisto pesa.</td>
+            <td>10 cistos viáveis/200 cm³ já custaram cerca de 16% de perda, e em veranico até 1 cisto pesa.</td>
           </tr>
           <tr>
             <td class="esp">Galhas <small>Meloidogyne incognita</small></td>
@@ -459,7 +459,7 @@
           <tr>
             <td class="esp">Galhas <small>Meloidogyne incognita</small></td>
             <td class="band b-alto" colspan="3">presença</td>
-            <td>Também das mais agressivas ao cafeeiro, sobretudo em solos arenosos. Detecção confirmada já é decisão de manejo.</td>
+            <td>Espécie agressiva ao cafeeiro, comum em solos arenosos. Detecção confirmada já é decisão de manejo.</td>
           </tr>
           <tr>
             <td class="esp">Lesões <small>Pratylenchus coffeae</small></td>
@@ -543,15 +543,15 @@
           </tr>
           <tr>
             <td class="esp">Galhas <small>Meloidogyne</small></td>
-            <td class="band semnum" colspan="3">sem faixa</td>
-            <td>Em campo, sob infestação natural, a perda chegou a 22% em cultivar suscetível. Os ensaios mediram a perda, sem estabelecer um valor de corte de contagem: em variedade suscetível, população expressiva indica risco.</td>
+            <td class="band semnum" colspan="2">sem faixa</td><td class="band b-alto">acima de 8<small>J2/g de raiz</small></td>
+            <td>Na pré-amostragem de soqueira, acima de 8 J2/g de raiz já indica nível alto. Em campo, a perda chegou a 22% em cultivar suscetível.</td>
           </tr>
         </tbody>
       </table>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
       <div class="tec-b">
         <div class="tl"><b>P. zeae:</b> em pré-amostragem de soqueira aos 6 meses (por 50 g de raízes): abaixo de 2.500 (= 50/g) o acréscimo com nematicida é de cerca de 5 t/ha (inviável); entre 2.500 e 5.000 (50 a 100/g), cerca de 10 t/ha; acima de 5.000 (mais de 100/g), mais de 15 t/ha (Novaretti, 1997). Magnitude aos 6 meses (Novaretti &amp; Reis, 2009): cada 1.000/50 g corresponde a −1,1 t/ha (aos 2 meses após o corte esse coeficiente sobe para −4,0 t/ha). <span class="nao">Os valores "1.870" e "4.790/50 g" de Dinardo-Miranda et al. (1996) NÃO são limiares: são médias populacionais de genótipos em subparcelas não tratadas, e o próprio trabalho classificou o genótipo de 4.790 como <b>tolerante</b> e o de 1.870 como <b>intolerante</b>, de modo que não servem como faixa de risco.</span></div>
-        <div class="tl"><b>Meloidogyne:</b> em CAMPO (SP, solo arenoso, cana planta), sob infestação natural de <i>M. javanica</i> + <i>P. zeae</i>, a perda chegou a <b>22% (cv. IACSP96-7569) e 17% (cv. CTC20)</b>, estimada pela resposta ao nematicida; média de 10% ou mais, com várias cultivares tolerantes (Dinardo-Miranda, Fracasso &amp; Miranda, 2019). <span class="nao">O percentual medido é o efeito conjunto das DUAS espécies e corresponde aos máximos de duas cultivares específicas: aplica-se a essa condição, e não como faixa geral. A perda foi estimada pela resposta ao nematicida, sem uma densidade correspondente. Endoparasitos também parasitam a cana no NE, em campo (Chaves, Pedrosa &amp; Moura, 2002).</span></div>
+        <div class="tl"><b>Meloidogyne:</b> na pré-amostragem de soqueira, mais de <b>400 J2/50 g de raízes (= 8/g)</b> de <i>M. incognita</i> indicaram nível populacional alto (Novaretti, 1997). Em CAMPO (SP, solo arenoso, cana planta), sob infestação natural de <i>M. javanica</i> + <i>P. zeae</i>, a perda chegou a <b>22% (cv. IACSP96-7569) e 17% (cv. CTC20)</b>, estimada pela resposta ao nematicida; média de 10% ou mais, com várias cultivares tolerantes (Dinardo-Miranda, Fracasso &amp; Miranda, 2019). <span class="nao">O percentual medido é o efeito conjunto das DUAS espécies e corresponde aos máximos de duas cultivares específicas: aplica-se a essa condição, e não como faixa geral. A perda foi estimada pela resposta ao nematicida, sem uma densidade correspondente. Endoparasitos também parasitam a cana no NE, em campo (Chaves, Pedrosa &amp; Moura, 2002).</span></div>
       </div>
       </details>
     </div>
@@ -568,12 +568,12 @@
       <table class="gt sem">
         <thead><tr><th style="width:20%">Cultura</th><th style="width:22%;text-align:left">Nematoide</th><th style="width:26%">Dano começa a partir de</th><th style="width:30%;text-align:left">O que observar</th></tr></thead>
         <tbody>
-          <tr><td><b>Tomate</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-medio">180<small>J2/200 cm³</small></td><td>a mais tolerante do grupo</td></tr>
-          <tr><td><b>Pimentão</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-medio">80<small>J2/200 cm³</small></td><td></td></tr>
-          <tr><td><b>Berinjela</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">11<small>ovos+J2/200 cm³</small></td><td>muito sensível</td></tr>
-          <tr><td><b>Melão / melancia / abobrinha</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">3 a 11<small>J2/200 cm³</small></td><td>sensíveis</td></tr>
-          <tr><td><b>Pepino</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">presença</td><td>o limite é tão baixo (abaixo do que o laudo detecta) que qualquer detecção já preocupa</td></tr>
-          <tr><td><b>Cenoura</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">presença</td><td>o dano é de QUALIDADE (raiz bifurcada, com galhas, sem valor comercial) e começa em densidade no piso de detecção do laudo</td></tr>
+          <tr><td><b>Tomate</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-medio">180<small>J2/200 cm³</small></td><td>A mais tolerante do grupo: suporta população alta antes de perder. Fique atento a galhas na raiz e à murcha nas horas quentes.</td></tr>
+          <tr><td><b>Pimentão</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-medio">80<small>J2/200 cm³</small></td><td>Tolerância intermediária. Reboleiras de plantas atrofiadas, com galhas na raiz.</td></tr>
+          <tr><td><b>Berinjela</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">11<small>ovos+J2/200 cm³</small></td><td>Muito sensível, perde cedo. Galhas volumosas na raiz, plantas amareladas e paradas.</td></tr>
+          <tr><td><b>Melão / melancia / abobrinha</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">3 a 11<small>J2/200 cm³</small></td><td>Sensíveis. Reboleiras de plantas que murcham ao meio-dia; raiz com galhas. Pior em solo arenoso.</td></tr>
+          <tr><td><b>Pepino</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">presença</td><td>O mais sensível do grupo: o limiar é menor do que o laudo consegue detectar, então qualquer detecção já preocupa.</td></tr>
+          <tr><td><b>Cenoura</b></td><td class="esp"><small>Meloidogyne incognita</small></td><td class="band b-alto">presença</td><td>O prejuízo é de qualidade: raiz bifurcada, com galhas e pelos, perde valor comercial mesmo com poucos nematoides.</td></tr>
         </tbody>
       </table>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
@@ -621,9 +621,6 @@
             <td>Em levantamento de pomares de maracujá em declínio (DF/MG/GO), galhas apareceram em quase metade das amostras. O trabalho mediu prevalência, não dano: leia junto com sintoma e histórico.</td></tr>
         </tbody>
       </table>
-      <div class="perigo"><b>Por que a goiaba é o caso mais grave:</b> o declínio da goiabeira é uma <b>doença
-        complexa</b>. O <i>M. enterolobii</i> abre a porta para uma podridão de raiz por fungo
-        (<i>Fusarium solani</i>). O nematoide sozinho já é grave; com o fungo, mata a planta.</div>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
       <div class="tec-b">
         <div class="tl"><b>Citros — T. semipenetrans:</b> perdas relatadas de <b>10 a 30%</b> conforme o nível de infestação (Verdejo-Lucas &amp; McKenry, 2004). Limiares diagnósticos, ambos <b>por grama de raiz</b>: <b>acima de 1.400 fêmeas/g</b> = nível alto na Califórnia em maio e junho (acima de 1.100 em fevereiro a abril), Becker &amp; Westerdahl, UC IPM; e <b>acima de 4.000 juvenis/g</b> = nível crítico para declínio em Israel (Cohn, 1969, citado em Verdejo-Lucas &amp; McKenry, 2004). <span class="nao">São ESTÁGIOS diferentes (fêmea × juvenil), mesmo denominador (g de raiz): não comparar nem somar os dois números. Gabia, Santos &amp; Wilcken (2016) mostraram que a contagem isolada não previu a perda; cruze com sintoma e histórico.</span></div>
@@ -640,10 +637,11 @@
   <div class="cult" id="c-pastagem">
     <h2 class="ch">Pastagem (Brachiaria, Panicum)</h2>
     <div class="cb">
-      <div class="nota"><b>Em pastagem, a contagem não diz se o pasto vai bem ou mal.</b> Um estudo de
-        campo mediu a população e <b>não achou relação</b> entre a quantidade de nematoide e a condição
-        do pasto (bom, médio ou ruim). Por isso o laudo de pastagem serve para <b>escolher a próxima
-        forrageira</b>, não para “aprovar” ou “reprovar” a área.</div>
+      <div class="nota"><b>Em pastagem, a contagem não diz se o pasto vai bem ou mal.</b> Faltam trabalhos
+        que relacionem a densidade de nematoides à condição da pastagem; num levantamento de campo, Carvalho
+        et al. (2013) mediram a população e não encontraram relação entre a quantidade de nematoide e a
+        condição do pasto (bom, médio ou ruim). Por isso o laudo de pastagem serve para escolher a próxima
+        forrageira, não para “aprovar” ou “reprovar” a área.</div>
       <table class="gt sem">
         <thead><tr><th style="width:30%;text-align:left">Capim (para <i>Pratylenchus brachyurus</i>)</th><th style="width:34%">Multiplica o nematoide?</th><th style="width:30%;text-align:left">Uso em área infestada</th></tr></thead>
         <tbody>
@@ -671,9 +669,9 @@
     <div class="cb">
       <p class="txt"><b>O que a PCR responde.</b> A contagem do laudo identifica o nematoide até o
         <b>gênero</b>: <i>Meloidogyne</i>, <i>Pratylenchus</i>, <i>Rotylenchulus</i> e assim por diante.
-        A PCR vai um passo adiante e identifica a <b>espécie</b>. É uma análise <b>qualitativa</b>:
-        responde <b>qual espécie está presente</b> na amostra, e não quantos indivíduos existem. No LAMAM,
-        é realizada principalmente para <b>espécies de <i>Meloidogyne</i></b>, com marcadores moleculares
+        A PCR vai um passo adiante e identifica a <b>espécie</b>. É uma análise qualitativa:
+        responde qual espécie está presente na amostra, e não quantos indivíduos existem. No LAMAM,
+        é realizada principalmente para espécies de <i>Meloidogyne</i>, com marcadores moleculares
         específicos para cada espécie (Zijlstra, Donkers-Venne &amp; Fargette, 2000; Randig et al., 2002).</p>
       <p class="txt"><b>Por que isso muda a decisão.</b> Dentro de um mesmo gênero, as espécies diferem em
         agressividade, em faixa de hospedeiros e na reação das cultivares. Resistência de cultivar e de
@@ -688,7 +686,7 @@
           <tr>
             <td class="esp">Fêmeas <small style="color:#5b6b78">desejável quando há galhas</small></td>
             <td>Extraídas de <b>raízes com galhas</b></td>
-            <td>Havendo raízes com galhas, a fêmea jovem em postura é o material desejável: além do PCR, permite a identificação pelo <b>fenótipo de esterase</b>, que só funciona com fêmeas nessa fase.</td>
+            <td>Havendo raízes com galhas, a fêmea jovem em postura é o material desejável: além do PCR, permite a identificação pelo <b>fenótipo de esterase</b>.</td>
           </tr>
           <tr>
             <td class="esp">Juvenis (J2) <small style="color:#5b6b78">alternativa</small></td>
@@ -718,15 +716,15 @@
         <i>M. exigua</i> é a mais disseminada no Brasil, enquanto <i>M. paranaensis</i> e <i>M. incognita</i> são as
         mais agressivas.</p>
       <p class="txt"><b>Na raiz, o sintoma muda conforme a espécie, e é isso que define o que coletar.</b>
-        <i>M. exigua</i> parasita as <b>radicelas</b> e forma as <b>galhas clássicas, pequenas e arredondadas</b>,
+        <i>M. exigua</i> parasita as <b>radicelas</b> e forma as galhas clássicas, pequenas e arredondadas,
         em série ao longo da raiz fina. Já <i>M. paranaensis</i> e <i>M. incognita</i> penetram em
-        <b>raízes mais grossas</b>, e o sintoma característico é a <b>cortiça</b>: o córtex engrossa,
-        <b>fendilha</b> e sofre <b>descorticamento</b>, desprendendo-se em placas e expondo o tecido
+        raízes mais grossas, e o sintoma característico é a <b>cortiça</b>: o córtex engrossa,
+        fendilha e sofre descorticamento, desprendendo-se em placas e expondo o tecido
         interno, com poucas ou nenhuma galha nítida.</p>
 
       <div class="gfoto-2 cafe">
         <figure class="fg-estreita"><img src="../img/cafe-galhas-exigua.jpg" alt="Galhas de Meloidogyne exigua em radicelas de cafeeiro"><figcaption>Galhas clássicas de <i>M. exigua</i>: pequenas e arredondadas, em série ao longo da radicela.</figcaption></figure>
-        <figure class="fg-larga"><img src="../img/cafe-cortica-1.jpg" alt="Raiz grossa de cafeeiro com cortiça, fendilhamento e descorticamento — detalhe ampliado"><figcaption>Raiz grossa com <b>cortiça</b>, e o <b>detalhe ampliado</b> do sintoma: <b>fendilhamento</b> longitudinal do córtex e <b>descorticamento</b>.</figcaption></figure>
+        <figure class="fg-larga"><img src="../img/cafe-cortica-1.jpg" alt="Raiz grossa de cafeeiro com cortiça, fendilhamento e descorticamento — detalhe ampliado"><figcaption>Raiz grossa com <b>cortiça</b>: fendilhamento longitudinal do córtex e descorticamento, no detalhe ampliado.</figcaption></figure>
       </div>
 
       <p class="txt"><b>Na parte aérea</b>, o parasitismo — sobretudo por <i>M. paranaensis</i> e <i>M. incognita</i> —
@@ -734,7 +732,7 @@
         declínio. Vale percorrer a lavoura e registrar essas manchas antes de coletar.</p>
 
       <div class="gfoto-par">
-        <figure><img src="../img/cafe-lavoura-paranaensis.jpg" alt="Lavoura de café jovem com plantas atrofiadas e falhas em reboleiras"><figcaption>Lavoura jovem: falhas e plantas atrofiadas.</figcaption></figure>
+        <figure><img src="../img/cafe-lavoura-paranaensis.jpg" alt="Lavoura de café jovem com plantas atrofiadas e falhas em reboleiras"><figcaption>Lavoura jovem: reboleiras com falhas, desfolha intensa e plantas mortas.</figcaption></figure>
         <figure><img src="../img/cafe-lavoura-velha.jpg" alt="Lavoura de café adulta em declínio, desfolhada, ao lado de plantas sadias"><figcaption>Lavoura adulta: desfolha intensa e declínio.</figcaption></figure>
       </div>
 
