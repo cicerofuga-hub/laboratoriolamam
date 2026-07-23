@@ -169,6 +169,32 @@
   @media print{ header,.crumb,.wpp,footer .fline{display:none!important;}
     details.tec{border:none;} details.tec[open] .tec-b{display:block;}
     .ch,table.gt th{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;} }
+
+  /* ===== MOBILE: tabelas viram cards empilhados ===== */
+  @media(max-width:640px){
+    table.gt{border:none;box-shadow:none;}
+    table.gt thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+    table.gt, table.gt tbody, table.gt tr, table.gt td{display:block;width:auto;}
+    table.gt tr{border:1px solid var(--borda);border-radius:12px;background:#fff;
+      margin:0 0 14px;padding:11px 13px;box-shadow:0 1px 8px rgba(21,80,122,.06);}
+    table.gt td{border:none!important;padding:5px 0;text-align:left!important;white-space:normal!important;}
+    /* 1ª coluna (nematoide/cultura) = título do card */
+    table.gt td:first-child{font-size:1.02rem;font-weight:700;color:var(--navy);
+      border-bottom:1px solid #eef3f7!important;padding:0 0 8px;margin-bottom:5px;}
+    table.gt td.esp:first-child small,table.gt td:first-child small{display:block;font-style:italic;
+      font-weight:400;font-size:.85rem;color:var(--cinza);margin-top:1px;}
+    /* célula do nematoide quando é 2ª coluna (frutas/hortaliças): vira subtítulo */
+    table.gt td.esp:not(:first-child){color:var(--navy);font-style:italic;padding-top:0;}
+    table.gt td.esp:not(:first-child)::before{content:none;}
+    /* demais células: mostram o rótulo da coluna */
+    table.gt td[data-label]::before{content:attr(data-label) ": ";font-weight:700;color:var(--navy);
+      font-style:normal;}
+    /* faixas do semáforo viram pílulas coloridas */
+    table.sem td.band{display:inline-block;border-radius:8px;padding:6px 11px;margin:3px 6px 3px 0;
+      font-weight:700;white-space:normal;text-align:left;}
+    table.sem td.band[data-label]::before{content:attr(data-label) ": ";font-weight:600;opacity:.85;}
+    table.gt td.band small,table.gt td.uni small{display:inline;font-size:.72rem;margin:0 0 0 4px;}
+  }
 </style>
 </head>
 <body>
@@ -250,16 +276,11 @@
           <th style="width:60%">Gêneros quantificados no laudo do LAMAM</th>
         </tr></thead>
         <tbody>
-          <tr><td><b>Endoparasitas</b></td><td>Penetram e vivem <b>dentro</b> da raiz</td>
-            <td><i>Meloidogyne</i> spp. (galhas), <i>Pratylenchus</i> spp. (lesões), <i>Radopholus</i> spp.</td></tr>
-          <tr><td><b>Semi-endoparasitas</b></td><td>A parte <b>anterior</b> penetra a raiz; a posterior fica <b>para fora</b></td>
-            <td><i>Rotylenchulus</i> spp. (reniforme), <i>Tylenchulus</i> spp. (citros)</td></tr>
-          <tr><td><b>Ectoparasitas</b></td><td>Alimentam-se de <b>fora</b>, com o estilete</td>
-            <td><i>Helicotylenchus</i> spp. (espiralado), <i>Criconemoides</i> spp. (anelado), <i>Hemicycliophora</i> spp., <i>Paratrichodorus</i> spp., <i>Paratylenchus</i> spp. (alfinete), <i>Scutellonema</i> spp., <i>Tylenchorhynchus</i> spp. (esguio), <i>Xiphinema</i> spp. (adaga)</td></tr>
-          <tr><td><b>Cistos e ovos</b></td><td>Não parasitam; são <b>fonte de inóculo</b> no solo</td>
-            <td><i>Heterodera glycines</i> (cisto da soja): no laudo, <b>cisto viável</b> e <b>cisto inviável</b>.<br><br>A contagem de <b>ovos</b> (sobretudo no solo) pode ser de <b>qualquer nematoide</b>, inclusive de vida livre.</td></tr>
-          <tr><td><b>De vida livre</b></td><td><b>Não</b> parasitam a planta</td>
-            <td>Agrupados no laudo como <b>“vida livre”</b> (bacteriófagos, fungívoros, onívoros, predadores): indicadores de solo biologicamente ativo, não dano.</td></tr>
+          <tr><td><b>Endoparasitas</b></td><td data-label="Como parasita">Penetram e vivem <b>dentro</b> da raiz</td><td data-label="Gêneros quantificados no laudo do LAMAM"><i>Meloidogyne</i> spp. (galhas), <i>Pratylenchus</i> spp. (lesões), <i>Radopholus</i> spp.</td></tr>
+          <tr><td><b>Semi-endoparasitas</b></td><td data-label="Como parasita">A parte <b>anterior</b> penetra a raiz; a posterior fica <b>para fora</b></td><td data-label="Gêneros quantificados no laudo do LAMAM"><i>Rotylenchulus</i> spp. (reniforme), <i>Tylenchulus</i> spp. (citros)</td></tr>
+          <tr><td><b>Ectoparasitas</b></td><td data-label="Como parasita">Alimentam-se de <b>fora</b>, com o estilete</td><td data-label="Gêneros quantificados no laudo do LAMAM"><i>Helicotylenchus</i> spp. (espiralado), <i>Criconemoides</i> spp. (anelado), <i>Hemicycliophora</i> spp., <i>Paratrichodorus</i> spp., <i>Paratylenchus</i> spp. (alfinete), <i>Scutellonema</i> spp., <i>Tylenchorhynchus</i> spp. (esguio), <i>Xiphinema</i> spp. (adaga)</td></tr>
+          <tr><td><b>Cistos e ovos</b></td><td data-label="Como parasita">Não parasitam; são <b>fonte de inóculo</b> no solo</td><td data-label="Gêneros quantificados no laudo do LAMAM"><i>Heterodera glycines</i> (cisto da soja): no laudo, <b>cisto viável</b> e <b>cisto inviável</b>.<br><br>A contagem de <b>ovos</b> (sobretudo no solo) pode ser de <b>qualquer nematoide</b>, inclusive de vida livre.</td></tr>
+          <tr><td><b>De vida livre</b></td><td data-label="Como parasita"><b>Não</b> parasitam a planta</td><td data-label="Gêneros quantificados no laudo do LAMAM">Agrupados no laudo como <b>“vida livre”</b> (bacteriófagos, fungívoros, onívoros, predadores): indicadores de solo biologicamente ativo, não dano.</td></tr>
         </tbody>
       </table>
 
@@ -326,26 +347,10 @@
           <th style="width:30%;text-align:left">O que observar</th>
         </tr></thead>
         <tbody>
-          <tr>
-            <td class="esp">Cisto <small><i>Heterodera glycines</i></small></td>
-            <td class="band b-baixo">até 5<small>cistos/200 cm³</small></td><td class="band b-medio">5 a 10<small>cistos/200 cm³</small></td><td class="band b-alto">acima de 10<small>cistos/200 cm³</small></td>
-            <td>10 cistos viáveis/200 cm³ já custaram cerca de 16% de perda, e em veranico até 1 cisto pesa.</td>
-          </tr>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td>
-            <td class="band b-baixo">até 100<small>J2/200 cm³</small></td><td class="band b-medio">100 a 200<small>J2/200 cm³</small></td><td class="band b-alto">acima de 200<small>J2/200 cm³</small></td>
-            <td>Plantas menores em reboleiras, com <b>galhas</b> nas raízes. Piora em solo arenoso; em solo mais argiloso o limiar é maior.</td>
-          </tr>
-          <tr>
-            <td class="esp">Lesões <small><i>Pratylenchus brachyurus</i></small></td>
-            <td class="band b-baixo">até 100<small>nematoides/200 cm³</small></td><td class="band b-medio">100 a 200<small>nematoides/200 cm³</small></td><td class="band b-alto">acima de 200<small>nematoides/200 cm³</small></td>
-            <td>O mais comum no Cerrado. Raiz com <b>lesões escuras</b>; reboleiras de plantas fracas. Avalie também a lesão na raiz, não só o solo.</td>
-          </tr>
-          <tr>
-            <td class="esp">Reniforme <small><i>Rotylenchulus reniformis</i></small></td>
-            <td class="band semnum" colspan="2">sem faixa nacional</td><td class="band b-alto">acima de 2.000<small>nematoides/200 cm³</small></td>
-            <td>Menos comum em soja de MG. <b>Não use o limite do algodão</b>: em soja o risco vem com população bem maior.</td>
-          </tr>
+          <tr><td class="esp">Cisto <small><i>Heterodera glycines</i></small></td><td class="band b-baixo" data-label="Baixo">até 5<small>cistos/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">5 a 10<small>cistos/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 10<small>cistos/200 cm³</small></td><td data-label="O que observar">10 cistos viáveis/200 cm³ já custaram cerca de 16% de perda, e em veranico até 1 cisto pesa.</td></tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td><td class="band b-baixo" data-label="Baixo">até 100<small>J2/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">100 a 200<small>J2/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 200<small>J2/200 cm³</small></td><td data-label="O que observar">Plantas menores em reboleiras, com <b>galhas</b> nas raízes. Piora em solo arenoso; em solo mais argiloso o limiar é maior.</td></tr>
+          <tr><td class="esp">Lesões <small><i>Pratylenchus brachyurus</i></small></td><td class="band b-baixo" data-label="Baixo">até 100<small>nematoides/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">100 a 200<small>nematoides/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 200<small>nematoides/200 cm³</small></td><td data-label="O que observar">O mais comum no Cerrado. Raiz com <b>lesões escuras</b>; reboleiras de plantas fracas. Avalie também a lesão na raiz, não só o solo.</td></tr>
+          <tr><td class="esp">Reniforme <small><i>Rotylenchulus reniformis</i></small></td><td class="band semnum" colspan="2" data-label="Baixo">sem faixa nacional</td><td class="band b-alto" data-label="Alto dano provável">acima de 2.000<small>nematoides/200 cm³</small></td><td data-label="O que observar">Menos comum em soja de MG. <b>Não use o limite do algodão</b>: em soja o risco vem com população bem maior.</td></tr>
         </tbody>
       </table>
 
@@ -375,21 +380,9 @@
           <th style="width:30%;text-align:left">O que observar</th>
         </tr></thead>
         <tbody>
-          <tr>
-            <td class="esp">Lesões <small><i>Pratylenchus zeae</i></small></td>
-            <td class="band b-baixo">até 100<small>nematoides/200 cm³</small></td><td class="band b-medio">100 a 200<small>nematoides/200 cm³</small></td><td class="band b-alto">acima de 200<small>nematoides/200 cm³</small></td>
-            <td>Um dos que mais causam perda no milho. No Alto, vale planejar rotação com plantas não hospedeiras.</td>
-          </tr>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td>
-            <td class="band b-baixo">até 100<small>J2/200 cm³</small></td><td class="band b-medio">100 a 200<small>J2/200 cm³</small></td><td class="band b-alto">acima de 200<small>J2/200 cm³</small></td>
-            <td>Cada 200 J2/200 cm³ correspondem a 2 a 7% de grãos a menos, conforme o ensaio da colheita (Bowen <i>et al.</i>, 2008).</td>
-          </tr>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne javanica</i></small></td>
-            <td class="band semnum" colspan="3">sem faixa</td>
-            <td>A literatura registra danos pouco expressivos e boa parte dos híbridos brasileiros como resistentes; a resposta varia com a cultivar e o solo, e por isso a população merece acompanhamento.</td>
-          </tr>
+          <tr><td class="esp">Lesões <small><i>Pratylenchus zeae</i></small></td><td class="band b-baixo" data-label="Baixo">até 100<small>nematoides/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">100 a 200<small>nematoides/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 200<small>nematoides/200 cm³</small></td><td data-label="O que observar">Um dos que mais causam perda no milho. No Alto, vale planejar rotação com plantas não hospedeiras.</td></tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td><td class="band b-baixo" data-label="Baixo">até 100<small>J2/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">100 a 200<small>J2/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 200<small>J2/200 cm³</small></td><td data-label="O que observar">Cada 200 J2/200 cm³ correspondem a 2 a 7% de grãos a menos, conforme o ensaio da colheita (Bowen <i>et al.</i>, 2008).</td></tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne javanica</i></small></td><td class="band semnum" colspan="3" data-label="Baixo">sem faixa</td><td data-label="O que observar">A literatura registra danos pouco expressivos e boa parte dos híbridos brasileiros como resistentes; a resposta varia com a cultivar e o solo, e por isso a população merece acompanhamento.</td></tr>
         </tbody>
       </table>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
@@ -415,12 +408,7 @@
           <th style="width:30%;text-align:left">O que observar</th>
         </tr></thead>
         <tbody>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td>
-            <td class="band semnum" colspan="2">sem faixa</td>
-            <td class="band b-alto">a partir de 5<small>ovos+J2/200 cm³</small></td>
-            <td>O dano começa com pouquíssimo nematoide. Em cultivar suscetível, trate população baixa já como risco.</td>
-          </tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td><td class="band semnum" colspan="2" data-label="Baixo">sem faixa</td><td class="band b-alto" data-label="Alto dano provável">a partir de 5<small>ovos+J2/200 cm³</small></td><td data-label="O que observar">O dano começa com pouquíssimo nematoide. Em cultivar suscetível, trate população baixa já como risco.</td></tr>
         </tbody>
       </table>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
@@ -446,26 +434,10 @@
           <th style="width:30%;text-align:left">O que observar</th>
         </tr></thead>
         <tbody>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne exigua</i></small></td>
-            <td class="band b-baixo">até 20<small>J2/200 cm³</small></td><td class="band b-medio">20 a 80<small>J2/200 cm³</small></td><td class="band b-alto">acima de 80<small>J2/200 cm³</small></td>
-            <td><b>Em lavoura com mais de 5 anos, trate qualquer detecção como atenção:</b> ela sofre com população muito baixa.</td>
-          </tr>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne paranaensis</i></small></td>
-            <td class="band b-alto" colspan="3">presença</td>
-            <td>É a mais agressiva por planta: onde entra, derruba a lavoura. A presença já é o alerta, não espere o número subir.</td>
-          </tr>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td>
-            <td class="band b-alto" colspan="3">presença</td>
-            <td>Espécie agressiva ao cafeeiro, comum em solos arenosos. Detecção confirmada já é decisão de manejo.</td>
-          </tr>
-          <tr>
-            <td class="esp">Lesões <small><i>Pratylenchus coffeae</i></small></td>
-            <td class="band b-alto" colspan="3">presença</td>
-            <td>Em ensaio controlado, o cafeeiro reduziu o crescimento já na <b>menor densidade testada</b>, por isso a detecção, por si só, conta como alerta.</td>
-          </tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne exigua</i></small></td><td class="band b-baixo" data-label="Baixo">até 20<small>J2/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">20 a 80<small>J2/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 80<small>J2/200 cm³</small></td><td data-label="O que observar"><b>Em lavoura com mais de 5 anos, trate qualquer detecção como atenção:</b> ela sofre com população muito baixa.</td></tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne paranaensis</i></small></td><td class="band b-alto" colspan="3" data-label="Baixo">presença</td><td data-label="O que observar">É a mais agressiva por planta: onde entra, derruba a lavoura. A presença já é o alerta, não espere o número subir.</td></tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td><td class="band b-alto" colspan="3" data-label="Baixo">presença</td><td data-label="O que observar">Espécie agressiva ao cafeeiro, comum em solos arenosos. Detecção confirmada já é decisão de manejo.</td></tr>
+          <tr><td class="esp">Lesões <small><i>Pratylenchus coffeae</i></small></td><td class="band b-alto" colspan="3" data-label="Baixo">presença</td><td data-label="O que observar">Em ensaio controlado, o cafeeiro reduziu o crescimento já na <b>menor densidade testada</b>, por isso a detecção, por si só, conta como alerta.</td></tr>
         </tbody>
       </table>
       <div class="nota"><b>Sobre o <i>Pratylenchus brachyurus</i>:</b> apesar de comum em levantamentos de
@@ -496,21 +468,9 @@
           <th style="width:30%;text-align:left">O que observar</th>
         </tr></thead>
         <tbody>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td>
-            <td class="band b-baixo">até 50<small>J2/200 cm³</small></td><td class="band b-medio">50 a 100<small>J2/200 cm³</small></td><td class="band b-alto">acima de 100<small>J2/200 cm³</small></td>
-            <td>Reboleiras de plantas fracas, raiz com galhas. Costuma vir junto com outros.</td>
-          </tr>
-          <tr>
-            <td class="esp">Reniforme <small><i>Rotylenchulus reniformis</i></small></td>
-            <td class="band b-baixo">até 300<small>nematoides/200 cm³</small></td><td class="band b-medio">300 a 600<small>nematoides/200 cm³</small></td><td class="band b-alto">acima de 600<small>nematoides/200 cm³</small></td>
-            <td>Concentra-se mais fundo (20 a 40 cm): <b>coletar só a camada de cima subestima</b>. Comum em MT.</td>
-          </tr>
-          <tr>
-            <td class="esp">Lesões <small><i>Pratylenchus brachyurus</i></small></td>
-            <td class="band semnum" colspan="3">sem faixa</td>
-            <td>Em campo, a densidade não prediz a perda. O algodão tolera, mas <b>multiplica o nematoide</b> para a cultura seguinte. Acompanhe pela raiz e pelo histórico.</td>
-          </tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne incognita</i></small></td><td class="band b-baixo" data-label="Baixo">até 50<small>J2/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">50 a 100<small>J2/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 100<small>J2/200 cm³</small></td><td data-label="O que observar">Reboleiras de plantas fracas, raiz com galhas. Costuma vir junto com outros.</td></tr>
+          <tr><td class="esp">Reniforme <small><i>Rotylenchulus reniformis</i></small></td><td class="band b-baixo" data-label="Baixo">até 300<small>nematoides/200 cm³</small></td><td class="band b-medio" data-label="Médio atenção">300 a 600<small>nematoides/200 cm³</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 600<small>nematoides/200 cm³</small></td><td data-label="O que observar">Concentra-se mais fundo (20 a 40 cm): <b>coletar só a camada de cima subestima</b>. Comum em MT.</td></tr>
+          <tr><td class="esp">Lesões <small><i>Pratylenchus brachyurus</i></small></td><td class="band semnum" colspan="3" data-label="Baixo">sem faixa</td><td data-label="O que observar">Em campo, a densidade não prediz a perda. O algodão tolera, mas <b>multiplica o nematoide</b> para a cultura seguinte. Acompanhe pela raiz e pelo histórico.</td></tr>
         </tbody>
       </table>
       <div class="nota"><b>Uma observação importante:</b> no algodão, estudos de campo em
@@ -541,16 +501,8 @@
           <th style="width:30%;text-align:left">O que observar</th>
         </tr></thead>
         <tbody>
-          <tr>
-            <td class="esp">Lesões <small><i>Pratylenchus zeae</i></small></td>
-            <td class="band b-baixo">até 50<small>nematoides/g de raiz</small></td><td class="band b-medio">50 a 100<small>nematoides/g de raiz</small></td><td class="band b-alto">acima de 100<small>nematoides/g de raiz</small></td>
-            <td>Em variedade suscetível, a partir do Médio já pode reduzir a produção.</td>
-          </tr>
-          <tr>
-            <td class="esp">Galhas <small><i>Meloidogyne</i></small></td>
-            <td class="band semnum" colspan="2">sem faixa</td><td class="band b-alto">acima de 8<small>J2/g de raiz</small></td>
-            <td>Na pré-amostragem de soqueira, acima de 8 J2/g de raiz já indica nível alto. Em campo, a perda chegou a 22% em cultivar suscetível.</td>
-          </tr>
+          <tr><td class="esp">Lesões <small><i>Pratylenchus zeae</i></small></td><td class="band b-baixo" data-label="Baixo">até 50<small>nematoides/g de raiz</small></td><td class="band b-medio" data-label="Médio atenção">50 a 100<small>nematoides/g de raiz</small></td><td class="band b-alto" data-label="Alto dano provável">acima de 100<small>nematoides/g de raiz</small></td><td data-label="O que observar">Em variedade suscetível, a partir do Médio já pode reduzir a produção.</td></tr>
+          <tr><td class="esp">Galhas <small><i>Meloidogyne</i></small></td><td class="band semnum" colspan="2" data-label="Baixo">sem faixa</td><td class="band b-alto" data-label="Alto dano provável">acima de 8<small>J2/g de raiz</small></td><td data-label="O que observar">Na pré-amostragem de soqueira, acima de 8 J2/g de raiz já indica nível alto. Em campo, a perda chegou a 22% em cultivar suscetível.</td></tr>
         </tbody>
       </table>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
@@ -574,12 +526,12 @@
       <table class="gt sem">
         <thead><tr><th style="width:20%">Cultura</th><th style="width:22%;text-align:left">Nematoide</th><th style="width:26%">Dano começa a partir de</th><th style="width:30%;text-align:left">O que observar</th></tr></thead>
         <tbody>
-          <tr><td><b>Tomate</b></td><td class="esp"><small><i>Meloidogyne incognita</i></small></td><td class="band b-medio">180<small>J2/200 cm³</small></td><td>A mais tolerante do grupo, mas isso depende da cultivar: há variedades com resistência (gene Mi) e outras sem. Galhas na raiz e murcha nas horas quentes.</td></tr>
-          <tr><td><b>Pimentão</b></td><td class="esp"><small><i>Meloidogyne incognita</i></small></td><td class="band b-medio">80<small>J2/200 cm³</small></td><td>Reboleiras de plantas atrofiadas, com galhas na raiz.</td></tr>
-          <tr><td><b>Berinjela</b></td><td class="esp"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto">11<small>ovos+J2/200 cm³</small></td><td>Muito sensível, perde cedo. Galhas volumosas na raiz, plantas amareladas e paradas.</td></tr>
-          <tr><td><b>Melão / melancia / abobrinha</b></td><td class="esp"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto">3 a 11<small>J2/200 cm³</small></td><td>Sensíveis. Reboleiras de plantas que murcham ao meio-dia; raiz com galhas. Pior em solo arenoso.</td></tr>
-          <tr><td><b>Pepino</b></td><td class="esp"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto">presença</td><td>O mais sensível do grupo: o limiar é menor do que o laudo consegue detectar, então qualquer detecção já preocupa.</td></tr>
-          <tr><td><b>Cenoura</b></td><td class="esp"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto">presença</td><td>O prejuízo é de qualidade: raiz bifurcada, com galhas e pelos, perde valor comercial mesmo com poucos nematoides.</td></tr>
+          <tr><td><b>Tomate</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne incognita</i></small></td><td class="band b-medio" data-label="Dano começa a partir de">180<small>J2/200 cm³</small></td><td data-label="O que observar">A mais tolerante do grupo, mas isso depende da cultivar: há variedades com resistência (gene Mi) e outras sem. Galhas na raiz e murcha nas horas quentes.</td></tr>
+          <tr><td><b>Pimentão</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne incognita</i></small></td><td class="band b-medio" data-label="Dano começa a partir de">80<small>J2/200 cm³</small></td><td data-label="O que observar">Reboleiras de plantas atrofiadas, com galhas na raiz.</td></tr>
+          <tr><td><b>Berinjela</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto" data-label="Dano começa a partir de">11<small>ovos+J2/200 cm³</small></td><td data-label="O que observar">Muito sensível, perde cedo. Galhas volumosas na raiz, plantas amareladas e paradas.</td></tr>
+          <tr><td><b>Melão / melancia / abobrinha</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto" data-label="Dano começa a partir de">3 a 11<small>J2/200 cm³</small></td><td data-label="O que observar">Sensíveis. Reboleiras de plantas que murcham ao meio-dia; raiz com galhas. Pior em solo arenoso.</td></tr>
+          <tr><td><b>Pepino</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto" data-label="Dano começa a partir de">presença</td><td data-label="O que observar">O mais sensível do grupo: o limiar é menor do que o laudo consegue detectar, então qualquer detecção já preocupa.</td></tr>
+          <tr><td><b>Cenoura</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne incognita</i></small></td><td class="band b-alto" data-label="Dano começa a partir de">presença</td><td data-label="O que observar">O prejuízo é de qualidade: raiz bifurcada, com galhas e pelos, perde valor comercial mesmo com poucos nematoides.</td></tr>
         </tbody>
       </table>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
@@ -601,24 +553,12 @@
       <table class="gt sem">
         <thead><tr><th style="width:14%">Cultura</th><th style="width:22%;text-align:left">Nematoide</th><th style="width:26%">Leitura</th><th style="width:30%;text-align:left">O que observar</th></tr></thead>
         <tbody>
-          <tr><td><b>Citros</b></td><td class="esp"><small><i>Tylenchulus semipenetrans</i></small></td>
-            <td class="band b-alto">acima de 1.400<small>fêmeas/g de raiz</small></td>
-            <td>População elevada (referência da Califórnia). É o principal nematoide dos citros, causa o “declínio lento”.</td></tr>
-          <tr><td><b>Citros</b></td><td class="esp"><small><i>Tylenchulus semipenetrans</i></small></td>
-            <td class="band b-alto">acima de 4.000<small>juvenis/g de raiz</small></td>
-            <td>Associado a declínio (referência de Israel). Conta juvenis, estágio diferente das fêmeas acima.</td></tr>
-          <tr><td><b>Citros</b></td><td class="esp"><small><i>Pratylenchus jaehni</i></small></td>
-            <td class="band b-alto">presença</td>
-            <td>É o nematoide-das-lesões dos citros no Brasil. Trate a detecção como alerta.</td></tr>
-          <tr><td><b>Goiaba</b></td><td class="esp"><small><i>Meloidogyne enterolobii</i></small></td>
-            <td class="band b-alto">presença</td>
-            <td>É a espécie mais agressiva. Derrubou a goiabicultura de regiões inteiras. Não espere população alta: a presença já é o risco.</td></tr>
-          <tr><td><b>Banana</b></td><td class="esp"><small><i>Radopholus similis</i></small></td>
-            <td class="band b-alto">acima de 25<small><i>R. similis</i>/g de raiz</small></td>
-            <td>Em banana o laudo útil é o de RAIZ, não o de solo. Causa o tombamento da bananeira.</td></tr>
-          <tr><td><b>Banana</b></td><td class="esp"><small><i>Meloidogyne</i></small></td>
-            <td class="band semnum">sem faixa</td>
-            <td>Provoca deformação e engrossamento das raízes, com galhas ocasionais nas radicelas. Não há valor de corte publicado; avalie pela intensidade do sintoma na raiz.</td></tr>
+          <tr><td><b>Citros</b></td><td class="esp" data-label="Nematoide"><small><i>Tylenchulus semipenetrans</i></small></td><td class="band b-alto" data-label="Leitura">acima de 1.400<small>fêmeas/g de raiz</small></td><td data-label="O que observar">População elevada (referência da Califórnia). É o principal nematoide dos citros, causa o “declínio lento”.</td></tr>
+          <tr><td><b>Citros</b></td><td class="esp" data-label="Nematoide"><small><i>Tylenchulus semipenetrans</i></small></td><td class="band b-alto" data-label="Leitura">acima de 4.000<small>juvenis/g de raiz</small></td><td data-label="O que observar">Associado a declínio (referência de Israel). Conta juvenis, estágio diferente das fêmeas acima.</td></tr>
+          <tr><td><b>Citros</b></td><td class="esp" data-label="Nematoide"><small><i>Pratylenchus jaehni</i></small></td><td class="band b-alto" data-label="Leitura">presença</td><td data-label="O que observar">É o nematoide-das-lesões dos citros no Brasil. Trate a detecção como alerta.</td></tr>
+          <tr><td><b>Goiaba</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne enterolobii</i></small></td><td class="band b-alto" data-label="Leitura">presença</td><td data-label="O que observar">É a espécie mais agressiva. Derrubou a goiabicultura de regiões inteiras. Não espere população alta: a presença já é o risco.</td></tr>
+          <tr><td><b>Banana</b></td><td class="esp" data-label="Nematoide"><small><i>Radopholus similis</i></small></td><td class="band b-alto" data-label="Leitura">acima de 25<small><i>R. similis</i>/g de raiz</small></td><td data-label="O que observar">Em banana o laudo útil é o de RAIZ, não o de solo. Causa o tombamento da bananeira.</td></tr>
+          <tr><td><b>Banana</b></td><td class="esp" data-label="Nematoide"><small><i>Meloidogyne</i></small></td><td class="band semnum" data-label="Leitura">sem faixa</td><td data-label="O que observar">Provoca deformação e engrossamento das raízes, com galhas ocasionais nas radicelas. Não há valor de corte publicado; avalie pela intensidade do sintoma na raiz.</td></tr>
         </tbody>
       </table>
       <details class="tec"><summary>Detalhe técnico e fontes</summary>
@@ -644,9 +584,9 @@
       <table class="gt sem">
         <thead><tr><th style="width:30%;text-align:left">Capim</th><th style="width:34%">Multiplica o nematoide?</th><th style="width:30%;text-align:left">Uso em área infestada</th></tr></thead>
         <tbody>
-          <tr><td class="esp"><i>Panicum</i> 'Tanzânia', 'Mombaça'; 'Mulato' <small><i>Pratylenchus brachyurus</i></small></td><td class="band b-alto">multiplica muito</td><td>evitar em área infestada, aumenta a população</td></tr>
-          <tr><td class="esp"><i>Brachiaria</i> 'Marandu', decumbens <small><i>Pratylenchus brachyurus</i></small></td><td class="band b-medio">multiplica</td><td>hospedeira: não reduz a população</td></tr>
-          <tr><td class="esp"><i>Brachiaria dictyoneura</i> <small><i>Pratylenchus brachyurus</i></small></td><td class="band b-medio">multiplica pouco</td><td>o menor risco, mas <b>não reduz</b> a população</td></tr>
+          <tr><td class="esp"><i>Panicum</i> 'Tanzânia', 'Mombaça'; 'Mulato' <small><i>Pratylenchus brachyurus</i></small></td><td class="band b-alto" data-label="Multiplica o nematoide?">multiplica muito</td><td data-label="Uso em área infestada">evitar em área infestada, aumenta a população</td></tr>
+          <tr><td class="esp"><i>Brachiaria</i> 'Marandu', decumbens <small><i>Pratylenchus brachyurus</i></small></td><td class="band b-medio" data-label="Multiplica o nematoide?">multiplica</td><td data-label="Uso em área infestada">hospedeira: não reduz a população</td></tr>
+          <tr><td class="esp"><i>Brachiaria dictyoneura</i> <small><i>Pratylenchus brachyurus</i></small></td><td class="band b-medio" data-label="Multiplica o nematoide?">multiplica pouco</td><td data-label="Uso em área infestada">o menor risco, mas <b>não reduz</b> a população</td></tr>
         </tbody>
       </table>
       <p class="sem-leg" style="margin-top:10px"><b>Importante:</b> nos ensaios de hospedabilidade,
@@ -682,16 +622,8 @@
       <table class="gt">
         <thead><tr><th style="width:26%">Material</th><th style="width:26%">Origem</th><th>Observação</th></tr></thead>
         <tbody>
-          <tr>
-            <td class="esp">Fêmeas <small style="color:#5b6b78">desejável quando há galhas</small></td>
-            <td>Extraídas de <b>raízes com galhas</b></td>
-            <td>Havendo raízes com galhas, a fêmea jovem em postura é o material desejável: além do PCR, permite a identificação pelo <b>fenótipo de esterase</b>.</td>
-          </tr>
-          <tr>
-            <td class="esp">Juvenis (J2) <small style="color:#5b6b78">alternativa</small></td>
-            <td>Recuperados da <b>amostra de solo</b></td>
-            <td>Quando não há raiz com galha, a identificação por PCR também pode ser feita a partir dos juvenis extraídos do solo.</td>
-          </tr>
+          <tr><td class="esp">Fêmeas <small style="color:#5b6b78">desejável quando há galhas</small></td><td data-label="Origem">Extraídas de <b>raízes com galhas</b></td><td data-label="Observação">Havendo raízes com galhas, a fêmea jovem em postura é o material desejável: além do PCR, permite a identificação pelo <b>fenótipo de esterase</b>.</td></tr>
+          <tr><td class="esp">Juvenis (J2) <small style="color:#5b6b78">alternativa</small></td><td data-label="Origem">Recuperados da <b>amostra de solo</b></td><td data-label="Observação">Quando não há raiz com galha, a identificação por PCR também pode ser feita a partir dos juvenis extraídos do solo.</td></tr>
         </tbody>
       </table>
 
