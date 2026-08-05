@@ -846,6 +846,29 @@
   function abrir(e){ if(e) e.preventDefault(); modal.classList.add('on'); document.body.style.overflow='hidden'; }
   function fechar(){ modal.classList.remove('on'); document.body.style.overflow=''; }
   if(openBtn) openBtn.addEventListener('click', abrir);
+  // Abertura via link das paginas de servico: index.html#orc=<slug> abre o modal
+  // ja marcando a analise correspondente (mapa slug -> value dos checkboxes).
+  var _svcMap={
+    'fitonematoides':'Fitonematoides','pcr-fitonematoides':'PCR de fitonematoides',
+    'fungos-solo':'Fungos de solo','patologia-plantas':'Patologia de plantas',
+    'patologia-sementes':'Patologia de sementes','compatibilidade':'Compatibilidade de bioinsumos',
+    'cq-produto-comercial':'CQ de produto comercial','cq-onfarm':'CQ On Farm',
+    'contaminantes':'Contaminantes','recuperacao-sementes':'Recuperação em sementes',
+    'conidios-viaveis':'Conídios viáveis','antagonismo':'Antagonismo',
+    'placas-resinadas':'Placas resinadas','broca-do-cafe':'Broca-do-café'};
+  function marcar(slug){
+    var val=_svcMap[slug]; if(!val) return;
+    var cb=form.querySelector('input[name="analise"][value="'+val+'"]');
+    if(cb) cb.checked=true;
+  }
+  function checarHash(){
+    var m=(location.hash||'').match(/^#orc(?:amento)?(?:=([^&]+))?/);
+    if(!m) return;
+    if(m[1]) marcar(decodeURIComponent(m[1]));
+    abrir();
+  }
+  checarHash();
+  window.addEventListener('hashchange', checarHash);
   var formalChk=document.getElementById('orc-formal-chk'), formalBox=document.getElementById('orcFormal');
   if(formalChk) formalChk.addEventListener('change', function(){ formalBox.hidden=!formalChk.checked; });
   closeBtn.addEventListener('click', fechar);
