@@ -403,6 +403,17 @@
   .ci-row b{display:block;color:#fff;font-family:'Poppins';font-size:14.5px;margin-bottom:2px}
   .ci-row span,.ci-row a{color:var(--muted);font-size:14px}
   .ci-row a:hover{color:var(--cyan-bright)}
+  .onde{display:flex;align-items:center;gap:58px;flex-wrap:wrap;justify-content:center;max-width:830px;margin:66px auto 6px}
+  .onde .map{width:340px;max-width:100%;flex:0 0 340px;height:auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.45))}
+  .onde .txt{flex:1 1 280px}
+  .onde .eyebrow{color:var(--cyan-bright);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700}
+  .onde h3{font-family:'Poppins';color:#fff;font-weight:800;font-size:clamp(2rem,4vw,2.9rem);line-height:1.05;margin:8px 0 4px}
+  .onde .sub{color:var(--cyan);font-weight:600;font-size:1.12rem;margin-bottom:16px}
+  .onde .addr{color:var(--muted);font-size:14.5px;line-height:1.6}
+  .onde .gmaps{display:inline-flex;align-items:center;gap:6px;color:var(--cyan-bright);font-weight:600;text-decoration:none;margin-top:16px;font-size:14px;transition:color .2s}
+  .onde .gmaps:hover{color:#fff}
+  .onde .gmaps svg{width:15px;height:15px}
+  @media(max-width:640px){.onde{gap:26px;margin-top:44px;text-align:center}.onde .map{width:260px;flex-basis:260px}}
   .foot-bottom{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:26px;border-top:1px solid var(--border)}
   .foot-bottom .brand-word{font-size:17px}
   .foot-bottom .brand img{height:30px;width:auto;object-fit:contain;vertical-align:middle}
@@ -691,14 +702,15 @@
       </div>
     </div>
 
-    <div class="loc-card reveal" style="margin:44px auto 8px;max-width:600px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:28px;padding:22px 30px;border-radius:18px;border:1px solid var(--border);background:var(--glass)">
-      <img src="img/mapa-brasil.png" alt="Mapa do Brasil com a sede do LAMAM em Patos de Minas, Minas Gerais" style="width:150px;flex:0 0 150px;height:auto" loading="lazy">
-      <div style="text-align:left;flex:1 1 240px;min-width:220px">
-        <span class="sec-tag" style="color:var(--cyan-bright)">Onde estamos</span>
-        <b style="display:block;color:#fff;font-family:'Poppins';font-size:1.2rem;margin:7px 0 5px">Patos de Minas · Minas Gerais</b>
-        <span style="color:var(--muted);font-size:14px;display:block">Av. Ari Pessoa Franco, 216 — Cidade Nova · CEP 38.706-416</span>
-        <a href="https://www.google.com/maps?q=Av.+Ari+Pessoa+Franco,+216,+Patos+de+Minas+-+MG" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:var(--cyan-bright);font-size:14px;font-weight:600">Abrir no Google Maps
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <div class="onde reveal">
+      <img class="map" src="img/mapa-onde.png" alt="Mapa do Brasil com a sede do LAMAM em Patos de Minas, Minas Gerais" loading="lazy">
+      <div class="txt">
+        <span class="eyebrow">Onde estamos</span>
+        <h3>Patos de Minas</h3>
+        <div class="sub">Minas Gerais · Brasil</div>
+        <div class="addr">Av. Ari Pessoa Franco, 216 — Bairro Cidade Nova<br>Patos de Minas - MG · CEP 38.706-416</div>
+        <a class="gmaps" href="https://www.google.com/maps?q=Av.+Ari+Pessoa+Franco,+216,+Patos+de+Minas+-+MG" target="_blank" rel="noopener">Abrir no Google Maps
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
