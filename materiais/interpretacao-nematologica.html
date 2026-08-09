@@ -117,8 +117,8 @@
   .refs h2{font-family:'Poppins';font-size:1.05rem;color:var(--navy);margin:0 0 12px;}
   .ref-item{font-size:.82rem;color:#3d4f5c;margin-bottom:7px;line-height:1.5;}
   .refs{counter-reset:refn;}
-  .refs .ref-item{counter-increment:refn;padding-left:24px;text-indent:-24px;}
-  .refs .ref-item::before{content:counter(refn) ". ";font-weight:700;color:var(--navy);}
+  .refs .ref-item{counter-increment:refn;position:relative;padding-left:36px;}
+  .refs .ref-item::before{content:counter(refn) ".";position:absolute;left:0;top:0;width:26px;font-weight:700;color:var(--navy);}
   h3.sub{font-family:'Poppins';font-size:1.02rem;color:var(--navy);margin:18px 0 8px;}
   .foto-slot{border:1.5px dashed #bcd6ea;border-radius:10px;background:#f2f8fc;padding:24px;
     text-align:center;color:#6a8296;font-size:.88rem;margin:12px 0;line-height:1.5;}

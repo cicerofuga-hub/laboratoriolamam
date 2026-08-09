@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Patologia de Sementes — LAMAM</title>
+<meta name="description" content="Como entender o laudo de sanidade de sementes: os testes do LAMAM (Blotter, BDA, NEON, CNS, MT, rolo de papel), padrões oficiais (PNQR), dano econômico e principais patógenos. Material técnico do LAMAM.">
+<link rel="icon" href="../favicon.ico">
+<meta property="og:title" content="Guia de Patologia de Sementes — LAMAM">
+<meta property="og:description" content="Entenda seu laudo de sanidade de sementes: os testes, padrões oficiais, dano econômico e principais patógenos.">
+<meta property="og:image" content="https://laboratoriolamam.com.br/img/svc-patologia-sementes.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .gwrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+  .guia-hero{background:linear-gradient(140deg,#081f33,#10416a 70%);color:#fff;padding:54px 0 46px;}
+  .guia-hero .eyebrow{color:var(--cyan-l);}
+  .guia-hero h1{color:#fff;font-size:2.1rem;font-weight:800;margin:10px 0 12px;max-width:760px;}
+  .guia-hero p{color:#cfe2f0;font-size:1.05rem;max-width:700px;}
+  .guia-hero .base{font-size:.82rem;color:#9fc1d8;margin-top:14px;}
+  .guia-hero .rev{font-size:.8rem;color:var(--cyan-l);margin-top:6px;font-style:italic;}
+  .guia-hero .acts{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;}
+  .crumb{background:var(--bg);border-bottom:1px solid var(--borda);font-size:.86rem;}
+  .crumb .gwrap{padding-top:13px;padding-bottom:13px;color:var(--cinza);}
+  .crumb a{color:var(--navy);font-weight:500;} .crumb a:hover{color:var(--cyan);} .crumb span{margin:0 8px;color:var(--cinza-l);}
+  .body-area{background:var(--bg);padding:34px 0 56px;}
+  .gsec{background:#fff;border:1px solid var(--borda);border-radius:12px;box-shadow:var(--sh);margin-bottom:26px;overflow:hidden;}
+  .gsh{background:var(--navy);color:#fff;padding:13px 22px;font-family:'Poppins';font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:11px;}
+  .gsh .num{background:rgba(255,255,255,.18);border-radius:8px;min-width:28px;height:28px;display:grid;place-items:center;font-size:.85rem;}
+  .gsb{padding:20px 22px;}
+  .gsb p{font-size:.92rem;color:#33414c;margin:0 0 12px;text-align:justify;}
+  .gdesc{font-size:.86rem;color:var(--cinza);margin-bottom:14px;border-bottom:1px solid var(--borda);padding-bottom:10px;text-align:justify;}
+  .mt{font-family:'Poppins';font-size:.96rem;font-weight:700;color:var(--navy);margin:22px 0 8px;padding-left:10px;border-left:3px solid var(--cyan);}
+  .mt em{font-style:italic;}
+  .leg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0;}
+  .li{border-radius:8px;padding:11px 9px;text-align:center;font-size:.8rem;font-weight:700;border:1.5px solid;}
+  .li small{display:block;font-weight:400;font-size:.71rem;margin-top:3px;opacity:.85;}
+  .l1{background:#e6f4ea;border-color:#6cc08a;color:#1f7a44;}
+  .l2{background:#eef5fb;border-color:#7fb2d6;color:#1d4e74;}
+  .l3{background:#f3eefb;border-color:#a98bd0;color:#5b3a8a;}
+  .l4{background:#f4ece3;border-color:#caa27a;color:#7a4f23;}
+  .tw{overflow-x:auto;margin:10px 0;}
+  table.gt{width:100%;border-collapse:collapse;font-size:.8rem;}
+  table.gt th{background:var(--navy);color:#fff;padding:8px 9px;text-align:center;font-weight:600;border:1px solid #0f3a59;font-size:.78rem;}
+  table.gt td{padding:7px 9px;border:1px solid var(--borda);text-align:center;vertical-align:middle;color:#2b3a45;}
+  table.gt td.tl{text-align:left;}
+  table.gt td.nm{text-align:left;font-weight:600;}
+  table.gt tr:nth-child(even) td{background:#fafcfe;}
+  .czero{background:#fbe3e3!important;color:#c1121f;font-weight:700;}
+  .cnum{background:#fff3d6!important;color:#8a6100;font-weight:700;}
+  .cfield{background:#e6f4ea!important;color:#1f7a44;font-weight:600;}
+  .cstore{background:#f4ece3!important;color:#7a4f23;font-weight:600;}
+  .nota{background:var(--bg);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:11px 14px;font-size:.82rem;color:#33414c;margin:12px 0;}
+  .aviso{background:#fff7e6;border-left:4px solid #e7a13a;border-radius:0 8px 8px 0;padding:11px 14px;font-size:.82rem;color:#7a5300;margin:12px 0;}
+  .fonte{font-size:.73rem;color:var(--cinza-l);margin-top:8px;font-style:italic;}
+  .chip{display:inline-block;border-radius:5px;padding:2px 8px;font-size:.71rem;margin:1px;font-weight:600;color:#fff;}
+  .cf{background:#1f9d57;} .cs{background:#b07a3c;} .cc{background:#7a8896;}
+  .refs{background:#fff;border:1px solid var(--borda);border-radius:14px;padding:20px 24px;margin-bottom:26px;counter-reset:refn;}
+  .refs h2{font-family:'Poppins';font-size:1.05rem;color:var(--navy);margin:0 0 12px;}
+  .ref-item{position:relative;padding-left:36px;counter-increment:refn;margin-bottom:7px;font-size:.82rem;line-height:1.5;color:#3d4f5c;}
+  .ref-item::before{content:counter(refn) ".";position:absolute;left:0;top:0;width:26px;font-weight:700;color:var(--navy);}
+  .aviso-top{background:#fff7e6;border:1px solid #f0c66a;border-left:5px solid #e7a13a;border-radius:10px;padding:14px 18px;font-size:.86rem;color:#7a5300;margin-bottom:22px;}
+  .sumario{background:#fff;border:1px solid var(--borda);border-radius:14px;margin-bottom:26px;overflow:hidden;box-shadow:0 2px 12px rgba(21,80,122,.07);}
+  .sumario h2{font-family:'Poppins';font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin:0;padding:13px 22px;background:linear-gradient(135deg,var(--navy),#1e6fa6);}
+  .sumario ol{list-style:none;margin:0;padding:0;}
+  .sumario > ol{counter-reset:s1;padding:10px 16px 14px;}
+  .sumario > ol > li{counter-increment:s1;}
+  .sumario > ol > li + li{border-top:1px solid #eff5fa;}
+  .sumario > ol > li > a{color:var(--navy);font-size:1rem;font-weight:700;text-decoration:none;display:flex;gap:12px;align-items:center;padding:11px 10px;border-radius:9px;transition:background .15s,color .15s;}
+  .sumario > ol > li > a::before{content:counter(s1);flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:var(--navy);color:#fff;font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background .15s;}
+  .sumario > ol > li > a:hover{background:#f1f8fd;}
+  .sumario > ol > li > a:hover::before{background:var(--cyan);}
+  .perigo{background:#fdeeee;border-left:4px solid #c0392b;border-radius:0 8px 8px 0;padding:11px 14px;font-size:.82rem;color:#6e2620;margin:12px 0;}
+  .perigo strong{color:#a12a1e;}
+  .gsec, .mt{scroll-margin-top:90px;}
+  /* Figuras */
+  .gfoto{margin:14px auto;text-align:center;max-width:460px;}
+  .gfoto img{max-width:100%;border-radius:10px;border:1px solid var(--borda);display:block;margin:0 auto;}
+  .gfoto figcaption{font-size:.8rem;color:#5b6b78;font-style:italic;margin-top:7px;}
+  .gfoto-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:16px 0 24px;}
+  .gfoto-row figure{flex:1 1 200px;max-width:31.5%;margin:0;text-align:center;}
+  .gfoto-row figure img{width:100%;border-radius:10px;border:1px solid var(--borda);display:block;}
+  .gfoto-row figcaption{font-size:.76rem;color:#5b6b78;font-style:italic;margin-top:5px;}
+  .gfoto-row.duo figure{max-width:40%;}
+  @media(max-width:600px){ .gfoto-row figure, .gfoto-row.duo figure{max-width:100%;} }
+  .foto-slot{border:1.5px dashed #bcd6ea;border-radius:10px;background:#f2f8fc;padding:26px 18px;text-align:center;color:#5b7fa0;font-size:.8rem;display:flex;flex-direction:column;justify-content:center;min-height:150px;}
+  .foto-slot b{display:block;color:var(--navy);font-size:.9rem;margin-bottom:3px;}
+  /* Bloco de teste (subseção) */
+  .teste{border:1px solid var(--borda);border-radius:12px;overflow:hidden;margin:14px 0 22px;}
+  .teste-h{background:#eef5fb;color:var(--navy);font-family:'Poppins';font-weight:700;font-size:.98rem;padding:11px 16px;border-bottom:1px solid var(--borda);}
+  .teste-b{padding:14px 16px;}
+  .teste-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start;}
+  .teste-grid .gfoto{margin:0;max-width:100%;}
+  .veo{font-size:.8rem;color:var(--navy);font-weight:700;margin:8px 0 4px;}
+  .rot-hint{display:none;background:#eef5fb;border:1px solid var(--borda);border-radius:8px;padding:9px 13px;font-size:.82rem;color:var(--navy);margin-bottom:18px;text-align:center;}
+  @media(max-width:760px){ .leg{grid-template-columns:repeat(2,1fr);} .guia-hero h1{font-size:1.5rem;} .rot-hint{display:block;} .teste-grid{grid-template-columns:1fr;} }
+  @media print{ header,.crumb,.guia-hero .acts,.wpp,footer .fline{display:none!important;} .body-area{background:#fff;padding:0;} .gsec{box-shadow:none;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../icon.svg" alt="LAMAM"> LAMAM</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="../index.html#top">Início</a></li>
+        <li><a href="../index.html#servicos">Análises</a></li>
+        <li><a href="../index.html#materiais">Guias</a></li>
+        <li><a href="../index.html#sobre">Sobre</a></li>
+        <li><a href="../index.html#galeria">Galeria</a></li>
+        <li><a href="../index.html#contato">Contato</a></li>
+        <li><a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumb"><div class="gwrap"><a href="../index.html">Início</a> <span>›</span> <a href="../index.html#servicos">Análises</a> <span>›</span> <a href="../servicos/patologia-sementes.html">Patologia de sementes</a> <span>›</span> <b>Guia técnico</b></div></nav>
+
+<section class="guia-hero">
+  <div class="gwrap">
+    <span class="eyebrow">Material técnico</span>
+    <h1>Guia de Patologia de Sementes</h1>
+    <p>Como entender o laudo de sanidade, o que cada teste do laboratório mostra, os padrões oficiais e por que a análise importa — referência para a leitura do resultado.</p>
+    <div class="rev">Última revisão: agosto de 2026</div>
+    <div class="acts">
+      <a class="btn" href="https://wa.me/5534997741631" target="_blank" rel="noopener">Falar com o laboratório</a>
+    </div>
+  </div>
+</section>
+
+<div class="body-area">
+<div class="gwrap">
+
+  <div class="aviso-top"><strong>Aviso legal — </strong>este material é uma referência técnica compilada a partir de fontes científicas e da legislação vigente, e <strong>não substitui o laudo oficial</strong> emitido pelo laboratório nem a recomendação individualizada de um Engenheiro Agrônomo habilitado. Os níveis de tolerância sanitária são atualizados periodicamente pelo MAPA/SDA — confirme sempre a versão vigente da RAS e das Instruções Normativas antes de decisões de certificação ou comercialização.</div>
+
+  <div class="rot-hint">Dica: no celular, gire a tela na horizontal para visualizar melhor as tabelas.</div>
+
+  <nav class="sumario">
+    <h2>Neste guia</h2>
+    <ol>
+      <li><a href="#laudo">Entendendo seu laudo</a></li>
+      <li><a href="#pnqr">Padrões oficiais — PNQR (Portaria SDA nº 3/2004)</a></li>
+      <li><a href="#porque">Por que a sanidade importa e para que serve a análise</a></li>
+      <li><a href="#dano">Dano econômico e limiar de inóculo</a></li>
+      <li><a href="#refs">Referências</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. ENTENDENDO O LAUDO -->
+  <div class="gsec" id="laudo">
+    <div class="gsh"><span class="num">1</span> Entendendo seu laudo</div>
+    <div class="gsb">
+      <div class="gdesc">O laudo de sanidade do LAMAM começa com as tabelas quantitativas de incidência — resultado do teste de Blotter e do BDA com semente desinfestada. Cada um enxerga a semente de um jeito diferente, e entender essa diferença é a chave para ler o laudo.</div>
+
+      <div class="mt">Blotter — o que está <em>na</em> semente (infestação)</div>
+      <p>No teste de Blotter (papel de filtro em caixa gerbox), as sementes são incubadas por 10 a 14 dias (20–25 °C, com alternância de luz e escuro) e depois avaliadas em lupa e microscópio. É um levantamento amplo: revela os fungos associados à semente — em geral os patógenos que a estão <strong>infestando</strong>, ou seja, presentes na superfície ou junto ao tegumento. O resultado é a incidência (%) de cada fungo.</p>
+      <div class="aviso"><strong>Limitação:</strong> fungos de crescimento rápido (como o <em>Trichoderma</em>) podem mascarar patógenos mais lentos — o tempo de leitura é crítico. O blotter também não detecta bactérias e não confirma a espécie.</div>
+      <div class="gfoto-row">
+        <figure><img src="../img/sem-blotter-soja.jpg" alt="Blotter test de soja em gerbox"><figcaption>Blotter — soja: fungos esporulando sobre as sementes</figcaption></figure>
+        <figure><img src="../img/sem-blotter-feijao.jpg" alt="Blotter test de feijão em gerbox"><figcaption>Blotter — feijão: colônias sobre o papel umedecido</figcaption></figure>
+        <figure><img src="../img/sem-blotter-milho.jpg" alt="Blotter test de milho (semente tratada) em gerbox"><figcaption>Blotter — milho de semente tratada (fungicida)</figcaption></figure>
+      </div>
+
+      <div class="mt">BDA com semente desinfestada — o que está <em>dentro</em> da semente (infecção)</div>
+      <p>Aqui as sementes passam antes por assepsia (desinfestação superficial) e só então são plaqueadas em meio BDA (batata-dextrose-ágar). A assepsia elimina a microbiota da superfície, de modo que o que cresce vem de dentro da semente: são os patógenos que a estão <strong>infectando</strong>, já estabelecidos no tecido. O resultado também sai em incidência (%).</p>
+      <div class="perigo"><strong>Por que a diferença importa:</strong> um patógeno detectado no BDA desinfestado (infecção interna) é, em regra, <strong>mais grave</strong> do que o mesmo fungo apenas no blotter (infestação superficial): por estar <em>dentro</em> da semente, ele escapa do tratamento de superfície, tem maior potencial de transmissão à plântula e de causar doença no campo.</div>
+      <div class="gfoto-row">
+        <figure><img src="../img/sem-bda-soja.jpg" alt="Sementes de soja desinfestadas em meio BDA"><figcaption>BDA — soja: sementes desinfestadas e colônia isolada</figcaption></figure>
+        <figure><img src="../img/sem-bda-feijao.jpg" alt="Sementes de feijão desinfestadas em meio BDA"><figcaption>BDA — feijão: crescimento a partir da semente</figcaption></figure>
+        <figure><img src="../img/sem-bda-milho.jpg" alt="Sementes de milho desinfestadas em meio BDA"><figcaption>BDA — milho: colônias emergindo das sementes</figcaption></figure>
+      </div>
+
+      <div class="nota">Nos ensaios de Blotter e BDA com semente desinfestada, a triagem contempla <strong>mais de 30 gêneros de fungos</strong> associados a sementes; o laudo, porém, relaciona apenas os <strong>efetivamente detectados</strong> na amostra. A ausência de um gênero no laudo significa que ele <strong>não foi detectado</strong> — não que deixou de ser avaliado.</div>
+
+      <div class="mt">Métodos específicos para determinados patógenos</div>
+      <p>Além do levantamento geral (Blotter e BDA), há métodos específicos, dirigidos a patógenos determinados, também realizados na rotina. Abaixo, os mais comuns:</p>
+
+      <p><strong>NEON (meio Ágar-bromofenol)</strong> — meio semi-seletivo usado na detecção de <em>Sclerotinia sclerotiorum</em> (mofo branco), patógeno PNQR de tolerância zero (ver seção 2). É realizado para soja, feijão e girassol. As sementes são incubadas sobre o meio e o resultado é registrado como ausência ou presença.</p>
+      <div class="gfoto-row duo">
+        <figure><img src="../img/sem-neon-soja.jpg" alt="Meio NEON (ágar-bromofenol) com sementes de soja"><figcaption>NEON — soja no meio ágar-bromofenol</figcaption></figure>
+        <figure><img src="../img/sem-neon-feijao.jpg" alt="Meio NEON (ágar-bromofenol) com sementes de feijão"><figcaption>NEON — feijão no meio ágar-bromofenol</figcaption></figure>
+      </div>
+
+      <p><strong>CNS e MT (meios semi-seletivos para bactérias)</strong> — faz-se a lavagem das sementes e a suspensão é plaqueada, em diluições. Cada meio favorece a sua bactéria-alvo: <strong>CNS</strong> → <em>Curtobacterium flaccumfaciens</em> pv. <em>flaccumfaciens</em> (murcha-de-curtobacterium), realizado para soja e feijão; <strong>MT</strong> (Milk-Tween) → <em>Xanthomonas axonopodis</em> pv. <em>phaseoli</em> (crestamento bacteriano comum), realizado apenas para feijão. O resultado sai em ausência ou presença e também pode ser quantitativo (contagem de colônias em UFC).</p>
+      <div class="gfoto-row duo">
+        <figure><img src="../img/sem-cns.jpg" alt="Meio CNS com colônias amarelas de Curtobacterium"><figcaption>CNS — suspensão de lavagem: colônias amarelas de <em>Curtobacterium</em></figcaption></figure>
+        <figure><img src="../img/sem-mt.jpg" alt="Meio MT Milk-Tween com colônias de Xanthomonas e halo de hidrólise"><figcaption>MT (Milk-Tween): colônias de <em>Xanthomonas</em> com halo de hidrólise</figcaption></figure>
+      </div>
+
+      <p><strong>Rolo de papel</strong> — as sementes são incubadas em rolo de papel úmido, combinando a avaliação da germinação com a observação de sintomas na plântula (lesões e tombamento, o <em>damping-off</em>) — evidenciando a transmissão do patógeno da semente para a plântula. É um dos métodos indicados para a detecção de <em>Colletotrichum lindemuthianum</em> (antracnose do feijão). O resultado é quantitativo (percentual de plântulas afetadas).</p>
+    </div>
+  </div>
+
+  <!-- 2. PNQR -->
+  <div class="gsec" id="pnqr">
+    <div class="gsh"><span class="num">2</span> Padrões oficiais — PNQR (Portaria SDA nº 3/2004)</div>
+    <div class="gsb">
+      <div class="gdesc">As <strong>PNQR (Pragas Não Quarentenárias Regulamentadas)</strong> são os patógenos com <strong>nível de tolerância oficialmente definido</strong> para a comercialização de sementes. Quando o patógeno detectado é PNQR com tolerância <strong>0/lote</strong>, qualquer detecção <strong>reprova o lote</strong> para certificação.</div>
+
+      <div style="font-size:.8rem;color:var(--cinza);margin-bottom:10px;">
+        <span class="chip" style="background:#fbe3e3;color:#c1121f;border:1px solid #f0b6b6;">0/lote = tolerância zero</span>
+        <span class="chip" style="background:#fff3d6;color:#8a6100;border:1px solid #ecd9a3;">valor numérico = nº máximo tolerado</span>
+      </div>
+
+      <div class="tw"><table class="gt">
+        <thead><tr>
+          <th class="tl">Cultura</th><th class="tl">Praga (PNQR)</th><th class="tl">Doença ou estrutura avaliada</th><th>Tolerância</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="tl nm" rowspan="4">Algodão</td><td class="nm"><em>Fusarium oxysporum</em> f.sp. <em>vasinfectum</em></td><td class="tl">Murcha de Fusário</td><td class="czero">0/lote</td></tr>
+          <tr><td class="nm"><em>Colletotrichum gossypii</em> var. <em>cephalosporioides</em></td><td class="tl">Ramulose</td><td class="czero">0/lote</td></tr>
+          <tr><td class="nm"><em>Xanthomonas axonopodis</em> pv. <em>malvacearum</em></td><td class="tl">Mancha angular</td><td class="czero">0/campo</td></tr>
+          <tr><td class="nm"><em>Sclerotinia sclerotiorum</em> **</td><td class="tl">Mofo branco</td><td class="czero">0/lote</td></tr>
+          <tr><td class="tl nm" rowspan="2">Arroz (sequeiro)</td><td class="nm"><em>Pyricularia grisea</em></td><td class="tl">Brusone</td><td class="cnum">5/lote</td></tr>
+          <tr><td class="nm"><em>Bipolaris oryzae</em></td><td class="tl">Mancha parda</td><td class="cnum">5/lote</td></tr>
+          <tr><td class="tl nm" rowspan="4">Trigo</td><td class="nm"><em>Bipolaris sorokiniana</em></td><td class="tl">Mancha marrom ou podridão comum da raiz</td><td class="cnum">5/lote</td></tr>
+          <tr><td class="nm"><em>Stagonospora nodorum</em></td><td class="tl">Mancha da gluma</td><td class="cnum">1/lote</td></tr>
+          <tr><td class="nm"><em>Drechslera tritici-repentis</em></td><td class="tl">Mancha amarela</td><td class="cnum">5/lote</td></tr>
+          <tr><td class="nm"><em>Xanthomonas campestris</em> pv. <em>undulosa</em></td><td class="tl">Estria bacteriana</td><td class="cnum">1.000 UFC*/3.000 sementes</td></tr>
+          <tr><td class="tl nm" rowspan="5">Feijão</td><td class="nm"><em>Colletotrichum lindemuthianum</em></td><td class="tl">Antracnose</td><td class="czero">0/lote</td></tr>
+          <tr><td class="nm"><em>Xanthomonas axonopodis</em> pv. <em>phaseoli</em></td><td class="tl">Crestamento bacteriano comum</td><td class="czero">0/lote</td></tr>
+          <tr><td class="nm"><em>Sclerotinia sclerotiorum</em> **</td><td class="tl">Mofo branco</td><td class="czero">0/lote</td></tr>
+          <tr><td class="nm"><em>Fusarium oxysporum</em> f.sp. <em>phaseoli</em></td><td class="tl">Murcha de Fusário</td><td class="czero">0/lote</td></tr>
+          <tr><td class="nm"><em>Fusarium solani</em> f.sp. <em>phaseoli</em></td><td class="tl">Podridão radicular seca</td><td class="czero">0/lote</td></tr>
+          <tr><td class="tl nm" rowspan="2">Soja</td><td class="nm"><em>Sclerotinia sclerotiorum</em> **</td><td class="tl">Mofo branco</td><td class="czero">0/lote</td></tr>
+          <tr><td class="nm"><em>Heterodera glycines</em> ***</td><td class="tl">Nematoide de cisto da soja</td><td class="czero">0/lote</td></tr>
+          <tr><td class="tl nm">Girassol</td><td class="nm"><em>Sclerotinia sclerotiorum</em> **</td><td class="tl">Mofo branco</td><td class="czero">0/lote</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fonte">* UFC = Unidade Formadora de Colônia &nbsp;|&nbsp; ** avaliado como escleródio/500 g &nbsp;|&nbsp; *** avaliado como torrão com cisto/500 g &nbsp;|&nbsp; Fonte: MAPA — Portaria SDA nº 3, de 5 de janeiro de 2004.</div>
+      <div class="aviso"><strong>Em revisão:</strong> a lista de PNQR é atualizada periodicamente pelo MAPA/SDA — inclusive no âmbito da harmonização fitossanitária do Mercosul — podendo incorporar novas culturas e patógenos. Confirme sempre a versão vigente junto ao MAPA/SDA antes de decisões de certificação.</div>
+    </div>
+  </div>
+
+  <!-- 3. POR QUE IMPORTA + PARA QUE SERVE -->
+  <div class="gsec" id="porque">
+    <div class="gsh"><span class="num">3</span> Por que a sanidade importa e para que serve a análise</div>
+    <div class="gsb">
+      <div class="gdesc">A semente é o insumo de maior valor agregado da lavoura — mas pode carregar, de forma latente e quase sempre <strong>assintomática</strong>, os patógenos que originam os primeiros focos de doença no campo. O teste de sanidade funciona como a "medicina preventiva" da cultura: detecta o problema antes que ele vire epidemia.</div>
+
+      <div class="nota">Cerca de <strong>90%</strong> das culturas usadas na alimentação humana são propagadas por semente. A presença de inóculo pode reduzir o rendimento em torno de <strong>20%</strong>, além de causar falhas de estande e elevar o custo de produção — por isso a leitura do laudo orienta o tratamento e a decisão de uso do lote.</div>
+
+      <div class="mt">3.1 Os quatro grupos de patógenos</div>
+      <div class="leg">
+        <div class="li l1">FUNGOS<small>Maior nº de espécies. De campo (<em>Phomopsis</em>, <em>Colletotrichum</em>) ou de armazenamento (<em>Aspergillus</em>, <em>Penicillium</em>).</small></div>
+        <div class="li l2">BACTÉRIAS<small>Permanecem latentes e em baixa população — semente quase sempre sem sintoma visível.</small></div>
+        <div class="li l3">VÍRUS<small>Precisam de alta estabilidade para sobreviver ao processamento. Transmissão geralmente baixa.</small></div>
+        <div class="li l4">NEMATOIDES<small>Menor nº, mas alto risco de disseminação a longa distância via comércio de sementes.</small></div>
+      </div>
+      <div class="aviso"><strong>Atenção:</strong> a maioria das sementes infectadas <strong>não apresenta sintoma visível</strong>. A ausência de sinais a olho nu não garante sanidade — só o teste de laboratório confirma.</div>
+
+      <div class="mt">3.2 Para que serve a análise de sanidade</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl" style="width:32%">Finalidade</th><th class="tl">O que a análise responde</th></tr></thead>
+        <tbody>
+          <tr><td class="tl nm">Decidir o uso do lote</td><td class="tl">Plantar, tratar ou descartar — com base em quais patógenos há e em que incidência.</td></tr>
+          <tr><td class="tl nm">Certificação e comercialização</td><td class="tl">Verificar a conformidade com os limites de PNQR para a produção e a venda de sementes.</td></tr>
+          <tr><td class="tl nm">Avaliar a eficácia de tratamentos</td><td class="tl">Comparar a sanidade antes e depois de um tratamento de sementes (produto químico ou biológico) para medir o controle obtido.</td></tr>
+          <tr><td class="tl nm">Escolher o produto certo</td><td class="tl">Direcionar o princípio ativo mais eficaz para o(s) patógeno(s) efetivamente identificado(s).</td></tr>
+          <tr><td class="tl nm">Diagnosticar falhas de estande</td><td class="tl">Investigar baixa germinação, tombamento e falhas de emergência com origem na semente.</td></tr>
+          <tr><td class="tl nm">Evitar disseminar patógenos</td><td class="tl">Impedir que sementes levem patógenos a novas áreas ou regiões produtoras.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <!-- 4. DANO ECONÔMICO -->
+  <div class="gsec" id="dano">
+    <div class="gsh"><span class="num">4</span> Dano econômico e limiar de inóculo</div>
+    <div class="gsb">
+      <div class="gdesc">Patógenos que vêm na semente causam prejuízo real — em produtividade, qualidade e custo. Mas quanto de doença uma semente infectada provoca no campo <strong>não segue uma regra única</strong>: depende do patógeno, da cultura e do clima. Às vezes menos de 0,01% de sementes infectadas já bastam para deflagrar uma epidemia; em outros casos, convive-se com vários por cento sem grande dano. É o chamado <strong>limiar de inóculo</strong> (Schaad, 1988) — e a tabela abaixo reúne, por patossistema, o que a literatura mediu.</div>
+
+      <div class="mt">Limiar e dano por patossistema</div>
+      <div class="tw"><table class="gt">
+        <thead><tr><th class="tl">Cultura — patógeno</th><th class="tl">Limiar ou dano documentado</th><th class="tl">Fonte</th></tr></thead>
+        <tbody>
+          <tr><td class="nm">Brássicas — podridão negra <span style="font-weight:400;color:#5b6b78">(<em>Xanthomonas campestris</em> pv. <em>campestris</em>)</span></td><td class="tl">Basta 0,01% de sementes infectadas para deflagrar a podridão negra no campo; em mudas transplantadas, o limiar exigido cai para 0,004%.</td><td class="tl">Schaad, Sitterly &amp; Humaydan (1980); Roberts, Brough &amp; Hunter (2007)</td></tr>
+          <tr><td class="nm">Tomate — cancro bacteriano <span style="font-weight:400;color:#5b6b78">(<em>Clavibacter michiganensis</em> subsp. <em>michiganensis</em>)</span></td><td class="tl">De 0,01 a 0,05% de sementes contaminadas já iniciam a epidemia; perdas de até 80% no campo — praga quarentenária na UE.</td><td class="tl">Chang et al. (1991) e Gitaitis et al. (1991), apud Theodoro &amp; Maringoni (2000); Méndez et al. (2020)</td></tr>
+          <tr><td class="nm">Soja — antracnose <span style="font-weight:400;color:#5b6b78">(<em>Colletotrichum truncatum</em>)</span></td><td class="tl">Cerca de 90 kg/ha perdidos a cada 1% de incidência nas vagens (r = −0,85); perdas de 16 a 26% nos EUA, 30 a 50% na Tailândia e até 100% na Índia.</td><td class="tl">Dias et al. (2016); Backman, Williams &amp; Crawford (1982); Hartman, Sinclair &amp; Rupe (1999)</td></tr>
+          <tr><td class="nm">Soja — podridão de sementes <span style="font-weight:400;color:#5b6b78">(<em>Phomopsis</em>, <em>Diaporthe</em>)</span></td><td class="tl">Infecção de até 76% das sementes, com a germinação caindo a 18–97%; o atraso de colheita reduz ~10% o peso e ≥50% a germinação (dano de qualidade fisiológica).</td><td class="tl">Li et al. (2017); Malvick (1997); Sinclair (1993)</td></tr>
+          <tr><td class="nm">Feijão — antracnose <span style="font-weight:400;color:#5b6b78">(<em>Colletotrichum lindemuthianum</em>)</span></td><td class="tl">70 a 80% das sementes infectadas transmitem a antracnose à plântula, que ainda desenvolve menor sistema radicular.</td><td class="tl">Rey et al. (2009)</td></tr>
+          <tr><td class="nm">Feijão — crestamento bacteriano comum <span style="font-weight:400;color:#5b6b78">(<em>Xanthomonas axonopodis</em> pv. <em>phaseoli</em>)</span></td><td class="tl">Reduções de 10 a 70% na colheita sob ataque natural (no Brasil, sem estimativa nacional consolidada de perdas).</td><td class="tl">Diaz (2000); Rava &amp; Sartorato (1994)</td></tr>
+          <tr><td class="nm">Arroz — brusone <span style="font-weight:400;color:#5b6b78">(<em>Pyricularia oryzae</em>)</span></td><td class="tl">Perda de até 47,8% na massa de grãos sob alta severidade nas panículas; 15 a 44% em condições gerais.</td><td class="tl">Prabhu et al. (2003); Prabhu, Faria &amp; Carvalho (1986)</td></tr>
+          <tr><td class="nm">Algodão — ramulose <span style="font-weight:400;color:#5b6b78">(<em>Colletotrichum gossypii</em> var. <em>cephalosporioides</em>)</span></td><td class="tl">Lavouras com incidência acima de 5% elevam fortemente a infecção das sementes (correlação entre inóculo no campo e nas sementes).</td><td class="tl">Araújo et al. (2009); Araújo (2008, tese ESALQ/USP)</td></tr>
+          <tr><td class="nm">Trigo — mancha marrom ou podridão comum <span style="font-weight:400;color:#5b6b78">(<em>Bipolaris sorokiniana</em>)</span></td><td class="tl">Incidência média de 15,2% nos lotes (99,1% positivos, máx. 60%); o tratamento de sementes controla a transmissão até ~44% de incidência.</td><td class="tl">Goulart (1998); Forcelini (1992)</td></tr>
+          <tr><td class="nm">Milho — podridões <span style="font-weight:400;color:#5b6b78">(<em>Stenocarpella</em> spp.)</span></td><td class="tl">A semente infectada é a principal fonte de inóculo primário; as perdas específicas, porém, ainda não foram quantificadas.</td><td class="tl">Costa, Cota &amp; Silva (2013); Casa, Reis &amp; Zambolim (2006)</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="mt">A leitura correta</div>
+      <div class="perigo">Na prática, <strong>o mesmo percentual de infecção significa coisas muito diferentes</strong> conforme o patógeno: uma detecção mínima de <em>Clavibacter</em> ou da podridão negra já pode condenar o lote (limiar de 0,01 a 0,05%), enquanto 15% de <em>Bipolaris sorokiniana</em> é rotina manejável. Por isso o laudo de sanidade deve ser lido <strong>à luz do patógeno e da cultura</strong> — nunca por uma estatística genérica.</div>
+    </div>
+  </div>
+
+  <!-- REFERÊNCIAS -->
+  <div class="refs" id="refs">
+    <h2>5. Referências</h2>
+      <div class="ref-item">MAPA — Ministério da Agricultura, Pecuária e Abastecimento. <strong>Portaria SDA nº 3, de 5 de janeiro de 2004</strong> — níveis de tolerância sanitária (PNQR) para algodão, arroz, trigo, feijão, soja e girassol.</div>
+      <div class="ref-item">MAPA. <strong>Manual de Análise Sanitária de Sementes</strong> (Capítulo 9 das Regras para Análise de Sementes — RAS). Brasília, 2009.</div>
+      <div class="ref-item">HENNING, A. A. <strong>Patologia e Tratamento de Sementes.</strong> 3. ed. Londrina: Embrapa Soja, 2016.</div>
+      <div class="ref-item">GOULART, A. C. P. <strong>Fungos em Sementes de Soja: Detecção, Importância e Controle.</strong> 2. ed. Dourados: Embrapa Agropecuária Oeste.</div>
+      <div class="ref-item">BARROCAS, E. N.; KOCH, E. F. de A.; DENARDIN, N. D.; MACHADO, J. da C.; MORAES, M. H. D.; CORREA, C. L.; MENTEN, J. O. M. (org.). <strong>Patologia de Sementes: a ciência básica.</strong> v. 1. ABRATES; Comitê de Patologia de Sementes (COPASEM), 2025.</div>
+      <div class="ref-item">ROSSETTI, C.; SARAIVA, C. R. C.; MADRUGA, F. B.; FIGUEIREDO, J. C.; ROSA, C. P. da; MADRUGA, N. P.; THIEL, K. T. R.; BOEIRA, K. C.; GELHING, F.; KLUG, E. <strong>Padrões sanitários em sementes.</strong> Research, Society and Development, v. 11, n. 7, e4711726719, 2022.</div>
+      <div class="ref-item">PESKE, S. T.; ROSENTHAL, M. D.; ROTA, G. R. M. <strong>Sementes: fundamentos científicos e tecnológicos.</strong> Pelotas, 2013.</div>
+      <div class="ref-item">SCHAAD, N. W. <strong>Inoculum thresholds of seedborne pathogens: Bacteria.</strong> Phytopathology, v. 78, n. 6, p. 872–875, 1988.</div>
+      <div class="ref-item">SCHAAD, N. W.; SITTERLY, W. R.; HUMAYDAN, H. <strong>Relationship of incidence of seedborne <em>Xanthomonas campestris</em> to black rot of crucifers.</strong> Plant Disease, v. 64, p. 91–92, 1980.</div>
+      <div class="ref-item">ROBERTS, S. J.; BROUGH, J.; HUNTER, P. J. <strong>Modelling the spread of <em>Xanthomonas campestris</em> pv. <em>campestris</em> in module-raised brassica transplants.</strong> Plant Pathology, v. 56, n. 3, p. 391–401, 2007.</div>
+      <div class="ref-item">SHIGAKI, T.; NELSON, S. C.; ALVAREZ, A. M. <strong>Symptomless spread of blight-inducing strains of <em>Xanthomonas campestris</em> pv. <em>campestris</em> on cabbage seedlings in misted seedbeds.</strong> European Journal of Plant Pathology, v. 106, n. 4, p. 339–346, 2000.</div>
+      <div class="ref-item">VICENTE, J. G.; HOLUB, E. B. <strong><em>Xanthomonas campestris</em> pv. <em>campestris</em> (cause of black rot of crucifers) in the genomic era is still a worldwide threat to brassica crops.</strong> Molecular Plant Pathology, v. 14, n. 1, p. 2–18, 2013.</div>
+      <div class="ref-item">THEODORO, G. F.; MARINGONI, A. C. <strong>Ação de produtos químicos <em>in vitro</em> e <em>in vivo</em> sobre <em>Clavibacter michiganensis</em> subsp. <em>michiganensis</em>, agente causal do cancro bacteriano do tomateiro.</strong> Scientia Agricola, v. 57, n. 3, p. 439–443, 2000.</div>
+      <div class="ref-item">MÉNDEZ, V.; VALENZUELA, M.; SALVÀ-SERRA, F.; JAÉN-LUCHORO, D.; BESOAIN, X.; MOORE, E. R. B.; SEEGER, M. <strong>Comparative genomics of pathogenic <em>Clavibacter michiganensis</em> subsp. <em>michiganensis</em> strains from Chile.</strong> Microorganisms, v. 8, n. 11, art. 1679, 2020.</div>
+      <div class="ref-item">DIAS, M. D.; PINHEIRO, V. F.; CAFÉ-FILHO, A. C. <strong>Impact of anthracnose on the yield of soybean subjected to chemical control in the north region of Brazil.</strong> Summa Phytopathologica, v. 42, n. 1, p. 18–24, 2016.</div>
+      <div class="ref-item">BACKMAN, P. A.; WILLIAMS, J. C.; CRAWFORD, M. A. <strong>Yield losses in soybeans from anthracnose caused by <em>Colletotrichum truncatum</em>.</strong> Plant Disease, v. 66, p. 1032–1034, 1982.</div>
+      <div class="ref-item">HARTMAN, G. L.; SINCLAIR, J. B.; RUPE, J. C. <strong>Compendium of Soybean Diseases.</strong> 4. ed. St. Paul: APS Press, 1999.</div>
+      <div class="ref-item">LI, S.; SCIUMBATO, G.; RUPE, J.; SHANNON, G.; CHEN, P.; BOYKIN, D. <strong>Evaluation of commercial soybean cultivars for reaction to Phomopsis seed decay.</strong> Plant Disease, v. 101, n. 12, p. 1990–1997, 2017.</div>
+      <div class="ref-item">MALVICK, D. K. <strong>Pod and stem blight, stem canker, and Phomopsis seed decay of soybeans.</strong> Report on Plant Disease (RPD) n. 509. Urbana: University of Illinois, 1997.</div>
+      <div class="ref-item">SINCLAIR, J. B. <strong>Phomopsis seed decay of soybeans — a prototype for studying seed disease.</strong> Plant Disease, v. 77, n. 4, p. 329–334, 1993.</div>
+      <div class="ref-item">REY, M. S.; LIMA, N. B.; SANTOS, J. dos; PIEROBOM, C. R. <strong>Transmissão semente-plântula de <em>Colletotrichum lindemuthianum</em> em feijão (<em>Phaseolus vulgaris</em>).</strong> Arquivos do Instituto Biológico, v. 76, n. 3, p. 465–470, 2009.</div>
+      <div class="ref-item">DIAZ, C. G. <strong>Avaliação de danos causados por <em>Xanthomonas axonopodis</em> pv. <em>phaseoli</em> em feijoeiro (<em>Phaseolus vulgaris</em> L.).</strong> Tese (Doutorado) — ESALQ/USP, Piracicaba, 2000.</div>
+      <div class="ref-item">RAVA, C. A.; SARTORATO, A. <strong>Crestamento bacteriano comum.</strong> In: SARTORATO, A.; RAVA, C. A. (ed.). Principais doenças do feijoeiro comum e seu controle. Brasília: EMBRAPA-CNPAF, 1994. p. 217–234.</div>
+      <div class="ref-item">PRABHU, A. S.; ARAÚJO, L. G. de; FAUSTINA, C.; BERNI, R. F. <strong>Estimativa de danos causados pela brusone na produtividade de arroz de terras altas.</strong> Pesquisa Agropecuária Brasileira, v. 38, n. 9, p. 1045–1051, 2003.</div>
+      <div class="ref-item">PRABHU, A. S.; FARIA, J. C.; CARVALHO, J. R. P. de. <strong>Efeito da brusone sobre a matéria seca, produção de grãos e seus componentes, em arroz de sequeiro.</strong> Pesquisa Agropecuária Brasileira, v. 21, n. 5, p. 495–500, 1986.</div>
+      <div class="ref-item">ARAÚJO, A. E.; MENTEN, J. O. M.; FERREIRA, A. C. B.; DIAS, C. T. S.; NÓBREGA, M. B. M.; MORELLO, C. L. <strong>Efeito de diferentes níveis de <em>Colletotrichum gossypii</em> var. <em>cephalosporioides</em> em plantas de algodão no campo e sua incidência nas sementes.</strong> Summa Phytopathologica, v. 35, n. 4, p. 310–315, 2009.</div>
+      <div class="ref-item">FORCELINI, C. A. <strong>Incidência, transmissão e controle de <em>Bipolaris sorokiniana</em> em sementes de trigo.</strong> Dissertação (Mestrado) — ESALQ/USP, Piracicaba, 1992.</div>
+      <div class="ref-item">GOULART, A. C. P. <strong>Qualidade sanitária de sementes de trigo, soja e milho produzidas em Mato Grosso do Sul.</strong> Dourados: EMBRAPA-CPAO, 1998. (Boletim de Pesquisa, 7).</div>
+      <div class="ref-item">COSTA, R. V. da; COTA, L. V.; SILVA, D. D. da. <strong>Doenças causadas por fungos do gênero <em>Stenocarpella</em> (<em>Diplodia</em>) em milho.</strong> Sete Lagoas: Embrapa Milho e Sorgo, 2013. (Circular Técnica, 197).</div>
+      <div class="ref-item">CASA, R. T.; REIS, E. M.; ZAMBOLIM, L. <strong>Doenças do milho causadas por fungos do gênero <em>Stenocarpella</em>.</strong> Fitopatologia Brasileira, v. 31, n. 5, p. 427–439, 2006.</div>
+      <div class="aviso" style="margin-top:16px"><strong>Aviso legal:</strong> este material é uma referência técnica compilada a partir de fontes científicas e da legislação vigente e <strong>não substitui</strong> o laudo oficial emitido pelo laboratório nem a recomendação técnica individualizada de um Engenheiro Agrônomo habilitado.</div>
+  </div>
+
+</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../icon.svg" alt="LAMAM" style="height:34px"> LAMAM</a>
+    <p>Laboratório Mineiro de Análises Agrícolas e Microbiológicas · Patos de Minas - MG</p>
+    <p class="fline">(34) 3825-1631 · <a href="https://wa.me/5534997741631" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:lamam@laboratoriolamam.com.br">lamam@laboratoriolamam.com.br</a></p>
+    <p class="fline" style="margin-top:12px;font-size:.8rem;color:#6f93ab">Guia de patologia de sementes · compilação técnica LAMAM · Última revisão: agosto de 2026</p>
+  </div>
+</footer>
+
+<a class="wpp" href="https://wa.me/5534997741631" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.87 11.87 0 01-1.6-5.96C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 018.4 3.49 11.82 11.82 0 013.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 01-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 005.1 1.4 9.9 9.9 0 009.88-9.88 9.9 9.9 0 00-16.9-7 9.86 9.86 0 00-1.49 12.4l.24.38-1 3.65 3.41-.57zM17.5 14.3c-.07-.12-.27-.2-.57-.35s-1.76-.87-2.03-.97-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.13 8.13 0 01-2.4-1.48 9 9 0 01-1.66-2.06c-.17-.3-.02-.46.13-.6l.45-.53c.15-.17.2-.3.3-.5s.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.01-1.04 2.47 1.06 2.86 1.21 3.06 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41s.25-1.29.18-1.41z"/></svg></a>
+
+<script>
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});
+</script>
+</body>
+</html>
