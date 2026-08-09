@@ -184,6 +184,7 @@ footer .fline{margin-top:8px;color:#8fb0c6}
 .svc-hero .lead{color:#cfe2f0;font-size:1.12rem;margin-bottom:26px;max-width:520px}
 .svc-hero .acoes{display:flex;gap:13px;flex-wrap:wrap}
 .svc-hero-img{aspect-ratio:4/3;border-radius:18px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.12)}
+.svc-hero-img.wide{aspect-ratio:1634/840}
 .svc-hero-img img{width:100%;height:100%;object-fit:cover}
 
 .svc-body{padding:74px 0}
